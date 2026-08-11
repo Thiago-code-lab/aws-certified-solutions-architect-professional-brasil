@@ -1,6 +1,6 @@
 ﻿# Changelog
 
-## Estrutura inicial SAP-C02
+## Base publica SAP-C02
 
 - Estrutura base criada para a certificação AWS Solutions Architect Professional.
 - README principal organizado como hub GitHub-first.
