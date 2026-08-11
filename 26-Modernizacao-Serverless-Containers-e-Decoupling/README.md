@@ -1,73 +1,119 @@
-﻿# Modernização: Serverless, Containers e Decoupling
+# 26 - Modernizacao: Serverless, Containers e Decoupling
 
-## Visão Geral
+Este modulo nao ensina "Lambda, ECS e EKS" como lista de servicos. Ele ensina como modernizar um workload existente sem cair em reescrita grande, cara e arriscada. Modernizacao Professional combina valor de negocio, prazo, skills do time, acoplamento, operacao, escala, dados e capacidade de migrar incrementalmente.
 
-Este módulo cobre refatoração progressiva, desacoplamento, eventos, containers e serverless em sistemas legados, com foco no tipo de raciocínio arquitetural exigido no AWS Certified Solutions Architect Professional (SAP-C02).
+## Objetivos
 
-## Conceitos-Chave
+- Diferenciar rehost, replatform e refactor em decisoes de modernizacao.
+- Aplicar strangler pattern para decompor monolitos gradualmente.
+- Escolher limites sincronos e assincronos com SQS, SNS, EventBridge e Step Functions.
+- Posicionar Lambda, ECS, EKS e Fargate conforme carga, operacao e skills.
+- Evitar big-bang rewrite quando o risco supera o beneficio.
+- Definir etapas de migracao incremental com rollback e convivencia legado/novo.
 
-- Domínio predominante: Migration and Modernization.
-- Serviços e padrões principais: Lambda, ECS, EKS, Fargate, SQS, SNS, EventBridge.
-- Decisão orientada por requisitos de negócio, risco operacional, segurança, resiliência, performance e custo.
-- Avaliação de impactos em ambientes multi-conta, multi-Region, híbridos ou em migração quando aplicável.
+## Comparacoes criticas
 
-## Relevância para o SAP-C02
+| Comparacao | Decisao Professional |
+| --- | --- |
+| Rehost vs modernize | Rehost reduz prazo; modernizacao ataca causas de escala, agilidade e operacao |
+| Replatform vs refactor | Replatform muda plataforma com pouca alteracao; refactor muda arquitetura/codigo |
+| Monolito vs modular | Monolito pode ser aceitavel se estavel; modularidade ajuda dominios que mudam/escala independentemente |
+| Sincrono vs assincrono | Sincrono simplifica resposta imediata; assincrono desacopla e absorve picos |
+| SQS vs EventBridge | SQS e fila ponto a ponto com buffering; EventBridge roteia eventos entre produtores/consumidores |
+| Lambda vs containers | Lambda reduz operacao para eventos curtos; containers servem runtimes/processos longos ou maior controle |
+| ECS vs EKS | ECS reduz operacao AWS-native; EKS faz sentido com padrao Kubernetes e skills existentes |
+| Fargate vs instancias | Fargate reduz gestao de servidores; instancias dao mais controle/custo em escala especifica |
+| Big-bang rewrite vs strangler | Strangler reduz risco migrando capacidades por fatias |
 
-O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicamente válidas. O objetivo aqui é treinar por que uma arquitetura é preferível, quando outra opção se torna melhor e quais detalhes do enunciado mudam a decisão.
+## Evolucao strangler
 
-## Decisões Arquiteturais
+Inicial:
 
-- Identificar o requisito dominante antes de escolher serviços.
-- Validar dependências entre contas, redes, dados, identidade e operação.
-- Preferir serviços gerenciados quando reduzem risco sem violar requisitos explícitos.
-- Documentar exceções quando controle, latência, compliance ou custo justificarem maior complexidade.
+```text
+Users
+  |
+Legacy Monolith
+  |
+Database
+```
 
-## Trade-offs
+Transicao:
 
-- Menor operação versus maior controle.
-- Resiliência multi-AZ versus multi-Region e seu impacto em custo e complexidade.
-- Centralização de governança versus autonomia de times e contas.
-- Otimização de custo versus requisitos de desempenho, recuperação e segurança.
+```text
+Users
+  |
+API / Routing Layer
+  |
+  +------ Legacy Monolith
+  |
+  +------ New Service A
+  |
+  +------ New Service B
+              |
+           SQS/EventBridge
+```
 
-## Cenários de Prova
+Explicacao:
 
-- Organizações com múltiplas contas e times independentes.
-- Ambientes híbridos com conectividade, DNS e segurança centralizados.
-- Workloads com requisitos conflitantes de RTO/RPO, compliance, custo e latência.
-- Migração ou modernização gradual sem indisponibilidade significativa.
+- A camada de API/roteamento direciona novas capacidades para servicos modernos.
+- O monolito continua atendendo partes nao migradas.
+- Eventos e filas desacoplam processamento em background.
+- Cada fatia migrada precisa observabilidade, rollback e estrategia de dados.
+- O objetivo e reduzir risco e entregar valor antes de concluir toda a decomposicao.
 
-## Armadilhas Comuns
+## Matriz de modernizacao
 
-- Escolher serviço por reconhecimento de nome, sem validar a restrição principal.
-- Resolver um problema organizacional com uma configuração local de uma única conta.
-- Ignorar operação contínua, automação, rastreabilidade e governança.
-- Escolher a arquitetura mais completa quando a pergunta pede menor esforço operacional ou menor custo.
+| Cenario | Estrategia | Tecnologia possivel | Beneficio | Trade-off |
+| --- | --- | --- | --- | --- |
+| Legado estavel com prazo curto | Rehost/replatform | EC2/RDS/ECS simples | Cumpre prazo | Pouca melhoria arquitetural |
+| API stateless de alto scale | Container/serverless | ECS Fargate ou Lambda | Escala e operacao menor | Limites/runtime precisam ser avaliados |
+| Processamento orientado a eventos | Decoupling assincrono | SQS/EventBridge/Step Functions | Absorve picos | Consistencia eventual |
+| Organizacao madura em Kubernetes | Containers gerenciados | EKS | Portabilidade/ecossistema | Mais operacao |
+| Time pequeno buscando low-ops | Serverless/managed services | Lambda, Fargate, DynamoDB quando aplicavel | Menos toil | Menos controle fino |
+| Monolito muito acoplado | Strangler gradual | API Gateway/ALB + novos servicos | Reduz risco | Convive com legado por mais tempo |
+| Batch sazonal | Containers ou serverless batch | ECS/Fargate/Lambda conforme duracao | Escala sob demanda | Observabilidade e retry |
+| Dominio muda rapidamente | Refactor focalizado | Servico dedicado + eventos | Agilidade | Requer ownership de dominio |
 
-## Próximo Passo de Revisão
+## Raciocinio SAP-C02
 
-1. Leia cheatsheet.md para consolidar critérios de decisão.
-2. Use casos-de-uso.md para treinar análise de cenários.
-3. Resolva questoes.md sem consulta e registre padrões de erro no módulo 30.
-4. Consulte links.md para validar detalhes em documentação oficial.
+### Cenario 1: monolito de 10 anos
+
+- Cenario: release lento, picos sazonais e nova demanda mobile.
+- Restricoes: negocio nao aceita rewrite multi-ano.
+- Sinal: modernizacao incremental.
+- Melhor decisao: strangler pattern, extrair capacidades de maior valor, manter partes estaveis no monolito e introduzir eventos/filas para background.
+- Trade-off: convivencia temporaria aumenta complexidade, mas reduz risco.
+- Por que nao alternativas: big-bang rewrite atrasa valor e concentra risco; rehost puro nao melhora ciclo de release.
+
+### Cenario 2: processamento de pedidos em picos
+
+- Cenario: pedidos chegam em rajadas e integracoes externas falham.
+- Restricoes: nao perder mensagens, desacoplar processamento e permitir retry.
+- Melhor decisao: SQS para buffering, consumidores em Lambda/ECS e DLQ; EventBridge se o problema for roteamento de eventos entre dominios.
+- Trade-off: consistencia eventual e necessidade de idempotencia.
+
+### Cenario 3: escolha ECS vs EKS
+
+- Cenario: empresa quer containers, mas tem time pequeno e sem Kubernetes maduro.
+- Restricoes: reduzir operacao e entregar rapido.
+- Melhor decisao: ECS com Fargate para reduzir overhead, salvo requisito claro de Kubernetes.
+- Trade-off: menos portabilidade de ecossistema Kubernetes, menor complexidade operacional.
 
 ## Estudos Complementares
 
-Para revisar Lambda, ECS/EKS, SQS, SNS e EventBridge antes de aprofundar modernização com serverless, containers e desacoplamento:
+Use a trilha Associate apenas de forma contextual para revisar fundamentos de Lambda, ECS/EKS/Fargate, SQS, SNS e EventBridge:
 
 https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
 
-Se a modernização envolver Amazon Bedrock, IA generativa ou workloads de IA na AWS:
+## Arquivos do modulo
 
-https://github.com/Thiago-code-lab/aws-certified-ai-practitioner-brasil
+- [Questoes](questoes.md)
+- [Flashcards](flashcards.md)
+- [Cheatsheet](cheatsheet.md)
+- [Casos de uso](casos-de-uso.md)
+- [Referencias oficiais](links.md)
+- [Workshop de modernizacao](lab.md)
 
 ---
 
-## ☁️ Acompanhe a CloudStudy
-
-Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais prática, organizada e acessível.
-
-Siga a CloudStudy para acompanhar novos materiais, atualizações e conteúdos sobre certificações AWS:
-
-- Instagram: https://www.instagram.com/cloudstudy.ai/
-- LinkedIn: https://www.linkedin.com/company/cloudstudy-ai/
-
+CloudStudy - Trilha AWS Solutions Architect Professional

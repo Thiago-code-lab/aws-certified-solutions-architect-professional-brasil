@@ -1,33 +1,71 @@
-﻿# Lab Guiado
+# Workshop - Arquitetura de Modernizacao
 
-## Objetivo
+> Exercicio de desenho. Nao provisione recursos AWS.
 
-Validar um padrão relacionado a Modernização: Serverless, Containers e Decoupling em ambiente de estudo, com escopo pequeno, evidência observável e cleanup claro.
+## Cenario
 
-## Serviços sugeridos
+Uma empresa possui monolito de 10 anos, banco relacional, picos sazonais, ciclo de release lento, pequena equipe de plataforma, processamento em background e novas exigencias mobile/API. O negocio nao aceita rewrite multi-ano.
 
-Lambda, ECS, EKS, Fargate, SQS, SNS, EventBridge
+## Tarefa 1 - Limites de modernizacao
 
-## Faixa de custo esperada
+Identifique:
 
-- Execute em conta de laboratório.
-- Prefira recursos elegíveis a baixo custo ou execução curta.
-- Remova todos os recursos ao final.
+- Dominios que mudam com frequencia.
+- Partes estaveis que nao devem ser modernizadas agora.
+- Fluxos que exigem resposta sincrona.
+- Fluxos que podem ser assincronos.
 
-## Passo a passo
+## Tarefa 2 - Strangler approach
 
-1. Defina o cenário e o requisito dominante antes de criar recursos.
-2. Implemente o menor fluxo funcional que demonstre a decisão arquitetural.
-3. Ative logs, métricas ou evidências mínimas de validação.
-4. Simule uma restrição, falha ou mudança de carga compatível com o tema.
-5. Registre o que mudaria em produção: governança, custo, segurança e operação.
+Desenhe:
 
-## Cleanup
+```text
+Users -> API/Routing -> Legacy Monolith
+                  \-> New Service A
+                  \-> New Service B -> SQS/EventBridge -> Workers
+```
 
-1. Remova recursos criados no laboratório.
-2. Apague dados temporários, snapshots e endpoints não usados.
-3. Verifique custos no dia seguinte.
+Explique como trafego migra por capacidade.
 
-## Takeaway para prova
+## Tarefa 3 - Lambda ou containers
 
-O valor do lab é conectar configuração técnica à decisão arquitetural: por que esta solução atende melhor ao cenário do que as alternativas.
+Preencha:
+
+| Capacidade | Lambda | ECS/Fargate | EKS | Justificativa |
+| --- | --- | --- | --- | --- |
+| API simples |  |  |  |  |
+| Worker longo |  |  |  |  |
+| Integracao por evento |  |  |  |  |
+| Servico com runtime customizado |  |  |  |  |
+
+## Tarefa 4 - Eventos e filas
+
+Defina:
+
+- Onde usar SQS.
+- Onde usar EventBridge.
+- Onde Step Functions ajudaria.
+- DLQ e idempotencia.
+- Observabilidade de eventos.
+
+## Tarefa 5 - Roadmap
+
+Monte fases:
+
+1. Preparar observabilidade e pipeline.
+2. Criar camada de API/roteamento.
+3. Extrair primeiro dominio de baixo risco.
+4. Desacoplar processamento em background.
+5. Migrar dominios de maior valor.
+6. Descomissionar partes do monolito quando seguro.
+
+## Entrega esperada
+
+- Limites iniciais.
+- O que nao modernizar agora.
+- Desenho strangler.
+- Decisoes Lambda/containers.
+- Fluxo de eventos.
+- Plano incremental.
+- Trade-offs operacionais.
+- Justificativa de por que big-bang rewrite e mais fraco.

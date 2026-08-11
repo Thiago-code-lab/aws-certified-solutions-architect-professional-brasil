@@ -1,34 +1,31 @@
-﻿# Cartões de Revisão
+# Flashcards - FinOps
 
-## Card 01
+1. **Quando comprar Savings Plans ou RIs?**
+   Depois de medir e ajustar o baseline previsivel; compromisso nao deve cristalizar desperdicio.
 
-**Pergunta:** Qual é o foco deste módulo no SAP-C02?
+2. **Quando Spot e melhor que On-Demand?**
+   Quando o workload tolera interrupcao, retry e variacao de capacidade.
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+3. **Quando On-Demand continua correto?**
+   Quando demanda e imprevisivel, critica ou ainda nao possui baseline confiavel.
 
-**Resposta:** Avaliar visibilidade, alocação, rightsizing, modelos de compra e trade-offs de custo por meio de decisões arquiteturais, trade-offs e restrições reais.
+4. **Por que rightsizing vem antes de commitment?**
+   Porque desconto em recurso superdimensionado ainda preserva desperdicio.
 
-</details>
+5. **Quando Budgets e melhor que Cost Explorer?**
+   Para alertar e acompanhar limites; Cost Explorer e melhor para analise historica/tendencia.
 
-## Card 02
+6. **Quando tags nao bastam?**
+   Quando a separacao de ownership exige contas/OUs distintas, controles e billing boundaries claros.
 
-**Pergunta:** Qual erro costuma eliminar alternativas em questões Professional?
+7. **Qual sinal aponta para storage lifecycle?**
+   Dados antigos, grande volume, padrao de acesso frio e requisito de retencao.
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+8. **Por que olhar data transfer?**
+   Porque trafego inter-AZ, inter-region, NAT e internet pode dominar custo mesmo com compute otimizado.
 
-**Resposta:** Ignorar requisitos de operação, governança, segurança, RTO/RPO, custo recorrente ou impacto multi-conta.
+9. **Quando gerenciado pode ser mais barato no total?**
+   Quando reduz operacao, incidentes, patching e capacidade ociosa, apesar do preco unitario.
 
-</details>
-
-## Card 03
-
-**Pergunta:** Como comparar duas alternativas tecnicamente viáveis?
-
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-**Resposta:** Compare risco operacional, complexidade, custo total, impacto em segurança, capacidade de automação e aderência ao requisito dominante.
-
-</details>
+10. **Qual risco de corte de custo sem SLA?**
+    Reduzir capacidade, backup ou redundancia pode economizar agora e criar indisponibilidade cara.

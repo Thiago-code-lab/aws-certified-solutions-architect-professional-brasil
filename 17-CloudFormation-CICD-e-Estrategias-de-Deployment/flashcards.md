@@ -1,34 +1,31 @@
-﻿# Cartões de Revisão
+# Flashcards - Deployment e IaC
 
-## Card 01
+1. **Quando StackSets e melhor que stack simples?**
+   Quando a mesma infraestrutura precisa ser implantada em multiplas contas ou regioes.
 
-**Pergunta:** Qual é o foco deste módulo no SAP-C02?
+2. **Quando usar change set?**
+   Quando a equipe precisa revisar impacto antes de aplicar atualizacao CloudFormation.
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+3. **Quando drift detection e util?**
+   Quando ha suspeita de mudanca manual ou divergencia entre IaC e estado real.
 
-**Resposta:** Avaliar IaC, rollback, blue/green, canary, governança de mudanças e automação segura por meio de decisões arquiteturais, trade-offs e restrições reais.
+4. **Quando canary supera all-at-once?**
+   Quando uma mudanca arriscada pode ser exposta gradualmente com metricas de decisao.
 
-</details>
+5. **Quando blue/green e forte?**
+   Quando rollback rapido e baixo downtime justificam manter ambiente paralelo temporario.
 
-## Card 02
+6. **Quando rolling e aceitavel?**
+   Quando a aplicacao tolera versoes mistas e substituicao gradual de instancias/tasks.
 
-**Pergunta:** Qual erro costuma eliminar alternativas em questões Professional?
+7. **Quando immutable supera in-place?**
+   Quando alterar recursos existentes aumenta risco e nova capacidade pode ser criada e validada.
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+8. **Qual sinal aponta para approval gate?**
+   Compliance, producao regulada, alto risco financeiro ou necessidade de aprovacao formal.
 
-**Resposta:** Ignorar requisitos de operação, governança, segurança, RTO/RPO, custo recorrente ou impacto multi-conta.
+9. **Por que IaC reduz risco?**
+   Porque torna mudancas versionadas, repetiveis, revisaveis e menos dependentes de passos manuais.
 
-</details>
-
-## Card 03
-
-**Pergunta:** Como comparar duas alternativas tecnicamente viáveis?
-
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-**Resposta:** Compare risco operacional, complexidade, custo total, impacto em segurança, capacidade de automação e aderência ao requisito dominante.
-
-</details>
+10. **Qual risco de pipeline com permissao ampla?**
+    Um erro de automacao pode alterar muitos recursos/contas; roles devem limitar blast radius.

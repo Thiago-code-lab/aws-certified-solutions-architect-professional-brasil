@@ -1,33 +1,74 @@
-﻿# Lab Guiado
+# Workshop - Desenho de Conectividade Hibrida
 
-## Objetivo
+> Exercicio de arquitetura. Nao provisione recursos AWS.
 
-Validar um padrão relacionado a Conectividade Híbrida, Direct Connect, VPN e DNS em ambiente de estudo, com escopo pequeno, evidência observável e cleanup claro.
+## Cenario
 
-## Serviços sugeridos
+Uma empresa possui data center em Sao Paulo, Active Directory DNS interno, ERP critico on-premises e tres contas AWS: Production, Development e Shared Services. Cada conta possui multiplas VPCs. A conectividade precisa ser resiliente e permitir crescimento para novos workloads.
 
-Direct Connect, Site-to-Site VPN, Route 53 Resolver, Transit Gateway
+## Tarefa 1 - Escolher DX/VPN
 
-## Faixa de custo esperada
+Defina:
 
-- Execute em conta de laboratório.
-- Prefira recursos elegíveis a baixo custo ou execução curta.
-- Remova todos os recursos ao final.
+- Caminho primario.
+- Caminho secundario.
+- Onde VPN entra no desenho.
+- Se criptografia adicional e necessaria.
 
-## Passo a passo
+Explique por que Direct Connect, VPN ou combinacao DX + VPN atende melhor.
 
-1. Defina o cenário e o requisito dominante antes de criar recursos.
-2. Implemente o menor fluxo funcional que demonstre a decisão arquitetural.
-3. Ative logs, métricas ou evidências mínimas de validação.
-4. Simule uma restrição, falha ou mudança de carga compatível com o tema.
-5. Registre o que mudaria em produção: governança, custo, segurança e operação.
+## Tarefa 2 - Posicionar DXGW, TGW e contas
 
-## Cleanup
+Preencha:
 
-1. Remova recursos criados no laboratório.
-2. Apague dados temporários, snapshots e endpoints não usados.
-3. Verifique custos no dia seguinte.
+| Componente | Conta/local | Responsabilidade |
+| --- | --- | --- |
+| Direct Connect |  |  |
+| Direct Connect Gateway |  |  |
+| Transit Gateway |  |  |
+| Route tables do TGW |  |  |
+| Resolver endpoints |  |  |
 
-## Takeaway para prova
+## Tarefa 3 - Desenhar DNS hibrido
 
-O valor do lab é conectar configuração técnica à decisão arquitetural: por que esta solução atende melhor ao cenário do que as alternativas.
+Fluxo on-prem -> AWS:
+
+```text
+AD DNS -> Resolver inbound endpoint -> Private hosted zone
+```
+
+Fluxo AWS -> on-prem:
+
+```text
+Workload AWS -> Resolver outbound endpoint -> forwarding rule -> AD DNS
+```
+
+Defina quais dominios usam forwarding e onde as regras sao administradas.
+
+## Tarefa 4 - Rotas e segmentacao
+
+Explique conceitualmente:
+
+- Como prod acessa ERP.
+- Como dev e limitado.
+- Como shared services acessa DNS e ferramentas.
+- Quais rotas nao devem ser propagadas.
+
+## Tarefa 5 - Comportamento em falhas
+
+Descreva:
+
+- Falha do DX.
+- Falha da VPN.
+- Falha de um Resolver endpoint/AZ.
+- Rota incorreta propagada para dev.
+
+## Entrega esperada
+
+- Diagrama final.
+- Justificativa DX/VPN.
+- Posicionamento DXGW/TGW.
+- Fluxos DNS inbound/outbound.
+- Politica de segmentacao de rotas.
+- Trade-offs de custo, resiliencia, lead time e complexidade.
+- Alternativas rejeitadas e motivo.

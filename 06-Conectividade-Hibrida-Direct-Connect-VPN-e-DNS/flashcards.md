@@ -1,34 +1,31 @@
-﻿# Cartões de Revisão
+# Flashcards - Conectividade Hibrida
 
-## Card 01
+1. **Quando Direct Connect supera VPN?**
+   Quando o requisito dominante e throughput previsivel, menor variabilidade de latencia ou conectividade empresarial dedicada.
 
-**Pergunta:** Qual é o foco deste módulo no SAP-C02?
+2. **Quando Site-to-Site VPN e suficiente?**
+   Quando a conectividade e temporaria, de menor custo, com prazo curto ou throughput moderado.
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+3. **Quando usar DX + VPN backup?**
+   Quando DX deve ser caminho primario, mas a arquitetura precisa sobreviver a falha do circuito dedicado.
 
-**Resposta:** Avaliar integração entre datacenters, múltiplas redes, DNS híbrido e requisitos de latência por meio de decisões arquiteturais, trade-offs e restrições reais.
+4. **Qual sinal aponta para Transit Gateway?**
+   Muitas VPCs, contas, ambientes ou necessidade de segmentar rotas em um hub.
 
-</details>
+5. **Quando VGW ainda faz sentido?**
+   Em conectividade mais simples e centrada em uma VPC, sem escala multi-account complexa.
 
-## Card 02
+6. **Qual papel do Direct Connect Gateway?**
+   Facilitar associacao da conectividade DX a VPCs/TGWs em escopos regionais suportados, sem criar circuito por VPC.
 
-**Pergunta:** Qual erro costuma eliminar alternativas em questões Professional?
+7. **O que BGP sinaliza em questoes SAP-C02?**
+   Troca dinamica de rotas, preferencia de caminhos e convergencia em falhas.
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+8. **Quando usar Resolver inbound endpoint?**
+   Quando DNS on-premises precisa resolver nomes privados hospedados na AWS.
 
-**Resposta:** Ignorar requisitos de operação, governança, segurança, RTO/RPO, custo recorrente ou impacto multi-conta.
+9. **Quando usar Resolver outbound endpoint?**
+   Quando workloads AWS precisam encaminhar consultas para DNS corporativo on-premises.
 
-</details>
-
-## Card 03
-
-**Pergunta:** Como comparar duas alternativas tecnicamente viáveis?
-
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-**Resposta:** Compare risco operacional, complexidade, custo total, impacto em segurança, capacidade de automação e aderência ao requisito dominante.
-
-</details>
+10. **Qual armadilha sobre Direct Connect e criptografia?**
+    Circuito dedicado nao significa automaticamente trafego criptografado; requisitos de compliance podem exigir camada adicional.

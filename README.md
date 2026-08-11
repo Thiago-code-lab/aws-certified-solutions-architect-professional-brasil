@@ -196,7 +196,7 @@ Esta tabela mostra o estado editorial real da fase atual. Alguns módulos já t�
 | [03 - IAM, Identity Center, Federação e Cross-Account](./03-IAM-Identity-Center-Federacao-e-Cross-Account/README.md) | Flagship | Aprofundado | Não |
 | [04 - Governança, SCPs, RAM e Service Catalog](./04-Governanca-SCPs-RAM-e-Service-Catalog/README.md) | Suporte | Estrutura inicial | Não |
 | [05 - Redes Avançadas, VPC e Transit Gateway](./05-Redes-Avancadas-VPC-e-Transit-Gateway/README.md) | Flagship | Aprofundado | Guiado |
-| [06 - Conectividade Híbrida, Direct Connect, VPN e DNS](./06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/README.md) | Suporte | Estrutura inicial | Rascunho |
+| [06 - Conectividade Híbrida, Direct Connect, VPN e DNS](./06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/README.md) | Flagship | Aprofundado | Workshop |
 | [07 - PrivateLink, Network Firewall, WAF e Shield](./07-PrivateLink-Network-Firewall-WAF-e-Shield/README.md) | Suporte | Estrutura inicial | Rascunho |
 | [08 - EC2, Auto Scaling e Estratégias de Compute](./08-EC2-Auto-Scaling-e-Estrategias-de-Compute/README.md) | Suporte | Estrutura inicial | Não |
 | [09 - Alta Disponibilidade, Multi-AZ e Multi-Region](./09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/README.md) | Suporte | Estrutura inicial | Rascunho |
@@ -207,16 +207,16 @@ Esta tabela mostra o estado editorial real da fase atual. Alguns módulos já t�
 | [14 - SQS, SNS, EventBridge e Step Functions](./14-SQS-SNS-EventBridge-e-Step-Functions/README.md) | Suporte | Estrutura inicial | Rascunho |
 | [15 - Lambda, API Gateway e Arquiteturas Serverless](./15-Lambda-API-Gateway-e-Arquiteturas-Serverless/README.md) | Suporte | Estrutura inicial | Rascunho |
 | [16 - ECS, EKS, Fargate e Containers](./16-ECS-EKS-Fargate-e-Containers/README.md) | Suporte | Estrutura inicial | Rascunho |
-| [17 - CloudFormation, CI/CD e Estratégias de Deployment](./17-CloudFormation-CICD-e-Estrategias-de-Deployment/README.md) | Suporte | Estrutura inicial | Rascunho |
+| [17 - CloudFormation, CI/CD e Estratégias de Deployment](./17-CloudFormation-CICD-e-Estrategias-de-Deployment/README.md) | Flagship | Aprofundado | Workshop |
 | [18 - CloudWatch, CloudTrail, Config e Observabilidade](./18-CloudWatch-CloudTrail-Config-e-Observabilidade/README.md) | Suporte | Estrutura inicial | Rascunho |
 | [19 - Segurança: KMS, Secrets, GuardDuty e Security Hub](./19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/README.md) | Flagship | Aprofundado | Não |
 | [20 - Disaster Recovery, Backup, RTO e RPO](./20-Disaster-Recovery-Backup-RTO-e-RPO/README.md) | Flagship | Aprofundado | Guiado |
 | [21 - Performance, Reliability e Service Quotas](./21-Performance-Reliability-e-Service-Quotas/README.md) | Suporte | Estrutura inicial | Não |
-| [22 - Otimização de Custos e FinOps](./22-Otimizacao-de-Custos-e-FinOps/README.md) | Suporte | Estrutura inicial | Rascunho |
+| [22 - Otimização de Custos e FinOps](./22-Otimizacao-de-Custos-e-FinOps/README.md) | Flagship | Aprofundado | Workshop |
 | [23 - Migration Hub, Discovery e Estratégia dos 7Rs](./23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/README.md) | Flagship | Aprofundado | Workshop |
 | [24 - MGN, DMS, SCT e Migração de Workloads](./24-MGN-DMS-SCT-e-Migracao-de-Workloads/README.md) | Suporte | Estrutura inicial | Rascunho |
 | [25 - DataSync, Snow, Transfer Family e Transferência de Dados](./25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/README.md) | Suporte | Estrutura inicial | Rascunho |
-| [26 - Modernização: Serverless, Containers e Decoupling](./26-Modernizacao-Serverless-Containers-e-Decoupling/README.md) | Suporte | Estrutura inicial | Rascunho |
+| [26 - Modernização: Serverless, Containers e Decoupling](./26-Modernizacao-Serverless-Containers-e-Decoupling/README.md) | Flagship | Aprofundado | Workshop |
 | [27 - Well-Architected e Trade-Offs Avançados](./27-Well-Architected-e-Trade-Offs-Avancados/README.md) | Suporte | Estrutura inicial | Não |
 | [28 - Casos de Uso Reais](./28-Casos-de-Uso-Reais/README.md) | Futuro hub de cenários | Estrutura inicial | Não |
 | [29 - Labs Práticos](./29-Labs-Praticos/README.md) | Hub de labs | Índice prático | Não |

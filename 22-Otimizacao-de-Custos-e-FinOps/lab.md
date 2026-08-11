@@ -1,33 +1,77 @@
-﻿# Lab Guiado
+# Workshop - Revisao Arquitetural FinOps
 
-## Objetivo
+> Exercicio de analise. Nao acesse console nem altere recursos reais.
 
-Validar um padrão relacionado a Otimização de Custos e FinOps em ambiente de estudo, com escopo pequeno, evidência observável e cleanup claro.
+## Cenario
 
-## Serviços sugeridos
+Uma empresa SaaS multi-account quer reduzir custo mensal sem comprometer disponibilidade dos clientes.
 
-Cost Explorer, Budgets, CUR, Savings Plans, Compute Optimizer
+## Dados mensais ficticios
 
-## Faixa de custo esperada
+| Categoria | Custo mensal | Observacao |
+| --- | --- | --- |
+| EC2 | USD 42.000 | 60% baseline estavel, 40% picos |
+| RDS | USD 28.000 | Duas instancias superdimensionadas |
+| S3 | USD 18.000 | 70% dados raramente acessados |
+| NAT Gateway | USD 12.000 | Alto trafego para servicos AWS publicos |
+| Data Transfer | USD 15.000 | Replicacao inter-region ampla |
+| EBS | USD 7.000 | Volumes antigos sem owner |
+| CloudFront | USD 4.000 | Reduz origem, custo aceitavel |
+| Idle development | USD 9.000 | Ambientes ligados 24x7 |
 
-- Execute em conta de laboratório.
-- Prefira recursos elegíveis a baixo custo ou execução curta.
-- Remova todos os recursos ao final.
+## Tarefa 1 - Identificar drivers
 
-## Passo a passo
+Classifique:
 
-1. Defina o cenário e o requisito dominante antes de criar recursos.
-2. Implemente o menor fluxo funcional que demonstre a decisão arquitetural.
-3. Ative logs, métricas ou evidências mínimas de validação.
-4. Simule uma restrição, falha ou mudança de carga compatível com o tema.
-5. Registre o que mudaria em produção: governança, custo, segurança e operação.
+- Custo de compute.
+- Custo de banco.
+- Custo de armazenamento.
+- Custo de rede.
+- Custo ocioso.
 
-## Cleanup
+## Tarefa 2 - Quick wins
 
-1. Remova recursos criados no laboratório.
-2. Apague dados temporários, snapshots e endpoints não usados.
-3. Verifique custos no dia seguinte.
+Liste acoes de baixo risco:
 
-## Takeaway para prova
+- Scheduling dev.
+- Volumes EBS sem owner.
+- Tags obrigatorias.
+- Budgets por time.
 
-O valor do lab é conectar configuração técnica à decisão arquitetural: por que esta solução atende melhor ao cenário do que as alternativas.
+## Tarefa 3 - Commitment
+
+Defina:
+
+- Qual parte do EC2 e baseline.
+- O que pode receber Savings Plans/RIs.
+- O que deve continuar flexivel.
+- Quais workloads podem usar Spot.
+
+## Tarefa 4 - Mudancas arquiteturais
+
+Avalie:
+
+- VPC endpoints para reduzir NAT quando aplicavel.
+- Lifecycle S3.
+- Rightsizing RDS.
+- Revisao de replicacao inter-region.
+- Cache/CDN para reduzir origem.
+
+## Tarefa 5 - Plano priorizado
+
+Monte:
+
+| Prioridade | Acao | Beneficio esperado | Risco | Validacao |
+| --- | --- | --- | --- | --- |
+| 1 |  |  |  |  |
+| 2 |  |  |  |  |
+| 3 |  |  |  |  |
+
+## Entrega esperada
+
+- Ranking de oportunidades.
+- Separacao quick win vs mudanca arquitetural.
+- Decisoes de commitment.
+- Riscos de disponibilidade.
+- Mecanismo de monitoramento continuo.
+- Explicacao de por que menor preco unitario nem sempre e menor custo total.

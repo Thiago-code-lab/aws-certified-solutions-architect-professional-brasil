@@ -1,69 +1,104 @@
-﻿# CloudFormation, CI/CD e Estratégias de Deployment
+# 17 - CloudFormation, CI/CD e Estrategias de Deployment
 
-## Visão Geral
+Este modulo ensina deployment architecture e gestao de risco operacional. No SAP-C02, IaC e CI/CD aparecem como mecanismos para reduzir drift, padronizar ambientes, controlar blast radius e escolher rollout/rollback conforme criticidade, compliance e velocidade de entrega.
 
-Este módulo cobre IaC, rollback, blue/green, canary, governança de mudanças e automação segura, com foco no tipo de raciocínio arquitetural exigido no AWS Certified Solutions Architect Professional (SAP-C02).
+## Objetivos
 
-## Conceitos-Chave
+- Posicionar CloudFormation, stacks, nested stacks, StackSets, change sets, rollback e drift detection.
+- Desenhar pipelines com CodePipeline/CodeBuild e roles cross-account.
+- Escolher estrategias all-at-once, rolling, canary, blue/green e immutable.
+- Planejar promocao dev -> staging -> prod, approvals e separacao de contas.
+- Reduzir blast radius de deployments multi-account e multi-region.
 
-- Domínio predominante: Design for New Solutions.
-- Serviços e padrões principais: CloudFormation, CodePipeline, CodeDeploy, Systems Manager.
-- Decisão orientada por requisitos de negócio, risco operacional, segurança, resiliência, performance e custo.
-- Avaliação de impactos em ambientes multi-conta, multi-Region, híbridos ou em migração quando aplicável.
+## Comparacoes criticas
 
-## Relevância para o SAP-C02
+| Comparacao | Decisao Professional |
+| --- | --- |
+| Stack vs StackSets | Stack gerencia um escopo; StackSets distribui stacks por contas/regioes |
+| Change set vs update direto | Change set mostra impacto antes de aplicar; update direto e mais rapido, mas menos controlado |
+| Blue/green vs canary | Blue/green troca ambientes; canary libera pequena porcentagem e aumenta gradualmente |
+| Canary vs rolling | Canary testa com pequena amostra; rolling substitui lotes ao longo do fleet |
+| Immutable vs in-place | Immutable cria nova capacidade; in-place altera recursos existentes |
+| Manual vs IaC | IaC cria rastreabilidade e repetibilidade; manual aumenta drift |
+| Velocidade vs blast radius | Deploy rapido amplia impacto; rollout gradual reduz risco com mais tempo/custo |
+| Rollback automatico vs intervencao manual | Automatico reduz MTTR; manual pode ser exigido em mudancas reguladas |
 
-O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicamente válidas. O objetivo aqui é treinar por que uma arquitetura é preferível, quando outra opção se torna melhor e quais detalhes do enunciado mudam a decisão.
+## Matriz de deployment
 
-## Decisões Arquiteturais
+| Estrategia | Risco | Velocidade | Rollback | Custo temporario | Melhor cenario |
+| --- | --- | --- | --- | --- | --- |
+| All-at-once | Alto | Alta | Pode ser abrupto | Baixo | Ambientes nao criticos ou mudanca pequena |
+| Rolling | Medio | Media | Reverte por lotes | Moderado | Aplicacoes tolerantes a versoes mistas |
+| Canary | Baixo/medio | Media/baixa | Reverter antes de ampliar | Moderado | API com metricas claras e alto risco funcional |
+| Blue/Green | Baixo/medio | Media | Troca de trafego para ambiente anterior | Alto | Zero/baixo downtime e rollback rapido |
+| Immutable | Baixo | Media | Descartar nova capacidade | Alto | Infra/app onde estado local nao deve ser alterado |
 
-- Identificar o requisito dominante antes de escolher serviços.
-- Validar dependências entre contas, redes, dados, identidade e operação.
-- Preferir serviços gerenciados quando reduzem risco sem violar requisitos explícitos.
-- Documentar exceções quando controle, latência, compliance ou custo justificarem maior complexidade.
+## Exemplo multi-account
 
-## Trade-offs
+```text
+Git Repository
+      |
+   Pipeline
+      |
+      +---- Dev Account
+      |
+      +---- Staging Account
+      |
+      +---- Production Account
+                |
+            Approval Gate
+```
 
-- Menor operação versus maior controle.
-- Resiliência multi-AZ versus multi-Region e seu impacto em custo e complexidade.
-- Centralização de governança versus autonomia de times e contas.
-- Otimização de custo versus requisitos de desempenho, recuperação e segurança.
+Fluxo:
 
-## Cenários de Prova
+1. Commit aciona pipeline.
+2. CodeBuild/testes validam artefatos e templates.
+3. Dev recebe deploy automatizado.
+4. Staging valida integracao e smoke tests.
+5. Production exige approval gate quando compliance ou risco pedem intervencao.
+6. Roles cross-account limitam o que o pipeline pode alterar.
+7. Change sets e rollback reduzem risco de infraestrutura.
 
-- Organizações com múltiplas contas e times independentes.
-- Ambientes híbridos com conectividade, DNS e segurança centralizados.
-- Workloads com requisitos conflitantes de RTO/RPO, compliance, custo e latência.
-- Migração ou modernização gradual sem indisponibilidade significativa.
+## Raciocinio SAP-C02
 
-## Armadilhas Comuns
+### Cenario 1: 100 contas e padronizacao
 
-- Escolher serviço por reconhecimento de nome, sem validar a restrição principal.
-- Resolver um problema organizacional com uma configuração local de uma única conta.
-- Ignorar operação contínua, automação, rastreabilidade e governança.
-- Escolher a arquitetura mais completa quando a pergunta pede menor esforço operacional ou menor custo.
+- Cenario: uma organizacao precisa aplicar baseline de IAM, Config e logging em muitas contas.
+- Restricoes: repetibilidade, governanca e multiplas regioes.
+- Sinal: deployment organizacional de IaC.
+- Melhor decisao: CloudFormation StackSets com permissoes apropriadas e controles de rollout.
+- Trade-off: requer governanca de operacoes StackSets, mas reduz configuracao manual e drift.
 
-## Próximo Passo de Revisão
+### Cenario 2: API critica com mudanca arriscada
 
-1. Leia cheatsheet.md para consolidar critérios de decisão.
-2. Use casos-de-uso.md para treinar análise de cenários.
-3. Resolva questoes.md sem consulta e registre padrões de erro no módulo 30.
-4. Consulte links.md para validar detalhes em documentação oficial.
+- Cenario: nova versao altera regra de precificacao.
+- Restricoes: usuarios globais, erro caro e rollback rapido.
+- Sinal: alto risco funcional com metricas observaveis.
+- Melhor decisao: canary ou blue/green conforme capacidade de rotear trafego e manter versoes.
+- Trade-off: menor risco, mas mais tempo, custo temporario e automacao de observabilidade.
+
+### Cenario 3: producao regulada
+
+- Cenario: deploys frequentes, mas producao exige aprovacao e evidencia.
+- Restricoes: auditoria, segregacao de ambientes e rollback.
+- Melhor decisao: pipeline multi-account com gates, change sets, logs de execucao e roles com menor privilegio.
+- Trade-off: menos velocidade em prod, mais rastreabilidade.
 
 ## Estudos Complementares
 
-Para revisar CloudFormation, CodePipeline e automacao basica antes de aprofundar rollback, canary, blue/green e governanca de deployment neste modulo Professional:
+Use a trilha Associate apenas para revisar fundamentos de CloudFormation, CodePipeline e deployment antes de aprofundar estrategias de rollout, rollback e governanca Professional:
 
 https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
 
+## Arquivos do modulo
+
+- [Questoes](questoes.md)
+- [Flashcards](flashcards.md)
+- [Cheatsheet](cheatsheet.md)
+- [Casos de uso](casos-de-uso.md)
+- [Referencias oficiais](links.md)
+- [Workshop de deployment](lab.md)
+
 ---
 
-## ☁️ Acompanhe a CloudStudy
-
-Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais prática, organizada e acessível.
-
-Siga a CloudStudy para acompanhar novos materiais, atualizações e conteúdos sobre certificações AWS:
-
-- Instagram: https://www.instagram.com/cloudstudy.ai/
-- LinkedIn: https://www.linkedin.com/company/cloudstudy-ai/
-
+CloudStudy - Trilha AWS Solutions Architect Professional

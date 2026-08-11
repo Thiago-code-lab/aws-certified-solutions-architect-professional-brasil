@@ -1,33 +1,57 @@
-﻿# Lab Guiado
+# Workshop - Estrategia de Deployment
 
-## Objetivo
+> Exercicio de desenho. Nenhum deployment precisa ser executado.
 
-Validar um padrão relacionado a CloudFormation, CI/CD e Estratégias de Deployment em ambiente de estudo, com escopo pequeno, evidência observável e cleanup claro.
+## Cenario
 
-## Serviços sugeridos
+Uma plataforma SaaS possui contas separadas de desenvolvimento, staging e producao. O produto atende usuarios globais, tem releases frequentes, disponibilidade estrita e precisa de aprovacao de compliance antes de producao.
 
-CloudFormation, CodePipeline, CodeDeploy, Systems Manager
+## Tarefa 1 - Estrutura IaC
 
-## Faixa de custo esperada
+Defina:
 
-- Execute em conta de laboratório.
-- Prefira recursos elegíveis a baixo custo ou execução curta.
-- Remova todos os recursos ao final.
+- Stacks por dominio.
+- O que poderia usar nested stacks.
+- O que deveria usar StackSets.
+- Como evitar drift.
 
-## Passo a passo
+## Tarefa 2 - Caminho de promocao
 
-1. Defina o cenário e o requisito dominante antes de criar recursos.
-2. Implemente o menor fluxo funcional que demonstre a decisão arquitetural.
-3. Ative logs, métricas ou evidências mínimas de validação.
-4. Simule uma restrição, falha ou mudança de carga compatível com o tema.
-5. Registre o que mudaria em produção: governança, custo, segurança e operação.
+```text
+Git -> Build/Test -> Dev -> Staging -> Approval -> Production
+```
 
-## Cleanup
+Explique:
 
-1. Remova recursos criados no laboratório.
-2. Apague dados temporários, snapshots e endpoints não usados.
-3. Verifique custos no dia seguinte.
+- Quem aprova.
+- Quais evidencias sao exigidas.
+- Quais roles o pipeline assume em cada conta.
 
-## Takeaway para prova
+## Tarefa 3 - Estrategia de deployment
 
-O valor do lab é conectar configuração técnica à decisão arquitetural: por que esta solução atende melhor ao cenário do que as alternativas.
+Escolha uma estrategia para:
+
+| Mudanca | Estrategia | Justificativa |
+| --- | --- | --- |
+| Alteracao pequena de UI |  |  |
+| Nova regra de billing |  |  |
+| Nova infraestrutura de rede |  |  |
+| Atualizacao de API critica |  |  |
+
+## Tarefa 4 - Rollback e falhas
+
+Documente:
+
+- Rollback de aplicacao.
+- Rollback de infraestrutura.
+- O que fazer se change set substituir recurso critico.
+- Como reduzir blast radius por conta, regiao ou porcentagem de trafego.
+
+## Entrega esperada
+
+- Diagrama de pipeline multi-account.
+- Estrutura de stacks/StackSets.
+- Estrategia de deployment por tipo de mudanca.
+- Approval gates.
+- Plano de rollback.
+- Trade-offs de velocidade, custo temporario e risco.

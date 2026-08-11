@@ -1,37 +1,111 @@
-﻿# Questões de Revisão
+# Questoes - Deployment e IaC
 
-## Questão 1
+## Questao 1
 
-Uma organização precisa tomar uma decisão relacionada a CloudFormation, CI/CD e Estratégias de Deployment em um cenário SAP-C02 com restrições de segurança, operação, custo e continuidade. Qual abordagem tende a ser mais adequada?
+Uma empresa global precisa aplicar uma configuracao padrao de AWS Config e CloudTrail em 100 contas e varias regioes. A equipe quer evitar criacao manual e manter controle central de atualizacoes.
 
-A) Escolher o serviço mais conhecido sem avaliar requisitos do enunciado.
-B) Identificar a restrição dominante, comparar trade-offs e selecionar a arquitetura com menor risco operacional aceitável.
-C) Adicionar componentes avançados mesmo quando não há requisito que justifique a complexidade.
-D) Priorizar apenas custo inicial e ignorar impacto em resiliência e governança.
+Qual abordagem e mais adequada?
+
+A. CloudFormation StackSets com escopo de contas/regioes e operacao controlada.
+B. Criar manualmente cada stack em cada conta.
+C. Copiar templates por e-mail para cada time aplicar.
+D. Usar apenas Route 53 health checks.
 
 <details>
 <summary><strong>Ver resposta</strong></summary>
 
-✅ **Resposta correta:** B
+**Resposta correta:** A
 
-**Explicação:** No SAP-C02, a melhor alternativa normalmente equilibra requisitos explícitos, operação contínua, segurança, confiabilidade, performance e custo. A resposta correta raramente depende apenas de reconhecer um serviço.
+**Por que esta correta:** StackSets foram desenhados para distribuir stacks entre multiplas contas e regioes com governanca.
+
+**Por que as alternativas sao mais fracas:** B e C aumentam drift e erro humano; D nao gerencia infraestrutura.
 
 </details>
 
-## Questão 2
+## Questao 2
 
-Qual sinal do enunciado deve mudar a decisão arquitetural neste módulo?
+Uma API de checkout tera uma mudanca de regra de negocio com risco alto. A empresa possui metricas de erro e conversao em tempo quase real e quer expor a nova versao inicialmente a poucos usuarios.
 
-A) Presença de múltiplas contas, requisitos de auditoria, RTO/RPO, migração ou restrições de conectividade.
-B) Preferência pessoal por um serviço específico.
-C) Desejo de usar a opção mais recente sem justificativa técnica.
-D) Ausência de métricas, logs e ownership operacional.
+Qual estrategia e mais defensavel?
+
+A. Canary deployment.
+B. All-at-once deployment.
+C. Atualizacao manual em producao sem observabilidade.
+D. Desativar rollback para acelerar a entrega.
 
 <details>
 <summary><strong>Ver resposta</strong></summary>
 
-✅ **Resposta correta:** A
+**Resposta correta:** A
 
-**Explicação:** Cenários profissionais exigem leitura de contexto organizacional e operacional. Esses sinais indicam que a decisão precisa considerar arquitetura além de uma única conta ou serviço isolado.
+**Por que esta correta:** canary reduz blast radius liberando gradualmente e usando metricas para decidir avancar ou reverter.
+
+**Por que as alternativas sao mais fracas:** B amplia impacto; C remove controle; D aumenta risco operacional.
+
+</details>
+
+## Questao 3
+
+Um template CloudFormation altera sub-redes, security groups e um load balancer de producao. Antes de aplicar, o time precisa revisar quais recursos serao substituidos.
+
+Qual recurso atende melhor?
+
+A. Change set.
+B. Stack drift detection apenas depois da mudanca.
+C. All-at-once deployment.
+D. S3 lifecycle rule.
+
+<details>
+<summary><strong>Ver resposta</strong></summary>
+
+**Resposta correta:** A
+
+**Por que esta correta:** change set permite visualizar mudancas planejadas antes da execucao, incluindo possiveis substituicoes.
+
+**Por que as alternativas sao mais fracas:** B detecta divergencia, nao antecipa update; C e estrategia de rollout, nao revisao de IaC; D e irrelevante.
+
+</details>
+
+## Questao 4
+
+Uma plataforma SaaS precisa promover mudancas de dev para staging e producao em contas separadas. Producao exige aprovacao formal, roles com menor privilegio e evidencias de deploy.
+
+Qual desenho e mais adequado?
+
+A. Pipeline multi-account com roles cross-account, approval gate antes de producao e logs de execucao.
+B. Usuario IAM compartilhado com AdministratorAccess em todas as contas.
+C. Deploy direto de laptops dos desenvolvedores em producao.
+D. Stack unica na management account para todos os recursos.
+
+<details>
+<summary><strong>Ver resposta</strong></summary>
+
+**Resposta correta:** A
+
+**Por que esta correta:** separa ambientes, controla promocao, registra evidencias e limita permissao do pipeline.
+
+**Por que as alternativas sao mais fracas:** B e C violam auditoria e menor privilegio; D mistura escopos e aumenta blast radius.
+
+</details>
+
+## Questao 5
+
+Uma aplicacao critica precisa de rollback rapido com baixo downtime. A empresa consegue manter temporariamente dois ambientes completos e alternar trafego.
+
+Qual estrategia tende a ser mais apropriada?
+
+A. Blue/green deployment.
+B. All-at-once em ambiente unico.
+C. Atualizacao in-place sem health checks.
+D. Criar snapshot manual apos o deploy.
+
+<details>
+<summary><strong>Ver resposta</strong></summary>
+
+**Resposta correta:** A
+
+**Por que esta correta:** blue/green permite validar novo ambiente e alternar trafego, mantendo caminho de retorno ao ambiente anterior.
+
+**Por que as alternativas sao mais fracas:** B e C aumentam downtime/blast radius; D nao e estrategia de rollback de aplicacao.
 
 </details>

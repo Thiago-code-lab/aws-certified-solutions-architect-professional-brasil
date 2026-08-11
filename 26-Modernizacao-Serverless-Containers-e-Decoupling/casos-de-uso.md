@@ -1,19 +1,99 @@
-﻿# Casos de Uso
+# Casos de Uso - Modernizacao
 
-## Cenário 1: Organização com múltiplas contas
+## Cenario 1 - Monolito com demanda mobile
 
-**Padrão recomendado:** separar responsabilidades por conta, centralizar governança e automatizar controles essenciais.  
-**Motivo:** reduz blast radius e melhora auditoria sem bloquear autonomia dos times.  
-**Sinal de prova:** termos como unidades de negócio, conta compartilhada, compliance, logging centralizado ou acesso cross-account.
+### Contexto
 
-## Cenário 2: Requisito conflitante de custo e resiliência
+Uma empresa tem monolito relacional de 10 anos e precisa lancar APIs mobile rapidamente.
 
-**Padrão recomendado:** comparar níveis de disponibilidade e recuperação contra impacto financeiro e operacional.  
-**Motivo:** SAP-C02 frequentemente testa a alternativa suficiente, não a arquitetura mais sofisticada.  
-**Sinal de prova:** RTO/RPO, orçamento limitado, operação enxuta, múltiplas regiões ou indisponibilidade tolerável.
+### Requisitos
 
-## Cenário 3: Modernização ou migração gradual
+- Evitar rewrite multi-ano.
+- Entregar valor incremental.
+- Reduzir risco operacional.
+- Manter regras legadas funcionando.
 
-**Padrão recomendado:** reduzir acoplamento, planejar ondas e manter coexistência temporária quando necessário.  
-**Motivo:** evita cortes arriscados e permite validar arquitetura por etapas.  
-**Sinal de prova:** legado, data center, baixa tolerância a downtime, dependências desconhecidas ou janela de migração curta.
+### Arquitetura recomendada
+
+Strangler pattern com API/routing layer, novos servicos para capacidades mobile e monolito mantendo funcoes estaveis.
+
+### Por que
+
+O negocio precisa de modernizacao incremental, nao substituicao total imediata.
+
+### Trade-offs
+
+Convivencia temporaria, integracao de dados e observabilidade mais complexas.
+
+### Por que nao as alternativas
+
+Big-bang rewrite atrasa valor; rehost puro nao resolve release; EKS sem decomposicao so muda runtime.
+
+### Sinal de prova
+
+"old monolith", "new API/mobile", "cannot accept multi-year rewrite".
+
+## Cenario 2 - Processamento em background
+
+### Contexto
+
+Pedidos acionam integracoes externas lentas e variaveis.
+
+### Requisitos
+
+- Nao bloquear requisicao principal.
+- Retry e DLQ.
+- Absorver picos.
+
+### Arquitetura recomendada
+
+SQS para buffering, consumidores Lambda ou ECS conforme duracao/processamento, DLQ e idempotencia.
+
+### Por que
+
+O limite assincrono reduz acoplamento e protege a experiencia do usuario.
+
+### Trade-offs
+
+Consistencia eventual e necessidade de rastrear estados.
+
+### Por que nao as alternativas
+
+Fluxo sincrono aumenta latencia; aumentar timeout mascara falhas; EventBridge pode ser complementar, mas fila e melhor para buffering direto.
+
+### Sinal de prova
+
+"background processing", "retry", "traffic spikes".
+
+## Cenario 3 - Containers sem Kubernetes maduro
+
+### Contexto
+
+Um time pequeno quer empacotar servicos em containers, mas nao possui plataforma Kubernetes.
+
+### Requisitos
+
+- Baixa operacao.
+- Deploy rapido.
+- Stateless services.
+- Escala sob demanda.
+
+### Arquitetura recomendada
+
+ECS com Fargate, pipeline de containers e observabilidade padronizada.
+
+### Por que
+
+Entrega containers com menor overhead operacional.
+
+### Trade-offs
+
+Menos controle/ecossistema Kubernetes, mas melhor encaixe para time pequeno.
+
+### Por que nao as alternativas
+
+EKS adiciona plataforma a operar; EC2 autogerenciado aumenta toil; Lambda pode nao encaixar se o processo for longo/customizado.
+
+### Sinal de prova
+
+"small team", "containers", "no Kubernetes expertise".

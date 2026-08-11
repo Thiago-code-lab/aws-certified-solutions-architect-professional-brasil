@@ -1,73 +1,102 @@
-﻿# Otimização de Custos e FinOps
+# 22 - Otimizacao de Custos e FinOps
 
-## Visão Geral
+Este modulo trata custo como disciplina arquitetural continua. No SAP-C02, otimizar custo nao significa escolher sempre o recurso mais barato; significa equilibrar requisito de negocio, disponibilidade, performance, operacao, risco e modelo de compra com visibilidade suficiente para tomar decisao.
 
-Este módulo cobre visibilidade, alocação, rightsizing, modelos de compra e trade-offs de custo, com foco no tipo de raciocínio arquitetural exigido no AWS Certified Solutions Architect Professional (SAP-C02).
+## Objetivos
 
-## Conceitos-Chave
+- Construir visibilidade com Cost Explorer, Budgets, Cost and Usage Report e tags.
+- Alocar custos por conta, produto, ambiente e unidade de negocio.
+- Diferenciar Savings Plans, Reserved Instances, On-Demand e Spot.
+- Aplicar rightsizing, storage lifecycle, desligamento de recursos ociosos e revisao de transferencia de dados.
+- Avaliar custo de arquitetura: NAT Gateway, trafego inter-region, overprovisioning, banco, armazenamento e operacao.
+- Usar FinOps como ciclo continuo, nao evento unico.
 
-- Domínio predominante: Continuous Improvement.
-- Serviços e padrões principais: Cost Explorer, Budgets, CUR, Savings Plans, Compute Optimizer.
-- Decisão orientada por requisitos de negócio, risco operacional, segurança, resiliência, performance e custo.
-- Avaliação de impactos em ambientes multi-conta, multi-Region, híbridos ou em migração quando aplicável.
+## Loop FinOps
 
-## Relevância para o SAP-C02
+```text
+Measure
+   |
+Allocate
+   |
+Analyze
+   |
+Optimize
+   |
+Commit
+   |
+Monitor
+   |
+Repeat
+```
 
-O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicamente válidas. O objetivo aqui é treinar por que uma arquitetura é preferível, quando outra opção se torna melhor e quais detalhes do enunciado mudam a decisão.
+Otimização e continua porque uso, arquitetura, trafego, precos, releases e requisitos de negocio mudam. Comprometer gasto antes de medir pode cristalizar desperdicio; otimizar sem alocacao impede accountability.
 
-## Decisões Arquiteturais
+## Distincoes criticas
 
-- Identificar o requisito dominante antes de escolher serviços.
-- Validar dependências entre contas, redes, dados, identidade e operação.
-- Preferir serviços gerenciados quando reduzem risco sem violar requisitos explícitos.
-- Documentar exceções quando controle, latência, compliance ou custo justificarem maior complexidade.
+| Comparacao | Decisao Professional |
+| --- | --- |
+| Savings Plans vs Reserved Instances | Savings Plans oferecem flexibilidade de compute; RIs podem ser especificas para familias/servicos e requerem encaixe preciso |
+| On-Demand vs Spot | On-Demand para previsibilidade/disponibilidade; Spot para workloads tolerantes a interrupcao |
+| Cost Explorer vs Budgets | Cost Explorer analisa historico/tendencia; Budgets alerta/acompanha limites |
+| Visibilidade vs controle | Ver custo nao reduz custo sozinho; controle exige ownership e acoes |
+| Rightsizing vs compromisso | Rightsizing reduz desperdicio; commitment desconta uso esperado apos estabilizar baseline |
+| Compute vs data transfer | Computacao visivel pode esconder transferencia inter-AZ/inter-region/NAT significativa |
+| Menor preco infra vs menor custo total | Servico gerenciado pode custar mais em recurso, mas reduzir operacao e risco |
 
-## Trade-offs
+## Tabela de decisao
 
-- Menor operação versus maior controle.
-- Resiliência multi-AZ versus multi-Region e seu impacto em custo e complexidade.
-- Centralização de governança versus autonomia de times e contas.
-- Otimização de custo versus requisitos de desempenho, recuperação e segurança.
+| Sinal | Estrategia provavel | Beneficio | Risco/Trade-off | Armadilha |
+| --- | --- | --- | --- | --- |
+| Baseline EC2 estavel | Savings Plans/RIs apos rightsizing | Desconto em uso previsivel | Compromisso financeiro | Comprar antes de medir |
+| Workload imprevisivel | On-Demand + autoscaling | Flexibilidade | Custo unitario maior | Comprometer picos temporarios |
+| Batch tolerante a interrupcao | Spot Instances | Custo menor | Interrupcoes | Usar para workload stateful critico |
+| Recursos dev ociosos | Scheduler/desligamento/tag owner | Quick win | Pode impactar testes | Desligar sem ownership |
+| Arquivo S3 massivo | Lifecycle para classes adequadas | Reduz armazenamento | Custo/latencia de recuperacao | Mover dados acessados frequentemente |
+| Multi-account sem ownership | Tags + contas por produto + CUR | Alocacao clara | Governanca de tagging | Otimizar sem dono |
+| Alta transferencia inter-region | Redesenhar proximidade/cache/replicacao | Reduz custo recorrente | Pode alterar resiliencia | Olhar so compute |
+| Banco superdimensionado | Rightsizing/read replicas/cache quando aplicavel | Reduz custo sem perder SLA | Testes de performance | Cortar capacidade sem medir |
+| Demanda variavel | Auto Scaling/serverless/managed scaling | Paga mais proximo do uso | Limites e cold starts | Capacidade fixa por medo |
 
-## Cenários de Prova
+## Raciocinio SAP-C02
 
-- Organizações com múltiplas contas e times independentes.
-- Ambientes híbridos com conectividade, DNS e segurança centralizados.
-- Workloads com requisitos conflitantes de RTO/RPO, compliance, custo e latência.
-- Migração ou modernização gradual sem indisponibilidade significativa.
+### Cenario 1: CFO exige atribuicao por unidade
 
-## Armadilhas Comuns
+- Cenario: a conta consolidada cresce, mas times contestam cobrancas.
+- Restricoes: multiplas contas, produtos e ambientes.
+- Sinal: visibilidade e alocacao antes de corte.
+- Melhor decisao: estrategia de contas/tags, Cost Categories/CUR, Budgets por owner e relatorios recorrentes.
+- Trade-off: governanca de tagging e disciplina operacional.
+- Por que nao alternativas: desligar recursos sem ownership gera conflito; Savings Plans nao resolvem accountability.
 
-- Escolher serviço por reconhecimento de nome, sem validar a restrição principal.
-- Resolver um problema organizacional com uma configuração local de uma única conta.
-- Ignorar operação contínua, automação, rastreabilidade e governança.
-- Escolher a arquitetura mais completa quando a pergunta pede menor esforço operacional ou menor custo.
+### Cenario 2: baseline estavel com picos
 
-## Próximo Passo de Revisão
+- Cenario: aplicacao tem uso minimo previsivel e campanhas sazonais.
+- Restricoes: disponibilidade nao pode cair.
+- Melhor decisao: rightsizing, commitment para baseline e On-Demand/Spot para partes tolerantes a interrupcao nos picos.
+- Trade-off: maior complexidade de capacidade, melhor equilibrio entre desconto e flexibilidade.
 
-1. Leia cheatsheet.md para consolidar critérios de decisão.
-2. Use casos-de-uso.md para treinar análise de cenários.
-3. Resolva questoes.md sem consulta e registre padrões de erro no módulo 30.
-4. Consulte links.md para validar detalhes em documentação oficial.
+### Cenario 3: custo de rede inesperado
+
+- Cenario: arquitetura global tem alto custo de transferencia inter-region e NAT.
+- Restricoes: usuarios globais e requisitos de resiliencia.
+- Melhor decisao: analisar fluxo de dados, aproximar processamento dos dados, usar cache/CDN/endpoints quando aplicavel e reduzir trafego desnecessario.
+- Trade-off: mudancas de arquitetura podem afetar simplicidade e DR.
 
 ## Estudos Complementares
 
-Para revisar trade-offs de custo em arquitetura AWS antes de aprofundar FinOps, alocação de custos e otimização arquitetural:
-
-https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
-
-Se precisar reforçar billing, pricing, responsabilidade compartilhada ou fundamentos de cloud relacionados a este tema:
+Cloud Practitioner e util para revisar billing, pricing, responsabilidade compartilhada e conceitos basicos de cost management antes de aprofundar FinOps arquitetural:
 
 https://github.com/Thiago-code-lab/aws-certified-cloud-practitioner-brasil
 
+## Arquivos do modulo
+
+- [Questoes](questoes.md)
+- [Flashcards](flashcards.md)
+- [Cheatsheet](cheatsheet.md)
+- [Casos de uso](casos-de-uso.md)
+- [Referencias oficiais](links.md)
+- [Workshop FinOps](lab.md)
+
 ---
 
-## ☁️ Acompanhe a CloudStudy
-
-Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais prática, organizada e acessível.
-
-Siga a CloudStudy para acompanhar novos materiais, atualizações e conteúdos sobre certificações AWS:
-
-- Instagram: https://www.instagram.com/cloudstudy.ai/
-- LinkedIn: https://www.linkedin.com/company/cloudstudy-ai/
-
+CloudStudy - Trilha AWS Solutions Architect Professional
