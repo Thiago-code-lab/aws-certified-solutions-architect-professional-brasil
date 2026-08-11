@@ -1,58 +1,101 @@
-﻿# Organizations, Control Tower e Multi-Account
+# Organizations, Control Tower e Multi-Account
 
 ## Visão Geral
 
-Este módulo cobre desenho de landing zone, contas, OUs, guardrails e governança multi-conta, com foco no tipo de raciocínio arquitetural exigido no AWS Certified Solutions Architect Professional (SAP-C02).
+No SAP-C02, multi-account não é um detalhe administrativo. É uma decisão arquitetural para reduzir blast radius, separar responsabilidades, aplicar governança centralizada e viabilizar crescimento organizacional sem transformar uma conta AWS em um monolito operacional.
+
+Este módulo trata de como desenhar uma estrutura de contas com AWS Organizations, AWS Control Tower, OUs, SCPs, administradores delegados, logging centralizado e contas compartilhadas. A pergunta central não é “como criar uma conta?”, mas “qual desenho de organização reduz risco e ainda permite autonomia para times diferentes?”.
 
 ## Conceitos-Chave
 
-- Domínio predominante: Organizational Complexity.
-- Serviços e padrões principais: AWS Organizations, AWS Control Tower, IAM Identity Center, CloudTrail, Config.
-- Decisão orientada por requisitos de negócio, risco operacional, segurança, resiliência, performance e custo.
-- Avaliação de impactos em ambientes multi-conta, multi-Region, híbridos ou em migração quando aplicável.
+- **AWS Organizations:** base para agrupar contas, aplicar SCPs, consolidar billing e habilitar integrações organizacionais.
+- **AWS Control Tower:** acelera a criação de landing zone com Account Factory, guardrails, contas essenciais e governança inicial.
+- **Organizational Units (OUs):** agrupam contas por função, criticidade, ambiente, unidade de negócio ou requisitos regulatórios.
+- **SCPs:** definem limites máximos de permissão para contas/OUs; não concedem acesso por si só.
+- **Delegated administrator:** permite que serviços como GuardDuty, Security Hub, Config e Firewall Manager sejam administrados por contas especializadas.
+- **Contas compartilhadas:** normalmente incluem management, log archive, audit/security, networking/shared services e workloads.
+- **Centralized logging:** CloudTrail, Config, VPC Flow Logs e logs de serviços enviados para uma conta de log imutável.
 
 ## Relevância para o SAP-C02
 
-O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicamente válidas. O objetivo aqui é treinar por que uma arquitetura é preferível, quando outra opção se torna melhor e quais detalhes do enunciado mudam a decisão.
+O exame frequentemente descreve empresas com múltiplas unidades de negócio, workloads regulados, aquisições, times independentes ou necessidade de padronizar contas. A resposta correta tende a combinar Organizations, OUs, SCPs, Control Tower, logging centralizado e administradores delegados, em vez de resolver tudo com IAM local em uma única conta.
+
+## Estrutura multi-account de exemplo
+
+```text
+Root
+├── Security OU
+│   ├── Audit account
+│   └── Log archive account
+├── Infrastructure OU
+│   ├── Network account
+│   └── Shared services account
+├── Workloads OU
+│   ├── Prod app account
+│   ├── Non-prod app account
+│   └── Data platform account
+├── Sandbox OU
+│   └── Experiment accounts
+└── Suspended OU
+    └── Closed or quarantined accounts
+```
+
+Esse desenho separa segurança, rede, serviços compartilhados e workloads. Em cenários regulados, uma OU adicional pode existir para workloads com requisitos específicos, como dados sensíveis, residência de dados ou aprovação manual de mudanças.
 
 ## Decisões Arquiteturais
 
-- Identificar o requisito dominante antes de escolher serviços.
-- Validar dependências entre contas, redes, dados, identidade e operação.
-- Preferir serviços gerenciados quando reduzem risco sem violar requisitos explícitos.
-- Documentar exceções quando controle, latência, compliance ou custo justificarem maior complexidade.
+| Cenário | Decisão preferida | Trade-off |
+|---|---|---|
+| Empresa começando landing zone do zero | Control Tower com Account Factory e guardrails | Menos flexibilidade inicial, mais velocidade e consistência |
+| Organização grande já operando Organizations | Evoluir OUs, SCPs e delegated admins sem refazer tudo | Exige governança incremental e cuidado com impacto em contas existentes |
+| Times independentes com workloads críticos | Separar contas por ambiente e domínio de negócio | Mais contas para operar, menor blast radius |
+| Segurança precisa investigar todas as contas | Delegar GuardDuty/Security Hub/Config para conta de segurança | Exige integração organizacional correta e permissões bem definidas |
+| Bloquear ações proibidas em toda uma OU | SCP na OU ou conta | Pode quebrar automações se aplicado sem teste |
 
-## Trade-offs
+## Organizations vs Control Tower
 
-- Menor operação versus maior controle.
-- Resiliência multi-AZ versus multi-Region e seu impacto em custo e complexidade.
-- Centralização de governança versus autonomia de times e contas.
-- Otimização de custo versus requisitos de desempenho, recuperação e segurança.
+| Escolha | Quando usar | Quando evitar |
+|---|---|---|
+| AWS Organizations | Você precisa da base de contas, OUs, SCPs, billing consolidado e integrações organizacionais | Quando a empresa quer uma landing zone padronizada rapidamente e ainda não tem governança madura |
+| AWS Control Tower | Você quer landing zone prescritiva, Account Factory, guardrails e baseline inicial consistente | Quando há customizações profundas que conflitam com a opinião operacional do Control Tower |
+
+Control Tower usa Organizations por baixo. A decisão não é “um ou outro” em termos absolutos; normalmente é “usar Organizations diretamente” ou “usar Control Tower como camada de governança e provisionamento sobre Organizations”.
+
+## SCP vs IAM Policy vs Permissions Boundary
+
+| Mecanismo | O que faz | Armadilha comum |
+|---|---|---|
+| SCP | Define o máximo permitido para contas/OUs | Não concede permissão; apenas limita |
+| IAM policy | Concede ou nega ações para usuários, grupos ou roles | Não impede outra role de ter permissão se não houver limite organizacional |
+| Permissions boundary | Define o máximo permitido para uma entidade IAM específica | Não substitui SCP para governança de conta/OUs |
 
 ## Cenários de Prova
 
-- Organizações com múltiplas contas e times independentes.
-- Ambientes híbridos com conectividade, DNS e segurança centralizados.
-- Workloads com requisitos conflitantes de RTO/RPO, compliance, custo e latência.
-- Migração ou modernização gradual sem indisponibilidade significativa.
+- Uma empresa adquiriu outra e precisa integrar contas sem misturar logs e permissões.
+- Uma unidade de negócio quer autonomia para deploy, mas segurança exige trilha de auditoria central.
+- Um time de sandbox cria recursos caros ou públicos; a organização precisa limitar ações sem travar produção.
+- Várias contas precisam habilitar GuardDuty, Security Hub e Config de forma centralizada.
+- Workloads regulados devem ficar separados de workloads comuns por requisitos de auditoria.
 
 ## Armadilhas Comuns
 
-- Escolher serviço por reconhecimento de nome, sem validar a restrição principal.
-- Resolver um problema organizacional com uma configuração local de uma única conta.
-- Ignorar operação contínua, automação, rastreabilidade e governança.
-- Escolher a arquitetura mais completa quando a pergunta pede menor esforço operacional ou menor custo.
+- Usar apenas IAM quando o requisito é controle organizacional.
+- Aplicar SCP restritiva direto em produção sem testar em OU piloto.
+- Colocar workloads na management account.
+- Tratar conta de log como conta operacional comum.
+- Criar OUs por organograma instável em vez de função, risco, ambiente ou governança.
+- Confundir delegated administrator com acesso administrativo irrestrito.
 
 ## Próximo Passo de Revisão
 
-1. Leia cheatsheet.md para consolidar critérios de decisão.
-2. Use casos-de-uso.md para treinar análise de cenários.
-3. Resolva questoes.md sem consulta e registre padrões de erro no módulo 30.
-4. Consulte links.md para validar detalhes em documentação oficial.
+1. Revise `cheatsheet.md` para fixar decisões entre Organizations, Control Tower, SCP, IAM e boundaries.
+2. Estude `casos-de-uso.md` e tente desenhar a árvore de OUs antes de ler a decisão recomendada.
+3. Resolva `questoes.md` prestando atenção a blast radius, auditoria, autonomia de times e governança.
+4. Consulte `links.md` para validar limites, comportamento de SCPs e recursos atuais do Control Tower.
 
 ## Estudos Complementares
 
-Para revisar Organizations e governança básica antes de aprofundar landing zones, OUs, contas e governança multi-account:
+Se você ainda precisa reforçar fundamentos de IAM, Organizations e governança básica antes de desenhar uma landing zone Professional, revise a trilha Associate de forma pontual:
 
 https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
 
@@ -66,4 +109,3 @@ Siga a CloudStudy para acompanhar novos materiais, atualizações e conteúdos s
 
 - Instagram: https://www.instagram.com/cloudstudy.ai/
 - LinkedIn: https://www.linkedin.com/company/cloudstudy-ai/
-

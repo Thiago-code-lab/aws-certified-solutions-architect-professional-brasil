@@ -52,9 +52,7 @@ O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicament
 
 ## Estudos Complementares
 
-Para revisar fundamentos dos serviços e padrões arquiteturais que serão migrados antes de aprofundar assessment, discovery e escolha dos 7Rs:
-
-https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
+Use documentacao oficial de Migration Hub, Application Discovery Service e AWS Prescriptive Guidance para validar assessment, discovery e criterios de escolha dos 7Rs.
 
 ---
 

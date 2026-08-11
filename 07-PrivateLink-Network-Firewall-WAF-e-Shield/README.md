@@ -52,7 +52,7 @@ O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicament
 
 ## Estudos Complementares
 
-Para revisar VPC endpoints, security groups, NACLs e CloudFront/WAF básicos antes de aprofundar exposição privada, inspeção de tráfego e proteção de borda:
+Para revisar VPC endpoints, security groups, NACLs e fundamentos de CloudFront/WAF antes de aprofundar PrivateLink, inspeção centralizada e proteção de borda neste modulo Professional:
 
 https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
 

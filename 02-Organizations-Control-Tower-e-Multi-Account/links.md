@@ -1,14 +1,20 @@
-﻿# Links Recomendados
+# Links Recomendados
 
 ## Referências oficiais AWS
 
-- https://aws.amazon.com/certification/certified-solutions-architect-professional/
-- https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html
-- https://docs.aws.amazon.com/
-- https://aws.amazon.com/architecture/
+- https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html
+- https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html
+- https://docs.aws.amazon.com/controltower/latest/userguide/what-is-control-tower.html
+- https://docs.aws.amazon.com/controltower/latest/userguide/account-factory.html
+- https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html
+- https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html
+- https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-accounts.html
+- https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-an-organizational-trail.html
 
-## Como usar estes links
+## Ordem sugerida de leitura
 
-1. Valide comportamento e limites dos serviços na documentação oficial.
-2. Use whitepapers e Well-Architected para entender trade-offs.
-3. Consulte a página da certificação para manter alinhamento com o exame SAP-C02.
+1. Organizations e conceitos de contas/OUs.
+2. SCPs e diferenças em relação a IAM.
+3. Control Tower e Account Factory.
+4. Delegated administrator para serviços de segurança.
+5. Organizational trails e centralização de logs.

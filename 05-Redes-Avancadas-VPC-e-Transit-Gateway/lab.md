@@ -1,33 +1,107 @@
-﻿# Lab Guiado
+# Lab Guiado - Arquitetura de Rede com TGW e PrivateLink
+
+> Lab de arquitetura. Nao execute em conta real sem revisar custo de TGW, NAT Gateway, endpoints e trafego processado.
 
 ## Objetivo
 
-Validar um padrão relacionado a Redes Avançadas, VPC e Transit Gateway em ambiente de estudo, com escopo pequeno, evidência observável e cleanup claro.
+Desenhar uma rede multi-account com conectividade central via Transit Gateway, inspeção opcional de egress e exposicao de um servico compartilhado via PrivateLink.
 
-## Serviços sugeridos
+## Topologia alvo
 
-Amazon VPC, Transit Gateway, VPC Endpoints, Route Tables
+```text
+Accounts:
 
-## Faixa de custo esperada
+network-account
+  Transit Gateway
+  Route tables: prod, nonprod, shared, inspection
 
-- Execute em conta de laboratório.
-- Prefira recursos elegíveis a baixo custo ou execução curta.
-- Remova todos os recursos ao final.
+security-account
+  Inspection VPC
+  AWS Network Firewall
+  Central logging
 
-## Passo a passo
+shared-services-account
+  Shared Services VPC
+  NLB + Endpoint Service
+  Route 53 Resolver endpoints
 
-1. Defina o cenário e o requisito dominante antes de criar recursos.
-2. Implemente o menor fluxo funcional que demonstre a decisão arquitetural.
-3. Ative logs, métricas ou evidências mínimas de validação.
-4. Simule uma restrição, falha ou mudança de carga compatível com o tema.
-5. Registre o que mudaria em produção: governança, custo, segurança e operação.
+app-prod-account
+  Prod VPC
+  Interface endpoint to shared service
+  TGW attachment
 
-## Cleanup
+app-dev-account
+  Dev VPC
+  TGW attachment with isolated nonprod routes
+```
 
-1. Remova recursos criados no laboratório.
-2. Apague dados temporários, snapshots e endpoints não usados.
-3. Verifique custos no dia seguinte.
+## Passo 1 - Definir enderecamento
 
-## Takeaway para prova
+Crie uma tabela de CIDRs sem sobreposicao:
 
-O valor do lab é conectar configuração técnica à decisão arquitetural: por que esta solução atende melhor ao cenário do que as alternativas.
+| VPC | CIDR exemplo | Observacao |
+| --- | --- | --- |
+| Prod | 10.10.0.0/16 | Workloads criticos |
+| Dev | 10.20.0.0/16 | Sem rota para prod |
+| Shared | 10.30.0.0/16 | DNS, ferramentas, servicos comuns |
+| Inspection | 10.40.0.0/16 | Firewalls e egress |
+| On-premises | 172.16.0.0/16 | Via DX/VPN |
+
+Checkpoint: nenhum CIDR pode se sobrepor.
+
+## Passo 2 - Modelar route tables do TGW
+
+Crie route tables logicas:
+
+- `rt-prod`: recebe rotas de prod, shared, inspection e on-premises autorizadas.
+- `rt-nonprod`: recebe dev e shared, sem rota para prod.
+- `rt-shared`: permite retorno para prod e nonprod conforme necessidade.
+- `rt-inspection`: concentra rotas de retorno para spokes.
+
+Decisao: nao habilite propagacao irrestrita. O objetivo e demonstrar isolamento.
+
+## Passo 3 - Definir caminho de inspeção
+
+Para egress produtivo:
+
+1. Sub-redes privadas de prod apontam default route para o TGW.
+2. `rt-prod` aponta `0.0.0.0/0` para inspection VPC.
+3. Inspection VPC envia trafego ao firewall e depois ao NAT/Internet Gateway.
+4. Rotas de retorno passam novamente pela inspection VPC.
+
+Checkpoint: confirme simetria. Firewalls stateful falham com retorno assimetrico.
+
+## Passo 4 - Publicar servico via PrivateLink
+
+No shared-services-account:
+
+1. Coloque a aplicacao atras de um Network Load Balancer.
+2. Crie um endpoint service PrivateLink.
+3. Permita principals das contas consumidoras.
+4. Habilite DNS privado se o dominio for controlado e validado.
+
+Nas contas consumidoras:
+
+1. Crie interface endpoints nas sub-redes privadas.
+2. Aplique security groups permitindo apenas portas necessarias.
+3. Teste resolucao DNS e conectividade.
+
+Checkpoint: consumidores acessam o servico, mas nao recebem rota para o CIDR da VPC provedora.
+
+## Passo 5 - Validar decisoes
+
+- Prod alcanca shared services?
+- Dev permanece isolado de prod?
+- On-premises alcanca apenas redes autorizadas?
+- Egress produtivo passa por inspeção?
+- Servico compartilhado e acessivel por PrivateLink sem peering?
+- Existe dependencia desnecessaria de NAT para servicos AWS que poderiam usar endpoints?
+
+## Resultado esperado
+
+Ao final, a arquitetura deve explicar:
+
+- Por que TGW foi usado para conectividade ampla.
+- Por que PrivateLink foi usado para exposicao de servico.
+- Onde a segmentacao e aplicada.
+- Qual custo/complexidade adicional foi aceito em troca de governanca.

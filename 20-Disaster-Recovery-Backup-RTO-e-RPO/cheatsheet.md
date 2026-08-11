@@ -1,17 +1,50 @@
-﻿# Guia Rápido
+# Cheatsheet - Disaster Recovery
 
-## Critérios de decisão
+## Matriz de decisao
 
-| Sinal do cenário | Decisão esperada | Risco ao ignorar |
-|---|---|---|
-| Múltiplas contas ou unidades de negócio | Considerar governança, acesso e limites por conta | Arquitetura sem controle centralizado |
-| Requisito de continuidade | Validar RTO/RPO, failover e testes | Recuperação incompatível com o negócio |
-| Ambiente híbrido ou global | Avaliar conectividade, DNS, latência e roteamento | Ponto único de falha ou latência alta |
-| Pressão de custo | Comparar custo recorrente, operação e transferência de dados | Economia local que aumenta custo total |
+| Requisito | Estrategia recomendada | Observacao |
+| --- | --- | --- |
+| RTO em horas, baixo custo | Backup & Restore | Exige backup testado e IaC |
+| RTO em menos de 1-2 horas | Pilot Light | Dados e componentes essenciais sempre prontos |
+| RTO em minutos | Warm Standby | Ambiente reduzido ja operando |
+| RTO/RPO quase zero | Active-Active/Multi-Site | Alto custo e alta complexidade de dados |
+| Protecao contra falha de AZ | Multi-AZ | Nao e DR regional |
+| Protecao contra falha regional | Multi-Region | Exige dados, DNS, rede e runbook |
 
-## Checklist de revisão
+## RTO vs RPO
 
-- Qual requisito domina a decisão?
-- A solução escala para contas, regiões e times envolvidos?
-- Existe rastreabilidade operacional e de segurança?
-- A complexidade proposta é necessária para o cenário?
+- RTO responde: quanto tempo posso ficar fora?
+- RPO responde: quantos dados posso perder?
+- RTO direciona capacidade pronta e automacao.
+- RPO direciona frequencia de backup, replicacao e consistencia.
+
+## Servicos e padroes
+
+| Necessidade | AWS |
+| --- | --- |
+| Politica central de backup | AWS Backup |
+| Copia cross-region de backups | AWS Backup copy / snapshots |
+| DR de servidores | AWS Elastic Disaster Recovery |
+| Failover DNS | Amazon Route 53 |
+| Replicacao de objetos | S3 Cross-Region Replication |
+| Banco relacional Multi-Region | Aurora Global Database ou replica cross-region conforme engine |
+| Recriacao de infraestrutura | CloudFormation/CDK/Terraform |
+| Automacao de runbook | Systems Manager Automation |
+
+## Perguntas de prova
+
+- O requisito fala em AZ ou regiao?
+- O RTO permite provisionar recursos no desastre?
+- O RPO exige replicacao continua ou backup periodico basta?
+- A aplicacao suporta escrita ativa em multiplas regioes?
+- Como o DNS muda no failover?
+- Como segredos, KMS keys e parametros existem na regiao secundaria?
+- O failback foi planejado?
+
+## Armadilhas
+
+- Confundir backup com DR completo.
+- Usar Multi-AZ como resposta para desastre regional.
+- Escolher Active-Active sem modelo de consistencia.
+- Nao testar restauracao.
+- Replicar dados sem replicar infraestrutura, IAM, parametros e observabilidade.

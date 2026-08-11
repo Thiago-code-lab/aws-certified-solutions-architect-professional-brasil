@@ -1,69 +1,72 @@
-﻿# Labs Práticos
+# 29 - Labs Praticos
 
-## Visão Geral
+Este modulo e o hub de laboratorios da trilha SAP-C02. Ele nao substitui os labs específicos dos modulos flagship; organiza a pratica por objetivo arquitetural, custo, risco e ordem recomendada de execucao.
 
-Este módulo cobre laboratórios guiados para validar padrões profissionais com custo controlado, com foco no tipo de raciocínio arquitetural exigido no AWS Certified Solutions Architect Professional (SAP-C02).
+## Como usar este hub
 
-## Conceitos-Chave
+1. Escolha um lab pelo dominio arquitetural que voce quer treinar.
+2. Leia o objetivo, restricoes e criterios de sucesso antes de abrir o console.
+3. Estime custo e defina uma janela curta de execucao.
+4. Registre decisoes, evidencias e lacunas encontradas.
+5. Destrua recursos quando o lab for executado em conta real.
 
-- Domínio predominante: Prática.
-- Serviços e padrões principais: Organizations, VPC, CloudWatch, IAM, Lambda, S3.
-- Decisão orientada por requisitos de negócio, risco operacional, segurança, resiliência, performance e custo.
-- Avaliação de impactos em ambientes multi-conta, multi-Region, híbridos ou em migração quando aplicável.
+## Indice de labs por tema
 
-## Relevância para o SAP-C02
+| Tema | Lab principal | Resultado esperado |
+| --- | --- | --- |
+| Governanca multi-account | [Modulo 02 - Organizations e Control Tower](../02-Organizations-Control-Tower-e-Multi-Account/README.md) | Estrutura de contas, OUs, SCPs, logging e seguranca centralizada |
+| Rede avancada | [Modulo 05 - TGW, Peering e PrivateLink](../05-Redes-Avancadas-VPC-e-Transit-Gateway/lab.md) | Desenho hub-and-spoke, segmentacao de rotas e exposicao privada de servico |
+| Disaster Recovery | [Modulo 20 - DR Multi-Region](../20-Disaster-Recovery-Backup-RTO-e-RPO/lab.md) | Estrategia Warm Standby, matriz RTO/RPO e runbook de failover |
+| Migracao | [Modulo 23 - Estrategia dos 7Rs](../23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/README.md) | Escolha de estrategia por restricao de negocio e dependencia tecnica |
+| Transferencia de dados | [Modulo 25 - Transferencia em escala](../25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/README.md) | Escolha entre DataSync, Snow Family, Transfer Family e transferencia online |
+| Casos integrados | [Modulo 28 - Casos de uso reais](../28-Casos-de-Uso-Reais/README.md) | Analise de cenarios com multiplas restricoes simultaneas |
 
-O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicamente válidas. O objetivo aqui é treinar por que uma arquitetura é preferível, quando outra opção se torna melhor e quais detalhes do enunciado mudam a decisão.
+## Template de execucao
 
-## Decisões Arquiteturais
+Use este checklist para qualquer lab:
 
-- Identificar o requisito dominante antes de escolher serviços.
-- Validar dependências entre contas, redes, dados, identidade e operação.
-- Preferir serviços gerenciados quando reduzem risco sem violar requisitos explícitos.
-- Documentar exceções quando controle, latência, compliance ou custo justificarem maior complexidade.
+| Etapa | Pergunta |
+| --- | --- |
+| Objetivo | Qual decisao arquitetural o lab valida? |
+| Escopo | Quais contas, regioes e servicos participam? |
+| Restricoes | Qual requisito domina: custo, seguranca, RTO/RPO, latencia, operacao ou compliance? |
+| Evidencia | Que logs, metricas, outputs ou diagramas comprovam o resultado? |
+| Limpeza | Quais recursos precisam ser removidos ao final? |
 
-## Trade-offs
+## Labs recomendados para a fase atual
 
-- Menor operação versus maior controle.
-- Resiliência multi-AZ versus multi-Region e seu impacto em custo e complexidade.
-- Centralização de governança versus autonomia de times e contas.
-- Otimização de custo versus requisitos de desempenho, recuperação e segurança.
+### 1. Organizacao multi-account
 
-## Cenários de Prova
+- Definir OUs para Security, Infrastructure, Workloads e Sandbox.
+- Mapear quais contas recebem GuardDuty, Security Hub, CloudTrail e logs centralizados.
+- Criar uma matriz SCP: negar regioes nao aprovadas, proteger logging e bloquear acoes destrutivas de seguranca.
 
-- Organizações com múltiplas contas e times independentes.
-- Ambientes híbridos com conectividade, DNS e segurança centralizados.
-- Workloads com requisitos conflitantes de RTO/RPO, compliance, custo e latência.
-- Migração ou modernização gradual sem indisponibilidade significativa.
+### 2. Rede hub-and-spoke
 
-## Armadilhas Comuns
+- Desenhar TGW com route tables separadas.
+- Comparar o mesmo requisito com VPC Peering e PrivateLink.
+- Documentar onde cada padrao deixa de ser adequado.
 
-- Escolher serviço por reconhecimento de nome, sem validar a restrição principal.
-- Resolver um problema organizacional com uma configuração local de uma única conta.
-- Ignorar operação contínua, automação, rastreabilidade e governança.
-- Escolher a arquitetura mais completa quando a pergunta pede menor esforço operacional ou menor custo.
+### 3. DR Warm Standby
 
-## Próximo Passo de Revisão
+- Definir RTO/RPO por componente.
+- Mapear replicacao de banco, S3, segredos, infraestrutura e DNS.
+- Escrever runbook de failover com checkpoints mensuraveis.
 
-1. Leia cheatsheet.md para consolidar critérios de decisão.
-2. Use casos-de-uso.md para treinar análise de cenários.
-3. Resolva questoes.md sem consulta e registre padrões de erro no módulo 30.
-4. Consulte links.md para validar detalhes em documentação oficial.
+## Regras de seguranca e custo
+
+- Nao execute labs em contas de producao.
+- Use tags de identificacao e expiração.
+- Prefira desenho arquitetural quando o custo de execucao real for alto.
+- Evite deixar NAT Gateway, TGW attachments, endpoints, replicas ou ambientes standby ativos sem necessidade.
+- Revise permissoes antes de criar recursos multi-account.
 
 ## Estudos Complementares
 
-Para revisar labs e fundamentos arquiteturais antes de executar cenários mais complexos antes de aprofundar laboratórios que validam padrões profissionais:
-
-https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
+- Para cada lab, retorne ao modulo teorico correspondente antes de executar.
+- Use documentacao oficial da AWS para validar limites, custos e comportamento atual dos servicos.
+- Registre duvidas e erros recorrentes no modulo de revisao/simulado da trilha antes de avancar.
 
 ---
 
-## ☁️ Acompanhe a CloudStudy
-
-Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais prática, organizada e acessível.
-
-Siga a CloudStudy para acompanhar novos materiais, atualizações e conteúdos sobre certificações AWS:
-
-- Instagram: https://www.instagram.com/cloudstudy.ai/
-- LinkedIn: https://www.linkedin.com/company/cloudstudy-ai/
-
+CloudStudy - Trilha AWS Solutions Architect Professional

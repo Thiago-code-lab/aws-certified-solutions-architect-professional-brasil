@@ -52,7 +52,7 @@ O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicament
 
 ## Estudos Complementares
 
-Para revisar S3, conectividade e armazenamento básico antes de aprofundar transferência de dados em escala e restrições de rede:
+Para revisar S3, conectividade e armazenamento antes de aprofundar DataSync, Snow Family, Transfer Family e transferencia em escala neste modulo Professional:
 
 https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
 

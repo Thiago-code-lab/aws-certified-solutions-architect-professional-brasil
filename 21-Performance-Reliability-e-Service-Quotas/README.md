@@ -52,9 +52,7 @@ O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicament
 
 ## Estudos Complementares
 
-Para revisar Auto Scaling, CloudWatch e Well-Architected fundamentals antes de aprofundar performance, reliability, SLAs e quotas:
-
-https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
+Use a documentacao oficial dos servicos e o AWS Well-Architected Framework para validar limites, SLAs, quotas e recomendacoes atuais antes de tomar decisoes de performance e confiabilidade.
 
 ---
 

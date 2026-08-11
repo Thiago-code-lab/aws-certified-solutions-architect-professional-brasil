@@ -1,19 +1,31 @@
-﻿# Casos de Uso
+# Casos de Uso - Disaster Recovery
 
-## Cenário 1: Organização com múltiplas contas
+## 1. Sistema administrativo com baixo custo
 
-**Padrão recomendado:** separar responsabilidades por conta, centralizar governança e automatizar controles essenciais.  
-**Motivo:** reduz blast radius e melhora auditoria sem bloquear autonomia dos times.  
-**Sinal de prova:** termos como unidades de negócio, conta compartilhada, compliance, logging centralizado ou acesso cross-account.
+**Cenario:** sistema interno de faturamento usado por poucas areas, com RTO de 8 horas e RPO de 24 horas.
 
-## Cenário 2: Requisito conflitante de custo e resiliência
+**Restricoes:** a empresa quer custo recorrente minimo e auditoria de retencao.
 
-**Padrão recomendado:** comparar níveis de disponibilidade e recuperação contra impacto financeiro e operacional.  
-**Motivo:** SAP-C02 frequentemente testa a alternativa suficiente, não a arquitetura mais sofisticada.  
-**Sinal de prova:** RTO/RPO, orçamento limitado, operação enxuta, múltiplas regiões ou indisponibilidade tolerável.
+**Decisao:** usar AWS Backup com politicas por tag, copia cross-region, vault lock quando aplicavel e templates IaC para recriar a stack.
 
-## Cenário 3: Modernização ou migração gradual
+**Trade-off:** baixo custo, mas failover nao e imediato e depende de runbook bem testado.
 
-**Padrão recomendado:** reduzir acoplamento, planejar ondas e manter coexistência temporária quando necessário.  
-**Motivo:** evita cortes arriscados e permite validar arquitetura por etapas.  
-**Sinal de prova:** legado, data center, baixa tolerância a downtime, dependências desconhecidas ou janela de migração curta.
+## 2. Plataforma de pedidos com DR regional
+
+**Cenario:** aplicacao de pedidos precisa voltar em ate 30 minutos com perda maxima de poucos minutos.
+
+**Restricoes:** duplicar capacidade integral e caro; o banco e o componente mais critico.
+
+**Decisao:** Warm Standby em regiao secundaria com banco replicado, servicos em capacidade reduzida, Route 53 failover e automacao de escala.
+
+**Trade-off:** custo maior que pilot light, mas RTO menor e validacao continua do ambiente secundario.
+
+## 3. Aplicacao legada baseada em servidores
+
+**Cenario:** workloads legados em EC2 possuem dependencias locais e configuracoes dificeis de reconstruir manualmente.
+
+**Restricoes:** RPO baixo e pouca tolerancia para reinstalacao manual durante incidente.
+
+**Decisao:** usar AWS Elastic Disaster Recovery para replicacao continua e testes de lancamento em sub-redes isoladas.
+
+**Trade-off:** reduz risco de reconstrucao manual, mas exige operacao do agente, validacao de rede, licencas e runbooks de failover/failback.

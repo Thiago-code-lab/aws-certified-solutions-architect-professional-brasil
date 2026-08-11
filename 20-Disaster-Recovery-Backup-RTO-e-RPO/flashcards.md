@@ -1,34 +1,37 @@
-﻿# Cartões de Revisão
+# Flashcards - Disaster Recovery
 
-## Card 01
+1. **O que e RTO?**
+   Tempo maximo aceitavel para restaurar um servico apos interrupcao.
 
-**Pergunta:** Qual é o foco deste módulo no SAP-C02?
+2. **O que e RPO?**
+   Quantidade maxima aceitavel de perda de dados medida no tempo.
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+3. **Quando usar Backup & Restore?**
+   Para workloads com RTO/RPO menos agressivos e forte pressao de custo.
 
-**Resposta:** Avaliar estratégias de DR, testes, backup, replicação e recuperação alinhada a negócio por meio de decisões arquiteturais, trade-offs e restrições reais.
+4. **O que e Pilot Light?**
+   Dados e componentes minimos ficam prontos na regiao de DR; compute completo sobe durante o desastre.
 
-</details>
+5. **O que e Warm Standby?**
+   Ambiente reduzido ja executa na regiao secundaria e escala no failover.
 
-## Card 02
+6. **O que e Active-Active/Multi-Site?**
+   Duas ou mais regioes atendem trafego simultaneamente, exigindo desenho cuidadoso de dados e operacao.
 
-**Pergunta:** Qual erro costuma eliminar alternativas em questões Professional?
+7. **Multi-AZ substitui Multi-Region?**
+   Nao. Multi-AZ melhora disponibilidade dentro de uma regiao; Multi-Region trata desastre regional.
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+8. **Quando AWS Backup e forte?**
+   Politicas centralizadas, copias cross-account/cross-region, retenÃ§Ã£o, auditoria e restauracao de recursos suportados.
 
-**Resposta:** Ignorar requisitos de operação, governança, segurança, RTO/RPO, custo recorrente ou impacto multi-conta.
+9. **Quando Elastic Disaster Recovery e forte?**
+   Recuperacao de servidores com replicacao continua e lancamento rapido de instancias em regiao alvo.
 
-</details>
+10. **Qual componente e critico para failover publico?**
+    Route 53 com health checks, failover records ou politicas de roteamento adequadas.
 
-## Card 03
+11. **Por que testar DR?**
+    Porque backup sem restauracao validada e apenas uma hipotese operacional.
 
-**Pergunta:** Como comparar duas alternativas tecnicamente viáveis?
-
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-**Resposta:** Compare risco operacional, complexidade, custo total, impacto em segurança, capacidade de automação e aderência ao requisito dominante.
-
-</details>
+12. **Qual risco de DR sem IaC?**
+    Recuperacao lenta, inconsistente e dependente de operacao manual em crise.

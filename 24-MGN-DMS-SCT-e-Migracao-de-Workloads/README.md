@@ -52,7 +52,7 @@ O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicament
 
 ## Estudos Complementares
 
-Para revisar EC2, RDS, DMS e padrões de banco no nível Associate antes de aprofundar migração de servidores e bancos com baixo downtime:
+Para revisar EC2, RDS, DMS e padroes de banco antes de aprofundar MGN, SCT, cutover, replicacao e migracao com baixo downtime neste modulo Professional:
 
 https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
 

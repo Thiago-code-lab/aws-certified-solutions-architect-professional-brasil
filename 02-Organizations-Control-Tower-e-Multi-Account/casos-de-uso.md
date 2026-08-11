@@ -1,19 +1,25 @@
-﻿# Casos de Uso
+# Casos de Uso
 
-## Cenário 1: Organização com múltiplas contas
+## Caso 1: Empresa adquirida precisa entrar na governança corporativa
 
-**Padrão recomendado:** separar responsabilidades por conta, centralizar governança e automatizar controles essenciais.  
-**Motivo:** reduz blast radius e melhora auditoria sem bloquear autonomia dos times.  
-**Sinal de prova:** termos como unidades de negócio, conta compartilhada, compliance, logging centralizado ou acesso cross-account.
+**Cenário:** A matriz comprou uma empresa com contas AWS próprias. A exigência é consolidar billing, habilitar auditoria central e manter autonomia temporária dos times adquiridos.
 
-## Cenário 2: Requisito conflitante de custo e resiliência
+**Decisão:** Convidar/migrar contas para Organizations, criar OU de transição, aplicar SCPs mínimas, habilitar CloudTrail/Config centralizados e planejar evolução para OUs definitivas.
 
-**Padrão recomendado:** comparar níveis de disponibilidade e recuperação contra impacto financeiro e operacional.  
-**Motivo:** SAP-C02 frequentemente testa a alternativa suficiente, não a arquitetura mais sofisticada.  
-**Sinal de prova:** RTO/RPO, orçamento limitado, operação enxuta, múltiplas regiões ou indisponibilidade tolerável.
+**Trade-off:** A OU de transição reduz risco imediato sem exigir refatoração operacional completa no primeiro dia.
 
-## Cenário 3: Modernização ou migração gradual
+## Caso 2: Sandbox está gerando custo e risco público
 
-**Padrão recomendado:** reduzir acoplamento, planejar ondas e manter coexistência temporária quando necessário.  
-**Motivo:** evita cortes arriscados e permite validar arquitetura por etapas.  
-**Sinal de prova:** legado, data center, baixa tolerância a downtime, dependências desconhecidas ou janela de migração curta.
+**Cenário:** Times criam recursos experimentais com portas abertas e instâncias caras. Produção não pode ser afetada.
+
+**Decisão:** Criar OU Sandbox, aplicar SCPs contra regiões/serviços proibidos, exigir tags de owner e usar Budgets/alertas separados.
+
+**Trade-off:** Restringe liberdade total, mas preserva autonomia controlada e evita impacto em contas produtivas.
+
+## Caso 3: Segurança precisa operar serviços centralizados
+
+**Cenário:** GuardDuty, Security Hub e Config precisam estar habilitados em todas as contas. A management account não deve ser usada para operação diária.
+
+**Decisão:** Usar conta de segurança como delegated administrator, agregar findings centralmente e enviar logs para log archive.
+
+**Trade-off:** Exige desenho claro de roles e responsabilidades, mas reduz risco operacional e melhora rastreabilidade.

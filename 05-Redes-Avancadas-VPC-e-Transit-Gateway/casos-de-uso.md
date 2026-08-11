@@ -1,19 +1,31 @@
-﻿# Casos de Uso
+# Casos de Uso - Redes Avancadas
 
-## Cenário 1: Organização com múltiplas contas
+## 1. Rede corporativa multi-account
 
-**Padrão recomendado:** separar responsabilidades por conta, centralizar governança e automatizar controles essenciais.  
-**Motivo:** reduz blast radius e melhora auditoria sem bloquear autonomia dos times.  
-**Sinal de prova:** termos como unidades de negócio, conta compartilhada, compliance, logging centralizado ou acesso cross-account.
+**Cenario:** uma empresa separa contas por produto, ambiente e unidade de negocio. Todas precisam acessar servicos compartilhados e alguns sistemas on-premises.
 
-## Cenário 2: Requisito conflitante de custo e resiliência
+**Restricoes:** nao deve haver comunicacao livre entre desenvolvimento e producao; a equipe de rede precisa auditar rotas por dominio.
 
-**Padrão recomendado:** comparar níveis de disponibilidade e recuperação contra impacto financeiro e operacional.  
-**Motivo:** SAP-C02 frequentemente testa a alternativa suficiente, não a arquitetura mais sofisticada.  
-**Sinal de prova:** RTO/RPO, orçamento limitado, operação enxuta, múltiplas regiões ou indisponibilidade tolerável.
+**Decisao:** implementar Transit Gateway em conta de rede, com route tables separadas para producao, nao producao, shared services e on-premises.
 
-## Cenário 3: Modernização ou migração gradual
+**Trade-off:** TGW adiciona custo por attachment e trafego, mas reduz malha de peering e permite governanca central de rotas.
 
-**Padrão recomendado:** reduzir acoplamento, planejar ondas e manter coexistência temporária quando necessário.  
-**Motivo:** evita cortes arriscados e permite validar arquitetura por etapas.  
-**Sinal de prova:** legado, data center, baixa tolerância a downtime, dependências desconhecidas ou janela de migração curta.
+## 2. Plataforma compartilhada consumida por outras contas
+
+**Cenario:** uma equipe central fornece um servico de validacao de identidade para workloads de varias contas.
+
+**Restricoes:** consumidores nao devem alcancar bancos, filas ou sub-redes administrativas do provedor.
+
+**Decisao:** publicar o servico com AWS PrivateLink atras de NLB, permitindo principals especificos e DNS privado.
+
+**Trade-off:** a solucao e excelente para servicos bem definidos, mas cada servico publicado exige operacao propria de endpoint service.
+
+## 3. Egress controlado para ambiente regulado
+
+**Cenario:** workloads de pagamento precisam sair para internet e parceiros externos passando por inspeção central.
+
+**Restricoes:** auditoria exige log central, bloqueio por dominio/IP e consistencia no caminho de ida e volta.
+
+**Decisao:** usar TGW com inspection VPC, AWS Network Firewall, route tables dedicadas e endpoints VPC para trafego AWS interno.
+
+**Trade-off:** melhora compliance e visibilidade, mas aumenta latencia e cria dependencia operacional da VPC de inspeção.

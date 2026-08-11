@@ -52,7 +52,7 @@ O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicament
 
 ## Estudos Complementares
 
-Para revisar CloudFormation e automação básica de infraestrutura antes de aprofundar IaC, rollback, canary e blue/green:
+Para revisar CloudFormation, CodePipeline e automacao basica antes de aprofundar rollback, canary, blue/green e governanca de deployment neste modulo Professional:
 
 https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
 

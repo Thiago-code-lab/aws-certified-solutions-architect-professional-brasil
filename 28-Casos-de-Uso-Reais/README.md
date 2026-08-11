@@ -52,9 +52,7 @@ O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicament
 
 ## Estudos Complementares
 
-Para revisar fundamentos dos serviços AWS usados nos cenários antes de aprofundar cenários integrados de empresas, M&A, DR, segurança e migração:
-
-https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
+Use os modulos desta trilha e a documentacao oficial da AWS para validar cada servico citado nos cenarios integrados de M&A, DR, seguranca, rede, dados e migracao.
 
 ---
 

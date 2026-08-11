@@ -1,69 +1,95 @@
-﻿# Redes Avançadas, VPC e Transit Gateway
+# 05 - Redes Avancadas: VPC, Transit Gateway e PrivateLink
 
-## Visão Geral
+Este modulo aprofunda decisoes de conectividade cobradas no SAP-C02: quando centralizar roteamento com AWS Transit Gateway, quando manter conectividade ponto a ponto com VPC Peering, quando expor servicos via AWS PrivateLink e como projetar redes hibridas com isolamento, observabilidade e limites operacionais claros.
 
-Este módulo cobre topologias multi-VPC, segmentação, roteamento centralizado e conectividade escalável, com foco no tipo de raciocínio arquitetural exigido no AWS Certified Solutions Architect Professional (SAP-C02).
+## Objetivos
 
-## Conceitos-Chave
+- Escolher entre Transit Gateway, VPC Peering e PrivateLink com base em escala, isolamento, rotas, custo e modelo operacional.
+- Projetar arquiteturas hub-and-spoke, multi-account e hibridas com segmentacao por ambiente, dominio ou sensibilidade.
+- Aplicar tabelas de rotas do TGW, attachments, propagacao seletiva e inspeção centralizada sem criar alcance lateral indevido.
+- Avaliar Direct Connect, VPN Site-to-Site, DNS privado, endpoints VPC e padroes de egress centralizado.
+- Reconhecer trade-offs de disponibilidade, custo por GB, complexidade de operacao e blast radius.
 
-- Domínio predominante: Organizational Complexity.
-- Serviços e padrões principais: Amazon VPC, Transit Gateway, VPC Endpoints, Route Tables.
-- Decisão orientada por requisitos de negócio, risco operacional, segurança, resiliência, performance e custo.
-- Avaliação de impactos em ambientes multi-conta, multi-Region, híbridos ou em migração quando aplicável.
+## Comparacao de conectividade
 
-## Relevância para o SAP-C02
+| Padrao | Melhor uso | Forca | Limitacao |
+| --- | --- | --- | --- |
+| Transit Gateway | Muitas VPCs, contas e redes on-premises | Roteamento central, segmentacao por route tables, escala operacional | Custo por attachment/processamento e desenho exige governanca de rotas |
+| VPC Peering | Poucas VPCs com trafego direto e previsivel | Simples, baixa latencia, sem appliance central | Sem transitive routing; escala vira malha dificil de governar |
+| PrivateLink | Consumir/prover servicos privados sem abrir rede | Isola consumidor e provedor; nao exige rotas entre CIDRs | Unidirecional por servico; nao substitui conectividade geral |
 
-O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicamente válidas. O objetivo aqui é treinar por que uma arquitetura é preferível, quando outra opção se torna melhor e quais detalhes do enunciado mudam a decisão.
+## Arquitetura de referencia
 
-## Decisões Arquiteturais
+```text
+                         On-premises
+                             |
+                     Direct Connect / VPN
+                             |
+                       DX Gateway / VPN
+                             |
+                      +----------------+
+                      | Transit Gateway|
+                      +----------------+
+                       /       |       \
+                      /        |        \
+             Route table   Route table   Route table
+              shared       prod          security
+                 |           |             |
+          +------+--+   +----+----+   +----+------+
+          | Shared  |   | Prod VPC|   | Inspection |
+          | Services|   | Apps    |   | VPC        |
+          +---------+   +---------+   +------------+
+                |             |              |
+          Private hosted  Interface     Network Firewall
+          zones / DNS     endpoints     egress controls
+```
 
-- Identificar o requisito dominante antes de escolher serviços.
-- Validar dependências entre contas, redes, dados, identidade e operação.
-- Preferir serviços gerenciados quando reduzem risco sem violar requisitos explícitos.
-- Documentar exceções quando controle, latência, compliance ou custo justificarem maior complexidade.
+## Raciocinio SAP-C02
 
-## Trade-offs
+### Cenario 1: cem VPCs em multiplas contas
 
-- Menor operação versus maior controle.
-- Resiliência multi-AZ versus multi-Region e seu impacto em custo e complexidade.
-- Centralização de governança versus autonomia de times e contas.
-- Otimização de custo versus requisitos de desempenho, recuperação e segurança.
+- Cenario: a empresa tem dezenas de contas por unidade de negocio, ambientes separados e conectividade on-premises.
+- Restricao: VPC Peering criaria uma malha de rotas dificil de auditar e nao permitiria transitive routing.
+- Decisao: usar Transit Gateway com route tables por dominio, propagacao seletiva e attachments gerenciados por conta de rede.
+- Trade-off: o custo por attachment e processamento aumenta, mas a arquitetura ganha governanca, segmentacao e operacao previsivel.
 
-## Cenários de Prova
+### Cenario 2: exposicao de servico interno para parceiros
 
-- Organizações com múltiplas contas e times independentes.
-- Ambientes híbridos com conectividade, DNS e segurança centralizados.
-- Workloads com requisitos conflitantes de RTO/RPO, compliance, custo e latência.
-- Migração ou modernização gradual sem indisponibilidade significativa.
+- Cenario: uma equipe precisa expor uma API privada para VPCs de outras contas sem permitir acesso a sub-redes internas.
+- Restricao: peering ou TGW criariam conectividade de rede mais ampla do que o necessario.
+- Decisao: publicar o servico com PrivateLink, usando endpoint service com NLB e controles de principals permitidos.
+- Trade-off: PrivateLink resolve o consumo de um servico especifico, mas nao serve para roteamento bidirecional generico.
 
-## Armadilhas Comuns
+### Cenario 3: inspeção centralizada de trafego
 
-- Escolher serviço por reconhecimento de nome, sem validar a restrição principal.
-- Resolver um problema organizacional com uma configuração local de uma única conta.
-- Ignorar operação contínua, automação, rastreabilidade e governança.
-- Escolher a arquitetura mais completa quando a pergunta pede menor esforço operacional ou menor custo.
+- Cenario: todo egress de workloads produtivos deve passar por firewall gerenciado.
+- Restricao: rotas assimetricas quebram inspeção stateful e aumentam risco operacional.
+- Decisao: usar TGW route tables direcionando spoke VPCs para uma inspection VPC com AWS Network Firewall ou appliances em GWLB.
+- Trade-off: a inspeção central simplifica compliance, mas adiciona dependencia regional e custo por trafego processado.
 
-## Próximo Passo de Revisão
+## Padroes de desenho
 
-1. Leia cheatsheet.md para consolidar critérios de decisão.
-2. Use casos-de-uso.md para treinar análise de cenários.
-3. Resolva questoes.md sem consulta e registre padrões de erro no módulo 30.
-4. Consulte links.md para validar detalhes em documentação oficial.
+- Separe route tables do TGW por finalidade: producao, nao producao, shared services, inspeção e conectividade on-premises.
+- Evite propagacao automatica ampla; associe e propague rotas de forma explicita.
+- Planeje CIDRs sem sobreposicao antes de escalar multi-account; TGW nao corrige enderecamento ruim.
+- Use Route 53 Resolver endpoints para integracao DNS hibrida.
+- Prefira endpoints VPC para servicos AWS acessados de forma privada, reduzindo dependencia de NAT para chamadas internas.
+- Centralize egress somente quando houver requisito de controle; para workloads de alta vazao, avalie custo e latencia.
 
 ## Estudos Complementares
 
-Para revisar VPC, subnets, route tables, NAT e endpoints antes de aprofundar Transit Gateway, segmentação e topologias multi-VPC:
+- Revise fundamentos de VPC, sub-redes, route tables, NAT Gateway e endpoints no repositório Associate quando precisar reforcar base operacional.
+- Neste modulo, foque a decisao Professional: escala multi-account, segmentacao, conectividade hibrida, inspeção centralizada e trade-offs de custo.
 
-https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
+## Arquivos do modulo
+
+- [Questoes](questoes.md)
+- [Flashcards](flashcards.md)
+- [Cheatsheet](cheatsheet.md)
+- [Casos de uso](casos-de-uso.md)
+- [Links oficiais](links.md)
+- [Lab guiado](lab.md)
 
 ---
 
-## ☁️ Acompanhe a CloudStudy
-
-Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais prática, organizada e acessível.
-
-Siga a CloudStudy para acompanhar novos materiais, atualizações e conteúdos sobre certificações AWS:
-
-- Instagram: https://www.instagram.com/cloudstudy.ai/
-- LinkedIn: https://www.linkedin.com/company/cloudstudy-ai/
-
+CloudStudy - Trilha AWS Solutions Architect Professional

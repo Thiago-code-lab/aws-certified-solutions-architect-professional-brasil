@@ -52,7 +52,7 @@ O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicament
 
 ## Estudos Complementares
 
-Para revisar Organizations, IAM e governança inicial antes de aprofundar SCPs, compartilhamento de recursos e provisionamento padronizado:
+Para revisar Organizations e IAM em nivel Associate antes de aprofundar guardrails organizacionais, SCPs, RAM e Service Catalog neste modulo Professional:
 
 https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
 

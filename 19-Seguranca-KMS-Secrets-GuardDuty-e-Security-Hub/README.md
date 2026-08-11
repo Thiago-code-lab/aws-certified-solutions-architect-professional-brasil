@@ -52,7 +52,7 @@ O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicament
 
 ## Estudos Complementares
 
-Para revisar KMS, IAM, CloudTrail e controles básicos de segurança antes de aprofundar segurança centralizada, chaves, segredos e detecção:
+Para revisar KMS, IAM, CloudTrail e controles basicos de seguranca antes de aprofundar chaves, segredos, deteccao centralizada e resposta organizacional neste modulo Professional:
 
 https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
 
