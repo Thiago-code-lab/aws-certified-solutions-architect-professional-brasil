@@ -1,14 +1,20 @@
-﻿# Links Recomendados
+# Links Oficiais - RDS e Aurora
 
-## Referências oficiais AWS
+## Essencial
 
-- https://aws.amazon.com/certification/certified-solutions-architect-professional/
-- https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html
-- https://docs.aws.amazon.com/
-- https://aws.amazon.com/architecture/
+- [Amazon RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html) - Base oficial para operacao gerenciada, backups, Multi-AZ e replicas.
+- [Amazon Aurora User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html) - Leitura prioritaria para entender arquitetura Aurora e diferenca em relacao a RDS tradicional.
+- [High availability for Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html) - Essencial para distinguir Multi-AZ de read scaling e DR regional.
+- [Aurora Global Database](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html) - Prioridade alta para cenarios globais e baixo RPO cross-region.
 
-## Como usar estes links
+## Aprofundamento
 
-1. Valide comportamento e limites dos serviços na documentação oficial.
-2. Use whitepapers e Well-Architected para entender trade-offs.
-3. Consulte a página da certificação para manter alinhamento com o exame SAP-C02.
+- [Working with read replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html) - Ajuda a separar escala de leitura de alta disponibilidade.
+- [Amazon RDS Proxy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy.html) - Importante para workloads serverless, pooling e failover de conexoes.
+- [Backing up and restoring Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_CommonTasks.BackupRestore.html) - Base para diferenciar backup, snapshot e recuperacao point-in-time.
+
+## Referencia
+
+- [Amazon RDS encryption](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Encryption.html) - Use para validar criptografia, KMS e copias.
+- [Aurora Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Replication.html) - Referencia para leitura e failover em clusters Aurora.
+- [AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html) - Consulte quando o cenario mistura banco relacional e migracao.

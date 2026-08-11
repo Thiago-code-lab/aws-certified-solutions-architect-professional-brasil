@@ -1,34 +1,31 @@
-﻿# Cartões de Revisão
+# Flashcards - IAM, Identity Center e Cross-Account
 
-## Card 01
+1. **Quando preferir IAM Identity Center a IAM users?**
+   Quando pessoas precisam acessar muitas contas com lifecycle, MFA e grupos controlados por IdP corporativo.
 
-**Pergunta:** Qual é o foco deste módulo no SAP-C02?
+2. **Quando uma IAM role e melhor que um IAM user?**
+   Quando o acesso pode ser temporario, assumido por workload, pessoa federada ou outra conta, reduzindo credenciais longas.
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+3. **Qual sinal aponta para STS AssumeRole?**
+   Acesso temporario entre principals e contas, com auditoria de sessao e escopo limitado.
 
-**Resposta:** Avaliar identidade federada, acesso entre contas, menor privilégio e separação de responsabilidades por meio de decisões arquiteturais, trade-offs e restrições reais.
+4. **Quando usar resource-based policy em vez de apenas identity policy?**
+   Quando o recurso precisa autorizar principals externos diretamente, como em S3, KMS, SQS ou Lambda.
 
-</details>
+5. **Por que permission set nao e a mesma coisa que role manual?**
+   Permission set e modelo do Identity Center para provisionar permissoes em contas; a role e o artefato assumido na conta.
 
-## Card 02
+6. **Quando permissions boundary e mais adequado que SCP?**
+   Quando o limite deve aplicar a roles/users especificos criados por equipes, nao a conta inteira.
 
-**Pergunta:** Qual erro costuma eliminar alternativas em questões Professional?
+7. **Quando SCP e mais adequado que permissions boundary?**
+   Quando a organizacao precisa impedir acoes em uma conta ou OU inteira, inclusive contra administradores locais.
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+8. **Por que trust policy e diferente de permission policy?**
+   Trust policy controla quem pode assumir a role; permission policy controla o que a role pode fazer apos assumida.
 
-**Resposta:** Ignorar requisitos de operação, governança, segurança, RTO/RPO, custo recorrente ou impacto multi-conta.
+9. **Qual risco de usuarios IAM duplicados entre contas?**
+   Lifecycle inconsistente, credenciais longas, auditoria fraca e maior chance de acesso residual.
 
-</details>
-
-## Card 03
-
-**Pergunta:** Como comparar duas alternativas tecnicamente viáveis?
-
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-**Resposta:** Compare risco operacional, complexidade, custo total, impacto em segurança, capacidade de automação e aderência ao requisito dominante.
-
-</details>
+10. **Quando manter acesso break-glass?**
+    Para emergencia controlada, com MFA forte, credenciais protegidas, monitoramento, aprovacao e revisao periodica.

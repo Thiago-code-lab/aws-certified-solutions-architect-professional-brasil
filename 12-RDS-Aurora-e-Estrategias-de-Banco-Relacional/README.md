@@ -1,69 +1,108 @@
-﻿# RDS, Aurora e Estratégias de Banco Relacional
+# 12 - RDS, Aurora e Estrategias de Banco Relacional
 
-## Visão Geral
+Este modulo ensina decisoes de banco relacional sob restricoes de disponibilidade, escala, recuperacao, custo e operacao. No SAP-C02, a resposta correta raramente e "usar RDS" ou "usar Aurora" isoladamente; ela depende de entender se o problema e alta disponibilidade, leitura, conexoes, DR regional, backup, migracao ou reducao de operacao.
 
-Este módulo cobre desenho relacional, HA, réplicas, failover, migração e consistência transacional, com foco no tipo de raciocínio arquitetural exigido no AWS Certified Solutions Architect Professional (SAP-C02).
+## Objetivos
 
-## Conceitos-Chave
+- Escolher entre Amazon RDS e Amazon Aurora conforme requisito arquitetural.
+- Diferenciar Multi-AZ, read replicas, Aurora Replicas e Aurora Global Database.
+- Separar alta disponibilidade regional de disaster recovery multi-region.
+- Usar backups, snapshots e replicacao sem confundir seus objetivos.
+- Posicionar RDS Proxy para gerenciamento de conexoes, especialmente com Lambda ou workloads com picos.
+- Avaliar failover, manutencao, criptografia, migracao e custo.
 
-- Domínio predominante: Design for New Solutions.
-- Serviços e padrões principais: RDS, Aurora, RDS Proxy, DMS, Backup.
-- Decisão orientada por requisitos de negócio, risco operacional, segurança, resiliência, performance e custo.
-- Avaliação de impactos em ambientes multi-conta, multi-Region, híbridos ou em migração quando aplicável.
+## Distincoes criticas
 
-## Relevância para o SAP-C02
+| Comparacao | Decisao Professional |
+| --- | --- |
+| Multi-AZ vs Read Replica | Multi-AZ e HA/failover; read replica e escala de leitura ou DR limitado conforme engine/configuracao |
+| Multi-AZ vs multi-Region DR | Multi-AZ cobre falha de AZ; DR regional exige estrategia em outra regiao |
+| RDS vs Aurora | RDS e adequado para engines tradicionais e simplicidade; Aurora oferece arquitetura cloud-native, replicas rapidas e opcoes globais |
+| Aurora Replica vs Aurora Global Database | Replica escala leitura na regiao; Global Database reduz latencia de leitura global e melhora DR cross-region |
+| Backup vs replicacao | Backup restaura ponto no tempo; replicacao mantem copia ativa/quase ativa para leitura ou recuperacao |
+| RDS Proxy vs aumentar banco | Proxy gerencia conexoes e pooling; nao resolve CPU, IO ou queries ruins |
+| Read scaling vs HA | Replica de leitura melhora leitura; nao substitui failover automatico Multi-AZ |
 
-O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicamente válidas. O objetivo aqui é treinar por que uma arquitetura é preferível, quando outra opção se torna melhor e quais detalhes do enunciado mudam a decisão.
+## Tabela de decisao
 
-## Decisões Arquiteturais
+| Cenario | Escolha provavel | Trade-off |
+| --- | --- | --- |
+| Alta disponibilidade em uma regiao | RDS Multi-AZ ou Aurora com replicas em AZs distintas | Custo maior que Single-AZ |
+| Aplicacao read-heavy regional | Read replicas ou Aurora Replicas | Consistencia eventual para leituras |
+| Leituras globais com baixa latencia | Aurora Global Database | Custo e complexidade multi-region |
+| Recuperacao cross-region com baixo RPO | Aurora Global Database ou replica cross-region conforme engine | Failover regional exige processo claro |
+| Picos de conexao vindos de Lambda | RDS Proxy | Nao aumenta capacidade de escrita |
+| Menor overhead operacional | RDS/Aurora gerenciado, backups automaticos e manutencao planejada | Menos controle que banco autogerenciado |
+| Aplicacao legada relacional | RDS engine compativel | Pode manter limitacoes antigas |
+| Sistema financeiro global | Aurora Global Database ou desenho multi-region especifico | Consistencia e failover exigem cuidado extremo |
 
-- Identificar o requisito dominante antes de escolher serviços.
-- Validar dependências entre contas, redes, dados, identidade e operação.
-- Preferir serviços gerenciados quando reduzem risco sem violar requisitos explícitos.
-- Documentar exceções quando controle, latência, compliance ou custo justificarem maior complexidade.
+## Arquitetura de referencia
 
-## Trade-offs
+```text
+Users
+  |
+Route 53
+  |
+Application
+  |
+  +-----------------------------+
+  |                             |
+Primary Region              Secondary Region
+Aurora Primary  ----------> Aurora Secondary
+     |
+Aurora Replicas
+```
 
-- Menor operação versus maior controle.
-- Resiliência multi-AZ versus multi-Region e seu impacto em custo e complexidade.
-- Centralização de governança versus autonomia de times e contas.
-- Otimização de custo versus requisitos de desempenho, recuperação e segurança.
+Fluxo:
 
-## Cenários de Prova
+- Escritas entram no writer da regiao primaria.
+- Leituras locais podem ir para Aurora Replicas na regiao primaria.
+- Leituras globais podem ser atendidas pela regiao secundaria quando o desenho permite.
+- Replicacao cross-region reduz RPO, mas nao elimina necessidade de runbook de failover.
+- Em failover regional, a promocao do secundario e o redirecionamento via DNS/aplicacao precisam ser planejados.
 
-- Organizações com múltiplas contas e times independentes.
-- Ambientes híbridos com conectividade, DNS e segurança centralizados.
-- Workloads com requisitos conflitantes de RTO/RPO, compliance, custo e latência.
-- Migração ou modernização gradual sem indisponibilidade significativa.
+## Raciocinio SAP-C02
 
-## Armadilhas Comuns
+### Cenario 1: banco regional critico
 
-- Escolher serviço por reconhecimento de nome, sem validar a restrição principal.
-- Resolver um problema organizacional com uma configuração local de uma única conta.
-- Ignorar operação contínua, automação, rastreabilidade e governança.
-- Escolher a arquitetura mais completa quando a pergunta pede menor esforço operacional ou menor custo.
+- Cenario: sistema transacional precisa sobreviver a falha de AZ.
+- Restricoes: nao ha requisito de outra regiao; downtime deve ser minimo.
+- Sinal: HA regional, nao DR global.
+- Melhor decisao: RDS Multi-AZ ou Aurora com replicas em AZs distintas.
+- Trade-off: custo adicional por standby/replicas, mas failover regional gerenciado.
+- Por que nao alternativas: snapshot nao atende RTO baixo; read replica isolada nao e HA automatica em todos os cenarios.
 
-## Próximo Passo de Revisão
+### Cenario 2: trafego de leitura global
 
-1. Leia cheatsheet.md para consolidar critérios de decisão.
-2. Use casos-de-uso.md para treinar análise de cenários.
-3. Resolva questoes.md sem consulta e registre padrões de erro no módulo 30.
-4. Consulte links.md para validar detalhes em documentação oficial.
+- Cenario: clientes na Europa e America do Norte fazem muitas consultas de catalogo.
+- Restricoes: baixa latencia de leitura; escrita continua centralizada.
+- Sinal: leitura global, nao write scaling horizontal generico.
+- Melhor decisao: Aurora Global Database quando a aplicacao e compativel e precisa de replica regional de baixa latencia.
+- Trade-off: custo e desenho multi-region, com consistencia eventual para regioes secundarias.
+
+### Cenario 3: Lambda gera storm de conexoes
+
+- Cenario: funcoes Lambda escalam rapidamente e abrem milhares de conexoes no banco.
+- Restricoes: CPU do banco nao e o gargalo principal; falhas ocorrem por limite de conexoes.
+- Sinal: problema de gerenciamento de conexoes.
+- Melhor decisao: RDS Proxy.
+- Trade-off: adiciona componente gerenciado e custo, mas estabiliza pooling e failover.
 
 ## Estudos Complementares
 
-Para revisar RDS, Aurora, backups e read replicas antes de aprofundar alta disponibilidade, réplicas e migração de bancos relacionais:
+Use a trilha Associate apenas para revisar fundamentos de RDS, backups, replicas e Multi-AZ antes de aprofundar decisoes Professional:
 
 https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
 
+## Arquivos do modulo
+
+- [Questoes](questoes.md)
+- [Flashcards](flashcards.md)
+- [Cheatsheet](cheatsheet.md)
+- [Casos de uso](casos-de-uso.md)
+- [Links oficiais](links.md)
+- [Lab guiado](lab.md)
+
 ---
 
-## ☁️ Acompanhe a CloudStudy
-
-Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais prática, organizada e acessível.
-
-Siga a CloudStudy para acompanhar novos materiais, atualizações e conteúdos sobre certificações AWS:
-
-- Instagram: https://www.instagram.com/cloudstudy.ai/
-- LinkedIn: https://www.linkedin.com/company/cloudstudy-ai/
-
+CloudStudy - Trilha AWS Solutions Architect Professional

@@ -1,69 +1,99 @@
-﻿# Segurança: KMS, Secrets, GuardDuty e Security Hub
+# 19 - Seguranca: KMS, Secrets, GuardDuty e Security Hub
 
-## Visão Geral
+Este modulo aprofunda arquitetura de seguranca centralizada em ambientes AWS multi-account. O foco Professional e entender como criptografia, segredos, deteccao, agregacao, compliance e resposta trabalham juntos, nao decorar a funcao isolada de cada servico.
 
-Este módulo cobre proteção de dados, detecção, resposta, centralização e rastreabilidade de segurança, com foco no tipo de raciocínio arquitetural exigido no AWS Certified Solutions Architect Professional (SAP-C02).
+## Objetivos
 
-## Conceitos-Chave
+- Projetar uma conta de seguranca central com administradores delegados.
+- Diferenciar AWS KMS key policies, IAM policies e uso cross-account de chaves.
+- Posicionar Secrets Manager, Parameter Store, GuardDuty, Security Hub, Inspector, Macie, AWS Config e CloudTrail.
+- Entender deteccao, agregacao, compliance evaluation e remediacao automatizada.
+- Criar governanca de criptografia e findings em escala organizacional.
 
-- Domínio predominante: Continuous Improvement / Security.
-- Serviços e padrões principais: KMS, Secrets Manager, GuardDuty, Security Hub, Inspector, Macie.
-- Decisão orientada por requisitos de negócio, risco operacional, segurança, resiliência, performance e custo.
-- Avaliação de impactos em ambientes multi-conta, multi-Region, híbridos ou em migração quando aplicável.
+## Arquitetura de referencia
 
-## Relevância para o SAP-C02
+```text
+AWS Organization
+      |
+      +---- Security Account
+      |       +-- Security Hub administrator
+      |       +-- GuardDuty delegated admin
+      |       +-- Inspector delegated admin
+      |       +-- central findings / automation
+      |
+      +---- Log Archive Account
+      |       +-- CloudTrail organization trails
+      |       +-- Config snapshots / immutable logs
+      |
+      +---- Workload Accounts
+              +-- GuardDuty detectors
+              +-- Config recorders
+              +-- Inspector scans
+              +-- KMS customer managed keys
+              +-- Secrets Manager secrets
+```
 
-O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicamente válidas. O objetivo aqui é treinar por que uma arquitetura é preferível, quando outra opção se torna melhor e quais detalhes do enunciado mudam a decisão.
+Fluxo:
 
-## Decisões Arquiteturais
+1. Organizations habilita integracoes em escala.
+2. A conta de seguranca opera como delegated administrator para servicos suportados.
+3. Workload accounts geram findings e configuracoes.
+4. Security Hub agrega, normaliza e correlaciona findings.
+5. CloudTrail e Config preservam trilha e estado para investigacao.
+6. EventBridge/Systems Manager/Lambda podem acionar remediacao controlada.
 
-- Identificar o requisito dominante antes de escolher serviços.
-- Validar dependências entre contas, redes, dados, identidade e operação.
-- Preferir serviços gerenciados quando reduzem risco sem violar requisitos explícitos.
-- Documentar exceções quando controle, latência, compliance ou custo justificarem maior complexidade.
+## Comparacoes criticas
 
-## Trade-offs
+| Comparacao | Decisao Professional |
+| --- | --- |
+| KMS key policy vs IAM policy | Key policy e autoridade primaria da chave; IAM pode complementar se permitido pela key policy |
+| Secrets Manager vs Parameter Store | Secrets Manager favorece rotacao e segredos sensiveis; Parameter Store serve configuracao e parametros, com SecureString quando adequado |
+| GuardDuty vs Security Hub | GuardDuty detecta ameacas; Security Hub agrega findings e checks de seguranca |
+| Security Hub vs AWS Config | Security Hub agrega postura/finding; Config avalia estado de recursos contra regras |
+| GuardDuty vs Inspector | GuardDuty detecta comportamento/anomalia; Inspector avalia vulnerabilidades em workloads suportados |
+| Macie vs GuardDuty | Macie descobre dados sensiveis em S3; GuardDuty detecta atividade suspeita |
+| Detection vs aggregation vs compliance vs remediation | Cada etapa e separada; automatizar sem contexto pode causar indisponibilidade |
 
-- Menor operação versus maior controle.
-- Resiliência multi-AZ versus multi-Region e seu impacto em custo e complexidade.
-- Centralização de governança versus autonomia de times e contas.
-- Otimização de custo versus requisitos de desempenho, recuperação e segurança.
+## Raciocinio SAP-C02
 
-## Cenários de Prova
+### Cenario 1: empresa regulada com centenas de contas
 
-- Organizações com múltiplas contas e times independentes.
-- Ambientes híbridos com conectividade, DNS e segurança centralizados.
-- Workloads com requisitos conflitantes de RTO/RPO, compliance, custo e latência.
-- Migração ou modernização gradual sem indisponibilidade significativa.
+- Cenario: auditoria exige visibilidade central, criptografia governada e trilha imutavel.
+- Restricoes: times de workload continuam autonomos; seguranca nao deve operar na management account.
+- Sinal: governanca organizacional e delegated administrator.
+- Melhor decisao: Security Account como administrador delegado para GuardDuty, Security Hub, Inspector/Config quando aplicavel, Log Archive separado para CloudTrail e logs.
+- Trade-off: mais desenho multi-account e automacao, mas menor risco operacional e melhor segregacao.
+- Por que nao alternativas: habilitar manualmente por conta nao escala; usar management account como operacional aumenta risco.
 
-## Armadilhas Comuns
+### Cenario 2: credencial vazada
 
-- Escolher serviço por reconhecimento de nome, sem validar a restrição principal.
-- Resolver um problema organizacional com uma configuração local de uma única conta.
-- Ignorar operação contínua, automação, rastreabilidade e governança.
-- Escolher a arquitetura mais completa quando a pergunta pede menor esforço operacional ou menor custo.
+- Cenario: access key aparece em repositorio publico e atividade anomala surge em uma conta.
+- Restricoes: detectar rapidamente, correlacionar findings e conter dano.
+- Sinal: deteccao comportamental + agregacao + resposta.
+- Melhor decisao: GuardDuty para deteccao, Security Hub para agregacao, CloudTrail para investigacao e automacao controlada para desativar chave ou isolar principal.
+- Trade-off: remediacao automatica deve ter guardrails para evitar impacto indevido.
 
-## Próximo Passo de Revisão
+### Cenario 3: governanca de chaves
 
-1. Leia cheatsheet.md para consolidar critérios de decisão.
-2. Use casos-de-uso.md para treinar análise de cenários.
-3. Resolva questoes.md sem consulta e registre padrões de erro no módulo 30.
-4. Consulte links.md para validar detalhes em documentação oficial.
+- Cenario: dados regulados devem ser criptografados com chaves controladas e uso cross-account restrito.
+- Restricoes: workloads em contas diferentes precisam usar chaves sem abrir administracao da key.
+- Melhor decisao: customer managed keys, key policies explicitas, IAM complementar, grants quando apropriado e SCP/Config para governanca.
+- Trade-off: key policy mal desenhada pode bloquear recuperacao ou abrir uso indevido.
 
 ## Estudos Complementares
 
-Para revisar KMS, IAM, CloudTrail e controles basicos de seguranca antes de aprofundar chaves, segredos, deteccao centralizada e resposta organizacional neste modulo Professional:
+Use a trilha Associate apenas para revisar fundamentos de IAM, KMS, CloudTrail e seguranca basica antes de aprofundar arquitetura centralizada neste modulo:
 
 https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
 
+## Arquivos do modulo
+
+- [Questoes](questoes.md)
+- [Flashcards](flashcards.md)
+- [Cheatsheet](cheatsheet.md)
+- [Casos de uso](casos-de-uso.md)
+- [Links oficiais](links.md)
+
 ---
 
-## ☁️ Acompanhe a CloudStudy
-
-Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais prática, organizada e acessível.
-
-Siga a CloudStudy para acompanhar novos materiais, atualizações e conteúdos sobre certificações AWS:
-
-- Instagram: https://www.instagram.com/cloudstudy.ai/
-- LinkedIn: https://www.linkedin.com/company/cloudstudy-ai/
-
+CloudStudy - Trilha AWS Solutions Architect Professional

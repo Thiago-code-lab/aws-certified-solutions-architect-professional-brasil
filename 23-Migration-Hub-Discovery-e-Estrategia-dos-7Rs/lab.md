@@ -1,33 +1,87 @@
-﻿# Lab Guiado
+# Workshop Pratico - Assessment de Migracao
+
+> Este lab e um workshop de assessment. Nao provisione recursos AWS.
 
 ## Objetivo
 
-Validar um padrão relacionado a Migration Hub, Discovery e Estratégia dos 7Rs em ambiente de estudo, com escopo pequeno, evidência observável e cleanup claro.
+Classificar um portfolio ficticio, escolher estrategias dos 7Rs, planejar waves, identificar dependencias, blockers e rollback.
 
-## Serviços sugeridos
+## Portfolio ficticio
 
-Migration Hub, Application Discovery Service, Control Tower
+| Workload | Descricao | Dependencias | Criticidade | Restricoes |
+| --- | --- | --- | --- | --- |
+| BillingApp | Aplicacao Java em VMs com banco Oracle compartilhado | ERP, OracleDB | Alta | Downtime maximo 4h |
+| IntranetLegacy | Portal interno sem dono claro | LDAP antigo | Baixa | Uso desconhecido |
+| CRMOnPrem | Software comercial com SaaS oficial | AD, relatorios | Media | Contrato expira em 9 meses |
+| AnalyticsBatch | Jobs noturnos em servidores Linux | S3-like storage, DB read-only | Media | Janela noturna |
+| PaymentsCore | Monolito critico com deploy manual | Mainframe, OracleDB, filas | Alta | Alto valor de modernizacao |
+| FileArchive | Servidor de arquivos historicos | Nenhuma critica | Baixa | Retencao legal |
 
-## Faixa de custo esperada
+## Tarefa 1 - Classificar workloads
 
-- Execute em conta de laboratório.
-- Prefira recursos elegíveis a baixo custo ou execução curta.
-- Remova todos os recursos ao final.
+Preencha:
 
-## Passo a passo
+| Workload | R escolhido | Justificativa | Alternativas rejeitadas |
+| --- | --- | --- | --- |
+| BillingApp |  |  |  |
+| IntranetLegacy |  |  |  |
+| CRMOnPrem |  |  |  |
+| AnalyticsBatch |  |  |  |
+| PaymentsCore |  |  |  |
+| FileArchive |  |  |  |
 
-1. Defina o cenário e o requisito dominante antes de criar recursos.
-2. Implemente o menor fluxo funcional que demonstre a decisão arquitetural.
-3. Ative logs, métricas ou evidências mínimas de validação.
-4. Simule uma restrição, falha ou mudança de carga compatível com o tema.
-5. Registre o que mudaria em produção: governança, custo, segurança e operação.
+## Tarefa 2 - Identificar dependencias
 
-## Cleanup
+Para cada workload, responda:
 
-1. Remova recursos criados no laboratório.
-2. Apague dados temporários, snapshots e endpoints não usados.
-3. Verifique custos no dia seguinte.
+- Quais sistemas precisam migrar antes?
+- Quais podem permanecer on-premises temporariamente?
+- Ha dependencia de identidade, rede, banco, licenca ou dados?
+- Qual dependencia torna a wave arriscada?
 
-## Takeaway para prova
+## Tarefa 3 - Planejar waves
 
-O valor do lab é conectar configuração técnica à decisão arquitetural: por que esta solução atende melhor ao cenário do que as alternativas.
+Modelo sugerido:
+
+| Wave | Workloads | Motivo | Blockers |
+| --- | --- | --- | --- |
+| Pre-wave | Retire/assessment adicional | Reduz escopo | Confirmar uso real |
+| Wave 1 | Baixo risco | Validar landing zone | Rede/IAM/logging |
+| Wave 2 | Media dependencia | Ganhar escala | Banco/licenca |
+| Wave 3 | Criticos/modernizacao | Maior valor | Downtime e rollback |
+
+## Tarefa 4 - Blockers e rollback
+
+Liste para cada wave:
+
+- Blockers tecnicos.
+- Blockers de negocio.
+- Plano de rollback.
+- Criterios de sucesso.
+- Observabilidade necessaria.
+
+## Tarefa 5 - Defender decisoes
+
+Para cada workload, escreva:
+
+1. Por que o R escolhido e o melhor.
+2. Por que pelo menos duas alternativas foram rejeitadas.
+3. Qual risco residual permanece.
+4. Qual informacao adicional poderia mudar a decisao.
+
+## Exemplo de resposta esperada
+
+- `IntranetLegacy`: provavel Retire ou Retain curto para confirmar uso. Rehost seria fraco se nao houver dono/uso.
+- `CRMOnPrem`: provavel Repurchase se SaaS atender compliance e migracao de dados for viavel.
+- `PaymentsCore`: provavel Refactor/Re-architect faseado, talvez com etapa intermediaria, porque valor e dor operacional justificam investimento.
+
+## Entrega final
+
+O estudante deve produzir:
+
+- Matriz 7Rs preenchida.
+- Mapa de dependencias.
+- Plano de waves.
+- Lista de blockers.
+- Plano de rollback por wave.
+- Justificativa das alternativas rejeitadas.

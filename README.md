@@ -193,7 +193,7 @@ Esta tabela mostra o estado editorial real da fase atual. Alguns módulos já t�
 |---|---|---|---|
 | [01 - Introdução SAP-C02](./01-Introducao-SAP-C02/README.md) | Onboarding | Estrutura inicial | Não |
 | [02 - Organizations, Control Tower e Multi-Account](./02-Organizations-Control-Tower-e-Multi-Account/README.md) | Flagship | Aprofundado | Não |
-| [03 - IAM, Identity Center, Federação e Cross-Account](./03-IAM-Identity-Center-Federacao-e-Cross-Account/README.md) | Suporte | Estrutura inicial | Não |
+| [03 - IAM, Identity Center, Federação e Cross-Account](./03-IAM-Identity-Center-Federacao-e-Cross-Account/README.md) | Flagship | Aprofundado | Não |
 | [04 - Governança, SCPs, RAM e Service Catalog](./04-Governanca-SCPs-RAM-e-Service-Catalog/README.md) | Suporte | Estrutura inicial | Não |
 | [05 - Redes Avançadas, VPC e Transit Gateway](./05-Redes-Avancadas-VPC-e-Transit-Gateway/README.md) | Flagship | Aprofundado | Guiado |
 | [06 - Conectividade Híbrida, Direct Connect, VPN e DNS](./06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/README.md) | Suporte | Estrutura inicial | Rascunho |
@@ -202,18 +202,18 @@ Esta tabela mostra o estado editorial real da fase atual. Alguns módulos já t�
 | [09 - Alta Disponibilidade, Multi-AZ e Multi-Region](./09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/README.md) | Suporte | Estrutura inicial | Rascunho |
 | [10 - Route 53, CloudFront e Global Accelerator](./10-Route53-CloudFront-e-Global-Accelerator/README.md) | Suporte | Estrutura inicial | Rascunho |
 | [11 - S3, EBS, EFS, FSx e Estratégias de Armazenamento](./11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/README.md) | Suporte | Estrutura inicial | Rascunho |
-| [12 - RDS, Aurora e Estratégias de Banco Relacional](./12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/README.md) | Suporte | Estrutura inicial | Rascunho |
+| [12 - RDS, Aurora e Estratégias de Banco Relacional](./12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/README.md) | Flagship | Aprofundado | Guiado |
 | [13 - DynamoDB, ElastiCache e Bancos Purpose-Built](./13-DynamoDB-ElastiCache-e-Bancos-Purpose-Built/README.md) | Suporte | Estrutura inicial | Não |
 | [14 - SQS, SNS, EventBridge e Step Functions](./14-SQS-SNS-EventBridge-e-Step-Functions/README.md) | Suporte | Estrutura inicial | Rascunho |
 | [15 - Lambda, API Gateway e Arquiteturas Serverless](./15-Lambda-API-Gateway-e-Arquiteturas-Serverless/README.md) | Suporte | Estrutura inicial | Rascunho |
 | [16 - ECS, EKS, Fargate e Containers](./16-ECS-EKS-Fargate-e-Containers/README.md) | Suporte | Estrutura inicial | Rascunho |
 | [17 - CloudFormation, CI/CD e Estratégias de Deployment](./17-CloudFormation-CICD-e-Estrategias-de-Deployment/README.md) | Suporte | Estrutura inicial | Rascunho |
 | [18 - CloudWatch, CloudTrail, Config e Observabilidade](./18-CloudWatch-CloudTrail-Config-e-Observabilidade/README.md) | Suporte | Estrutura inicial | Rascunho |
-| [19 - Segurança: KMS, Secrets, GuardDuty e Security Hub](./19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/README.md) | Suporte | Estrutura inicial | Não |
+| [19 - Segurança: KMS, Secrets, GuardDuty e Security Hub](./19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/README.md) | Flagship | Aprofundado | Não |
 | [20 - Disaster Recovery, Backup, RTO e RPO](./20-Disaster-Recovery-Backup-RTO-e-RPO/README.md) | Flagship | Aprofundado | Guiado |
 | [21 - Performance, Reliability e Service Quotas](./21-Performance-Reliability-e-Service-Quotas/README.md) | Suporte | Estrutura inicial | Não |
 | [22 - Otimização de Custos e FinOps](./22-Otimizacao-de-Custos-e-FinOps/README.md) | Suporte | Estrutura inicial | Rascunho |
-| [23 - Migration Hub, Discovery e Estratégia dos 7Rs](./23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/README.md) | Suporte | Estrutura inicial | Rascunho |
+| [23 - Migration Hub, Discovery e Estratégia dos 7Rs](./23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/README.md) | Flagship | Aprofundado | Workshop |
 | [24 - MGN, DMS, SCT e Migração de Workloads](./24-MGN-DMS-SCT-e-Migracao-de-Workloads/README.md) | Suporte | Estrutura inicial | Rascunho |
 | [25 - DataSync, Snow, Transfer Family e Transferência de Dados](./25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/README.md) | Suporte | Estrutura inicial | Rascunho |
 | [26 - Modernização: Serverless, Containers e Decoupling](./26-Modernizacao-Serverless-Containers-e-Decoupling/README.md) | Suporte | Estrutura inicial | Rascunho |

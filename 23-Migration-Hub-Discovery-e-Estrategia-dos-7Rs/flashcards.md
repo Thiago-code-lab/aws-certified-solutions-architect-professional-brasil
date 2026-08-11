@@ -1,34 +1,31 @@
-﻿# Cartões de Revisão
+# Flashcards - Estrategia de Migracao
 
-## Card 01
+1. **Quando Retire e a melhor decisao?**
+   Quando o workload nao tem uso, dono, valor ou e duplicado e pode ser descontinuado com validacao.
 
-**Pergunta:** Qual é o foco deste módulo no SAP-C02?
+2. **Quando Retain nao e procrastinacao?**
+   Quando ha bloqueio real de contrato, compliance, dependencia tecnica ou janela de negocio.
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+3. **Quando Rehost e defensavel?**
+   Quando prazo e baixo risco dominam, dependencias sao conhecidas e mudanca minima e aceitavel.
 
-**Resposta:** Avaliar assessment, portfólio, ondas de migração, TCO e escolha de estratégia por meio de decisões arquiteturais, trade-offs e restrições reais.
+4. **Quando Replatform supera Rehost?**
+   Quando mover para servico gerenciado reduz operacao sem redesenhar a aplicacao.
 
-</details>
+5. **Quando Repurchase deve ser avaliado?**
+   Quando software comercial pode ser substituido por SaaS que atende requisitos de negocio e compliance.
 
-## Card 02
+6. **Quando Refactor/Re-architect se justifica?**
+   Quando valor de negocio, escala, resiliencia ou agilidade compensam maior custo e risco.
 
-**Pergunta:** Qual erro costuma eliminar alternativas em questões Professional?
+7. **Qual sinal vem antes de escolher ferramenta?**
+   Dependencias, criticidade, TCO, dono, dados, licencas e restricoes de downtime.
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+8. **Por que wave planning e critico?**
+   Porque migrar sistemas dependentes fora de ordem pode causar indisponibilidade e retrabalho.
 
-**Resposta:** Ignorar requisitos de operação, governança, segurança, RTO/RPO, custo recorrente ou impacto multi-conta.
+9. **Quando usar Application Discovery Service?**
+   Quando dependencias de servidores, comunicacoes e uso real precisam ser descobertos para planejar waves.
 
-</details>
-
-## Card 03
-
-**Pergunta:** Como comparar duas alternativas tecnicamente viáveis?
-
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-**Resposta:** Compare risco operacional, complexidade, custo total, impacto em segurança, capacidade de automação e aderência ao requisito dominante.
-
-</details>
+10. **Quando Migration Hub ajuda?**
+    Quando a organizacao precisa acompanhar progresso de migracao e coordenar ferramentas/workloads.

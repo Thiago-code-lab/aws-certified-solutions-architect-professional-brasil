@@ -1,17 +1,32 @@
-﻿# Guia Rápido
+# Cheatsheet - 7Rs e Wave Planning
 
-## Critérios de decisão
+| Sinal no cenario | Escolha provavel | Por que | Trade-off | Armadilha |
+| --- | --- | --- | --- | --- |
+| Sem uso, duplicado ou sem dono | Retire | Evita migrar custo inutil | Exige validacao de impacto | Desligar sem confirmar dependencias |
+| Bloqueio temporario real | Retain | Respeita contrato/compliance/dependencia | Mantem legado | Virar adiamento indefinido |
+| Prazo curto e baixa mudanca | Rehost | Reduz risco de prazo | Carrega divida tecnica | Chamar de modernizacao |
+| Banco/servidor pode virar gerenciado | Replatform | Reduz operacao sem redesign total | Testes de compatibilidade | Subestimar tuning |
+| SaaS substitui software comum | Repurchase | Remove operacao de plataforma | Mudanca de processo/dados | Ignorar lock-in e compliance |
+| Alto valor exige novo desenho | Refactor/Re-architect | Ataca causa raiz | Maior custo e risco | Refatorar tudo sem business case |
+| Ambiente VMware precisa mover rapido | Relocate | Move plataforma com menor mudanca | Mantem modelo operacional | Confundir com redesenho cloud-native |
+| Dependencias desconhecidas | Discovery primeiro | Evita waves quebradas | Leva tempo | Migrar por tamanho de servidor |
 
-| Sinal do cenário | Decisão esperada | Risco ao ignorar |
-|---|---|---|
-| Múltiplas contas ou unidades de negócio | Considerar governança, acesso e limites por conta | Arquitetura sem controle centralizado |
-| Requisito de continuidade | Validar RTO/RPO, failover e testes | Recuperação incompatível com o negócio |
-| Ambiente híbrido ou global | Avaliar conectividade, DNS, latência e roteamento | Ponto único de falha ou latência alta |
-| Pressão de custo | Comparar custo recorrente, operação e transferência de dados | Economia local que aumenta custo total |
+## Sequencia recomendada
 
-## Checklist de revisão
+1. Inventario de workloads.
+2. Dono, criticidade e valor de negocio.
+3. Dependencias tecnicas e dados.
+4. Restrições: prazo, downtime, compliance, licenca.
+5. Landing zone readiness.
+6. Classificacao 7Rs.
+7. Waves e rollback.
+8. Execucao, tracking e aprendizagem.
 
-- Qual requisito domina a decisão?
-- A solução escala para contas, regiões e times envolvidos?
-- Existe rastreabilidade operacional e de segurança?
-- A complexidade proposta é necessária para o cenário?
+## Sinais de prova
+
+- "data center contract expires" -> waves e estrategias pragmatica.
+- "obsolete tool" -> Retire.
+- "commercial software SaaS" -> Repurchase.
+- "minimal change" -> Rehost.
+- "managed database without app redesign" -> Replatform.
+- "business agility and high value" -> Refactor/Re-architect.
