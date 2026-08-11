@@ -1,31 +1,22 @@
-# Flashcards - Redes Avancadas
+# Flashcards - Redes Avancadas VPC e Transit Gateway
 
-1. **Quando escolher Transit Gateway?**
-   Quando muitas VPCs, contas ou redes on-premises precisam de conectividade centralizada com segmentacao e roteamento transitive.
+1. **Qual e o foco deste modulo?**  
+   Decidir quando Redes Avancadas VPC e Transit Gateway muda a arquitetura recomendada.
 
-2. **Quando VPC Peering e suficiente?**
-   Quando poucas VPCs precisam se comunicar diretamente, sem roteamento transitivo e sem grande complexidade operacional.
+2. **Qual e o primeiro passo em cenarios longos?**  
+   Identificar o requisito dominante.
 
-3. **Quando PrivateLink e a melhor resposta?**
-   Quando consumidores precisam acessar um servico privado especifico sem receber rotas para a rede do provedor.
+3. **O que elimina alternativas?**  
+   Limites, risco operacional, custo recorrente, seguranca ou indisponibilidade.
 
-4. **Qual o risco de propagacao automatica ampla no TGW?**
-   Ela pode criar alcance lateral indesejado entre ambientes ou unidades de negocio.
+4. **Quando evitar solucao sofisticada?**  
+   Quando ela nao responde a uma restricao explicita.
 
-5. **O que sao TGW route tables?**
-   Sao tabelas que controlam quais attachments podem alcancar quais destinos, permitindo segmentacao no hub.
+5. **Como validar a decisao?**  
+   Conferir documentacao oficial, quotas e comportamento de falha.
 
-6. **Por que CIDR planning e critico?**
-   CIDRs sobrepostos impedem conectividade roteada previsivel entre VPCs, TGW e redes on-premises.
+---
 
-7. **Como integrar DNS hibrido?**
-   Com Route 53 Resolver inbound/outbound endpoints e regras compartilhadas conforme o modelo multi-account.
+Continue seus estudos na CloudStudy:
 
-8. **Qual cuidado com firewall stateful centralizado?**
-   Garantir caminhos simetricos para ida e volta do trafego.
-
-9. **Quando usar endpoints VPC?**
-   Para acessar servicos AWS privadamente, reduzindo exposicao a internet e dependencia de NAT Gateway para chamadas internas.
-
-10. **Qual trade-off do egress centralizado?**
-    Ele melhora controle e auditoria, mas adiciona custo, latencia e dependencia de uma VPC central.
+[https://cloudstudy.com.br](https://cloudstudy.com.br)

@@ -1,31 +1,22 @@
-# Casos de Uso - Redes Avancadas
+# Caso de Uso - Redes Avancadas VPC e Transit Gateway
 
-## 1. Rede corporativa multi-account
+## Cenario
 
-**Cenario:** uma empresa separa contas por produto, ambiente e unidade de negocio. Todas precisam acessar servicos compartilhados e alguns sistemas on-premises.
+Uma organizacao revisa uma arquitetura relacionada a Redes Avancadas VPC e Transit Gateway. A solucao precisa manter operacao continua, seguranca e custo controlado.
 
-**Restricoes:** nao deve haver comunicacao livre entre desenvolvimento e producao; a equipe de rede precisa auditar rotas por dominio.
+## Decisao recomendada
 
-**Decisao:** implementar Transit Gateway em conta de rede, com route tables separadas para producao, nao producao, shared services e on-premises.
+Escolha a alternativa que atende ao requisito dominante com automacao, observabilidade e controles claros. A justificativa deve conectar o desenho tecnico ao risco de negocio.
 
-**Trade-off:** TGW adiciona custo por attachment e trafego, mas reduz malha de peering e permite governanca central de rotas.
+## Por que funciona
 
-## 2. Plataforma compartilhada consumida por outras contas
+- Reduz operacao manual.
+- Preserva rastreabilidade.
+- Mantem caminho de rollback ou evolucao.
+- Evita complexidade sem requisito explicito.
 
-**Cenario:** uma equipe central fornece um servico de validacao de identidade para workloads de varias contas.
+---
 
-**Restricoes:** consumidores nao devem alcancar bancos, filas ou sub-redes administrativas do provedor.
+Continue seus estudos na CloudStudy:
 
-**Decisao:** publicar o servico com AWS PrivateLink atras de NLB, permitindo principals especificos e DNS privado.
-
-**Trade-off:** a solucao e excelente para servicos bem definidos, mas cada servico publicado exige operacao propria de endpoint service.
-
-## 3. Egress controlado para ambiente regulado
-
-**Cenario:** workloads de pagamento precisam sair para internet e parceiros externos passando por inspeção central.
-
-**Restricoes:** auditoria exige log central, bloqueio por dominio/IP e consistencia no caminho de ida e volta.
-
-**Decisao:** usar TGW com inspection VPC, AWS Network Firewall, route tables dedicadas e endpoints VPC para trafego AWS interno.
-
-**Trade-off:** melhora compliance e visibilidade, mas aumenta latencia e cria dependencia operacional da VPC de inspeção.
+[https://cloudstudy.com.br](https://cloudstudy.com.br)

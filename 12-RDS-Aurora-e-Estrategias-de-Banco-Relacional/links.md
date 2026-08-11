@@ -1,20 +1,47 @@
-# Links Oficiais - RDS e Aurora
+# Links Recomendados
 
-## Essencial
+## Referencias oficiais AWS
 
-- [Amazon RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html) - Base oficial para operacao gerenciada, backups, Multi-AZ e replicas.
-- [Amazon Aurora User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html) - Leitura prioritaria para entender arquitetura Aurora e diferenca em relacao a RDS tradicional.
-- [High availability for Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html) - Essencial para distinguir Multi-AZ de read scaling e DR regional.
-- [Aurora Global Database](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html) - Prioridade alta para cenarios globais e baixo RPO cross-region.
+- [https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)
+- [https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html)
+- [https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html)
+- [https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html)
+- [https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html)
 
-## Aprofundamento
+## Por que estes links importam
 
-- [Working with read replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html) - Ajuda a separar escala de leitura de alta disponibilidade.
-- [Amazon RDS Proxy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy.html) - Importante para workloads serverless, pooling e failover de conexoes.
-- [Backing up and restoring Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_CommonTasks.BackupRestore.html) - Base para diferenciar backup, snapshot e recuperacao point-in-time.
+- Documentacao oficial reduz ambiguidade sobre o comportamento dos servicos.
+- Guias de boas praticas ajudam a entender decisoes arquiteturais e trade-offs.
+- Referencias oficiais ajudam a alinhar terminologia e contexto para o SAP-C02.
 
-## Referencia
+## Ordem sugerida de leitura
 
-- [Amazon RDS encryption](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Encryption.html) - Use para validar criptografia, KMS e copias.
-- [Aurora Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Replication.html) - Referencia para leitura e failover em clusters Aurora.
-- [AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html) - Consulte quando o cenario mistura banco relacional e migracao.
+1. Visao geral do servico.
+2. Arquitetura, limites e seguranca.
+3. Boas praticas e cenarios relevantes para o exame.
+
+---
+
+## Acompanhe a CloudStudy
+
+Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais pratica, organizada e acessivel.
+
+Continue seus estudos e acompanhe novos materiais, atualizacoes e conteudos sobre certificacoes AWS:
+
+- Plataforma: [https://cloudstudy.com.br](https://cloudstudy.com.br)
+- Instagram: [https://www.instagram.com/cloudstudy.ai/](https://www.instagram.com/cloudstudy.ai/)
+- LinkedIn: [https://www.linkedin.com/company/cloudstudy-ai/](https://www.linkedin.com/company/cloudstudy-ai/)
+
+---
+
+## Outras trilhas AWS em portugues
+
+- [AWS Solutions Architect Associate](https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil)
+- [AWS Cloud Practitioner](https://github.com/Thiago-code-lab/aws-certified-cloud-practitioner-brasil)
+- [AWS AI Practitioner](https://github.com/Thiago-code-lab/aws-certified-ai-practitioner-brasil)
+
+---
+
+> Continue sua jornada de estudos para certificacoes AWS na [CloudStudy](https://cloudstudy.com.br).
+
+> Para conteudos praticos de dados e projetos na AWS, veja tambem: [Engenharia de Dados na AWS](https://www.udemy.com/course/engenharia-de-dados-na-aws-do-zero-aos-projetos-reais/?referralCode=E28670B9116BA68E08A9).

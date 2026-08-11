@@ -1,97 +1,70 @@
-# Casos de Uso - FinOps
+﻿# Casos de Uso - FinOps
 
-## Cenario 1 - Custo sem ownership
-
-### Contexto
-
-Uma empresa tem billing consolidado e nao consegue explicar custos por produto.
-
-### Requisitos
-
-- Atribuir custos por unidade.
-- Alertar desvios.
-- Criar accountability.
-
-### Arquitetura recomendada
-
-Padronizar contas/tags, habilitar CUR, usar Cost Explorer para analise, Budgets por owner e processo de revisao recorrente.
-
-### Por que
-
-Sem alocacao, qualquer corte e arbitrario.
-
-### Trade-offs
-
-Governanca de tagging exige disciplina e automacao.
-
-### Por que nao as alternativas
-
-Savings Plans sem visibilidade podem comprometer gasto errado; desligamento aleatorio causa incidente.
-
-### Sinal de prova
-
-"cost attribution", "business unit", "many accounts".
-
-## Cenario 2 - Plataforma com baseline e picos
+## Cenario 1 - Chargeback
 
 ### Contexto
-
-Um e-commerce tem baseline previsivel e campanhas com demanda variavel.
+Fatura consolidada cresce e areas negam responsabilidade.
 
 ### Requisitos
-
-- Reduzir custo recorrente.
-- Preservar disponibilidade em picos.
-- Evitar compromisso excessivo.
+Atribuicao por produto, centro de custo, ambiente e conta.
 
 ### Arquitetura recomendada
-
-Rightsizing, commitment para baseline e autoscaling com On-Demand/Spot para partes tolerantes a interrupcao.
+Padrao de contas e tags, CUR e Budgets por owner.
 
 ### Por que
-
-Separa uso previsivel de variabilidade.
+Visibilidade e alocacao precedem otimizacao confiavel.
 
 ### Trade-offs
-
-Mais planejamento de capacidade e politicas de fallback.
+Tags e contas exigem governanca.
 
 ### Por que nao as alternativas
-
-Commitment para pico desperdiça; On-Demand puro perde desconto; Spot para tudo pode afetar disponibilidade.
+Comprar desconto sem ownership esconde desperdicio.
 
 ### Sinal de prova
+CFO, chargeback e showback indicam CUR, tags e Budgets.
 
-"stable baseline", "unpredictable peaks".
-
-## Cenario 3 - Custo de dados e rede
+## Cenario 2 - Baseline e picos
 
 ### Contexto
-
-Uma plataforma global reduziu EC2, mas a fatura continua alta por NAT Gateway e transferencia inter-region.
+Servico web opera 24x7 com campanhas sazonais.
 
 ### Requisitos
-
-- Reduzir custo sem quebrar resiliencia.
-- Manter usuarios globais.
-- Entender fluxo de dados.
+Disponibilidade e custo menor.
 
 ### Arquitetura recomendada
-
-Mapear trafego, usar endpoints VPC quando aplicavel, cache/CDN, localidade de processamento e replicacao seletiva.
+Rightsizing, Auto Scaling, Savings Plans para baseline e elasticidade para pico.
 
 ### Por que
-
-O driver de custo e arquitetura de dados/rede, nao tamanho de instancia.
+Separa demanda previsivel de demanda incerta.
 
 ### Trade-offs
-
-Pode exigir redesenho e revisao de DR/consistencia.
+Exige medicao e revisao periodica.
 
 ### Por que nao as alternativas
-
-Reserved Instances nao reduzem transferencia; arquivar dados sem padrao de acesso pode quebrar app.
+Comprometer pico desperdiça; Spot integral arrisca disponibilidade.
 
 ### Sinal de prova
+Baseline estavel mais pico imprevisivel pede compromisso parcial.
 
-"data transfer bill", "NAT Gateway", "inter-Region".
+## Cenario 3 - Transferencia alta
+
+### Contexto
+Aplicacao replica dados entre regioes e serve downloads publicos sem cache.
+
+### Requisitos
+Reduzir custo preservando experiencia e DR.
+
+### Arquitetura recomendada
+CloudFront, revisao de replicacao por RPO, lifecycle e endpoints privados quando suportados.
+
+### Por que
+Custo de transferencia nasce do desenho de fluxo.
+
+### Trade-offs
+Cache e politica de dados aumentam complexidade.
+
+### Por que nao as alternativas
+Cortar replicacao sem RPO e arriscado.
+
+### Sinal de prova
+Data transfer alto exige revisar topologia.

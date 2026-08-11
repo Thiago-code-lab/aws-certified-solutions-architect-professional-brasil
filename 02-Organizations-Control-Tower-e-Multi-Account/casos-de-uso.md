@@ -1,25 +1,22 @@
-# Casos de Uso
+# Caso de Uso - Organizations Control Tower e Multi Account
 
-## Caso 1: Empresa adquirida precisa entrar na governança corporativa
+## Cenario
 
-**Cenário:** A matriz comprou uma empresa com contas AWS próprias. A exigência é consolidar billing, habilitar auditoria central e manter autonomia temporária dos times adquiridos.
+Uma organizacao revisa uma arquitetura relacionada a Organizations Control Tower e Multi Account. A solucao precisa manter operacao continua, seguranca e custo controlado.
 
-**Decisão:** Convidar/migrar contas para Organizations, criar OU de transição, aplicar SCPs mínimas, habilitar CloudTrail/Config centralizados e planejar evolução para OUs definitivas.
+## Decisao recomendada
 
-**Trade-off:** A OU de transição reduz risco imediato sem exigir refatoração operacional completa no primeiro dia.
+Escolha a alternativa que atende ao requisito dominante com automacao, observabilidade e controles claros. A justificativa deve conectar o desenho tecnico ao risco de negocio.
 
-## Caso 2: Sandbox está gerando custo e risco público
+## Por que funciona
 
-**Cenário:** Times criam recursos experimentais com portas abertas e instâncias caras. Produção não pode ser afetada.
+- Reduz operacao manual.
+- Preserva rastreabilidade.
+- Mantem caminho de rollback ou evolucao.
+- Evita complexidade sem requisito explicito.
 
-**Decisão:** Criar OU Sandbox, aplicar SCPs contra regiões/serviços proibidos, exigir tags de owner e usar Budgets/alertas separados.
+---
 
-**Trade-off:** Restringe liberdade total, mas preserva autonomia controlada e evita impacto em contas produtivas.
+Continue seus estudos na CloudStudy:
 
-## Caso 3: Segurança precisa operar serviços centralizados
-
-**Cenário:** GuardDuty, Security Hub e Config precisam estar habilitados em todas as contas. A management account não deve ser usada para operação diária.
-
-**Decisão:** Usar conta de segurança como delegated administrator, agregar findings centralmente e enviar logs para log archive.
-
-**Trade-off:** Exige desenho claro de roles e responsabilidades, mas reduz risco operacional e melhora rastreabilidade.
+[https://cloudstudy.com.br](https://cloudstudy.com.br)

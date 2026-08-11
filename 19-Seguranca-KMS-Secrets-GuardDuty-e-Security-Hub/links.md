@@ -1,21 +1,47 @@
-# Links Oficiais - Seguranca Centralizada
+# Links Recomendados
 
-## Essencial
+## Referencias oficiais AWS
 
-- [AWS Key Management Service Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) - Base para customer managed keys, key policies e uso com servicos AWS.
-- [AWS Secrets Manager User Guide](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) - Prioridade para segredos, rotacao e integracao com aplicacoes.
-- [Amazon GuardDuty User Guide](https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html) - Essencial para deteccao de ameacas e findings.
-- [AWS Security Hub User Guide](https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html) - Base para agregacao, postura e integracao de findings.
+- [https://docs.aws.amazon.com/kms/latest/developerguide/overview.html](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html)
+- [https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)
+- [https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html](https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html)
+- [https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html](https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html)
+- [https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html)
 
-## Aprofundamento
+## Por que estes links importam
 
-- [AWS Config Developer Guide](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html) - Use para compliance de configuracao e avaliacao de recursos.
-- [Amazon Inspector User Guide](https://docs.aws.amazon.com/inspector/latest/user/what-is-inspector.html) - Leitura para vulnerabilidades em workloads suportados.
-- [Amazon Macie User Guide](https://docs.aws.amazon.com/macie/latest/user/what-is-macie.html) - Importante para descoberta de dados sensiveis em S3.
-- [AWS CloudTrail User Guide](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html) - Essencial para auditoria e investigacao.
+- Documentacao oficial reduz ambiguidade sobre o comportamento dos servicos.
+- Guias de boas praticas ajudam a entender decisoes arquiteturais e trade-offs.
+- Referencias oficiais ajudam a alinhar terminologia e contexto para o SAP-C02.
 
-## Referencia
+## Ordem sugerida de leitura
 
-- [KMS key policies](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html) - Consulte para diferenciar key policy e IAM policy.
-- [Managing AWS accounts in GuardDuty](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html) - Relevante para delegated administrator.
-- [Security Hub administrator and member accounts](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-accounts.html) - Relevante para arquitetura multi-account.
+1. Visao geral do servico.
+2. Arquitetura, limites e seguranca.
+3. Boas praticas e cenarios relevantes para o exame.
+
+---
+
+## Acompanhe a CloudStudy
+
+Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais pratica, organizada e acessivel.
+
+Continue seus estudos e acompanhe novos materiais, atualizacoes e conteudos sobre certificacoes AWS:
+
+- Plataforma: [https://cloudstudy.com.br](https://cloudstudy.com.br)
+- Instagram: [https://www.instagram.com/cloudstudy.ai/](https://www.instagram.com/cloudstudy.ai/)
+- LinkedIn: [https://www.linkedin.com/company/cloudstudy-ai/](https://www.linkedin.com/company/cloudstudy-ai/)
+
+---
+
+## Outras trilhas AWS em portugues
+
+- [AWS Solutions Architect Associate](https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil)
+- [AWS Cloud Practitioner](https://github.com/Thiago-code-lab/aws-certified-cloud-practitioner-brasil)
+- [AWS AI Practitioner](https://github.com/Thiago-code-lab/aws-certified-ai-practitioner-brasil)
+
+---
+
+> Continue sua jornada de estudos para certificacoes AWS na [CloudStudy](https://cloudstudy.com.br).
+
+> Para conteudos praticos de dados e projetos na AWS, veja tambem: [Engenharia de Dados na AWS](https://www.udemy.com/course/engenharia-de-dados-na-aws-do-zero-aos-projetos-reais/?referralCode=E28670B9116BA68E08A9).

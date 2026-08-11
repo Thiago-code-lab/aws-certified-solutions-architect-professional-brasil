@@ -1,99 +1,70 @@
-# Casos de Uso - Modernizacao
+﻿# Casos de Uso - Modernizacao
 
-## Cenario 1 - Monolito com demanda mobile
-
-### Contexto
-
-Uma empresa tem monolito relacional de 10 anos e precisa lancar APIs mobile rapidamente.
-
-### Requisitos
-
-- Evitar rewrite multi-ano.
-- Entregar valor incremental.
-- Reduzir risco operacional.
-- Manter regras legadas funcionando.
-
-### Arquitetura recomendada
-
-Strangler pattern com API/routing layer, novos servicos para capacidades mobile e monolito mantendo funcoes estaveis.
-
-### Por que
-
-O negocio precisa de modernizacao incremental, nao substituicao total imediata.
-
-### Trade-offs
-
-Convivencia temporaria, integracao de dados e observabilidade mais complexas.
-
-### Por que nao as alternativas
-
-Big-bang rewrite atrasa valor; rehost puro nao resolve release; EKS sem decomposicao so muda runtime.
-
-### Sinal de prova
-
-"old monolith", "new API/mobile", "cannot accept multi-year rewrite".
-
-## Cenario 2 - Processamento em background
+## Cenario 1 - Monolito com novas APIs
 
 ### Contexto
-
-Pedidos acionam integracoes externas lentas e variaveis.
+Sistema legado concentra web, batch e regras em uma base unica.
 
 ### Requisitos
-
-- Nao bloquear requisicao principal.
-- Retry e DLQ.
-- Absorver picos.
+Novas APIs mobile, menor tempo de release e baixo risco.
 
 ### Arquitetura recomendada
-
-SQS para buffering, consumidores Lambda ou ECS conforme duracao/processamento, DLQ e idempotencia.
+Strangler pattern com API layer, novos servicos por dominio e monolito para funcoes estaveis.
 
 ### Por que
-
-O limite assincrono reduz acoplamento e protege a experiencia do usuario.
+Entrega valor antes da substituicao completa.
 
 ### Trade-offs
-
-Consistencia eventual e necessidade de rastrear estados.
+Convivencia e observabilidade ficam mais complexas.
 
 ### Por que nao as alternativas
-
-Fluxo sincrono aumenta latencia; aumentar timeout mascara falhas; EventBridge pode ser complementar, mas fila e melhor para buffering direto.
+Rewrite total aumenta risco; rehost puro nao melhora release.
 
 ### Sinal de prova
+Sem tolerancia para rewrite longo indica migracao incremental.
 
-"background processing", "retry", "traffic spikes".
-
-## Cenario 3 - Containers sem Kubernetes maduro
+## Cenario 2 - Processamento assincrono
 
 ### Contexto
-
-Um time pequeno quer empacotar servicos em containers, mas nao possui plataforma Kubernetes.
+Checkout dispara notificacao, antifraude, faturamento e analytics.
 
 ### Requisitos
-
-- Baixa operacao.
-- Deploy rapido.
-- Stateless services.
-- Escala sob demanda.
+Absorver picos, retry e evitar falha cascata.
 
 ### Arquitetura recomendada
-
-ECS com Fargate, pipeline de containers e observabilidade padronizada.
+EventBridge para eventos de dominio e SQS para consumidores que precisam de buffer.
 
 ### Por que
-
-Entrega containers com menor overhead operacional.
+Reduz acoplamento e permite falha parcial.
 
 ### Trade-offs
-
-Menos controle/ecossistema Kubernetes, mas melhor encaixe para time pequeno.
+Consistencia eventual e idempotencia obrigatorias.
 
 ### Por que nao as alternativas
-
-EKS adiciona plataforma a operar; EC2 autogerenciado aumenta toil; Lambda pode nao encaixar se o processo for longo/customizado.
+Chamadas sincrônicas em cadeia ampliam latencia e risco.
 
 ### Sinal de prova
+Picos e consumidores independentes indicam assincronia.
 
-"small team", "containers", "no Kubernetes expertise".
+## Cenario 3 - Escolha de plataforma
+
+### Contexto
+Time pequeno entrega servicos simples; area central tem Kubernetes maduro.
+
+### Requisitos
+Baixo overhead para alguns servicos e controle de runtime para outros.
+
+### Arquitetura recomendada
+Lambda/Fargate para servicos simples e EKS somente onde Kubernetes agrega valor.
+
+### Por que
+A escolha respeita skill e restricao operacional.
+
+### Trade-offs
+Mais de uma plataforma exige padroes comuns.
+
+### Por que nao as alternativas
+Forcar EKS para tudo aumenta toil; forcar Lambda ignora runtime.
+
+### Sinal de prova
+Skill do time e overhead operacional sao sinais decisivos.

@@ -1,24 +1,47 @@
-# Links Oficiais - Disaster Recovery
+# Links Recomendados
 
-## Estrategia e fundamentos
+## Referencias oficiais AWS
 
-- [Disaster Recovery of Workloads on AWS: Recovery in the Cloud](https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-workloads-on-aws.html)
-- [Reliability Pillar - AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html)
-- [Reliability Pillar - Plan for disaster recovery](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_planning_for_recovery_disaster_recovery.html)
+- [https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-workloads-on-aws.html](https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-workloads-on-aws.html)
+- [https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html)
+- [https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_planning_for_recovery_disaster_recovery.html](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_planning_for_recovery_disaster_recovery.html)
+- [https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html](https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html)
+- [https://docs.aws.amazon.com/aws-backup/latest/devguide/cross-region-backup.html](https://docs.aws.amazon.com/aws-backup/latest/devguide/cross-region-backup.html)
 
-## Backup e replicacao
+## Por que estes links importam
 
-- [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html)
-- [Cross-Region backup copies](https://docs.aws.amazon.com/aws-backup/latest/devguide/cross-region-backup.html)
-- [S3 Replication](https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication.html)
+- Documentacao oficial reduz ambiguidade sobre o comportamento dos servicos.
+- Guias de boas praticas ajudam a entender decisoes arquiteturais e trade-offs.
+- Referencias oficiais ajudam a alinhar terminologia e contexto para o SAP-C02.
 
-## DR de workloads
+## Ordem sugerida de leitura
 
-- [AWS Elastic Disaster Recovery](https://docs.aws.amazon.com/drs/latest/userguide/what-is-drs.html)
-- [Amazon Route 53 health checks and DNS failover](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover.html)
-- [Aurora Global Database](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html)
+1. Visao geral do servico.
+2. Arquitetura, limites e seguranca.
+3. Boas praticas e cenarios relevantes para o exame.
 
-## Estudos Complementares
+---
 
-- Use materiais Associate para revisar snapshots, RDS Multi-AZ, Auto Scaling e S3 versioning.
-- Para SAP-C02, aprofunde whitepapers oficiais de DR, Well-Architected Reliability e documentacao dos servicos usados na estrategia escolhida.
+## Acompanhe a CloudStudy
+
+Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais pratica, organizada e acessivel.
+
+Continue seus estudos e acompanhe novos materiais, atualizacoes e conteudos sobre certificacoes AWS:
+
+- Plataforma: [https://cloudstudy.com.br](https://cloudstudy.com.br)
+- Instagram: [https://www.instagram.com/cloudstudy.ai/](https://www.instagram.com/cloudstudy.ai/)
+- LinkedIn: [https://www.linkedin.com/company/cloudstudy-ai/](https://www.linkedin.com/company/cloudstudy-ai/)
+
+---
+
+## Outras trilhas AWS em portugues
+
+- [AWS Solutions Architect Associate](https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil)
+- [AWS Cloud Practitioner](https://github.com/Thiago-code-lab/aws-certified-cloud-practitioner-brasil)
+- [AWS AI Practitioner](https://github.com/Thiago-code-lab/aws-certified-ai-practitioner-brasil)
+
+---
+
+> Continue sua jornada de estudos para certificacoes AWS na [CloudStudy](https://cloudstudy.com.br).
+
+> Para conteudos praticos de dados e projetos na AWS, veja tambem: [Engenharia de Dados na AWS](https://www.udemy.com/course/engenharia-de-dados-na-aws-do-zero-aos-projetos-reais/?referralCode=E28670B9116BA68E08A9).

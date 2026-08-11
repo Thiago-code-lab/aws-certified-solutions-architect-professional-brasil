@@ -1,87 +1,58 @@
-# 23 - Migration Hub, Discovery e Estrategia dos 7Rs
+# Migration Hub Discovery e Estrategia dos 7Rs
 
-Este modulo trata migracao como decisao de portfolio antes de ferramenta. No SAP-C02, o ponto central e reconhecer negocio, dependencias, prazo, risco, licenciamento, downtime, divida tecnica e prontidao da landing zone para escolher a estrategia correta entre os 7Rs.
+## Visao geral
 
-## Objetivos
+Este modulo resume o tema Migration Hub Discovery e Estrategia dos 7Rs para a certificacao AWS Certified Solutions Architect Professional (SAP-C02). O foco e reconhecer sinais de arquitetura em cenarios longos e escolher a alternativa que equilibra seguranca, confiabilidade, performance, custo e operacao.
 
-- Conduzir discovery de portfolio e dependencias antes de selecionar ferramenta.
-- Usar AWS Migration Hub, Application Discovery Service, Migration Evaluator e TCO quando apropriado.
-- Planejar waves de migracao com base em criticidade, dependencia, risco e valor.
-- Aplicar os 7Rs: Retire, Retain, Rehost, Relocate, Replatform, Repurchase, Refactor/Re-architect.
-- Explicar por que uma estrategia foi escolhida e por que as alternativas foram rejeitadas.
+## Conceitos centrais
 
-## Mental model Professional
+- Identificar a restricao dominante antes de comparar servicos.
+- Validar impacto de identidade, rede, dados, automacao, observabilidade e governanca.
+- Preferir servicos gerenciados quando reduzem operacao sem violar requisitos.
+- Confirmar limites e comportamento na documentacao oficial.
 
-```text
-Scenario
-  -> constraints
-  -> architectural signal
-  -> options
-  -> best decision
-  -> trade-off
-  -> why not the alternatives
-```
+## Decisao arquitetural
 
-## 7Rs orientados por decisao
+Use este tema quando o cenario pedir uma decisao sustentavel e verificavel. Em SAP-C02, a melhor resposta geralmente nao e a arquitetura mais sofisticada, mas a que atende os requisitos explicitos com menor risco operacional.
 
-| Pergunta | Sinal | R provavel | Cuidado |
-| --- | --- | --- | --- |
-| O workload ainda e necessario? | Sem dono, sem uso, duplicado | Retire | Validar impacto antes de desligar |
-| Deve ficar onde esta por compliance, latencia ou contrato? | Bloqueio temporario real | Retain | Reavaliar depois; nao virar adiamento eterno |
-| Pode mover com mudanca minima e prazo agressivo? | Baixa dependencia, app estavel | Rehost | Pode carregar divida tecnica |
-| Pode mudar plataforma sem redesenhar app? | Banco/servidor compativel com gerenciado | Replatform | Testar compatibilidade e performance |
-| Existe SaaS que substitui melhor? | Software comercial comum | Repurchase | Migracao de dados e processos |
-| Business value justifica redesign? | Escala, agilidade, custo ou resiliencia exigem mudanca | Refactor/Re-architect | Maior custo, prazo e risco |
-| Workload VMware pode mover como plataforma? | Ambiente VMware e requisito de rapidez | Relocate | Mantem modelo operacional semelhante |
+## Sinais de prova
 
-## Exemplo de portfolio e waves
+1. Requisitos de multi-account, auditoria, RTO/RPO, latencia ou custo mudam a prioridade da solucao.
+2. Alternativas tecnicamente validas devem ser comparadas por trade-off e risco.
+3. Automacao, rollback e observabilidade contam como parte da arquitetura.
+4. O enunciado costuma eliminar solucoes excessivas ou manuais demais.
 
-| Aplicacao | Perfil | R provavel | Wave | Racional |
-| --- | --- | --- | --- | --- |
-| A | Baixa dependencia, baixa criticidade | Rehost | Wave 1 | Bom candidato para validar landing zone e processo |
-| B | Depende de banco compartilhado, criticidade media | Replatform | Wave 2 | Banco gerenciado reduz operacao, mas dependencia exige sequenciamento |
-| C | Monolito legado, alto valor de negocio | Refactor/Re-architect | Wave 3+ | Modernizacao justificada, mas precisa discovery profundo e roadmap |
-| D | Ferramenta interna obsoleta | Retire | Antes da Wave 1 | Evita migrar o que nao gera valor |
-| E | Software comercial disponivel como SaaS | Repurchase | Wave 2 | Reduz operacao, mas exige avaliacao de dados, usuarios e contrato |
+## Armadilhas comuns
 
-## Raciocinio SAP-C02
+- Escolher um recurso avancado sem necessidade descrita.
+- Ignorar limites de servico, falha parcial ou modelo de consistencia.
+- Resolver seguranca sem menor privilegio, auditoria e controles verificaveis.
+- Confundir migracao, modernizacao e melhoria continua.
 
-### Cenario 1: data-center exit com prazo fixo
+## Navegacao
 
-- Cenario: contrato do data center vence em 12 meses.
-- Restricoes: prazo domina; nem todos os apps podem ser modernizados.
-- Sinal: migracao em waves com quick wins e baixa mudanca.
-- Melhor decisao: discovery, agrupamento por dependencia, landing zone pronta, rehost/replatform para workloads aptos e retain para bloqueios reais.
-- Trade-off: parte da divida tecnica continua, mas o risco de prazo cai.
-- Por que nao alternativas: refatorar tudo antes da saida aumenta risco; migrar sem discovery quebra dependencias.
-
-### Cenario 2: aquisicao
-
-- Cenario: empresa adquirida tem portfolio desconhecido, licencas distintas e apps duplicados.
-- Restricoes: consolidar custo e reduzir redundancia sem interromper negocio.
-- Melhor decisao: assessment, dependencia, TCO e classificacao: retire duplicados, repurchase softwares comuns, retain bloqueados e migrar waves de baixo risco primeiro.
-- Trade-off: analise inicial demora, mas evita migracao desnecessaria.
-
-### Cenario 3: monolito critico
-
-- Cenario: monolito gera receita, tem deploy lento e escala irregular.
-- Restricoes: baixo downtime, alto valor de modernizacao, dependencias complexas.
-- Melhor decisao: decompor roadmap; talvez replatform inicial para reduzir operacao e refactor gradual de dominios de maior valor.
-- Trade-off: abordagem faseada reduz risco, mas demora mais que rehost simples.
-
-## Estudos Complementares
-
-Este modulo e inerentemente Professional. Use documentacao oficial e prescriptive guidance para validar estrategia, discovery, readiness e wave planning. Nao ha recomendacao cross-repository generica para esta fase.
-
-## Arquivos do modulo
-
-- [Questoes](questoes.md)
-- [Flashcards](flashcards.md)
-- [Cheatsheet](cheatsheet.md)
-- [Casos de uso](casos-de-uso.md)
-- [Links oficiais](links.md)
-- [Workshop de migracao](lab.md)
+- Modulo anterior: [Otimizacao de Custos e FinOps](../22-Otimizacao-de-Custos-e-FinOps/README.md)
+- Revise tambem: [questoes](./questoes.md), [flashcards](./flashcards.md), [cheatsheet](./cheatsheet.md), [casos de uso](./casos-de-uso.md) e [links recomendados](./links.md).
+- Proximo modulo: [MGN DMS SCT e Migracao de Workloads](../24-MGN-DMS-SCT-e-Migracao-de-Workloads/README.md)
 
 ---
 
-CloudStudy - Trilha AWS Solutions Architect Professional
+## Acompanhe a CloudStudy
+
+Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais pratica, organizada e acessivel.
+
+- Plataforma: [CloudStudy](https://cloudstudy.com.br)
+- Instagram: [cloudstudy.ai](https://www.instagram.com/cloudstudy.ai/)
+- LinkedIn: [CloudStudy](https://www.linkedin.com/company/cloudstudy-ai/)
+
+---
+
+## Outras trilhas AWS em portugues
+
+- [AWS Solutions Architect Associate](https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil)
+- [AWS Cloud Practitioner](https://github.com/Thiago-code-lab/aws-certified-cloud-practitioner-brasil)
+- [AWS AI Practitioner](https://github.com/Thiago-code-lab/aws-certified-ai-practitioner-brasil)
+
+---
+
+> Continue sua preparacao para certificacoes AWS na [CloudStudy](https://cloudstudy.com.br).

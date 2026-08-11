@@ -1,111 +1,33 @@
-# Questoes - RDS e Aurora
+# Questoes - RDS Aurora e Estrategias de Banco Relacional
 
 ## Questao 1
 
-Uma aplicacao regional usa RDS PostgreSQL Single-AZ. O requisito novo e reduzir indisponibilidade em falha de AZ, sem mudar a aplicacao e sem criar arquitetura multi-region.
+Uma empresa precisa tomar uma decisao relacionada a RDS Aurora e Estrategias de Banco Relacional em um cenario com seguranca, operacao continua e custo previsivel. Qual abordagem tende a ser mais adequada?
 
-Qual alternativa atende melhor?
+A. Escolher a opcao mais complexa mesmo sem requisito explicito.
+B. Priorizar a solucao que atende aos requisitos com menor risco operacional e controles verificaveis.
+C. Usar apenas operacao manual para manter flexibilidade.
+D. Adiar observabilidade e rollback.
 
-A. Habilitar RDS Multi-AZ.
-B. Criar snapshot diario e restaurar quando houver falha.
-C. Criar read replica na mesma AZ.
-D. Colocar CloudFront na frente do banco.
+**Resposta:** B
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-**Resposta correta:** A
-
-**Por que esta correta:** Multi-AZ entrega standby/failover gerenciado para falha de AZ, com baixa mudanca na aplicacao.
-
-**Por que as alternativas sao mais fracas:** snapshot tem RTO maior; read replica e para leitura/replicacao e nao substitui HA regional automaticamente; CloudFront nao acelera acesso a banco relacional.
-
-</details>
+**Explicacao:** SAP-C02 premia decisao sustentavel, alinhada ao requisito dominante e com risco controlado.
 
 ## Questao 2
 
-Um catalogo global recebe muitas leituras de clientes na Europa e America do Norte, mas as escritas devem permanecer concentradas em uma regiao primaria. A empresa quer baixa latencia de leitura e baixo RPO regional.
+Duas alternativas tecnicamente funcionam. O que deve desempatar?
 
-Qual escolha e mais apropriada?
+A. Quantidade de servicos usados.
+B. Alinhamento com requisitos explicitos, limites, custo e operacao.
+C. Preferencia pessoal por um servico.
+D. Menor documentacao disponivel.
 
-A. Aurora Global Database.
-B. Apenas RDS Multi-AZ na regiao primaria.
-C. Backups automaticos com retencao de 35 dias.
-D. RDS Proxy sem replicas.
+**Resposta:** B
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+**Explicacao:** O nivel Professional cobra trade-off, nao apenas reconhecimento de servico.
 
-**Resposta correta:** A
+---
 
-**Por que esta correta:** Aurora Global Database permite replicas em regioes secundarias para leitura global e melhora postura de recuperacao cross-region.
+Continue seus estudos na CloudStudy:
 
-**Por que as alternativas sao mais fracas:** Multi-AZ e regional; backups nao atendem leitura global; RDS Proxy gerencia conexoes, nao replica dados globalmente.
-
-</details>
-
-## Questao 3
-
-Uma API serverless com Lambda usa RDS MySQL. Em campanhas, milhares de execucoes simultaneas abrem conexoes e o banco passa a rejeitar sessoes, mesmo quando CPU e IO ainda estao aceitaveis.
-
-Qual acao deve ser priorizada?
-
-A. Adicionar RDS Proxy entre Lambda e o banco.
-B. Criar snapshots mais frequentes.
-C. Migrar todos os dados para S3 Glacier.
-D. Criar uma read replica para receber escritas.
-
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-**Resposta correta:** A
-
-**Por que esta correta:** o sinal e storm de conexoes. RDS Proxy fornece pooling e melhora comportamento de failover.
-
-**Por que as alternativas sao mais fracas:** snapshots nao reduzem conexoes; Glacier nao e banco transacional; read replica nao recebe escritas da aplicacao.
-
-</details>
-
-## Questao 4
-
-Uma empresa acredita que backups automaticos cross-region bastam para atender RPO de poucos segundos em desastre regional de um banco relacional critico.
-
-Qual avaliacao e mais correta?
-
-A. Backups sao suficientes para RPO de segundos em qualquer engine.
-B. Replicacao cross-region ou Aurora Global Database devem ser avaliadas; backup e restauracao geralmente nao atendem RPO tao baixo.
-C. Multi-AZ resolve desastre regional.
-D. RDS Proxy substitui replicacao.
-
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-**Resposta correta:** B
-
-**Por que esta correta:** RPO de segundos aponta para replicacao, nao apenas backup. Backup e restauracao tendem a ter RTO/RPO maiores.
-
-**Por que as alternativas sao mais fracas:** A ignora limites de backup; C confunde AZ com regiao; D resolve conexoes, nao perda de dados.
-
-</details>
-
-## Questao 5
-
-Uma aplicacao legada certificada para SQL Server precisa migrar para AWS com baixa alteracao de codigo e operacao gerenciada. Nao ha requisito de arquitetura global, mas ha requisito de HA dentro da regiao.
-
-Qual decisao e mais defensavel?
-
-A. Amazon RDS for SQL Server com Multi-AZ, backups automaticos e criptografia.
-B. Aurora Global Database, mesmo sem compatibilidade da aplicacao.
-C. DynamoDB global tables.
-D. EC2 autogerenciado sem backups automatizados.
-
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-**Resposta correta:** A
-
-**Por que esta correta:** RDS preserva compatibilidade de engine e reduz operacao; Multi-AZ atende HA regional.
-
-**Por que as alternativas sao mais fracas:** Aurora nao e SQL Server; DynamoDB exigiria redesign; EC2 autogerenciado aumenta overhead e risco.
-
-</details>
+[https://cloudstudy.com.br](https://cloudstudy.com.br)

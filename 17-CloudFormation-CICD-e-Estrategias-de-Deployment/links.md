@@ -1,19 +1,47 @@
-# Referencias Oficiais
+# Links Recomendados
 
-## Essencial
+## Referencias oficiais AWS
 
-- [AWS CloudFormation User Guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html) - Base oficial para stacks, updates, rollback e IaC; leitura prioritaria.
-- [AWS CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html) - Essencial para deployment multi-account e multi-region.
-- [AWS CodePipeline User Guide](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html) - Cobre orquestracao de pipeline; importante para promocao entre ambientes.
+- [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/)
+- [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html)
+- [https://docs.aws.amazon.com/codepipeline/](https://docs.aws.amazon.com/codepipeline/)
+- [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html)
+- [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html)
 
-## Aprofundamento
+## Por que estes links importam
 
-- [CloudFormation change sets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html) - Ajuda a avaliar impacto antes de atualizar.
-- [CloudFormation drift detection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html) - Importante para detectar divergencia entre IaC e estado real.
-- [AWS CodeBuild User Guide](https://docs.aws.amazon.com/codebuild/latest/userguide/welcome.html) - Relevante para build/testes e validacao automatizada.
+- Documentacao oficial reduz ambiguidade sobre o comportamento dos servicos.
+- Guias de boas praticas ajudam a entender decisoes arquiteturais e trade-offs.
+- Referencias oficiais ajudam a alinhar terminologia e contexto para o SAP-C02.
 
-## Referencia
+## Ordem sugerida de leitura
 
-- [AWS CodeDeploy User Guide](https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html) - Consulte para estrategias de deployment e rollback de aplicacoes.
-- [Amazon ECS deployment types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html) - Referencia para rolling e blue/green em containers.
-- [Lambda deployments with CodeDeploy](https://docs.aws.amazon.com/lambda/latest/dg/configuring-alias-routing.html) - Util para canary/linear deployments em funcoes Lambda.
+1. Visao geral do servico.
+2. Arquitetura, limites e seguranca.
+3. Boas praticas e cenarios relevantes para o exame.
+
+---
+
+## Acompanhe a CloudStudy
+
+Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais pratica, organizada e acessivel.
+
+Continue seus estudos e acompanhe novos materiais, atualizacoes e conteudos sobre certificacoes AWS:
+
+- Plataforma: [https://cloudstudy.com.br](https://cloudstudy.com.br)
+- Instagram: [https://www.instagram.com/cloudstudy.ai/](https://www.instagram.com/cloudstudy.ai/)
+- LinkedIn: [https://www.linkedin.com/company/cloudstudy-ai/](https://www.linkedin.com/company/cloudstudy-ai/)
+
+---
+
+## Outras trilhas AWS em portugues
+
+- [AWS Solutions Architect Associate](https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil)
+- [AWS Cloud Practitioner](https://github.com/Thiago-code-lab/aws-certified-cloud-practitioner-brasil)
+- [AWS AI Practitioner](https://github.com/Thiago-code-lab/aws-certified-ai-practitioner-brasil)
+
+---
+
+> Continue sua jornada de estudos para certificacoes AWS na [CloudStudy](https://cloudstudy.com.br).
+
+> Para conteudos praticos de dados e projetos na AWS, veja tambem: [Engenharia de Dados na AWS](https://www.udemy.com/course/engenharia-de-dados-na-aws-do-zero-aos-projetos-reais/?referralCode=E28670B9116BA68E08A9).

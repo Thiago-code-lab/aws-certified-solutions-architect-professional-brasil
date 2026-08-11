@@ -1,31 +1,22 @@
-# Flashcards - RDS e Aurora
+# Flashcards - RDS Aurora e Estrategias de Banco Relacional
 
-1. **Quando Multi-AZ e preferivel a read replica?**
-   Quando o requisito principal e failover/alta disponibilidade dentro da regiao.
+1. **Qual e o foco deste modulo?**  
+   Decidir quando RDS Aurora e Estrategias de Banco Relacional muda a arquitetura recomendada.
 
-2. **Quando read replica e preferivel a Multi-AZ?**
-   Quando o gargalo principal e leitura e a aplicacao aceita consistencia eventual.
+2. **Qual e o primeiro passo em cenarios longos?**  
+   Identificar o requisito dominante.
 
-3. **Quando Aurora Global Database entra na decisao?**
-   Quando ha leitura global, DR cross-region com baixo RPO ou necessidade de replica regional rapida.
+3. **O que elimina alternativas?**  
+   Limites, risco operacional, custo recorrente, seguranca ou indisponibilidade.
 
-4. **Quando RDS tradicional e melhor que Aurora?**
-   Quando a aplicacao exige engine especifica, compatibilidade legada ou simplicidade operacional suficiente.
+4. **Quando evitar solucao sofisticada?**  
+   Quando ela nao responde a uma restricao explicita.
 
-5. **Por que backup nao substitui replicacao?**
-   Backup restaura um ponto no tempo; replicacao mantem copia mais proxima do estado atual para leitura ou recuperacao.
+5. **Como validar a decisao?**  
+   Conferir documentacao oficial, quotas e comportamento de falha.
 
-6. **Quando usar RDS Proxy?**
-   Quando o problema e excesso de conexoes, failover de conexoes ou workloads serverless com alta concorrencia.
+---
 
-7. **Por que RDS Proxy nao resolve write scaling?**
-   Ele gerencia conexoes; nao transforma uma engine relacional em escritor horizontal ilimitado.
+Continue seus estudos na CloudStudy:
 
-8. **Quando Multi-AZ nao basta?**
-   Quando o requisito menciona desastre regional, usuarios globais ou failover para outra regiao.
-
-9. **Qual sinal indica problema de leitura, nao HA?**
-   Queries de leitura saturam o writer, mas o requisito nao fala em falha de AZ.
-
-10. **Qual risco em failover cross-region?**
-    Promocao, DNS, consistencia, aplicacao e failback precisam ser coordenados.
+[https://cloudstudy.com.br](https://cloudstudy.com.br)

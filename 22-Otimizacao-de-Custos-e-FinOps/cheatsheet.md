@@ -1,24 +1,15 @@
-# Cheatsheet - FinOps e Otimizacao Arquitetural
+# Cheatsheet - Otimizacao de Custos e FinOps
 
-| Sinal no cenario | Escolha provavel | Por que | Trade-off | Armadilha |
-| --- | --- | --- | --- | --- |
-| CFO pede custo por BU | Tags/contas/CUR/Budgets | Cria ownership | Governanca continua | Cortar sem saber dono |
-| Baseline compute estavel | Savings Plans/RIs | Desconto em uso previsivel | Compromisso | Comprar para pico |
-| Picos imprevisiveis | On-Demand/autoscaling | Flexibilidade | Custo maior | Comprometer uso incerto |
-| Batch interruptivel | Spot | Baixo custo | Interrupcao | Usar sem retry |
-| Banco ocioso | Rightsizing | Reduz desperdicio | Teste de performance | Diminuir sem metricas |
-| S3 frio e volumoso | Lifecycle policies | Reduz storage | Custo/latencia de restore | Arquivar dado quente |
-| Conta dev 24x7 | Scheduler + ownership | Quick win | Excecoes | Desligar recurso critico |
-| Alto custo NAT/transfer | Redesenho de fluxo/endpoints/cache | Ataca driver real | Mudanca arquitetural | Olhar so EC2 |
-| Servico autogerenciado caro em operacao | Managed service | Reduz toil | Preco unitario maior | Comparar so infra |
+| Sinal no cenario | Decisao provavel | Cuidado de prova |
+|---|---|---|
+| Requisito de governanca ou auditoria | Preferir desenho controlado e verificavel | Nao confundir permissao local com controle organizacional |
+| Requisito de continuidade | Avaliar failover, replicacao e rollback | Nao assumir alta disponibilidade sem teste |
+| Requisito de performance | Escolher servico pelo padrao de acesso | Validar quotas, latencia e throughput |
+| Requisito de custo | Reduzir desperdicio sem quebrar confiabilidade | Evitar economia que aumenta risco |
+| Requisito de migracao ou modernizacao | Escolher menor mudanca que atende o objetivo | Nao refatorar tudo sem necessidade |
 
-## Ordem de decisao
+---
 
-1. Medir.
-2. Alocar.
-3. Identificar drivers.
-4. Remover ocioso.
-5. Rightsizing.
-6. Otimizar arquitetura.
-7. Assumir commitments.
-8. Monitorar anomalias.
+Continue seus estudos na CloudStudy:
+
+[https://cloudstudy.com.br](https://cloudstudy.com.br)

@@ -1,111 +1,81 @@
-# Questoes - Modernizacao
+﻿# Questoes - Modernizacao
 
 ## Questao 1
 
-Uma empresa possui um monolito de 10 anos com release trimestral e muitas regras de negocio. O negocio precisa de novas APIs mobile em meses, mas nao aceita uma reescrita multi-ano.
+Uma empresa tem monolito de dez anos, banco compartilhado e novas APIs mobile. O negocio nao aceita rewrite de varios anos. Qual abordagem e melhor?
 
-Qual abordagem e mais adequada?
+A) Big-bang rewrite.
+B) Strangler pattern com camada de roteamento e novos servicos por dominio.
+C) Migrar tudo para EKS sem reduzir acoplamento.
+D) Recriar todo banco antes de entregar valor.
 
-A. Big-bang rewrite completo antes de entregar qualquer funcionalidade.
-B. Strangler pattern, extraindo capacidades novas por tras de uma camada de API/roteamento e mantendo partes estaveis no monolito.
-C. Rehost do monolito e proibicao de novas APIs.
-D. Migrar tudo para EKS sem alterar arquitetura.
-
-<details>
-<summary><strong>Ver resposta</strong></summary>
+<details><summary><strong>Ver resposta</strong></summary>
 
 **Resposta correta:** B
 
-**Por que esta correta:** strangler permite modernizacao incremental, entrega de valor e reducao de risco.
-
-**Por que as alternativas sao mais fracas:** A concentra risco e atrasa valor; C nao atende negocio; D troca plataforma sem resolver acoplamento.
-
+Strangler entrega valor incremental e reduz risco. A concentra risco; C troca plataforma sem modernizar; D cria dependencia excessiva.
 </details>
 
 ## Questao 2
 
-Um sistema recebe picos de eventos de pedidos. O processamento chama provedores externos instaveis e precisa de retry sem bloquear a API principal.
+Pedido online dispara email, estoque e analytics. Picos causam lentidao no fluxo sincrono. O que melhora resiliencia?
 
-Qual desenho e mais defensavel?
+A) Aumentar timeouts.
+B) Usar SQS/EventBridge para desacoplar etapas e permitir retry.
+C) Colocar tudo no mesmo container.
+D) Remover observabilidade.
 
-A. Processar tudo sincronicamente na requisicao do usuario.
-B. Usar SQS para desacoplar, consumidores idempotentes e DLQ para falhas.
-C. Aumentar timeout da API para varios minutos.
-D. Usar apenas CloudFront.
-
-<details>
-<summary><strong>Ver resposta</strong></summary>
+<details><summary><strong>Ver resposta</strong></summary>
 
 **Resposta correta:** B
 
-**Por que esta correta:** fila desacopla picos, permite retry e evita bloquear a experiencia principal.
-
-**Por que as alternativas sao mais fracas:** A e C ampliam acoplamento e latencia; D nao processa eventos.
-
+Etapas independentes combinam com assincronia e retry. As demais aumentam acoplamento ou risco operacional.
 </details>
 
 ## Questao 3
 
-Uma organizacao quer adotar containers, mas tem time pequeno, pouca experiencia Kubernetes e objetivo de reduzir operacao. As aplicacoes sao stateless e nao exigem recursos especificos de Kubernetes.
+Equipe pequena precisa operar APIs stateless com picos variaveis e pouca experiencia Kubernetes. Qual opcao reduz overhead?
 
-Qual escolha e mais apropriada?
+A) EKS altamente customizado.
+B) Lambda quando servir ou ECS/Fargate para containers sem gerenciar instancias.
+C) EC2 manual sem Auto Scaling.
+D) Um cluster por microservico.
 
-A. ECS com Fargate.
-B. EKS obrigatoriamente, pois todo container moderno deve usar Kubernetes.
-C. EC2 autogerenciado com scripts manuais.
-D. Lambda para processos longos sem avaliar limites.
+<details><summary><strong>Ver resposta</strong></summary>
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+**Resposta correta:** B
 
-**Resposta correta:** A
-
-**Por que esta correta:** ECS/Fargate reduz overhead operacional para containers stateless quando Kubernetes nao e requisito.
-
-**Por que as alternativas sao mais fracas:** B adiciona complexidade desnecessaria; C aumenta toil; D pode ser inadequado para processos longos.
-
+Lambda e Fargate reduzem operacao. EKS pode ser valido, mas exige maturidade.
 </details>
 
 ## Questao 4
 
-Um dominio de notificacoes precisa receber eventos de varios sistemas e rotear para consumidores diferentes, sem acoplar produtores a filas especificas.
+Uma organizacao ja tem Kubernetes maduro, observabilidade e times treinados. Servicos exigem runtime especifico. Qual decisao e defensavel?
 
-Qual servico tende a se encaixar melhor?
+A) EKS pode ser adequado, aceitando maior operacao.
+B) Lambda substitui todos os containers.
+C) S3 executa servicos.
+D) Voltar ao monolito.
 
-A. EventBridge.
-B. Uma unica fila SQS compartilhada por todos sem schema.
-C. EBS snapshots.
-D. Direct Connect.
-
-<details>
-<summary><strong>Ver resposta</strong></summary>
+<details><summary><strong>Ver resposta</strong></summary>
 
 **Resposta correta:** A
 
-**Por que esta correta:** EventBridge favorece roteamento baseado em eventos entre produtores e consumidores desacoplados.
-
-**Por que as alternativas sao mais fracas:** B cria acoplamento e mistura consumidores; C e armazenamento/backup; D e conectividade hibrida.
-
+Maturidade Kubernetes e necessidade de controle favorecem EKS. As demais alternativas ignoram requisitos.
 </details>
 
 ## Questao 5
 
-Um workload legado e estavel, tem prazo de migracao curto por encerramento de data center e nao sofre com escala ou release. A empresa quer minimizar risco inicial.
+Faturamento muda rapidamente, mas modulo fiscal legado e estavel e regulado. Qual plano e melhor?
 
-Qual estrategia deve ser considerada antes de refatorar?
+A) Modernizar tudo simultaneamente.
+B) Refatorar faturamento primeiro e manter fiscal ate haver justificativa e testes.
+C) Remover controles fiscais.
+D) Criar eventos sem idempotencia.
 
-A. Rehost ou replatform com modernizacao posterior se houver valor.
-B. Refactor completo imediato.
-C. Big-bang rewrite para microservicos.
-D. Repurchase sem SaaS equivalente.
+<details><summary><strong>Ver resposta</strong></summary>
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+**Resposta correta:** B
 
-**Resposta correta:** A
-
-**Por que esta correta:** prazo curto e baixo problema arquitetural favorecem mover com menor mudanca e modernizar depois se houver justificativa.
-
-**Por que as alternativas sao mais fracas:** B e C aumentam risco sem necessidade; D depende de alternativa SaaS real.
-
+Modernizacao prioriza valor e risco. Mexer em dominio regulado sem necessidade aumenta risco sem retorno.
 </details>

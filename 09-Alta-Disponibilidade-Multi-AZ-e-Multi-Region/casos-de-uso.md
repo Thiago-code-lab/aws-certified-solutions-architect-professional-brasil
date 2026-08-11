@@ -1,19 +1,22 @@
-﻿# Casos de Uso
+# Caso de Uso - Alta Disponibilidade Multi AZ e Multi Region
 
-## Cenário 1: Organização com múltiplas contas
+## Cenario
 
-**Padrão recomendado:** separar responsabilidades por conta, centralizar governança e automatizar controles essenciais.  
-**Motivo:** reduz blast radius e melhora auditoria sem bloquear autonomia dos times.  
-**Sinal de prova:** termos como unidades de negócio, conta compartilhada, compliance, logging centralizado ou acesso cross-account.
+Uma organizacao revisa uma arquitetura relacionada a Alta Disponibilidade Multi AZ e Multi Region. A solucao precisa manter operacao continua, seguranca e custo controlado.
 
-## Cenário 2: Requisito conflitante de custo e resiliência
+## Decisao recomendada
 
-**Padrão recomendado:** comparar níveis de disponibilidade e recuperação contra impacto financeiro e operacional.  
-**Motivo:** SAP-C02 frequentemente testa a alternativa suficiente, não a arquitetura mais sofisticada.  
-**Sinal de prova:** RTO/RPO, orçamento limitado, operação enxuta, múltiplas regiões ou indisponibilidade tolerável.
+Escolha a alternativa que atende ao requisito dominante com automacao, observabilidade e controles claros. A justificativa deve conectar o desenho tecnico ao risco de negocio.
 
-## Cenário 3: Modernização ou migração gradual
+## Por que funciona
 
-**Padrão recomendado:** reduzir acoplamento, planejar ondas e manter coexistência temporária quando necessário.  
-**Motivo:** evita cortes arriscados e permite validar arquitetura por etapas.  
-**Sinal de prova:** legado, data center, baixa tolerância a downtime, dependências desconhecidas ou janela de migração curta.
+- Reduz operacao manual.
+- Preserva rastreabilidade.
+- Mantem caminho de rollback ou evolucao.
+- Evita complexidade sem requisito explicito.
+
+---
+
+Continue seus estudos na CloudStudy:
+
+[https://cloudstudy.com.br](https://cloudstudy.com.br)

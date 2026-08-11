@@ -1,19 +1,47 @@
-# Links Oficiais - Estrategia de Migracao
+# Links Recomendados
 
-## Essencial
+## Referencias oficiais AWS
 
-- [AWS Migration Hub User Guide](https://docs.aws.amazon.com/migrationhub/latest/ug/whatishub.html) - Ensina acompanhamento central de migracoes; importante para coordenar progresso em waves.
-- [AWS Application Discovery Service User Guide](https://docs.aws.amazon.com/application-discovery/latest/userguide/what-is-appdiscovery.html) - Prioridade para discovery de servidores, dependencias e planejamento de portfolio.
-- [AWS Prescriptive Guidance - Migration strategy](https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-strategy/welcome.html) - Fonte essencial para estrategia antes de ferramenta.
+- [https://docs.aws.amazon.com/migrationhub/latest/ug/whatishub.html](https://docs.aws.amazon.com/migrationhub/latest/ug/whatishub.html)
+- [https://docs.aws.amazon.com/application-discovery/latest/userguide/what-is-appdiscovery.html](https://docs.aws.amazon.com/application-discovery/latest/userguide/what-is-appdiscovery.html)
+- [https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-strategy/welcome.html](https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-strategy/welcome.html)
+- [https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-terms-and-concepts/welcome.html](https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-terms-and-concepts/welcome.html)
+- [https://aws.amazon.com/migration-evaluator/](https://aws.amazon.com/migration-evaluator/)
 
-## Aprofundamento
+## Por que estes links importam
 
-- [AWS Prescriptive Guidance - Migration terms and concepts](https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-terms-and-concepts/welcome.html) - Ajuda a alinhar linguagem de assessment, waves e estrategias.
-- [AWS Migration Evaluator](https://aws.amazon.com/migration-evaluator/) - Relevante para TCO, business case e planejamento economico.
-- [AWS Cloud Adoption Framework](https://docs.aws.amazon.com/whitepapers/latest/aws-caf/aws-caf.html) - Apoia migration readiness e dimensoes organizacionais.
+- Documentacao oficial reduz ambiguidade sobre o comportamento dos servicos.
+- Guias de boas praticas ajudam a entender decisoes arquiteturais e trade-offs.
+- Referencias oficiais ajudam a alinhar terminologia e contexto para o SAP-C02.
 
-## Referencia
+## Ordem sugerida de leitura
 
-- [AWS Application Migration Service](https://docs.aws.amazon.com/mgn/latest/ug/what-is-application-migration-service.html) - Referencia para execucao de rehost quando a estrategia ja foi escolhida.
-- [AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html) - Consulte quando o portfolio envolve migracao de bancos.
-- [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html) - Use para validar trade-offs de confiabilidade, seguranca, custo e operacao.
+1. Visao geral do servico.
+2. Arquitetura, limites e seguranca.
+3. Boas praticas e cenarios relevantes para o exame.
+
+---
+
+## Acompanhe a CloudStudy
+
+Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais pratica, organizada e acessivel.
+
+Continue seus estudos e acompanhe novos materiais, atualizacoes e conteudos sobre certificacoes AWS:
+
+- Plataforma: [https://cloudstudy.com.br](https://cloudstudy.com.br)
+- Instagram: [https://www.instagram.com/cloudstudy.ai/](https://www.instagram.com/cloudstudy.ai/)
+- LinkedIn: [https://www.linkedin.com/company/cloudstudy-ai/](https://www.linkedin.com/company/cloudstudy-ai/)
+
+---
+
+## Outras trilhas AWS em portugues
+
+- [AWS Solutions Architect Associate](https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil)
+- [AWS Cloud Practitioner](https://github.com/Thiago-code-lab/aws-certified-cloud-practitioner-brasil)
+- [AWS AI Practitioner](https://github.com/Thiago-code-lab/aws-certified-ai-practitioner-brasil)
+
+---
+
+> Continue sua jornada de estudos para certificacoes AWS na [CloudStudy](https://cloudstudy.com.br).
+
+> Para conteudos praticos de dados e projetos na AWS, veja tambem: [Engenharia de Dados na AWS](https://www.udemy.com/course/engenharia-de-dados-na-aws-do-zero-aos-projetos-reais/?referralCode=E28670B9116BA68E08A9).

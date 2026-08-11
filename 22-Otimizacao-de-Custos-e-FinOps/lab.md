@@ -1,77 +1,33 @@
-# Workshop - Revisao Arquitetural FinOps
+﻿# Lab - FinOps Architecture Review Workshop
 
-> Exercicio de analise. Nao acesse console nem altere recursos reais.
+Use dados ficticios. Nenhum recurso AWS deve ser criado.
 
 ## Cenario
 
-Uma empresa SaaS multi-account quer reduzir custo mensal sem comprometer disponibilidade dos clientes.
-
-## Dados mensais ficticios
-
 | Categoria | Custo mensal | Observacao |
-| --- | --- | --- |
-| EC2 | USD 42.000 | 60% baseline estavel, 40% picos |
-| RDS | USD 28.000 | Duas instancias superdimensionadas |
-| S3 | USD 18.000 | 70% dados raramente acessados |
-| NAT Gateway | USD 12.000 | Alto trafego para servicos AWS publicos |
-| Data Transfer | USD 15.000 | Replicacao inter-region ampla |
-| EBS | USD 7.000 | Volumes antigos sem owner |
-| CloudFront | USD 4.000 | Reduz origem, custo aceitavel |
-| Idle development | USD 9.000 | Ambientes ligados 24x7 |
+| --- | ---: | --- |
+| EC2 On-Demand | USD 42.000 | Baseline 60%, picos sazonais |
+| RDS | USD 18.000 | CPU media 25% |
+| S3 Standard | USD 9.000 | 70% sem acesso em 180 dias |
+| NAT Gateway | USD 7.500 | Chamadas a servicos AWS |
+| Data Transfer | USD 11.000 | Replicacao e download publico |
+| EBS | USD 5.000 | Volumes antigos |
+| Dev ocioso | USD 6.500 | Ambientes 24x7 |
 
-## Tarefa 1 - Identificar drivers
+## Tarefas
 
-Classifique:
+1. Identifique drivers.
+2. Classifique quick wins, arquitetura e compromisso.
+3. Determine rightsizing.
+4. Avalie Savings Plans ou RI apos medir.
+5. Avalie Spot.
+6. Proponha lifecycle S3.
+7. Preserve disponibilidade e DR.
+8. Crie plano priorizado.
 
-- Custo de compute.
-- Custo de banco.
-- Custo de armazenamento.
-- Custo de rede.
-- Custo ocioso.
+## Criterios
 
-## Tarefa 2 - Quick wins
-
-Liste acoes de baixo risco:
-
-- Scheduling dev.
-- Volumes EBS sem owner.
-- Tags obrigatorias.
-- Budgets por time.
-
-## Tarefa 3 - Commitment
-
-Defina:
-
-- Qual parte do EC2 e baseline.
-- O que pode receber Savings Plans/RIs.
-- O que deve continuar flexivel.
-- Quais workloads podem usar Spot.
-
-## Tarefa 4 - Mudancas arquiteturais
-
-Avalie:
-
-- VPC endpoints para reduzir NAT quando aplicavel.
-- Lifecycle S3.
-- Rightsizing RDS.
-- Revisao de replicacao inter-region.
-- Cache/CDN para reduzir origem.
-
-## Tarefa 5 - Plano priorizado
-
-Monte:
-
-| Prioridade | Acao | Beneficio esperado | Risco | Validacao |
-| --- | --- | --- | --- | --- |
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-
-## Entrega esperada
-
-- Ranking de oportunidades.
-- Separacao quick win vs mudanca arquitetural.
-- Decisoes de commitment.
-- Riscos de disponibilidade.
-- Mecanismo de monitoramento continuo.
-- Explicacao de por que menor preco unitario nem sempre e menor custo total.
+- Nao comprar compromisso antes de remover desperdicio.
+- Separar custo de resiliencia.
+- Definir ownership.
+- Explicar risco de cada acao.

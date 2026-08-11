@@ -1,33 +1,16 @@
 # 26 - Modernizacao: Serverless, Containers e Decoupling
 
-Este modulo nao ensina "Lambda, ECS e EKS" como lista de servicos. Ele ensina como modernizar um workload existente sem cair em reescrita grande, cara e arriscada. Modernizacao Professional combina valor de negocio, prazo, skills do time, acoplamento, operacao, escala, dados e capacidade de migrar incrementalmente.
+Este modulo trata modernizacao como mudanca incremental. O objetivo nao e aprender Lambda, ECS ou EKS isoladamente, mas decidir como evoluir workloads legados sem rewrite de alto risco, reduzindo acoplamento e melhorando velocidade de entrega.
 
 ## Objetivos
 
-- Diferenciar rehost, replatform e refactor em decisoes de modernizacao.
-- Aplicar strangler pattern para decompor monolitos gradualmente.
-- Escolher limites sincronos e assincronos com SQS, SNS, EventBridge e Step Functions.
-- Posicionar Lambda, ECS, EKS e Fargate conforme carga, operacao e skills.
-- Evitar big-bang rewrite quando o risco supera o beneficio.
-- Definir etapas de migracao incremental com rollback e convivencia legado/novo.
+- Escolher entre rehost, replatform e refactor conforme prazo, risco e valor.
+- Aplicar strangler pattern para substituir partes do monolito gradualmente.
+- Identificar limites sincronos e assincronos com SQS, SNS, EventBridge e Step Functions.
+- Decidir entre Lambda, ECS, EKS e Fargate conforme operacao, escala e skill.
+- Evitar modernizacao artificial quando mudanca menor resolve a restricao.
 
-## Comparacoes criticas
-
-| Comparacao | Decisao Professional |
-| --- | --- |
-| Rehost vs modernize | Rehost reduz prazo; modernizacao ataca causas de escala, agilidade e operacao |
-| Replatform vs refactor | Replatform muda plataforma com pouca alteracao; refactor muda arquitetura/codigo |
-| Monolito vs modular | Monolito pode ser aceitavel se estavel; modularidade ajuda dominios que mudam/escala independentemente |
-| Sincrono vs assincrono | Sincrono simplifica resposta imediata; assincrono desacopla e absorve picos |
-| SQS vs EventBridge | SQS e fila ponto a ponto com buffering; EventBridge roteia eventos entre produtores/consumidores |
-| Lambda vs containers | Lambda reduz operacao para eventos curtos; containers servem runtimes/processos longos ou maior controle |
-| ECS vs EKS | ECS reduz operacao AWS-native; EKS faz sentido com padrao Kubernetes e skills existentes |
-| Fargate vs instancias | Fargate reduz gestao de servidores; instancias dao mais controle/custo em escala especifica |
-| Big-bang rewrite vs strangler | Strangler reduz risco migrando capacidades por fatias |
-
-## Evolucao strangler
-
-Inicial:
+## Strangler pattern
 
 ```text
 Users
@@ -36,8 +19,6 @@ Legacy Monolith
   |
 Database
 ```
-
-Transicao:
 
 ```text
 Users
@@ -53,57 +34,38 @@ API / Routing Layer
            SQS/EventBridge
 ```
 
-Explicacao:
+A camada de roteamento envia novas capacidades para servicos modernos enquanto o monolito continua atendendo dominios nao migrados.
 
-- A camada de API/roteamento direciona novas capacidades para servicos modernos.
-- O monolito continua atendendo partes nao migradas.
-- Eventos e filas desacoplam processamento em background.
-- Cada fatia migrada precisa observabilidade, rollback e estrategia de dados.
-- O objetivo e reduzir risco e entregar valor antes de concluir toda a decomposicao.
+## Comparacoes criticas
+
+| Decisao | Escolha provavel | Trade-off |
+| --- | --- | --- |
+| Rehost vs modernize | Rehost para prazo; modernize para valor arquitetural claro | Rehost mantem divida |
+| Replatform vs refactor | Replatform reduz operacao; refactor muda desenho | Refactor custa mais |
+| Sincrono vs assincrono | Assincrono para picos, retry e consumidores independentes | Consistencia eventual |
+| SQS vs EventBridge | SQS para fila/buffer; EventBridge para eventos e roteamento | Modelos diferentes |
+| Lambda vs containers | Lambda para eventos curtos; containers para runtime customizado | Operacao e limites |
+| ECS vs EKS | ECS/Fargate para menor operacao; EKS para maturidade Kubernetes | EKS exige plataforma |
+| Big-bang vs strangler | Strangler reduz risco incrementalmente | Convivencia temporaria |
 
 ## Matriz de modernizacao
 
 | Cenario | Estrategia | Tecnologia possivel | Beneficio | Trade-off |
 | --- | --- | --- | --- | --- |
-| Legado estavel com prazo curto | Rehost/replatform | EC2/RDS/ECS simples | Cumpre prazo | Pouca melhoria arquitetural |
-| API stateless de alto scale | Container/serverless | ECS Fargate ou Lambda | Escala e operacao menor | Limites/runtime precisam ser avaliados |
-| Processamento orientado a eventos | Decoupling assincrono | SQS/EventBridge/Step Functions | Absorve picos | Consistencia eventual |
-| Organizacao madura em Kubernetes | Containers gerenciados | EKS | Portabilidade/ecossistema | Mais operacao |
-| Time pequeno buscando low-ops | Serverless/managed services | Lambda, Fargate, DynamoDB quando aplicavel | Menos toil | Menos controle fino |
-| Monolito muito acoplado | Strangler gradual | API Gateway/ALB + novos servicos | Reduz risco | Convive com legado por mais tempo |
-| Batch sazonal | Containers ou serverless batch | ECS/Fargate/Lambda conforme duracao | Escala sob demanda | Observabilidade e retry |
-| Dominio muda rapidamente | Refactor focalizado | Servico dedicado + eventos | Agilidade | Requer ownership de dominio |
-
-## Raciocinio SAP-C02
-
-### Cenario 1: monolito de 10 anos
-
-- Cenario: release lento, picos sazonais e nova demanda mobile.
-- Restricoes: negocio nao aceita rewrite multi-ano.
-- Sinal: modernizacao incremental.
-- Melhor decisao: strangler pattern, extrair capacidades de maior valor, manter partes estaveis no monolito e introduzir eventos/filas para background.
-- Trade-off: convivencia temporaria aumenta complexidade, mas reduz risco.
-- Por que nao alternativas: big-bang rewrite atrasa valor e concentra risco; rehost puro nao melhora ciclo de release.
-
-### Cenario 2: processamento de pedidos em picos
-
-- Cenario: pedidos chegam em rajadas e integracoes externas falham.
-- Restricoes: nao perder mensagens, desacoplar processamento e permitir retry.
-- Melhor decisao: SQS para buffering, consumidores em Lambda/ECS e DLQ; EventBridge se o problema for roteamento de eventos entre dominios.
-- Trade-off: consistencia eventual e necessidade de idempotencia.
-
-### Cenario 3: escolha ECS vs EKS
-
-- Cenario: empresa quer containers, mas tem time pequeno e sem Kubernetes maduro.
-- Restricoes: reduzir operacao e entregar rapido.
-- Melhor decisao: ECS com Fargate para reduzir overhead, salvo requisito claro de Kubernetes.
-- Trade-off: menos portabilidade de ecossistema Kubernetes, menor complexidade operacional.
+| App estavel com deadline | Rehost/replatform | EC2, RDS, ECS | Menor risco | Divida continua |
+| API stateless | Refactor parcial | Lambda ou Fargate | Escala independente | Observabilidade distribuida |
+| Eventos independentes | Decoupling | SQS/EventBridge | Absorve picos | Consistencia eventual |
+| Kubernetes maduro | Plataforma container | EKS | Ecossistema | Operacao complexa |
+| Time pequeno | Gerenciado | Lambda/Fargate | Menos toil | Limites do servico |
+| Monolito acoplado | Strangler | API layer + servicos | Migra por dominio | Convivencia |
+| Batch | Replatform/refactor | ECS tasks, Batch, Lambda | Escala sob demanda | Idempotencia |
+| Dominio muda rapido | Refactor seletivo | Servicos por capacidade | Time-to-market | Custo de design |
 
 ## Estudos Complementares
 
-Use a trilha Associate apenas de forma contextual para revisar fundamentos de Lambda, ECS/EKS/Fargate, SQS, SNS e EventBridge:
-
-https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
+- Associate e util apenas para fundamentos de Lambda, ECS, EKS, Fargate, SQS, SNS e EventBridge.
+- AI Practitioner nao permanece neste modulo porque nao ha exemplo real de Bedrock, IA generativa ou workload AI/ML.
+- O foco Professional e selecionar caminho de modernizacao conforme negocio e operacao.
 
 ## Arquivos do modulo
 
@@ -117,3 +79,24 @@ https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-b
 ---
 
 CloudStudy - Trilha AWS Solutions Architect Professional
+---
+
+## Acompanhe a CloudStudy
+
+Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais pratica, organizada e acessivel.
+
+- Plataforma: [CloudStudy](https://cloudstudy.com.br)
+- Instagram: [cloudstudy.ai](https://www.instagram.com/cloudstudy.ai/)
+- LinkedIn: [CloudStudy](https://www.linkedin.com/company/cloudstudy-ai/)
+
+---
+
+## Outras trilhas AWS em portugues
+
+- [AWS Solutions Architect Associate](https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil)
+- [AWS Cloud Practitioner](https://github.com/Thiago-code-lab/aws-certified-cloud-practitioner-brasil)
+- [AWS AI Practitioner](https://github.com/Thiago-code-lab/aws-certified-ai-practitioner-brasil)
+
+---
+
+> Continue sua preparacao para certificacoes AWS na [CloudStudy](https://cloudstudy.com.br).

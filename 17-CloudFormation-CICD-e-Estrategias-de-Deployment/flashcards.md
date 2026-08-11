@@ -1,31 +1,22 @@
-# Flashcards - Deployment e IaC
+# Flashcards - CloudFormation CICD e Estrategias de Deployment
 
-1. **Quando StackSets e melhor que stack simples?**
-   Quando a mesma infraestrutura precisa ser implantada em multiplas contas ou regioes.
+1. **Qual e o foco deste modulo?**  
+   Decidir quando CloudFormation CICD e Estrategias de Deployment muda a arquitetura recomendada.
 
-2. **Quando usar change set?**
-   Quando a equipe precisa revisar impacto antes de aplicar atualizacao CloudFormation.
+2. **Qual e o primeiro passo em cenarios longos?**  
+   Identificar o requisito dominante.
 
-3. **Quando drift detection e util?**
-   Quando ha suspeita de mudanca manual ou divergencia entre IaC e estado real.
+3. **O que elimina alternativas?**  
+   Limites, risco operacional, custo recorrente, seguranca ou indisponibilidade.
 
-4. **Quando canary supera all-at-once?**
-   Quando uma mudanca arriscada pode ser exposta gradualmente com metricas de decisao.
+4. **Quando evitar solucao sofisticada?**  
+   Quando ela nao responde a uma restricao explicita.
 
-5. **Quando blue/green e forte?**
-   Quando rollback rapido e baixo downtime justificam manter ambiente paralelo temporario.
+5. **Como validar a decisao?**  
+   Conferir documentacao oficial, quotas e comportamento de falha.
 
-6. **Quando rolling e aceitavel?**
-   Quando a aplicacao tolera versoes mistas e substituicao gradual de instancias/tasks.
+---
 
-7. **Quando immutable supera in-place?**
-   Quando alterar recursos existentes aumenta risco e nova capacidade pode ser criada e validada.
+Continue seus estudos na CloudStudy:
 
-8. **Qual sinal aponta para approval gate?**
-   Compliance, producao regulada, alto risco financeiro ou necessidade de aprovacao formal.
-
-9. **Por que IaC reduz risco?**
-   Porque torna mudancas versionadas, repetiveis, revisaveis e menos dependentes de passos manuais.
-
-10. **Qual risco de pipeline com permissao ampla?**
-    Um erro de automacao pode alterar muitos recursos/contas; roles devem limitar blast radius.
+[https://cloudstudy.com.br](https://cloudstudy.com.br)

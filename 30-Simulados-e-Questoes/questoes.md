@@ -1,37 +1,18 @@
-﻿# Questões de Revisão
+# Questoes - Amostra SAP-C02
 
-## Questão 1
+1. Uma empresa usa varias contas AWS e precisa impedir que workloads fora da OU de seguranca desativem CloudTrail. **Resposta:** aplicar SCP na OU.
+2. Uma aplicacao precisa conectividade previsivel entre data center e AWS, com VPN como contingencia. **Resposta:** Direct Connect com Site-to-Site VPN como backup.
+3. Uma API global precisa reduzir latencia e manter failover controlado. **Resposta:** avaliar Route 53, CloudFront, Global Accelerator e estrategia de origem.
+4. Um banco relacional critico precisa reduzir downtime em falha de AZ. **Resposta:** Multi-AZ ou Aurora com failover gerenciado.
+5. Uma arquitetura com picos imprevisiveis precisa desacoplar produtores e consumidores. **Resposta:** SQS, SNS, EventBridge ou Step Functions conforme padrao.
+6. Uma organizacao quer detectar configuracoes inseguras em varias contas. **Resposta:** GuardDuty, Security Hub e administracao delegada.
+7. Uma equipe precisa reduzir custo sem afetar workloads criticos. **Resposta:** tags, Cost Explorer, Budgets e rightsizing antes de commitments.
+8. Uma migracao tem centenas de servidores e precisa priorizar ondas. **Resposta:** discovery, dependencias e escolha dos 7Rs.
+9. Uma empresa quer modernizar gradualmente um monolito. **Resposta:** extrair capacidades por APIs, eventos e componentes gerenciados.
+10. Duas alternativas tecnicamente funcionam. **Resposta:** desempatar por requisitos explicitos, risco operacional, custo e governanca.
 
-Uma organização precisa tomar uma decisão relacionada a Simulados e Questões em um cenário SAP-C02 com restrições de segurança, operação, custo e continuidade. Qual abordagem tende a ser mais adequada?
+---
 
-A) Escolher o serviço mais conhecido sem avaliar requisitos do enunciado.
-B) Identificar a restrição dominante, comparar trade-offs e selecionar a arquitetura com menor risco operacional aceitável.
-C) Adicionar componentes avançados mesmo quando não há requisito que justifique a complexidade.
-D) Priorizar apenas custo inicial e ignorar impacto em resiliência e governança.
+Continue seus estudos na CloudStudy:
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-✅ **Resposta correta:** B
-
-**Explicação:** No SAP-C02, a melhor alternativa normalmente equilibra requisitos explícitos, operação contínua, segurança, confiabilidade, performance e custo. A resposta correta raramente depende apenas de reconhecer um serviço.
-
-</details>
-
-## Questão 2
-
-Qual sinal do enunciado deve mudar a decisão arquitetural neste módulo?
-
-A) Presença de múltiplas contas, requisitos de auditoria, RTO/RPO, migração ou restrições de conectividade.
-B) Preferência pessoal por um serviço específico.
-C) Desejo de usar a opção mais recente sem justificativa técnica.
-D) Ausência de métricas, logs e ownership operacional.
-
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-✅ **Resposta correta:** A
-
-**Explicação:** Cenários profissionais exigem leitura de contexto organizacional e operacional. Esses sinais indicam que a decisão precisa considerar arquitetura além de uma única conta ou serviço isolado.
-
-</details>
+[https://cloudstudy.com.br](https://cloudstudy.com.br)

@@ -1,31 +1,22 @@
-# Flashcards - IAM, Identity Center e Cross-Account
+# Flashcards - IAM Identity Center Federacao e Cross Account
 
-1. **Quando preferir IAM Identity Center a IAM users?**
-   Quando pessoas precisam acessar muitas contas com lifecycle, MFA e grupos controlados por IdP corporativo.
+1. **Qual e o foco deste modulo?**  
+   Decidir quando IAM Identity Center Federacao e Cross Account muda a arquitetura recomendada.
 
-2. **Quando uma IAM role e melhor que um IAM user?**
-   Quando o acesso pode ser temporario, assumido por workload, pessoa federada ou outra conta, reduzindo credenciais longas.
+2. **Qual e o primeiro passo em cenarios longos?**  
+   Identificar o requisito dominante.
 
-3. **Qual sinal aponta para STS AssumeRole?**
-   Acesso temporario entre principals e contas, com auditoria de sessao e escopo limitado.
+3. **O que elimina alternativas?**  
+   Limites, risco operacional, custo recorrente, seguranca ou indisponibilidade.
 
-4. **Quando usar resource-based policy em vez de apenas identity policy?**
-   Quando o recurso precisa autorizar principals externos diretamente, como em S3, KMS, SQS ou Lambda.
+4. **Quando evitar solucao sofisticada?**  
+   Quando ela nao responde a uma restricao explicita.
 
-5. **Por que permission set nao e a mesma coisa que role manual?**
-   Permission set e modelo do Identity Center para provisionar permissoes em contas; a role e o artefato assumido na conta.
+5. **Como validar a decisao?**  
+   Conferir documentacao oficial, quotas e comportamento de falha.
 
-6. **Quando permissions boundary e mais adequado que SCP?**
-   Quando o limite deve aplicar a roles/users especificos criados por equipes, nao a conta inteira.
+---
 
-7. **Quando SCP e mais adequado que permissions boundary?**
-   Quando a organizacao precisa impedir acoes em uma conta ou OU inteira, inclusive contra administradores locais.
+Continue seus estudos na CloudStudy:
 
-8. **Por que trust policy e diferente de permission policy?**
-   Trust policy controla quem pode assumir a role; permission policy controla o que a role pode fazer apos assumida.
-
-9. **Qual risco de usuarios IAM duplicados entre contas?**
-   Lifecycle inconsistente, credenciais longas, auditoria fraca e maior chance de acesso residual.
-
-10. **Quando manter acesso break-glass?**
-    Para emergencia controlada, com MFA forte, credenciais protegidas, monitoramento, aprovacao e revisao periodica.
+[https://cloudstudy.com.br](https://cloudstudy.com.br)

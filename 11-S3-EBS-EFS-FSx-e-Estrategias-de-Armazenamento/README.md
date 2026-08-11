@@ -1,69 +1,58 @@
-﻿# S3, EBS, EFS, FSx e Estratégias de Armazenamento
+# S3 EBS EFS FSx e Estrategias de Armazenamento
 
-## Visão Geral
+## Visao geral
 
-Este módulo cobre seleção de armazenamento por acesso, performance, durabilidade, custo e migração, com foco no tipo de raciocínio arquitetural exigido no AWS Certified Solutions Architect Professional (SAP-C02).
+Este modulo resume o tema S3 EBS EFS FSx e Estrategias de Armazenamento para a certificacao AWS Certified Solutions Architect Professional (SAP-C02). O foco e reconhecer sinais de arquitetura em cenarios longos e escolher a alternativa que equilibra seguranca, confiabilidade, performance, custo e operacao.
 
-## Conceitos-Chave
+## Conceitos centrais
 
-- Domínio predominante: Design for New Solutions.
-- Serviços e padrões principais: S3, EBS, EFS, FSx, Storage Gateway, Backup.
-- Decisão orientada por requisitos de negócio, risco operacional, segurança, resiliência, performance e custo.
-- Avaliação de impactos em ambientes multi-conta, multi-Region, híbridos ou em migração quando aplicável.
+- Identificar a restricao dominante antes de comparar servicos.
+- Validar impacto de identidade, rede, dados, automacao, observabilidade e governanca.
+- Preferir servicos gerenciados quando reduzem operacao sem violar requisitos.
+- Confirmar limites e comportamento na documentacao oficial.
 
-## Relevância para o SAP-C02
+## Decisao arquitetural
 
-O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicamente válidas. O objetivo aqui é treinar por que uma arquitetura é preferível, quando outra opção se torna melhor e quais detalhes do enunciado mudam a decisão.
+Use este tema quando o cenario pedir uma decisao sustentavel e verificavel. Em SAP-C02, a melhor resposta geralmente nao e a arquitetura mais sofisticada, mas a que atende os requisitos explicitos com menor risco operacional.
 
-## Decisões Arquiteturais
+## Sinais de prova
 
-- Identificar o requisito dominante antes de escolher serviços.
-- Validar dependências entre contas, redes, dados, identidade e operação.
-- Preferir serviços gerenciados quando reduzem risco sem violar requisitos explícitos.
-- Documentar exceções quando controle, latência, compliance ou custo justificarem maior complexidade.
+1. Requisitos de multi-account, auditoria, RTO/RPO, latencia ou custo mudam a prioridade da solucao.
+2. Alternativas tecnicamente validas devem ser comparadas por trade-off e risco.
+3. Automacao, rollback e observabilidade contam como parte da arquitetura.
+4. O enunciado costuma eliminar solucoes excessivas ou manuais demais.
 
-## Trade-offs
+## Armadilhas comuns
 
-- Menor operação versus maior controle.
-- Resiliência multi-AZ versus multi-Region e seu impacto em custo e complexidade.
-- Centralização de governança versus autonomia de times e contas.
-- Otimização de custo versus requisitos de desempenho, recuperação e segurança.
+- Escolher um recurso avancado sem necessidade descrita.
+- Ignorar limites de servico, falha parcial ou modelo de consistencia.
+- Resolver seguranca sem menor privilegio, auditoria e controles verificaveis.
+- Confundir migracao, modernizacao e melhoria continua.
 
-## Cenários de Prova
+## Navegacao
 
-- Organizações com múltiplas contas e times independentes.
-- Ambientes híbridos com conectividade, DNS e segurança centralizados.
-- Workloads com requisitos conflitantes de RTO/RPO, compliance, custo e latência.
-- Migração ou modernização gradual sem indisponibilidade significativa.
-
-## Armadilhas Comuns
-
-- Escolher serviço por reconhecimento de nome, sem validar a restrição principal.
-- Resolver um problema organizacional com uma configuração local de uma única conta.
-- Ignorar operação contínua, automação, rastreabilidade e governança.
-- Escolher a arquitetura mais completa quando a pergunta pede menor esforço operacional ou menor custo.
-
-## Próximo Passo de Revisão
-
-1. Leia cheatsheet.md para consolidar critérios de decisão.
-2. Use casos-de-uso.md para treinar análise de cenários.
-3. Resolva questoes.md sem consulta e registre padrões de erro no módulo 30.
-4. Consulte links.md para validar detalhes em documentação oficial.
-
-## Estudos Complementares
-
-Para revisar S3, EBS, EFS e storage classes antes de aprofundar estratégias de armazenamento por acesso, performance e custo:
-
-https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
+- Modulo anterior: [Route53 CloudFront e Global Accelerator](../10-Route53-CloudFront-e-Global-Accelerator/README.md)
+- Revise tambem: [questoes](./questoes.md), [flashcards](./flashcards.md), [cheatsheet](./cheatsheet.md), [casos de uso](./casos-de-uso.md) e [links recomendados](./links.md).
+- Proximo modulo: [RDS Aurora e Estrategias de Banco Relacional](../12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/README.md)
 
 ---
 
-## ☁️ Acompanhe a CloudStudy
+## Acompanhe a CloudStudy
 
-Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais prática, organizada e acessível.
+Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais pratica, organizada e acessivel.
 
-Siga a CloudStudy para acompanhar novos materiais, atualizações e conteúdos sobre certificações AWS:
+- Plataforma: [CloudStudy](https://cloudstudy.com.br)
+- Instagram: [cloudstudy.ai](https://www.instagram.com/cloudstudy.ai/)
+- LinkedIn: [CloudStudy](https://www.linkedin.com/company/cloudstudy-ai/)
 
-- Instagram: https://www.instagram.com/cloudstudy.ai/
-- LinkedIn: https://www.linkedin.com/company/cloudstudy-ai/
+---
 
+## Outras trilhas AWS em portugues
+
+- [AWS Solutions Architect Associate](https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil)
+- [AWS Cloud Practitioner](https://github.com/Thiago-code-lab/aws-certified-cloud-practitioner-brasil)
+- [AWS AI Practitioner](https://github.com/Thiago-code-lab/aws-certified-ai-practitioner-brasil)
+
+---
+
+> Continue sua preparacao para certificacoes AWS na [CloudStudy](https://cloudstudy.com.br).

@@ -1,34 +1,22 @@
-﻿# Cartões de Revisão
+# Flashcards - DataSync Snow Transfer Family e Transferencia de Dados
 
-## Card 01
+1. **Qual e o foco deste modulo?**  
+   Decidir quando DataSync Snow Transfer Family e Transferencia de Dados muda a arquitetura recomendada.
 
-**Pergunta:** Qual é o foco deste módulo no SAP-C02?
+2. **Qual e o primeiro passo em cenarios longos?**  
+   Identificar o requisito dominante.
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+3. **O que elimina alternativas?**  
+   Limites, risco operacional, custo recorrente, seguranca ou indisponibilidade.
 
-**Resposta:** Avaliar movimentação de dados em escala, janelas limitadas, redes híbridas e custo de transferência por meio de decisões arquiteturais, trade-offs e restrições reais.
+4. **Quando evitar solucao sofisticada?**  
+   Quando ela nao responde a uma restricao explicita.
 
-</details>
+5. **Como validar a decisao?**  
+   Conferir documentacao oficial, quotas e comportamento de falha.
 
-## Card 02
+---
 
-**Pergunta:** Qual erro costuma eliminar alternativas em questões Professional?
+Continue seus estudos na CloudStudy:
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-**Resposta:** Ignorar requisitos de operação, governança, segurança, RTO/RPO, custo recorrente ou impacto multi-conta.
-
-</details>
-
-## Card 03
-
-**Pergunta:** Como comparar duas alternativas tecnicamente viáveis?
-
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-**Resposta:** Compare risco operacional, complexidade, custo total, impacto em segurança, capacidade de automação e aderência ao requisito dominante.
-
-</details>
+[https://cloudstudy.com.br](https://cloudstudy.com.br)

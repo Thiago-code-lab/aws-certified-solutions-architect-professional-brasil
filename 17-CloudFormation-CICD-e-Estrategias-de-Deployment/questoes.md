@@ -1,111 +1,33 @@
-# Questoes - Deployment e IaC
+# Questoes - CloudFormation CICD e Estrategias de Deployment
 
 ## Questao 1
 
-Uma empresa global precisa aplicar uma configuracao padrao de AWS Config e CloudTrail em 100 contas e varias regioes. A equipe quer evitar criacao manual e manter controle central de atualizacoes.
+Uma empresa precisa tomar uma decisao relacionada a CloudFormation CICD e Estrategias de Deployment em um cenario com seguranca, operacao continua e custo previsivel. Qual abordagem tende a ser mais adequada?
 
-Qual abordagem e mais adequada?
+A. Escolher a opcao mais complexa mesmo sem requisito explicito.
+B. Priorizar a solucao que atende aos requisitos com menor risco operacional e controles verificaveis.
+C. Usar apenas operacao manual para manter flexibilidade.
+D. Adiar observabilidade e rollback.
 
-A. CloudFormation StackSets com escopo de contas/regioes e operacao controlada.
-B. Criar manualmente cada stack em cada conta.
-C. Copiar templates por e-mail para cada time aplicar.
-D. Usar apenas Route 53 health checks.
+**Resposta:** B
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-**Resposta correta:** A
-
-**Por que esta correta:** StackSets foram desenhados para distribuir stacks entre multiplas contas e regioes com governanca.
-
-**Por que as alternativas sao mais fracas:** B e C aumentam drift e erro humano; D nao gerencia infraestrutura.
-
-</details>
+**Explicacao:** SAP-C02 premia decisao sustentavel, alinhada ao requisito dominante e com risco controlado.
 
 ## Questao 2
 
-Uma API de checkout tera uma mudanca de regra de negocio com risco alto. A empresa possui metricas de erro e conversao em tempo quase real e quer expor a nova versao inicialmente a poucos usuarios.
+Duas alternativas tecnicamente funcionam. O que deve desempatar?
 
-Qual estrategia e mais defensavel?
+A. Quantidade de servicos usados.
+B. Alinhamento com requisitos explicitos, limites, custo e operacao.
+C. Preferencia pessoal por um servico.
+D. Menor documentacao disponivel.
 
-A. Canary deployment.
-B. All-at-once deployment.
-C. Atualizacao manual em producao sem observabilidade.
-D. Desativar rollback para acelerar a entrega.
+**Resposta:** B
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+**Explicacao:** O nivel Professional cobra trade-off, nao apenas reconhecimento de servico.
 
-**Resposta correta:** A
+---
 
-**Por que esta correta:** canary reduz blast radius liberando gradualmente e usando metricas para decidir avancar ou reverter.
+Continue seus estudos na CloudStudy:
 
-**Por que as alternativas sao mais fracas:** B amplia impacto; C remove controle; D aumenta risco operacional.
-
-</details>
-
-## Questao 3
-
-Um template CloudFormation altera sub-redes, security groups e um load balancer de producao. Antes de aplicar, o time precisa revisar quais recursos serao substituidos.
-
-Qual recurso atende melhor?
-
-A. Change set.
-B. Stack drift detection apenas depois da mudanca.
-C. All-at-once deployment.
-D. S3 lifecycle rule.
-
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-**Resposta correta:** A
-
-**Por que esta correta:** change set permite visualizar mudancas planejadas antes da execucao, incluindo possiveis substituicoes.
-
-**Por que as alternativas sao mais fracas:** B detecta divergencia, nao antecipa update; C e estrategia de rollout, nao revisao de IaC; D e irrelevante.
-
-</details>
-
-## Questao 4
-
-Uma plataforma SaaS precisa promover mudancas de dev para staging e producao em contas separadas. Producao exige aprovacao formal, roles com menor privilegio e evidencias de deploy.
-
-Qual desenho e mais adequado?
-
-A. Pipeline multi-account com roles cross-account, approval gate antes de producao e logs de execucao.
-B. Usuario IAM compartilhado com AdministratorAccess em todas as contas.
-C. Deploy direto de laptops dos desenvolvedores em producao.
-D. Stack unica na management account para todos os recursos.
-
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-**Resposta correta:** A
-
-**Por que esta correta:** separa ambientes, controla promocao, registra evidencias e limita permissao do pipeline.
-
-**Por que as alternativas sao mais fracas:** B e C violam auditoria e menor privilegio; D mistura escopos e aumenta blast radius.
-
-</details>
-
-## Questao 5
-
-Uma aplicacao critica precisa de rollback rapido com baixo downtime. A empresa consegue manter temporariamente dois ambientes completos e alternar trafego.
-
-Qual estrategia tende a ser mais apropriada?
-
-A. Blue/green deployment.
-B. All-at-once em ambiente unico.
-C. Atualizacao in-place sem health checks.
-D. Criar snapshot manual apos o deploy.
-
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-**Resposta correta:** A
-
-**Por que esta correta:** blue/green permite validar novo ambiente e alternar trafego, mantendo caminho de retorno ao ambiente anterior.
-
-**Por que as alternativas sao mais fracas:** B e C aumentam downtime/blast radius; D nao e estrategia de rollback de aplicacao.
-
-</details>
+[https://cloudstudy.com.br](https://cloudstudy.com.br)

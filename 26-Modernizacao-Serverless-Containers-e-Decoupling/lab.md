@@ -1,71 +1,38 @@
-# Workshop - Arquitetura de Modernizacao
+﻿# Lab - Modernization Architecture Workshop
 
-> Exercicio de desenho. Nao provisione recursos AWS.
+Nenhum recurso deve ser provisionado.
 
 ## Cenario
 
-Uma empresa possui monolito de 10 anos, banco relacional, picos sazonais, ciclo de release lento, pequena equipe de plataforma, processamento em background e novas exigencias mobile/API. O negocio nao aceita rewrite multi-ano.
+Empresa com monolito de 10 anos, banco relacional compartilhado, picos sazonais, release lento, time pequeno de plataforma, background processing e novas demandas mobile/API.
 
-## Tarefa 1 - Limites de modernizacao
+## Tarefas
 
-Identifique:
+1. Identifique limites de dominio.
+2. Escolha o que nao modernizar inicialmente.
+3. Defina strangler approach.
+4. Separe sync e async.
+5. Escolha Lambda ou containers por capacidade.
+6. Desenhe eventos.
+7. Defina etapas.
+8. Analise overhead.
+9. Explique por que big-bang e mais fraco.
 
-- Dominios que mudam com frequencia.
-- Partes estaveis que nao devem ser modernizadas agora.
-- Fluxos que exigem resposta sincrona.
-- Fluxos que podem ser assincronos.
-
-## Tarefa 2 - Strangler approach
-
-Desenhe:
+## Arquitetura esperada
 
 ```text
-Users -> API/Routing -> Legacy Monolith
-                  \-> New Service A
-                  \-> New Service B -> SQS/EventBridge -> Workers
+Users / Mobile
+      |
+ API or Routing Layer
+      |
+      +--> Legacy Monolith --> Shared Database
+      +--> Orders API on Fargate/Lambda
+      +--> Background events -> SQS/EventBridge -> Workers
 ```
 
-Explique como trafego migra por capacidade.
+## Criterios
 
-## Tarefa 3 - Lambda ou containers
-
-Preencha:
-
-| Capacidade | Lambda | ECS/Fargate | EKS | Justificativa |
-| --- | --- | --- | --- | --- |
-| API simples |  |  |  |  |
-| Worker longo |  |  |  |  |
-| Integracao por evento |  |  |  |  |
-| Servico com runtime customizado |  |  |  |  |
-
-## Tarefa 4 - Eventos e filas
-
-Defina:
-
-- Onde usar SQS.
-- Onde usar EventBridge.
-- Onde Step Functions ajudaria.
-- DLQ e idempotencia.
-- Observabilidade de eventos.
-
-## Tarefa 5 - Roadmap
-
-Monte fases:
-
-1. Preparar observabilidade e pipeline.
-2. Criar camada de API/roteamento.
-3. Extrair primeiro dominio de baixo risco.
-4. Desacoplar processamento em background.
-5. Migrar dominios de maior valor.
-6. Descomissionar partes do monolito quando seguro.
-
-## Entrega esperada
-
-- Limites iniciais.
-- O que nao modernizar agora.
-- Desenho strangler.
-- Decisoes Lambda/containers.
-- Fluxo de eventos.
-- Plano incremental.
-- Trade-offs operacionais.
-- Justificativa de por que big-bang rewrite e mais fraco.
+- Entrega valor antes de substituir tudo.
+- Nao cria microservicos sem limite de dominio.
+- Eventos incluem idempotencia, retry e observabilidade.
+- Plataforma reflete skill e custo operacional.

@@ -1,31 +1,22 @@
-# Casos de Uso - Disaster Recovery
+# Caso de Uso - Disaster Recovery Backup RTO e RPO
 
-## 1. Sistema administrativo com baixo custo
+## Cenario
 
-**Cenario:** sistema interno de faturamento usado por poucas areas, com RTO de 8 horas e RPO de 24 horas.
+Uma organizacao revisa uma arquitetura relacionada a Disaster Recovery Backup RTO e RPO. A solucao precisa manter operacao continua, seguranca e custo controlado.
 
-**Restricoes:** a empresa quer custo recorrente minimo e auditoria de retencao.
+## Decisao recomendada
 
-**Decisao:** usar AWS Backup com politicas por tag, copia cross-region, vault lock quando aplicavel e templates IaC para recriar a stack.
+Escolha a alternativa que atende ao requisito dominante com automacao, observabilidade e controles claros. A justificativa deve conectar o desenho tecnico ao risco de negocio.
 
-**Trade-off:** baixo custo, mas failover nao e imediato e depende de runbook bem testado.
+## Por que funciona
 
-## 2. Plataforma de pedidos com DR regional
+- Reduz operacao manual.
+- Preserva rastreabilidade.
+- Mantem caminho de rollback ou evolucao.
+- Evita complexidade sem requisito explicito.
 
-**Cenario:** aplicacao de pedidos precisa voltar em ate 30 minutos com perda maxima de poucos minutos.
+---
 
-**Restricoes:** duplicar capacidade integral e caro; o banco e o componente mais critico.
+Continue seus estudos na CloudStudy:
 
-**Decisao:** Warm Standby em regiao secundaria com banco replicado, servicos em capacidade reduzida, Route 53 failover e automacao de escala.
-
-**Trade-off:** custo maior que pilot light, mas RTO menor e validacao continua do ambiente secundario.
-
-## 3. Aplicacao legada baseada em servidores
-
-**Cenario:** workloads legados em EC2 possuem dependencias locais e configuracoes dificeis de reconstruir manualmente.
-
-**Restricoes:** RPO baixo e pouca tolerancia para reinstalacao manual durante incidente.
-
-**Decisao:** usar AWS Elastic Disaster Recovery para replicacao continua e testes de lancamento em sub-redes isoladas.
-
-**Trade-off:** reduz risco de reconstrucao manual, mas exige operacao do agente, validacao de rede, licencas e runbooks de failover/failback.
+[https://cloudstudy.com.br](https://cloudstudy.com.br)

@@ -1,37 +1,33 @@
-﻿# Questões de Revisão
+# Questoes - Lambda API Gateway e Arquiteturas Serverless
 
-## Questão 1
+## Questao 1
 
-Uma organização precisa tomar uma decisão relacionada a Lambda, API Gateway e Arquiteturas Serverless em um cenário SAP-C02 com restrições de segurança, operação, custo e continuidade. Qual abordagem tende a ser mais adequada?
+Uma empresa precisa tomar uma decisao relacionada a Lambda API Gateway e Arquiteturas Serverless em um cenario com seguranca, operacao continua e custo previsivel. Qual abordagem tende a ser mais adequada?
 
-A) Escolher o serviço mais conhecido sem avaliar requisitos do enunciado.
-B) Identificar a restrição dominante, comparar trade-offs e selecionar a arquitetura com menor risco operacional aceitável.
-C) Adicionar componentes avançados mesmo quando não há requisito que justifique a complexidade.
-D) Priorizar apenas custo inicial e ignorar impacto em resiliência e governança.
+A. Escolher a opcao mais complexa mesmo sem requisito explicito.
+B. Priorizar a solucao que atende aos requisitos com menor risco operacional e controles verificaveis.
+C. Usar apenas operacao manual para manter flexibilidade.
+D. Adiar observabilidade e rollback.
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+**Resposta:** B
 
-✅ **Resposta correta:** B
+**Explicacao:** SAP-C02 premia decisao sustentavel, alinhada ao requisito dominante e com risco controlado.
 
-**Explicação:** No SAP-C02, a melhor alternativa normalmente equilibra requisitos explícitos, operação contínua, segurança, confiabilidade, performance e custo. A resposta correta raramente depende apenas de reconhecer um serviço.
+## Questao 2
 
-</details>
+Duas alternativas tecnicamente funcionam. O que deve desempatar?
 
-## Questão 2
+A. Quantidade de servicos usados.
+B. Alinhamento com requisitos explicitos, limites, custo e operacao.
+C. Preferencia pessoal por um servico.
+D. Menor documentacao disponivel.
 
-Qual sinal do enunciado deve mudar a decisão arquitetural neste módulo?
+**Resposta:** B
 
-A) Presença de múltiplas contas, requisitos de auditoria, RTO/RPO, migração ou restrições de conectividade.
-B) Preferência pessoal por um serviço específico.
-C) Desejo de usar a opção mais recente sem justificativa técnica.
-D) Ausência de métricas, logs e ownership operacional.
+**Explicacao:** O nivel Professional cobra trade-off, nao apenas reconhecimento de servico.
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+---
 
-✅ **Resposta correta:** A
+Continue seus estudos na CloudStudy:
 
-**Explicação:** Cenários profissionais exigem leitura de contexto organizacional e operacional. Esses sinais indicam que a decisão precisa considerar arquitetura além de uma única conta ou serviço isolado.
-
-</details>
+[https://cloudstudy.com.br](https://cloudstudy.com.br)

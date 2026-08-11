@@ -1,67 +1,41 @@
-﻿# Casos de Uso Reais
+# Casos de Uso Reais
 
-## Visão Geral
+Este modulo funciona como hub de cenarios arquiteturais para SAP-C02. A proposta e revisar decisoes recorrentes sem transformar o repositorio em uma enciclopedia.
 
-Este módulo cobre cenários integrados com multinacionais, M&A, multi-account, DR, segurança e migração, com foco no tipo de raciocínio arquitetural exigido no AWS Certified Solutions Architect Professional (SAP-C02).
+| Cenario | Modulos relacionados |
+|---|---|
+| Landing zone multi-account com governanca central | [02](../02-Organizations-Control-Tower-e-Multi-Account/README.md), [04](../04-Governanca-SCPs-RAM-e-Service-Catalog/README.md) |
+| Acesso federado e segregacao por ambiente | [03](../03-IAM-Identity-Center-Federacao-e-Cross-Account/README.md), [19](../19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/README.md) |
+| Rede hub-and-spoke com conectividade hibrida | [05](../05-Redes-Avancadas-VPC-e-Transit-Gateway/README.md), [06](../06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/README.md) |
+| Aplicacao critica com DR e backup testavel | [09](../09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/README.md), [20](../20-Disaster-Recovery-Backup-RTO-e-RPO/README.md) |
+| Modernizacao gradual com eventos e containers | [14](../14-SQS-SNS-EventBridge-e-Step-Functions/README.md), [16](../16-ECS-EKS-Fargate-e-Containers/README.md), [26](../26-Modernizacao-Serverless-Containers-e-Decoupling/README.md) |
+| Migracao em ondas com baixo downtime | [23](../23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/README.md), [24](../24-MGN-DMS-SCT-e-Migracao-de-Workloads/README.md), [25](../25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/README.md) |
 
-## Conceitos-Chave
+## Como usar
 
-- Domínio predominante: Todos os domínios.
-- Serviços e padrões principais: Organizations, Transit Gateway, Route 53, RDS, ECS, Lambda.
-- Decisão orientada por requisitos de negócio, risco operacional, segurança, resiliência, performance e custo.
-- Avaliação de impactos em ambientes multi-conta, multi-Region, híbridos ou em migração quando aplicável.
-
-## Relevância para o SAP-C02
-
-O SAP-C02 cobra cenários com múltiplas restrições e alternativas tecnicamente válidas. O objetivo aqui é treinar por que uma arquitetura é preferível, quando outra opção se torna melhor e quais detalhes do enunciado mudam a decisão.
-
-## Decisões Arquiteturais
-
-- Identificar o requisito dominante antes de escolher serviços.
-- Validar dependências entre contas, redes, dados, identidade e operação.
-- Preferir serviços gerenciados quando reduzem risco sem violar requisitos explícitos.
-- Documentar exceções quando controle, latência, compliance ou custo justificarem maior complexidade.
-
-## Trade-offs
-
-- Menor operação versus maior controle.
-- Resiliência multi-AZ versus multi-Region e seu impacto em custo e complexidade.
-- Centralização de governança versus autonomia de times e contas.
-- Otimização de custo versus requisitos de desempenho, recuperação e segurança.
-
-## Cenários de Prova
-
-- Organizações com múltiplas contas e times independentes.
-- Ambientes híbridos com conectividade, DNS e segurança centralizados.
-- Workloads com requisitos conflitantes de RTO/RPO, compliance, custo e latência.
-- Migração ou modernização gradual sem indisponibilidade significativa.
-
-## Armadilhas Comuns
-
-- Escolher serviço por reconhecimento de nome, sem validar a restrição principal.
-- Resolver um problema organizacional com uma configuração local de uma única conta.
-- Ignorar operação contínua, automação, rastreabilidade e governança.
-- Escolher a arquitetura mais completa quando a pergunta pede menor esforço operacional ou menor custo.
-
-## Próximo Passo de Revisão
-
-1. Leia cheatsheet.md para consolidar critérios de decisão.
-2. Use casos-de-uso.md para treinar análise de cenários.
-3. Resolva questoes.md sem consulta e registre padrões de erro no módulo 30.
-4. Consulte links.md para validar detalhes em documentação oficial.
-
-## Estudos Complementares
-
-Use os modulos desta trilha e a documentacao oficial da AWS para validar cada servico citado nos cenarios integrados de M&A, DR, seguranca, rede, dados e migracao.
+1. Leia o cenario.
+2. Identifique o requisito dominante.
+3. Abra os modulos relacionados.
+4. Compare a decisao com as questoes do modulo 30.
 
 ---
 
-## ☁️ Acompanhe a CloudStudy
+## Acompanhe a CloudStudy
 
-Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais prática, organizada e acessível.
+Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais pratica, organizada e acessivel.
 
-Siga a CloudStudy para acompanhar novos materiais, atualizações e conteúdos sobre certificações AWS:
+- Plataforma: [CloudStudy](https://cloudstudy.com.br)
+- Instagram: [cloudstudy.ai](https://www.instagram.com/cloudstudy.ai/)
+- LinkedIn: [CloudStudy](https://www.linkedin.com/company/cloudstudy-ai/)
 
-- Instagram: https://www.instagram.com/cloudstudy.ai/
-- LinkedIn: https://www.linkedin.com/company/cloudstudy-ai/
+---
 
+## Outras trilhas AWS em portugues
+
+- [AWS Solutions Architect Associate](https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil)
+- [AWS Cloud Practitioner](https://github.com/Thiago-code-lab/aws-certified-cloud-practitioner-brasil)
+- [AWS AI Practitioner](https://github.com/Thiago-code-lab/aws-certified-ai-practitioner-brasil)
+
+---
+
+> Continue sua preparacao para certificacoes AWS na [CloudStudy](https://cloudstudy.com.br).

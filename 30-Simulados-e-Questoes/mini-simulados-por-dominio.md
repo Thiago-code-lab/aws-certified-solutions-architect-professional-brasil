@@ -1,41 +1,31 @@
-﻿# Mini Simulados por Domínio
+# Mini Simulados por Dominio
 
-## Como usar
+## Design Solutions for Organizational Complexity - 26%
 
-- Resolva por domínio oficial do SAP-C02.
-- Leia o enunciado procurando restrição dominante, exceções e objetivos de negócio.
-- Corrija imediatamente e registre padrões de erro no caderno.
+1. Landing zone com autonomia e governanca central. **Resposta:** multi-account com OUs, SCPs e logging centralizado.
+2. Acesso temporario via provedor corporativo. **Resposta:** IAM Identity Center com permission sets.
+3. Compartilhamento controlado de recursos entre contas. **Resposta:** AWS RAM quando aplicavel.
 
-## Bloco A: Organizational Complexity
+## Design for New Solutions - 29%
 
-1. Uma empresa multinacional quer centralizar governança sem impedir autonomia das unidades de negócio. Qual decisão deve ser priorizada?
-A) Uma única conta para todos os workloads.
-B) Estratégia multi-account com OUs, guardrails e logging centralizado.
-C) Usuários IAM locais em cada workload.
-D) Remover auditoria para reduzir operação.
+4. Conteudo global com baixa latencia. **Resposta:** CloudFront e desenho de origem.
+5. Consumidores processam pedidos em ritmos diferentes. **Resposta:** Amazon SQS.
+6. Containers com menos administracao de servidores. **Resposta:** AWS Fargate quando requisitos permitirem.
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
+## Continuous Improvement for Existing Solutions - 25%
 
-✅ **Resposta correta:** B
+7. Custo sem rastreabilidade por produto. **Resposta:** tags, Cost Explorer e Budgets.
+8. Deteccao de ameacas em varias contas. **Resposta:** GuardDuty e Security Hub com administracao delegada.
+9. Limite regional antes de evento de alto trafego. **Resposta:** revisar Service Quotas, testar carga e solicitar aumento.
 
-**Explicação:** SAP-C02 favorece desenho organizacional escalável com separação de responsabilidades, governança e rastreabilidade.
+## Accelerate Workload Migration and Modernization - 20%
 
-</details>
+10. Migracao grande com dependencias desconhecidas. **Resposta:** discovery e assessment.
+11. Banco precisa migrar com replicacao continua. **Resposta:** AWS DMS.
+12. Grande volume de dados com link restrito. **Resposta:** DataSync ou Snow Family conforme volume e conectividade.
 
-## Bloco B: New Solutions
+---
 
-2. Uma aplicação global exige baixa latência e failover controlado. Qual família de decisões deve ser avaliada?
-A) Roteamento global, edge, replicação de dados e estratégia multi-Region.
-B) Apenas aumentar uma instância EC2.
-C) Criar backups manuais sem teste.
-D) Desabilitar observabilidade para reduzir custo.
+Continue seus estudos na CloudStudy:
 
-<details>
-<summary><strong>Ver resposta</strong></summary>
-
-✅ **Resposta correta:** A
-
-**Explicação:** O cenário combina latência, disponibilidade e continuidade, exigindo análise de arquitetura global.
-
-</details>
+[https://cloudstudy.com.br](https://cloudstudy.com.br)
