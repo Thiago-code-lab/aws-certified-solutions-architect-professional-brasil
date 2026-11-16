@@ -1,41 +1,41 @@
-﻿# Como Contribuir
+# Contributing
 
-Obrigado por contribuir com este repositório da comunidade AWS Brasil.
+Thank you for contributing to this AWS Brazil community repository.
 
-## Formas de contribuir
+## Ways to contribute
 
-- Corrigir erros técnicos ou de escrita.
-- Melhorar clareza de explicações e materiais de revisão.
-- Sugerir labs curtos e casos de uso relevantes para SAP-C02.
-- Atualizar links oficiais da AWS quando necessário.
+- Correct technical or writing errors.
+- Improve the clarity of explanations and review materials.
+- Suggest short labs and SAP-C02 use cases.
+- Update official AWS links when needed.
 
-## Fluxo recomendado
+## Recommended workflow
 
-1. Abra uma issue com contexto claro.
-2. Crie uma branch com nome objetivo.
-3. Faça alterações pequenas e focadas.
-4. Abra pull request com resumo, motivação e arquivos alterados.
+1. Open an issue with clear context.
+2. Create a branch with a descriptive name.
+3. Make small, focused changes.
+4. Open a pull request targeting `sap-c02-english` with a summary, motivation and list of changed files.
 
-## Padrão editorial
+## Editorial standard
 
-- Conteúdo público em PT-BR.
-- Objetividade, precisão técnica e foco arquitetural profissional.
-- Preferir decisões, trade-offs e restrições reais a definições isoladas.
-- Evitar textos longos, repetitivos ou sem consequência prática.
+- Public content on this branch is in English.
+- Be concise, technically precise and focused on professional architectural reasoning.
+- Prefer decisions, trade-offs and real constraints to isolated definitions.
+- Avoid long, repetitive text without practical consequences.
 
-## Checklist antes do PR
+## Before opening a pull request
 
-- Markdown legível e consistente.
-- Links funcionando.
-- Terminologia AWS coerente entre módulos.
-- Conteúdo alinhado aos domínios do SAP-C02.
+- Use readable, consistent Markdown.
+- Check that links work.
+- Keep AWS terminology consistent across modules.
+- Align content with SAP-C02 domains.
 
 ---
 
-## Referências de contexto
+## Context references
 
-Para manter consistência entre trilhas da comunidade:
+To maintain consistency across community learning paths:
 
-- Solutions Architect Associate: https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil
-- Cloud Practitioner: https://github.com/Thiago-code-lab/aws-certified-cloud-practitioner-brasil
-- AI Practitioner: https://github.com/Thiago-code-lab/aws-certified-ai-practitioner-brasil
+- Solutions Architect Associate: https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil/tree/saa-c03-english
+- Cloud Practitioner: https://github.com/Thiago-code-lab/aws-certified-cloud-practitioner-brasil/tree/clf-c02-english
+- AI Practitioner: https://github.com/Thiago-code-lab/aws-certified-ai-practitioner-brasil/tree/aif-c01-english

@@ -9,24 +9,24 @@
 </p>
 
 <p align="center">
-  <strong>Guia em PT-BR para AWS Solutions Architect Professional (SAP-C02), com dominios, arquiteturas, labs, flashcards, cheatsheets e questoes.</strong>
+  <strong>English guide to AWS Certified Solutions Architect – Professional (SAP-C02), with exam domains, architectures, labs, flashcards, cheatsheets and questions.</strong>
 </p>
 
 <p align="center">
-  <strong>Entre na lista de espera da CloudStudy e receba acesso antecipado a plataforma.</strong>
+  <strong>Join the CloudStudy waitlist for early access to the platform.</strong>
 </p>
 
 <p align="center">
   <a href="https://cloudstudy.com.br">
-    <img src="https://img.shields.io/badge/ENTRAR_NA_WAITLIST-CloudStudy-2563EB?style=for-the-badge&logo=amazonaws&logoColor=white" alt="Entrar na waitlist CloudStudy" />
+    <img src="https://img.shields.io/badge/JOIN_THE_WAITLIST-CloudStudy-2563EB?style=for-the-badge&logo=amazonaws&logoColor=white" alt="Join the CloudStudy waitlist" />
   </a>
 </p>
 
 <div align="center">
   <a href="https://www.udemy.com/course/engenharia-de-dados-na-aws-do-zero-aos-projetos-reais/?referralCode=E28670B9116BA68E08A9">
     <img
-      src="https://img.shields.io/badge/Curso%20na%20Udemy-A435F0?style=for-the-badge&logo=udemy&logoColor=white"
-      alt="Curso na Udemy"
+      src="https://img.shields.io/badge/Udemy%20Course-A435F0?style=for-the-badge&logo=udemy&logoColor=white"
+      alt="Udemy course"
       width="230"
       height="40"
     />
@@ -34,18 +34,18 @@
   &nbsp;&nbsp;
   <a href="https://chat.whatsapp.com/Lsuexbkt1oELAGX8nCH2La?mode=gi_t">
     <img
-      src="https://img.shields.io/badge/Grupo%20CloudStudy-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"
-      alt="Grupo CloudStudy no WhatsApp"
+      src="https://img.shields.io/badge/CloudStudy%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"
+      alt="CloudStudy WhatsApp group"
       width="230"
       height="40"
     />
   </a>
 </div>
 
-## Patrocinio educacional
+## Educational sponsorship
 
 <p align="center">
-  Este projeto conta com apoio da <a href="https://cloudstudy.com.br">CloudStudy</a>.
+  This project is supported by <a href="https://cloudstudy.com.br">CloudStudy</a>.
 </p>
 
 <div align="center">
@@ -66,7 +66,7 @@
 
 <br>
 
-<h1 align="center">AWS Solutions Architect Professional (SAP-C02)</h1>
+<h1 align="center">AWS Certified Solutions Architect – Professional (SAP-C02)</h1>
 
 <p align="center">
   <img src="https://img.shields.io/github/stars/Thiago-code-lab/aws-certified-solutions-architect-professional-brasil?style=for-the-badge&label=Stars&color=2563eb&labelColor=374151" alt="GitHub stars" />
@@ -75,165 +75,182 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/CONTEUDO-PT--BR-0284c7?style=for-the-badge&labelColor=0f172a" alt="Conteudo PT-BR" />
+  <img src="https://img.shields.io/badge/LANGUAGE-ENGLISH-0284c7?style=for-the-badge&labelColor=0f172a" alt="English language" />
   <img src="https://img.shields.io/badge/OPEN-SOURCE-2563eb?style=for-the-badge&labelColor=0f172a" alt="Open source" />
-  <img src="https://img.shields.io/badge/USO-EDUCACIONAL-1d4ed8?style=for-the-badge&labelColor=0f172a" alt="Uso educacional" />
+  <img src="https://img.shields.io/badge/USE-EDUCATIONAL-1d4ed8?style=for-the-badge&labelColor=0f172a" alt="Educational use" />
   <img src="https://img.shields.io/badge/CERTIFICATION-SAP--C02-1e40af?style=for-the-badge&labelColor=0f172a" alt="SAP-C02" />
   <img src="https://img.shields.io/badge/PROFESSIONAL-ARCHITECTURE-0f766e?style=for-the-badge&labelColor=0f172a" alt="Professional architecture" />
 </p>
 
 <p align="center">
-  <a href="#como-usar-este-repositorio">Como usar</a> |
-  <a href="#fluxo-recomendado-de-estudo">Fluxo de estudo</a> |
-  <a href="#roteiro-de-estudo">Roteiro</a> |
-  <a href="#modulos">Modulos</a> |
-  <a href="./30-Simulados-e-Questoes/README.md">Simulados</a> |
-  <a href="#trilhas-complementares-aws">Trilhas AWS</a>
+  <a href="#how-to-use-this-repository">How to use</a> |
+  <a href="#recommended-study-workflow">Study workflow</a> |
+  <a href="#study-map">Study map</a> |
+  <a href="#modules">Modules</a> |
+  <a href="./30-Practice-Exams-and-Questions/README.md">Practice exams</a> |
+  <a href="#additional-aws-learning-paths">AWS learning paths</a>
 </p>
 
-<p align="center"><sub>Material aberto por Thiago Cardoso | <a href="https://www.linkedin.com/in/analyticsthiagocardoso">LinkedIn</a></sub></p>
+<p align="center"><sub>Open learning materials by Thiago Cardoso | <a href="https://www.linkedin.com/in/analyticsthiagocardoso">LinkedIn</a></sub></p>
 
 ---
 
-## O que voce vai encontrar neste repositorio
+> **Exam version note — November 16, 2026:** AWS lists November 16 as the last day for SAP-C02 and November 17 as the start of SAP-C03 delivery. This edition intentionally preserves the SAP-C02 curriculum and four-domain structure. See the [official certification update](https://aws.amazon.com/blogs/training-and-certification/september-2026-new-offerings/).
 
-| Tema | O que voce encontra aqui |
+## What you will find in this repository
+
+| Topic | Materials included |
 |---|---|
-| Arquitetura organizacional | Multi-account, Organizations, Control Tower, governanca e acesso cross-account. |
-| Redes avancadas e hibridas | Transit Gateway, Direct Connect, VPN, DNS hibrido, PrivateLink e segmentacao. |
-| Novas solucoes | Compute, storage, bancos, integracao, serverless e containers. |
-| Melhoria continua | Observabilidade, seguranca, performance, confiabilidade, quotas e automacao. |
-| Disaster recovery | RTO/RPO, backup, replicacao, testes e continuidade de negocio. |
-| Migracao e modernizacao | 7Rs, assessment, MGN, DMS, SCT, DataSync, Snow Family e modernizacao gradual. |
-| Otimizacao de custos | FinOps, tagging, Cost Explorer, Budgets, Savings Plans e rightsizing. |
-| Revisao e simulados | Questoes no estilo SAP-C02, mini-simulados por dominio e caderno de erros. |
+| Organizational architecture | Multi-account architecture, Organizations, Control Tower, governance and cross-account access. |
+| Advanced and hybrid networking | Transit Gateway, Direct Connect, VPN, hybrid DNS, PrivateLink and segmentation. |
+| New solutions | Compute, storage, databases, integration, serverless and containers. |
+| Continuous improvement | Observability, security, performance, reliability, quotas and automation. |
+| Disaster recovery | RTO/RPO, backup, replication, testing and business continuity. |
+| Migration and modernization | The 7 Rs, assessment, MGN, DMS, SCT, DataSync, Snow Family and gradual modernization. |
+| Cost optimization | FinOps, tagging, Cost Explorer, Budgets, Savings Plans and rightsizing. |
+| Review and practice exams | SAP-C02-style questions, domain practice exams and an error log. |
 
-## Por onde comecar
+## Where to start
 
-- **Ja domina fundamentos de arquitetura AWS:** comece pelo [Modulo 01](./01-Introducao-SAP-C02/README.md) e siga a sequencia ate recursos oficiais.
-- **Precisa reforcar base arquitetural:** revise a trilha de [Solutions Architect Associate](https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil) antes dos modulos mais avancados.
-- **Reta final:** use [Simulados e Questoes](./30-Simulados-e-Questoes/README.md), [mini-simulados por dominio](./30-Simulados-e-Questoes/mini-simulados-por-dominio.md), [caderno de erros](./30-Simulados-e-Questoes/caderno-de-erros.md) e [reta final SAP-C02](./30-Simulados-e-Questoes/reta-final-sap-c02.md).
+- **Already comfortable with AWS architecture fundamentals:** start with [Module 01](./01-Introduction-SAP-C02/README.md) and follow the sequence through the official resources.
+- **Need to strengthen architectural fundamentals:** review the [Solutions Architect Associate](https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil/tree/saa-c03-english) path before the more advanced modules.
+- **Final review:** use [Practice Exams and Questions](./30-Practice-Exams-and-Questions/README.md), [domain practice exams](./30-Practice-Exams-and-Questions/domain-practice-exams.md), the [error log](./30-Practice-Exams-and-Questions/error-log.md) and the [SAP-C02 final review](./30-Practice-Exams-and-Questions/final-review-sap-c02.md).
 
-> Trilha aberta em Portugues do Brasil para preparacao estruturada da certificacao AWS Certified Solutions Architect Professional SAP-C02.
+> An open English learning path for structured preparation for AWS Certified Solutions Architect – Professional (SAP-C02).
 
-Repositorio oficial: https://github.com/Thiago-code-lab/aws-certified-solutions-architect-professional-brasil
+Official repository: https://github.com/Thiago-code-lab/aws-certified-solutions-architect-professional-brasil
 
-## Sobre este Repositorio
+## About this repository
 
-Este repositorio organiza uma trilha de preparacao para SAP-C02 com foco nos principais temas cobrados pela certificacao Professional. O objetivo e treinar raciocinio arquitetural em cenarios com multiplas contas, ambientes hibridos, requisitos regulatorios, migracao, modernizacao, continuidade, seguranca e custo.
+This repository organizes SAP-C02 preparation around the main topics covered by the Professional certification. It develops architectural reasoning for scenarios involving multiple accounts, hybrid environments, regulatory requirements, migration, modernization, continuity, security and cost.
 
-O material foi reduzido para uma experiencia publica mais objetiva: cada modulo mantem o essencial, com visao geral, decisoes arquiteturais, sinais de prova, armadilhas, questoes, flashcards, cheatsheets, casos de uso e links oficiais.
+The Portuguese source was condensed for a focused public learning experience: modules retain their essentials through overviews, architectural decisions, exam cues, pitfalls, questions, flashcards, cheatsheets, use cases and official links. This English edition preserves that source coverage and its varied depth.
 
-## Estrutura e Dominios do Exame
+## Exam structure and domains
 
-| Dominio | Peso | O que cai na pratica | Modulos principais |
+| Domain | Weight | Practical coverage | Main modules |
 |---|---:|---|---|
-| Design Solutions for Organizational Complexity | 26% | Multi-account, governanca, redes hibridas, seguranca centralizada e resiliencia organizacional | 02, 03, 04, 05, 06, 07 |
-| Design for New Solutions | 29% | Deployment, continuidade, seguranca, confiabilidade, performance, dados, integracao, serverless e containers | 08, 09, 10, 11, 12, 13, 14, 15, 16, 17 |
-| Continuous Improvement for Existing Solutions | 25% | Observabilidade, seguranca, performance, confiabilidade, quotas, automacao e custo | 18, 19, 20, 21, 22, 27 |
-| Accelerate Workload Migration and Modernization | 20% | Assessment, 7Rs, migracao de workloads e dados, modernizacao e refatoracao gradual | 23, 24, 25, 26, 28, 29 |
+| Design Solutions for Organizational Complexity | 26% | Multi-account architecture, governance, hybrid networking, centralized security and organizational resilience | 02, 03, 04, 05, 06, 07 |
+| Design for New Solutions | 29% | Deployment, continuity, security, reliability, performance, data, integration, serverless and containers | 08, 09, 10, 11, 12, 13, 14, 15, 16, 17 |
+| Continuous Improvement for Existing Solutions | 25% | Observability, security, performance, reliability, quotas, automation and cost | 18, 19, 20, 21, 22, 27 |
+| Accelerate Workload Migration and Modernization | 20% | Assessment, the 7 Rs, workload and data migration, modernization and gradual refactoring | 23, 24, 25, 26, 28, 29 |
 
-<a id="roteiro-de-estudo"></a>
-## Mapa de Estudos
+<a id="study-map"></a>
+## Study map
 
-| Semana | Foco | Modulos |
+| Week | Focus | Modules |
 |---|---|---|
-| 1 | Mentalidade Professional, multi-account, identidade e governanca | 01 a 04 |
-| 2 | Redes avancadas, conectividade hibrida e seguranca de rede | 05 a 07 |
-| 3 | Compute, alta disponibilidade e trafego global | 08 a 10 |
-| 4 | Armazenamento e bancos de dados | 11 a 13 |
-| 5 | Integracao, serverless e containers | 14 a 16 |
-| 6 | Deployment, observabilidade e auditoria | 17 a 18 |
-| 7 | Seguranca, DR, performance e quotas | 19 a 21 |
-| 8 | FinOps, discovery e estrategia de migracao | 22 a 23 |
-| 9 | Migracao de workloads, transferencia de dados e modernizacao | 24 a 27 |
-| 10 | Casos reais, labs, simulados e recursos | 28 a 31 |
+| 1 | Professional mindset, multi-account architecture, identity and governance | 01 to 04 |
+| 2 | Advanced networking, hybrid connectivity and network security | 05 to 07 |
+| 3 | Compute, high availability and global traffic | 08 to 10 |
+| 4 | Storage and databases | 11 to 13 |
+| 5 | Integration, serverless and containers | 14 to 16 |
+| 6 | Deployment, observability and auditing | 17 to 18 |
+| 7 | Security, DR, performance and quotas | 19 to 21 |
+| 8 | FinOps, discovery and migration strategy | 22 to 23 |
+| 9 | Workload migration, data transfer and modernization | 24 to 27 |
+| 10 | Real-world scenarios, labs, practice exams and resources | 28 to 31 |
 
-<a id="modulos"></a>
-## Modulos
+<a id="modules"></a>
+## Modules
 
-| # | Modulo | Dominio predominante | Link |
+| # | Module | Predominant domain | Link |
 |---|---|---|---|
-| 01 | Introducao SAP-C02 | Base / Estrategia | [README](./01-Introducao-SAP-C02/README.md) |
-| 02 | Organizations, Control Tower e Multi-Account | Organizational Complexity | [README](./02-Organizations-Control-Tower-e-Multi-Account/README.md) |
-| 03 | IAM, Identity Center, Federacao e Cross-Account | Organizational Complexity | [README](./03-IAM-Identity-Center-Federacao-e-Cross-Account/README.md) |
-| 04 | Governanca, SCPs, RAM e Service Catalog | Organizational Complexity | [README](./04-Governanca-SCPs-RAM-e-Service-Catalog/README.md) |
-| 05 | Redes Avancadas, VPC e Transit Gateway | Organizational Complexity | [README](./05-Redes-Avancadas-VPC-e-Transit-Gateway/README.md) |
-| 06 | Conectividade Hibrida, Direct Connect, VPN e DNS | Organizational Complexity | [README](./06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/README.md) |
-| 07 | PrivateLink, Network Firewall, WAF e Shield | Organizational Complexity / Security | [README](./07-PrivateLink-Network-Firewall-WAF-e-Shield/README.md) |
-| 08 | EC2, Auto Scaling e Estrategias de Compute | Design for New Solutions | [README](./08-EC2-Auto-Scaling-e-Estrategias-de-Compute/README.md) |
-| 09 | Alta Disponibilidade, Multi-AZ e Multi-Region | Design for New Solutions | [README](./09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/README.md) |
-| 10 | Route 53, CloudFront e Global Accelerator | Design for New Solutions | [README](./10-Route53-CloudFront-e-Global-Accelerator/README.md) |
-| 11 | S3, EBS, EFS, FSx e Estrategias de Armazenamento | Design for New Solutions | [README](./11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/README.md) |
-| 12 | RDS, Aurora e Estrategias de Banco Relacional | Design for New Solutions | [README](./12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/README.md) |
-| 13 | DynamoDB, ElastiCache e Bancos Purpose-Built | Design for New Solutions | [README](./13-DynamoDB-ElastiCache-e-Bancos-Purpose-Built/README.md) |
-| 14 | SQS, SNS, EventBridge e Step Functions | Design for New Solutions | [README](./14-SQS-SNS-EventBridge-e-Step-Functions/README.md) |
-| 15 | Lambda, API Gateway e Arquiteturas Serverless | Design for New Solutions | [README](./15-Lambda-API-Gateway-e-Arquiteturas-Serverless/README.md) |
-| 16 | ECS, EKS, Fargate e Containers | Design for New Solutions | [README](./16-ECS-EKS-Fargate-e-Containers/README.md) |
-| 17 | CloudFormation, CI/CD e Estrategias de Deployment | Design for New Solutions | [README](./17-CloudFormation-CICD-e-Estrategias-de-Deployment/README.md) |
-| 18 | CloudWatch, CloudTrail, Config e Observabilidade | Continuous Improvement | [README](./18-CloudWatch-CloudTrail-Config-e-Observabilidade/README.md) |
-| 19 | Seguranca: KMS, Secrets, GuardDuty e Security Hub | Continuous Improvement / Security | [README](./19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/README.md) |
-| 20 | Disaster Recovery, Backup, RTO e RPO | Continuous Improvement | [README](./20-Disaster-Recovery-Backup-RTO-e-RPO/README.md) |
-| 21 | Performance, Reliability e Service Quotas | Continuous Improvement | [README](./21-Performance-Reliability-e-Service-Quotas/README.md) |
-| 22 | Otimizacao de Custos e FinOps | Continuous Improvement | [README](./22-Otimizacao-de-Custos-e-FinOps/README.md) |
-| 23 | Migration Hub, Discovery e Estrategia dos 7Rs | Migration and Modernization | [README](./23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/README.md) |
-| 24 | MGN, DMS, SCT e Migracao de Workloads | Migration and Modernization | [README](./24-MGN-DMS-SCT-e-Migracao-de-Workloads/README.md) |
-| 25 | DataSync, Snow, Transfer Family e Transferencia de Dados | Migration and Modernization | [README](./25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/README.md) |
-| 26 | Modernizacao: Serverless, Containers e Decoupling | Migration and Modernization | [README](./26-Modernizacao-Serverless-Containers-e-Decoupling/README.md) |
-| 27 | Well-Architected e Trade-Offs Avancados | Todos os dominios | [README](./27-Well-Architected-e-Trade-Offs-Avancados/README.md) |
-| 28 | Casos de Uso Reais | Todos os dominios | [README](./28-Casos-de-Uso-Reais/README.md) |
-| 29 | Labs Praticos | Pratica | [README](./29-Labs-Praticos/README.md) |
-| 30 | Simulados e Questoes | Revisao final | [README](./30-Simulados-e-Questoes/README.md) |
-| 31 | Glossario e Recursos | Recursos | [README](./31-Glossario-e-Recursos/README.md) |
+| 01 | Introduction to SAP-C02 | Foundations / Strategy | [README](./01-Introduction-SAP-C02/README.md) |
+| 02 | AWS Organizations, Control Tower and Multi-Account Architecture | Organizational Complexity | [README](./02-AWS-Organizations-Control-Tower-and-Multi-Account-Architecture/README.md) |
+| 03 | IAM Identity Center, Federation and Cross-Account Access | Organizational Complexity | [README](./03-IAM-Identity-Center-Federation-and-Cross-Account-Access/README.md) |
+| 04 | Governance, SCPs, RAM and Service Catalog | Organizational Complexity | [README](./04-Governance-SCPs-RAM-and-Service-Catalog/README.md) |
+| 05 | Advanced Networking, VPC and Transit Gateway | Organizational Complexity | [README](./05-Advanced-Networking-VPC-and-Transit-Gateway/README.md) |
+| 06 | Hybrid Connectivity, Direct Connect, VPN and DNS | Organizational Complexity | [README](./06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/README.md) |
+| 07 | PrivateLink, Network Firewall, WAF and Shield | Organizational Complexity / Security | [README](./07-PrivateLink-Network-Firewall-WAF-and-Shield/README.md) |
+| 08 | EC2, Auto Scaling and Compute Strategies | Design for New Solutions | [README](./08-EC2-Auto-Scaling-and-Compute-Strategies/README.md) |
+| 09 | High Availability, Multi-AZ and Multi-Region | Design for New Solutions | [README](./09-High-Availability-Multi-AZ-and-Multi-Region/README.md) |
+| 10 | Route 53, CloudFront and Global Accelerator | Design for New Solutions | [README](./10-Route53-CloudFront-and-Global-Accelerator/README.md) |
+| 11 | S3, EBS, EFS, FSx and Storage Strategies | Design for New Solutions | [README](./11-S3-EBS-EFS-FSx-and-Storage-Strategies/README.md) |
+| 12 | RDS, Aurora and Relational Database Strategies | Design for New Solutions | [README](./12-RDS-Aurora-and-Relational-Database-Strategies/README.md) |
+| 13 | DynamoDB, ElastiCache and Purpose-Built Databases | Design for New Solutions | [README](./13-DynamoDB-ElastiCache-and-Purpose-Built-Databases/README.md) |
+| 14 | SQS, SNS, EventBridge and Step Functions | Design for New Solutions | [README](./14-SQS-SNS-EventBridge-and-Step-Functions/README.md) |
+| 15 | Lambda, API Gateway and Serverless Architectures | Design for New Solutions | [README](./15-Lambda-API-Gateway-and-Serverless-Architectures/README.md) |
+| 16 | ECS, EKS, Fargate and Containers | Design for New Solutions | [README](./16-ECS-EKS-Fargate-and-Containers/README.md) |
+| 17 | CloudFormation, CI/CD and Deployment Strategies | Design for New Solutions | [README](./17-CloudFormation-CICD-and-Deployment-Strategies/README.md) |
+| 18 | CloudWatch, CloudTrail, Config and Observability | Continuous Improvement | [README](./18-CloudWatch-CloudTrail-Config-and-Observability/README.md) |
+| 19 | Security, KMS, Secrets Manager, GuardDuty and Security Hub | Continuous Improvement / Security | [README](./19-Security-KMS-Secrets-Manager-GuardDuty-and-Security-Hub/README.md) |
+| 20 | Disaster Recovery, Backup, RTO and RPO | Continuous Improvement | [README](./20-Disaster-Recovery-Backup-RTO-and-RPO/README.md) |
+| 21 | Performance, Reliability and Service Quotas | Continuous Improvement | [README](./21-Performance-Reliability-and-Service-Quotas/README.md) |
+| 22 | Cost Optimization and FinOps | Continuous Improvement | [README](./22-Cost-Optimization-and-FinOps/README.md) |
+| 23 | Migration Hub, Discovery and the 7 Rs | Migration and Modernization | [README](./23-Migration-Hub-Discovery-and-the-7-Rs/README.md) |
+| 24 | AWS MGN, DMS, SCT and Workload Migration | Migration and Modernization | [README](./24-AWS-MGN-DMS-SCT-and-Workload-Migration/README.md) |
+| 25 | DataSync, Snow Family, Transfer Family and Data Transfer | Migration and Modernization | [README](./25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer/README.md) |
+| 26 | Modernization, Serverless, Containers and Decoupling | Migration and Modernization | [README](./26-Modernization-Serverless-Containers-and-Decoupling/README.md) |
+| 27 | Well-Architected Framework and Advanced Trade-Offs | All domains | [README](./27-Well-Architected-and-Advanced-Trade-Offs/README.md) |
+| 28 | Real-World Architecture Use Cases | All domains | [README](./28-Real-World-Architecture-Use-Cases/README.md) |
+| 29 | Hands-On Labs | Practice | [README](./29-Hands-On-Labs/README.md) |
+| 30 | Practice Exams and Questions | Final review | [README](./30-Practice-Exams-and-Questions/README.md) |
+| 31 | Glossary and Resources | Resources | [README](./31-Glossary-and-Resources/README.md) |
 
-## Maturidade atual dos modulos
+## Source module maturity
 
-Esta tabela mostra o estado editorial real da fase atual. Modulos marcados como aprofundados possuem conteudo Professional com cenarios, decisoes, trade-offs, questoes, flashcards, cheatsheets, casos de uso, links oficiais e workshop quando aplicavel. Os demais permanecem como estrutura de estudo ou curadoria inicial.
+The table below preserves the source's editorial maturity classifications. The Portuguese README labels the listed modules as developed, with scenarios, decisions, trade-offs, questions, flashcards, cheatsheets, use cases, official links and workshops where applicable. Inspection shows that many of these files still use shared introductory templates. Treat these labels as historical source metadata, not a guarantee of comprehensive Professional-level coverage. The detailed hybrid-connectivity questions, FinOps cases and modernization materials retain their additional depth in this edition.
 
-| Modulo | Maturidade | Observacao |
+| Module | Source classification | Topic |
 |---|---|---|
-| 02 | Aprofundado | Organizations, Control Tower e multi-account |
-| 03 | Aprofundado | IAM, Identity Center, federacao e cross-account |
-| 05 | Aprofundado | Redes avancadas, TGW e PrivateLink |
-| 06 | Aprofundado | Conectividade hibrida, DX, VPN e DNS |
-| 12 | Aprofundado | RDS, Aurora e estrategias relacionais |
-| 17 | Aprofundado | CloudFormation, CI/CD e deployment |
-| 19 | Aprofundado | KMS, Secrets, GuardDuty e Security Hub |
-| 20 | Aprofundado | DR, backup, RTO e RPO |
-| 22 | Aprofundado | FinOps e otimizacao de custos |
-| 23 | Aprofundado | Migration Hub, discovery e 7Rs |
-| 26 | Aprofundado | Modernizacao, serverless, containers e decoupling |
-| Demais modulos | Estrutura ou curadoria inicial | Nao devem ser lidos como conteudo profundo completo ainda |
+| 02 | Developed in source metadata | Organizations, Control Tower and multi-account architecture |
+| 03 | Developed in source metadata | IAM, Identity Center, federation and cross-account access |
+| 05 | Developed in source metadata | Advanced networking, TGW and PrivateLink |
+| 06 | Developed in source metadata | Hybrid connectivity, DX, VPN and DNS |
+| 12 | Developed in source metadata | RDS, Aurora and relational strategies |
+| 17 | Developed in source metadata | CloudFormation, CI/CD and deployment |
+| 19 | Developed in source metadata | KMS, Secrets Manager, GuardDuty and Security Hub |
+| 20 | Developed in source metadata | DR, backup, RTO and RPO |
+| 22 | Developed in source metadata | FinOps and cost optimization |
+| 23 | Developed in source metadata | Migration Hub, discovery and the 7 Rs |
+| 26 | Developed in source metadata | Modernization, serverless, containers and decoupling |
+| Other modules | Structure or initial curation | These are not yet comprehensive, in-depth lessons |
 
-<a id="como-usar-este-repositorio"></a>
-## Como Usar Este Repositorio
+<a id="how-to-use-this-repository"></a>
+## How to use this repository
 
-1. Comece pelo modulo 01 para calibrar o nivel Professional e a leitura de cenarios longos.
-2. Estude os modulos em ordem, porque governanca, identidade e rede sustentam varias decisoes posteriores.
-3. Use cheatsheets e casos de uso para revisar criterios de decisao antes das questoes.
-4. Registre erros recorrentes no caderno de erros do modulo 30.
-5. Priorize documentacao oficial AWS quando houver duvida sobre comportamento, limite ou recomendacao atual.
+1. Start with module 01 to calibrate Professional-level expectations and long-scenario reading.
+2. Study the modules in order: governance, identity and networking underpin many later decisions.
+3. Use cheatsheets and use cases to review decision criteria before answering questions.
+4. Record recurring errors in the module 30 error log.
+5. Prioritize official AWS documentation when uncertain about current behavior, quotas or recommendations.
 
-<a id="fluxo-recomendado-de-estudo"></a>
-## Fluxo Recomendado de Estudo
+<a id="recommended-study-workflow"></a>
+## Recommended study workflow
 
-1. Leia o README do modulo para entender contexto, decisoes e trade-offs.
-2. Revise cheatsheet.md antes de resolver questoes.
-3. Estude casos-de-uso.md procurando o requisito dominante de cada cenario.
-4. Resolva questoes.md sem abrir o bloco de resposta.
-5. Reforce lacunas com flashcards, links oficiais e mini-simulados por dominio.
+1. Read the module README to understand context, decisions and trade-offs.
+2. Review cheatsheet.md before answering questions.
+3. Study use-cases.md and identify each scenario's dominant requirement.
+4. Answer questions.md before revealing its answers.
+5. Address gaps with flashcards, official links and domain practice exams.
 
-<a id="trilhas-complementares-aws"></a>
-## Trilhas Complementares AWS
+<a id="additional-aws-learning-paths"></a>
+## Additional AWS learning paths
 
-| Trilha | Quando usar |
+| Learning path | When to use it |
 |---|---|
-| [AWS Solutions Architect Associate](https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil) | Revisar fundamentos arquiteturais antes de temas Professional. |
-| [AWS Cloud Practitioner](https://github.com/Thiago-code-lab/aws-certified-cloud-practitioner-brasil) | Reforcar conceitos basicos de cloud, servicos AWS e terminologia. |
-| [AWS AI Practitioner](https://github.com/Thiago-code-lab/aws-certified-ai-practitioner-brasil) | Explorar IA na AWS como caminho complementar de estudo. |
+| [AWS Solutions Architect Associate](https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil/tree/saa-c03-english) | Review architectural fundamentals before Professional topics. |
+| [AWS Cloud Practitioner](https://github.com/Thiago-code-lab/aws-certified-cloud-practitioner-brasil/tree/clf-c02-english) | Strengthen basic cloud concepts, AWS services and terminology. |
+| [AWS AI Practitioner](https://github.com/Thiago-code-lab/aws-certified-ai-practitioner-brasil/tree/aif-c01-english) | Explore AI on AWS as an additional learning path. |
 
-## Acompanhe a CloudStudy
+## Follow CloudStudy
 
-Continue sua preparacao na [CloudStudy](https://cloudstudy.com.br), acompanhe novidades no [Instagram](https://www.instagram.com/cloudstudy.ai/) e siga a pagina no [LinkedIn](https://www.linkedin.com/company/cloudstudy-ai/).
+Continue preparing with [CloudStudy](https://cloudstudy.com.br), follow updates on [Instagram](https://www.instagram.com/cloudstudy.ai/) and follow the [LinkedIn page](https://www.linkedin.com/company/cloudstudy-ai/).
 
-Para conteudos praticos de dados e projetos na AWS, veja tambem [Engenharia de Dados na AWS](https://www.udemy.com/course/engenharia-de-dados-na-aws-do-zero-aos-projetos-reais/?referralCode=E28670B9116BA68E08A9).
+For practical data content and AWS projects, also see [Data Engineering on AWS](https://www.udemy.com/course/engenharia-de-dados-na-aws-do-zero-aos-projetos-reais/?referralCode=E28670B9116BA68E08A9).
+
+## GitHub study navigation
+
+- [Exam domain learning paths](./EXAM_DOMAIN_PATHS.md).
+- [Real-world architecture scenarios](./28-Real-World-Architecture-Use-Cases/README.md).
+- [Hands-on lab and workshop index](./29-Hands-On-Labs/README.md).
+- Every module links its flashcards, cheatsheet, use cases, questions and official resources under Navigation or Module files.
+- [Official SAP-C02 exam guide](https://docs.aws.amazon.com/aws-certification/latest/solutions-architect-professional-02/solutions-architect-professional-02.html).
+- [English edition coverage, technical corrections and validation audit](./docs/english-edition/README.md).
+
+## Contributing and license
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md), [SECURITY.md](./SECURITY.md) and [CHANGELOG.md](./CHANGELOG.md). Contributions to this edition should target `sap-c02-english`.
+
+This open-source repository is available under the [MIT license](./LICENSE). CloudStudy community and promotional destinations may be in Portuguese; original banner artwork is preserved.

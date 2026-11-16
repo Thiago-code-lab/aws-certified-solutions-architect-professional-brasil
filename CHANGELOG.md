@@ -1,8 +1,8 @@
-﻿# Changelog
+# Changelog
 
-## Base publica SAP-C02
+## Public SAP-C02 foundation
 
-- Estrutura base criada para a certificação AWS Solutions Architect Professional.
-- README principal organizado como hub GitHub-first.
-- Currículo inicial estruturado em 31 módulos alinhados aos domínios do SAP-C02.
-- Materiais de apoio preparados para expansão gradual em fases futuras.
+- Created the base structure for the AWS Solutions Architect Professional certification.
+- Organized the main README as a GitHub-first hub.
+- Structured the initial curriculum into 31 modules aligned with SAP-C02 domains.
+- Prepared supporting materials for gradual expansion in future phases.

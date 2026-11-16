@@ -60,3 +60,7 @@ We are building a platform to help Brazilian learners study AWS in a more practi
 ## Current service terminology
 
 AWS documentation now calls MGN **AWS Transform MGN**, formerly AWS Application Migration Service. It uses continuous block-level replication for server migration. Keep server rehosting distinct from DMS database replication and SCT schema conversion; engine support, source prerequisites and cutover validation still matter. See the [MGN overview](https://docs.aws.amazon.com/mgn/latest/ug/what-is-mgn.html).
+
+## Additional study materials
+
+- [Module lab or architecture workshop](./lab.md).

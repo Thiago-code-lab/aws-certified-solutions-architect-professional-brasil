@@ -38,3 +38,9 @@ We are building a platform to help Brazilian learners study AWS in a more practi
 ---
 
 > Continue preparing for AWS certifications with [CloudStudy](https://cloudstudy.com.br).
+
+## Additional study materials
+
+- [Questions](./questions.md), [flashcards](./flashcards.md), [cheatsheet](./cheatsheet.md), [use cases](./use-cases.md) and [official links](./links.md).
+- Previous module: [Practice Exams and Questions](../30-Practice-Exams-and-Questions/README.md).
+- [Glossary and official resources](./official-resources.md).

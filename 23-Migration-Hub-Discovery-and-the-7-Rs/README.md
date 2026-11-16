@@ -60,3 +60,7 @@ We are building a platform to help Brazilian learners study AWS in a more practi
 ## Current service availability
 
 Migration Hub stopped accepting new customers on November 7, 2025. Existing customers can complete ongoing projects. For new migration planning, evaluate AWS Transform. Discovery, dependency mapping, wave planning and the 7 Rs remain relevant architectural practices. See the [official Migration Hub availability notice](https://docs.aws.amazon.com/migrationhub-orchestrator/latest/userguide/migrationhub-availability-change.html).
+
+## Additional study materials
+
+- [Module lab or architecture workshop](./lab.md).

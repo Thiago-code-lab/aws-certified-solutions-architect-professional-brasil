@@ -1,18 +1,18 @@
-﻿# Política de Segurança
+# Security Policy
 
-## Versão suportada
+## Supported version
 
-A referência oficial deste projeto é sempre a branch `main` mais recente.
+The Portuguese project's official reference is the latest `main` branch. This English edition is maintained on `sap-c02-english`.
 
-## Como reportar vulnerabilidade
+## Reporting a vulnerability
 
-1. Não abra issue pública para vulnerabilidade.
-2. Envie detalhes para `analyticsdev.thiago@gmail.com`.
-3. Inclua impacto, passos de reprodução e possível mitigação.
+1. Report vulnerabilities privately.
+2. Send details to `analyticsdev.thiago@gmail.com`.
+3. Include impact, reproduction steps and a possible mitigation.
 
-## Janela de resposta
+## Response window
 
-- Confirmação de recebimento: até 48 horas.
-- Retorno inicial com plano de tratamento: até 7 dias.
+- Acknowledgment: within 48 hours.
+- Initial response with a remediation plan: within seven days.
 
-Obrigado por reportar de forma responsável.
+Thank you for reporting responsibly.

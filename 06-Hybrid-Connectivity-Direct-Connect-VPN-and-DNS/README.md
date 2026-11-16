@@ -63,3 +63,7 @@ We are building a platform to help Brazilian learners study AWS in a more practi
 - [MACsec](https://docs.aws.amazon.com/directconnect/latest/UserGuide/MACsec.html): point-to-point Layer 2 protection has a different scope from end-to-end encryption.
 - [Route 53 VPC Resolver](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver.html): inbound and outbound endpoints and forwarding rules support hybrid DNS. The source uses the earlier name Route 53 Resolver.
 - [TGW route tables](https://docs.aws.amazon.com/vpc/latest/tgw/tgw-route-tables.html): association and selective propagation support routing domains; validate return paths and bypass routes.
+
+## Additional study materials
+
+- [Module lab or architecture workshop](./lab.md).

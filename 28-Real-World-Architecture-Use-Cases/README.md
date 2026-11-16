@@ -39,3 +39,9 @@ We are building a platform to help Brazilian learners study AWS in a more practi
 ---
 
 > Continue preparing for AWS certifications with [CloudStudy](https://cloudstudy.com.br).
+
+## Additional study materials
+
+- [Questions](./questions.md), [flashcards](./flashcards.md), [cheatsheet](./cheatsheet.md), [use cases](./use-cases.md) and [official links](./links.md).
+- Previous module: [Well-Architected Framework and Advanced Trade-Offs](../27-Well-Architected-and-Advanced-Trade-Offs/README.md).
+- Next module: [Hands-On Labs](../29-Hands-On-Labs/README.md).

@@ -60,3 +60,7 @@ We are building a platform to help Brazilian learners study AWS in a more practi
 ## Availability and transfer decisions
 
 AWS Snow Family devices are no longer available for new customers to order. Preserve Snow examples as historical SAP-C02 context and check eligibility for existing deployments. For new work, evaluate DataSync for online transfer, AWS Data Transfer Terminal for physical transfer where available, or AWS Partner options. Choose against bandwidth, volume, time, location and handling requirements. See the [official Snowball Edge availability notice](https://docs.aws.amazon.com/snowball/latest/developer-guide/snowball-edge-availability-change.html).
+
+## Additional study materials
+
+- [Module lab or architecture workshop](./lab.md).

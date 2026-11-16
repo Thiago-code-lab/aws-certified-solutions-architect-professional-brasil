@@ -56,3 +56,7 @@ We are building a platform to help Brazilian learners study AWS in a more practi
 ---
 
 > Continue preparing for AWS certifications with [CloudStudy](https://cloudstudy.com.br).
+
+## Additional study materials
+
+- [Module lab or architecture workshop](./lab.md).
