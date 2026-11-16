@@ -1,0 +1,1538 @@
+{
+  "source_branch": "main",
+  "source_commit": "471ebd78a428180b5d12afa320751fb60fbecffc",
+  "target_branch": "sap-c02-english",
+  "source_files": 223,
+  "markdown_documents": 217,
+  "renamed_file_paths": 210,
+  "renamed_basenames": 68,
+  "renamed_directories": 31,
+  "modules": [
+    {
+      "number": 1,
+      "title": "Introduction to SAP-C02",
+      "source": "01-Introducao-SAP-C02",
+      "target": "01-Introduction-SAP-C02"
+    },
+    {
+      "number": 2,
+      "title": "AWS Organizations, Control Tower and Multi-Account Architecture",
+      "source": "02-Organizations-Control-Tower-e-Multi-Account",
+      "target": "02-AWS-Organizations-Control-Tower-and-Multi-Account-Architecture"
+    },
+    {
+      "number": 3,
+      "title": "IAM Identity Center, Federation and Cross-Account Access",
+      "source": "03-IAM-Identity-Center-Federacao-e-Cross-Account",
+      "target": "03-IAM-Identity-Center-Federation-and-Cross-Account-Access"
+    },
+    {
+      "number": 4,
+      "title": "Governance, SCPs, RAM and Service Catalog",
+      "source": "04-Governanca-SCPs-RAM-e-Service-Catalog",
+      "target": "04-Governance-SCPs-RAM-and-Service-Catalog"
+    },
+    {
+      "number": 5,
+      "title": "Advanced Networking, VPC and Transit Gateway",
+      "source": "05-Redes-Avancadas-VPC-e-Transit-Gateway",
+      "target": "05-Advanced-Networking-VPC-and-Transit-Gateway"
+    },
+    {
+      "number": 6,
+      "title": "Hybrid Connectivity, Direct Connect, VPN and DNS",
+      "source": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS",
+      "target": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS"
+    },
+    {
+      "number": 7,
+      "title": "PrivateLink, Network Firewall, WAF and Shield",
+      "source": "07-PrivateLink-Network-Firewall-WAF-e-Shield",
+      "target": "07-PrivateLink-Network-Firewall-WAF-and-Shield"
+    },
+    {
+      "number": 8,
+      "title": "EC2, Auto Scaling and Compute Strategies",
+      "source": "08-EC2-Auto-Scaling-e-Estrategias-de-Compute",
+      "target": "08-EC2-Auto-Scaling-and-Compute-Strategies"
+    },
+    {
+      "number": 9,
+      "title": "High Availability, Multi-AZ and Multi-Region",
+      "source": "09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region",
+      "target": "09-High-Availability-Multi-AZ-and-Multi-Region"
+    },
+    {
+      "number": 10,
+      "title": "Route 53, CloudFront and Global Accelerator",
+      "source": "10-Route53-CloudFront-e-Global-Accelerator",
+      "target": "10-Route53-CloudFront-and-Global-Accelerator"
+    },
+    {
+      "number": 11,
+      "title": "S3, EBS, EFS, FSx and Storage Strategies",
+      "source": "11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento",
+      "target": "11-S3-EBS-EFS-FSx-and-Storage-Strategies"
+    },
+    {
+      "number": 12,
+      "title": "RDS, Aurora and Relational Database Strategies",
+      "source": "12-RDS-Aurora-e-Estrategias-de-Banco-Relacional",
+      "target": "12-RDS-Aurora-and-Relational-Database-Strategies"
+    },
+    {
+      "number": 13,
+      "title": "DynamoDB, ElastiCache and Purpose-Built Databases",
+      "source": "13-DynamoDB-ElastiCache-e-Bancos-Purpose-Built",
+      "target": "13-DynamoDB-ElastiCache-and-Purpose-Built-Databases"
+    },
+    {
+      "number": 14,
+      "title": "SQS, SNS, EventBridge and Step Functions",
+      "source": "14-SQS-SNS-EventBridge-e-Step-Functions",
+      "target": "14-SQS-SNS-EventBridge-and-Step-Functions"
+    },
+    {
+      "number": 15,
+      "title": "Lambda, API Gateway and Serverless Architectures",
+      "source": "15-Lambda-API-Gateway-e-Arquiteturas-Serverless",
+      "target": "15-Lambda-API-Gateway-and-Serverless-Architectures"
+    },
+    {
+      "number": 16,
+      "title": "ECS, EKS, Fargate and Containers",
+      "source": "16-ECS-EKS-Fargate-e-Containers",
+      "target": "16-ECS-EKS-Fargate-and-Containers"
+    },
+    {
+      "number": 17,
+      "title": "CloudFormation, CI/CD and Deployment Strategies",
+      "source": "17-CloudFormation-CICD-e-Estrategias-de-Deployment",
+      "target": "17-CloudFormation-CICD-and-Deployment-Strategies"
+    },
+    {
+      "number": 18,
+      "title": "CloudWatch, CloudTrail, Config and Observability",
+      "source": "18-CloudWatch-CloudTrail-Config-e-Observabilidade",
+      "target": "18-CloudWatch-CloudTrail-Config-and-Observability"
+    },
+    {
+      "number": 19,
+      "title": "Security, KMS, Secrets Manager, GuardDuty and Security Hub",
+      "source": "19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub",
+      "target": "19-Security-KMS-Secrets-Manager-GuardDuty-and-Security-Hub"
+    },
+    {
+      "number": 20,
+      "title": "Disaster Recovery, Backup, RTO and RPO",
+      "source": "20-Disaster-Recovery-Backup-RTO-e-RPO",
+      "target": "20-Disaster-Recovery-Backup-RTO-and-RPO"
+    },
+    {
+      "number": 21,
+      "title": "Performance, Reliability and Service Quotas",
+      "source": "21-Performance-Reliability-e-Service-Quotas",
+      "target": "21-Performance-Reliability-and-Service-Quotas"
+    },
+    {
+      "number": 22,
+      "title": "Cost Optimization and FinOps",
+      "source": "22-Otimizacao-de-Custos-e-FinOps",
+      "target": "22-Cost-Optimization-and-FinOps"
+    },
+    {
+      "number": 23,
+      "title": "Migration Hub, Discovery and the 7 Rs",
+      "source": "23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs",
+      "target": "23-Migration-Hub-Discovery-and-the-7-Rs"
+    },
+    {
+      "number": 24,
+      "title": "AWS MGN, DMS, SCT and Workload Migration",
+      "source": "24-MGN-DMS-SCT-e-Migracao-de-Workloads",
+      "target": "24-AWS-MGN-DMS-SCT-and-Workload-Migration"
+    },
+    {
+      "number": 25,
+      "title": "DataSync, Snow Family, Transfer Family and Data Transfer",
+      "source": "25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados",
+      "target": "25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer"
+    },
+    {
+      "number": 26,
+      "title": "Modernization, Serverless, Containers and Decoupling",
+      "source": "26-Modernizacao-Serverless-Containers-e-Decoupling",
+      "target": "26-Modernization-Serverless-Containers-and-Decoupling"
+    },
+    {
+      "number": 27,
+      "title": "Well-Architected Framework and Advanced Trade-Offs",
+      "source": "27-Well-Architected-e-Trade-Offs-Avancados",
+      "target": "27-Well-Architected-and-Advanced-Trade-Offs"
+    },
+    {
+      "number": 28,
+      "title": "Real-World Architecture Use Cases",
+      "source": "28-Casos-de-Uso-Reais",
+      "target": "28-Real-World-Architecture-Use-Cases"
+    },
+    {
+      "number": 29,
+      "title": "Hands-On Labs",
+      "source": "29-Labs-Praticos",
+      "target": "29-Hands-On-Labs"
+    },
+    {
+      "number": 30,
+      "title": "Practice Exams and Questions",
+      "source": "30-Simulados-e-Questoes",
+      "target": "30-Practice-Exams-and-Questions"
+    },
+    {
+      "number": 31,
+      "title": "Glossary and Resources",
+      "source": "31-Glossario-e-Recursos",
+      "target": "31-Glossary-and-Resources"
+    }
+  ],
+  "files": [
+    {
+      "original_path": ".github/FUNDING.yml",
+      "target_path": ".github/FUNDING.yml",
+      "source_sha256": "3bd7a46bb5348f13238be44209baa6d5b773e4f6ed5e4dd78363045909b0bdc9",
+      "kind": "preserved"
+    },
+    {
+      "original_path": ".github/ISSUE_TEMPLATE/aws_update.md",
+      "target_path": ".github/ISSUE_TEMPLATE/aws_update.md",
+      "source_sha256": "ff034b25a1c2e10e9445642545fd05451da7411f12718f6f5a751fd8f6b61b7e",
+      "kind": "markdown"
+    },
+    {
+      "original_path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "target_path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "source_sha256": "8a7d981aa668a8886ccd9101e03e69aedef71b59d2bf1159047ccd8878b081a8",
+      "kind": "markdown"
+    },
+    {
+      "original_path": ".github/ISSUE_TEMPLATE/pedagogy_suggestion.md",
+      "target_path": ".github/ISSUE_TEMPLATE/pedagogy_suggestion.md",
+      "source_sha256": "b899dee838deab92342320c2089c81f6371aeea03c45792b8a7aeb1a92f04b71",
+      "kind": "markdown"
+    },
+    {
+      "original_path": ".github/workflows/deploy.yml",
+      "target_path": ".github/workflows/deploy.yml",
+      "source_sha256": "008a70be82ba1ace3105c1240eedce8268a58c89f625f41f13bc2bdc0e22facc",
+      "kind": "preserved"
+    },
+    {
+      "original_path": "01-Introducao-SAP-C02/README.md",
+      "target_path": "01-Introduction-SAP-C02/README.md",
+      "source_sha256": "35c11704783dfb460cccdc50a65d8bf7d4d421a71919751e52173d6475d4c6d6",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "01-Introducao-SAP-C02/casos-de-uso.md",
+      "target_path": "01-Introduction-SAP-C02/use-cases.md",
+      "source_sha256": "a77f69b51cb4e80a46f1d1e3c8fe40d7fdbcf9c399c29653770ecf34efe1353c",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "01-Introducao-SAP-C02/cheatsheet.md",
+      "target_path": "01-Introduction-SAP-C02/cheatsheet.md",
+      "source_sha256": "e26ded8dd9343a8878ffdedeb945c772cc072f4054e9f98ac6dc1a95b47bd275",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "01-Introducao-SAP-C02/flashcards.md",
+      "target_path": "01-Introduction-SAP-C02/flashcards.md",
+      "source_sha256": "909256b959363f010fac1ef1f622b2739e737fcd2b9987ea01462ff9477571d3",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "01-Introducao-SAP-C02/links.md",
+      "target_path": "01-Introduction-SAP-C02/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "01-Introducao-SAP-C02/questoes.md",
+      "target_path": "01-Introduction-SAP-C02/questions.md",
+      "source_sha256": "d18a6f608d1231176e16ccf9740487f2d0d9e724814b6222dd56e525bd9ecf83",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "02-Organizations-Control-Tower-e-Multi-Account/README.md",
+      "target_path": "02-AWS-Organizations-Control-Tower-and-Multi-Account-Architecture/README.md",
+      "source_sha256": "48451cdf828bcf565d8fea0e8f00e1807c1b9b0e3ae1165b4f822a0209beee12",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "02-Organizations-Control-Tower-e-Multi-Account/casos-de-uso.md",
+      "target_path": "02-AWS-Organizations-Control-Tower-and-Multi-Account-Architecture/use-cases.md",
+      "source_sha256": "c4e242534f6f45f73be0c5d40f686f10c8335686bab151f46152842dc284e2ae",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "02-Organizations-Control-Tower-e-Multi-Account/cheatsheet.md",
+      "target_path": "02-AWS-Organizations-Control-Tower-and-Multi-Account-Architecture/cheatsheet.md",
+      "source_sha256": "3d1df967c663dffd42c43088d262be666a3fbbffd83a6c60e4fe4685fa3282e4",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "02-Organizations-Control-Tower-e-Multi-Account/flashcards.md",
+      "target_path": "02-AWS-Organizations-Control-Tower-and-Multi-Account-Architecture/flashcards.md",
+      "source_sha256": "8e03dd5dfa439e868b588b72b8161d30cb7afff37a2850aa9b35c4c15a9313b2",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "02-Organizations-Control-Tower-e-Multi-Account/links.md",
+      "target_path": "02-AWS-Organizations-Control-Tower-and-Multi-Account-Architecture/links.md",
+      "source_sha256": "c5cdfba4429189a062d31d9c23829a6f6aa68d27fbb117554d9a6e83b92aea5d",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "02-Organizations-Control-Tower-e-Multi-Account/questoes.md",
+      "target_path": "02-AWS-Organizations-Control-Tower-and-Multi-Account-Architecture/questions.md",
+      "source_sha256": "7d703b8aed4da4eea4a3f278450c075aadad29b378003edd27f09fb5c679d1a4",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "03-IAM-Identity-Center-Federacao-e-Cross-Account/README.md",
+      "target_path": "03-IAM-Identity-Center-Federation-and-Cross-Account-Access/README.md",
+      "source_sha256": "e67873c4c5f870de3b8eddd2d70561b6fe4a5b6d1bfa6ac2af1f50d549335257",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "03-IAM-Identity-Center-Federacao-e-Cross-Account/casos-de-uso.md",
+      "target_path": "03-IAM-Identity-Center-Federation-and-Cross-Account-Access/use-cases.md",
+      "source_sha256": "80a4837bcea085ca8bea3533aeef574f531a55a8d3dc2e7b8a10a873a232e4bf",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "03-IAM-Identity-Center-Federacao-e-Cross-Account/cheatsheet.md",
+      "target_path": "03-IAM-Identity-Center-Federation-and-Cross-Account-Access/cheatsheet.md",
+      "source_sha256": "3ad011b106783562717883e38cbae06689864d3c2ff5a41921bf7eb363eef696",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "03-IAM-Identity-Center-Federacao-e-Cross-Account/flashcards.md",
+      "target_path": "03-IAM-Identity-Center-Federation-and-Cross-Account-Access/flashcards.md",
+      "source_sha256": "3e3926019f190091a758347d020844b683ee971b71b1ebb2dda4b626ee8ea142",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "03-IAM-Identity-Center-Federacao-e-Cross-Account/links.md",
+      "target_path": "03-IAM-Identity-Center-Federation-and-Cross-Account-Access/links.md",
+      "source_sha256": "9e7eb0fa2aa55239f9d23018c375f2ce1589695e22031ef22c217467248bae53",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "03-IAM-Identity-Center-Federacao-e-Cross-Account/questoes.md",
+      "target_path": "03-IAM-Identity-Center-Federation-and-Cross-Account-Access/questions.md",
+      "source_sha256": "e334689b3dc8515253cc771eff5810123aab8ae9a3a41b363b478a5a012afa5c",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "04-Governanca-SCPs-RAM-e-Service-Catalog/README.md",
+      "target_path": "04-Governance-SCPs-RAM-and-Service-Catalog/README.md",
+      "source_sha256": "9442679fc5711aad0949d581a3e633e35178dccf8346f4a9b239b021c2c375bc",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "04-Governanca-SCPs-RAM-e-Service-Catalog/casos-de-uso.md",
+      "target_path": "04-Governance-SCPs-RAM-and-Service-Catalog/use-cases.md",
+      "source_sha256": "4217af6c82710aed4fc12b95d692795aa62f39f8c9a97c556e275ed5e5b00e6f",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "04-Governanca-SCPs-RAM-e-Service-Catalog/cheatsheet.md",
+      "target_path": "04-Governance-SCPs-RAM-and-Service-Catalog/cheatsheet.md",
+      "source_sha256": "2737d21a1d91f40a235c8e34520fb95600b2b060f0ae6fc9eacd75799e62a48f",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "04-Governanca-SCPs-RAM-e-Service-Catalog/flashcards.md",
+      "target_path": "04-Governance-SCPs-RAM-and-Service-Catalog/flashcards.md",
+      "source_sha256": "d29908667aeb155a888a6a04e48b03cb47c6ad99265107afae02425c3e3fa940",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "04-Governanca-SCPs-RAM-e-Service-Catalog/links.md",
+      "target_path": "04-Governance-SCPs-RAM-and-Service-Catalog/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "04-Governanca-SCPs-RAM-e-Service-Catalog/questoes.md",
+      "target_path": "04-Governance-SCPs-RAM-and-Service-Catalog/questions.md",
+      "source_sha256": "3d08ab0e972bf5b386791609392d8988764951f6982d4145ff8a1b1794861d34",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "05-Redes-Avancadas-VPC-e-Transit-Gateway/README.md",
+      "target_path": "05-Advanced-Networking-VPC-and-Transit-Gateway/README.md",
+      "source_sha256": "94be368dbccbc8588847df0c515a41ac9a3eed8f222cbac0232e410d0cfbbdbd",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "05-Redes-Avancadas-VPC-e-Transit-Gateway/casos-de-uso.md",
+      "target_path": "05-Advanced-Networking-VPC-and-Transit-Gateway/use-cases.md",
+      "source_sha256": "484fe7beec8f94b28533348bd0209c8517dc43b3f5f1a26d036f28a5d7749279",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "05-Redes-Avancadas-VPC-e-Transit-Gateway/cheatsheet.md",
+      "target_path": "05-Advanced-Networking-VPC-and-Transit-Gateway/cheatsheet.md",
+      "source_sha256": "64dcfda9b9bec47817aacd7c911fe9ca5b0b5874f297012562ce4394a98d4e65",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "05-Redes-Avancadas-VPC-e-Transit-Gateway/flashcards.md",
+      "target_path": "05-Advanced-Networking-VPC-and-Transit-Gateway/flashcards.md",
+      "source_sha256": "6ea6a8b938634c0b65028184c3d0c1b0747777a3760ed27460082af82c5d2723",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "05-Redes-Avancadas-VPC-e-Transit-Gateway/lab.md",
+      "target_path": "05-Advanced-Networking-VPC-and-Transit-Gateway/lab.md",
+      "source_sha256": "d494f95755e9571db534c0a8ff61a3bf431bb27fa27bbd6dd0c9731e4e277987",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "05-Redes-Avancadas-VPC-e-Transit-Gateway/links.md",
+      "target_path": "05-Advanced-Networking-VPC-and-Transit-Gateway/links.md",
+      "source_sha256": "342d9464cbffbd3ae20e8f3557acfaf3ee2a00d62994633b2eb757b60d25a20f",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "05-Redes-Avancadas-VPC-e-Transit-Gateway/questoes.md",
+      "target_path": "05-Advanced-Networking-VPC-and-Transit-Gateway/questions.md",
+      "source_sha256": "97714bc6fcfce4bd17efed3fa4c133b13a6d19073ee116b1213753f4a6ab5b5b",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/README.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/README.md",
+      "source_sha256": "7800cf6174734f392d2dd0e08f789e2ca2f7b2ee09ce4e53728464e2877f2f45",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/casos-de-uso.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/use-cases.md",
+      "source_sha256": "93d7f5f0812a7ddebe1cdcca111de29bb1fdce597b6e97133c87790f397c745f",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/cheatsheet.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/cheatsheet.md",
+      "source_sha256": "50d47177fce64f2507e1d136d23fb4517352af2a11f8a5fb161353268b23ddea",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/flashcards.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/flashcards.md",
+      "source_sha256": "175cb1d1dd02b2681ceadf2f9a81060e979471cc60bbca45955207823ba7cf6b",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/lab.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/lab.md",
+      "source_sha256": "1e65ceed1936d21fd516675564ad6f9aadf1e40046264d3bf2b381f695b14c40",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/links.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/links.md",
+      "source_sha256": "66f5d5b5427edaa2f988ce2bbc0b85039e70966937b870c9c8c7de49fde017ca",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/questoes.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/questions.md",
+      "source_sha256": "0ace086dd10f680e1e57a16a80f2490c2d194d09df46e787e9bbb52be7aef410",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "07-PrivateLink-Network-Firewall-WAF-e-Shield/README.md",
+      "target_path": "07-PrivateLink-Network-Firewall-WAF-and-Shield/README.md",
+      "source_sha256": "f8e296f03685e6ad0645f677500d7dc89702ab1d31e4b5a6d1c6a91bdf821a3b",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "07-PrivateLink-Network-Firewall-WAF-e-Shield/casos-de-uso.md",
+      "target_path": "07-PrivateLink-Network-Firewall-WAF-and-Shield/use-cases.md",
+      "source_sha256": "a6b81713c75cdf7db20602268542cc062818be8820c3cec0edfc4162503543c0",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "07-PrivateLink-Network-Firewall-WAF-e-Shield/cheatsheet.md",
+      "target_path": "07-PrivateLink-Network-Firewall-WAF-and-Shield/cheatsheet.md",
+      "source_sha256": "e2be7bb61d34173c75258b078255c66e88146b5310f2f71378826809ea9dc520",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "07-PrivateLink-Network-Firewall-WAF-e-Shield/flashcards.md",
+      "target_path": "07-PrivateLink-Network-Firewall-WAF-and-Shield/flashcards.md",
+      "source_sha256": "b69811f8d741a4eb21847797e0ece3273e62e6ddcf3bb16aef940c1be836b529",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "07-PrivateLink-Network-Firewall-WAF-e-Shield/lab.md",
+      "target_path": "07-PrivateLink-Network-Firewall-WAF-and-Shield/lab.md",
+      "source_sha256": "12cb5e38f603f52a43a92e84cf9addc5f70402567490976bc829cefdc4080fe1",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "07-PrivateLink-Network-Firewall-WAF-e-Shield/links.md",
+      "target_path": "07-PrivateLink-Network-Firewall-WAF-and-Shield/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "07-PrivateLink-Network-Firewall-WAF-e-Shield/questoes.md",
+      "target_path": "07-PrivateLink-Network-Firewall-WAF-and-Shield/questions.md",
+      "source_sha256": "7d04d39cd6f116a33d868043b7ea9b0e359f3ef5116467c5044382d6cefc75db",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "08-EC2-Auto-Scaling-e-Estrategias-de-Compute/README.md",
+      "target_path": "08-EC2-Auto-Scaling-and-Compute-Strategies/README.md",
+      "source_sha256": "3754b577e9c5c75fbe4a0afc42e5f3a333c915d6492321ef42ec260e583a4141",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "08-EC2-Auto-Scaling-e-Estrategias-de-Compute/casos-de-uso.md",
+      "target_path": "08-EC2-Auto-Scaling-and-Compute-Strategies/use-cases.md",
+      "source_sha256": "cdbb6e97340cc718254c6975a251a521efc9753da011ae9b0d4baa8b21689c59",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "08-EC2-Auto-Scaling-e-Estrategias-de-Compute/cheatsheet.md",
+      "target_path": "08-EC2-Auto-Scaling-and-Compute-Strategies/cheatsheet.md",
+      "source_sha256": "51a564680ab42d71ffdb6850ca59aba33171e52080d004f679ae471781076f0a",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "08-EC2-Auto-Scaling-e-Estrategias-de-Compute/flashcards.md",
+      "target_path": "08-EC2-Auto-Scaling-and-Compute-Strategies/flashcards.md",
+      "source_sha256": "844cdb9ad788d9da67b020b3f6f8af44fd370b2db0fbae8029481dd3a5333cf7",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "08-EC2-Auto-Scaling-e-Estrategias-de-Compute/links.md",
+      "target_path": "08-EC2-Auto-Scaling-and-Compute-Strategies/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "08-EC2-Auto-Scaling-e-Estrategias-de-Compute/questoes.md",
+      "target_path": "08-EC2-Auto-Scaling-and-Compute-Strategies/questions.md",
+      "source_sha256": "2ab316b4cede8fe17436eafec250dadd613866b58ec0b71745edf1721f6f88e4",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/README.md",
+      "target_path": "09-High-Availability-Multi-AZ-and-Multi-Region/README.md",
+      "source_sha256": "ae2aee7a3af1c56cb667e1a1c2d681068a0a563d66a6133b405ffa210f3bea9b",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/casos-de-uso.md",
+      "target_path": "09-High-Availability-Multi-AZ-and-Multi-Region/use-cases.md",
+      "source_sha256": "19af99de8c40b3e4502a2fcecfdd7932327efdc16b089592f7747a8e8c9c9212",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/cheatsheet.md",
+      "target_path": "09-High-Availability-Multi-AZ-and-Multi-Region/cheatsheet.md",
+      "source_sha256": "eb0b5cf69498272d2d663b6c9da2edc2d0a0a6f7dbc728c0dd58b6b789222d2d",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/flashcards.md",
+      "target_path": "09-High-Availability-Multi-AZ-and-Multi-Region/flashcards.md",
+      "source_sha256": "9abb254be03f6224b748c780566ee38216edb710567f4ed5a52425f1bfb57608",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/lab.md",
+      "target_path": "09-High-Availability-Multi-AZ-and-Multi-Region/lab.md",
+      "source_sha256": "f9d92de50ef63f686f6fd74192a1cbeea0fb66b3a738e6c56cf127d88a5ba42c",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/links.md",
+      "target_path": "09-High-Availability-Multi-AZ-and-Multi-Region/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/questoes.md",
+      "target_path": "09-High-Availability-Multi-AZ-and-Multi-Region/questions.md",
+      "source_sha256": "bf38e10e648e69250ebf0bc7c75d4f446f29d7a4e2e4c7b3b6fbcd50f3cb2e66",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "10-Route53-CloudFront-e-Global-Accelerator/README.md",
+      "target_path": "10-Route53-CloudFront-and-Global-Accelerator/README.md",
+      "source_sha256": "6a013d4de3a332d95fba60ebd7dbd0ebf119f9376c3ab41509002d57ce83d125",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "10-Route53-CloudFront-e-Global-Accelerator/casos-de-uso.md",
+      "target_path": "10-Route53-CloudFront-and-Global-Accelerator/use-cases.md",
+      "source_sha256": "b80a4a1270ab31569561c1ae672451311e806acacd3a7e3694bfd0e17f1325b8",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "10-Route53-CloudFront-e-Global-Accelerator/cheatsheet.md",
+      "target_path": "10-Route53-CloudFront-and-Global-Accelerator/cheatsheet.md",
+      "source_sha256": "7afa1c2d32fe2e4bc4b86a7c56e52a74b92bd4f6142c821a47a306f7f5007425",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "10-Route53-CloudFront-e-Global-Accelerator/flashcards.md",
+      "target_path": "10-Route53-CloudFront-and-Global-Accelerator/flashcards.md",
+      "source_sha256": "4bbd246fa1a5ed6d5458957198b12a263cf3eecdb9b9ea21383819052b7318bd",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "10-Route53-CloudFront-e-Global-Accelerator/lab.md",
+      "target_path": "10-Route53-CloudFront-and-Global-Accelerator/lab.md",
+      "source_sha256": "b281e9f6e12c2038ca9f39cd784e9d22be91844dd38718c7595cfe5b6e061c45",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "10-Route53-CloudFront-e-Global-Accelerator/links.md",
+      "target_path": "10-Route53-CloudFront-and-Global-Accelerator/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "10-Route53-CloudFront-e-Global-Accelerator/questoes.md",
+      "target_path": "10-Route53-CloudFront-and-Global-Accelerator/questions.md",
+      "source_sha256": "916e1ca25aae8d5fe407abbdfdc1fd72704e38f500528db2b53c7ae9d7b99224",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/README.md",
+      "target_path": "11-S3-EBS-EFS-FSx-and-Storage-Strategies/README.md",
+      "source_sha256": "06c5dd57656ab3d2532cde5fa3bb6c0b1be6c5fac18f1928c0b93bf538f75c5f",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/casos-de-uso.md",
+      "target_path": "11-S3-EBS-EFS-FSx-and-Storage-Strategies/use-cases.md",
+      "source_sha256": "328c8b2522e6f48f16033269cbf1c6c584d54803bb12241b66ce5489674d3bba",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/cheatsheet.md",
+      "target_path": "11-S3-EBS-EFS-FSx-and-Storage-Strategies/cheatsheet.md",
+      "source_sha256": "eec322f55dbfa438e2ef83bcae5f0db9fffe3583ef12c41859867eac0f5626da",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/flashcards.md",
+      "target_path": "11-S3-EBS-EFS-FSx-and-Storage-Strategies/flashcards.md",
+      "source_sha256": "008ec9db4aeaec3b4e23fea121528f4c85d32d8b7dc2d3b270edcaef6b3f476c",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/lab.md",
+      "target_path": "11-S3-EBS-EFS-FSx-and-Storage-Strategies/lab.md",
+      "source_sha256": "dc681d09a39d9d281571f1ccec7308bbf6b745d77a4582789a2ca2c3efedd4f5",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/links.md",
+      "target_path": "11-S3-EBS-EFS-FSx-and-Storage-Strategies/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/questoes.md",
+      "target_path": "11-S3-EBS-EFS-FSx-and-Storage-Strategies/questions.md",
+      "source_sha256": "dbae1bb0e0a8d9ec6124cb8214186b958cc4a1c9ced1c9267e983fd34b5185a2",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/README.md",
+      "target_path": "12-RDS-Aurora-and-Relational-Database-Strategies/README.md",
+      "source_sha256": "545c57f910234b5a392a2d77045d345dc1e4ae5dcffb6c78c3e1fda5cd0e62f0",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/casos-de-uso.md",
+      "target_path": "12-RDS-Aurora-and-Relational-Database-Strategies/use-cases.md",
+      "source_sha256": "a10089f08b559b322282d61f3f6a535fbc555e92ed3a4506ae1edd32a25c7318",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/cheatsheet.md",
+      "target_path": "12-RDS-Aurora-and-Relational-Database-Strategies/cheatsheet.md",
+      "source_sha256": "bc2723a40bfee8cd01dfd13fd9ff7b8e3d0a846f6f30ccc3529c7565d45bee29",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/flashcards.md",
+      "target_path": "12-RDS-Aurora-and-Relational-Database-Strategies/flashcards.md",
+      "source_sha256": "72789121147f93cfb9c029f10b55b391abac249a67e0cb51c5fdcd2b847cc320",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/lab.md",
+      "target_path": "12-RDS-Aurora-and-Relational-Database-Strategies/lab.md",
+      "source_sha256": "b3690a298fbb0a59175a3ca5330c1d5d83d15f045bf6e1dc1ad6c5e0399341ea",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/links.md",
+      "target_path": "12-RDS-Aurora-and-Relational-Database-Strategies/links.md",
+      "source_sha256": "9350cdfc7e311e774ad3435f9eb1645f46eb369cc907cd10b5886fd4d5eb3367",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/questoes.md",
+      "target_path": "12-RDS-Aurora-and-Relational-Database-Strategies/questions.md",
+      "source_sha256": "73244ab8c491d9bd6677a1d7b5ed6714070de67c0f65d02cdec3fb7df539c611",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "13-DynamoDB-ElastiCache-e-Bancos-Purpose-Built/README.md",
+      "target_path": "13-DynamoDB-ElastiCache-and-Purpose-Built-Databases/README.md",
+      "source_sha256": "c450e2464392afa3f065de13e3d46cbfa31f0078ec7cdcbee87cf363cd01ed0a",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "13-DynamoDB-ElastiCache-e-Bancos-Purpose-Built/casos-de-uso.md",
+      "target_path": "13-DynamoDB-ElastiCache-and-Purpose-Built-Databases/use-cases.md",
+      "source_sha256": "58511bcda9d844cd8d6c7789d8e7f183e66a06c9d8868d2f82c797a4407485b2",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "13-DynamoDB-ElastiCache-e-Bancos-Purpose-Built/cheatsheet.md",
+      "target_path": "13-DynamoDB-ElastiCache-and-Purpose-Built-Databases/cheatsheet.md",
+      "source_sha256": "a4842016186f4573cd4161d9a0cddd09d633d5a867d00e159984697308da79ae",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "13-DynamoDB-ElastiCache-e-Bancos-Purpose-Built/flashcards.md",
+      "target_path": "13-DynamoDB-ElastiCache-and-Purpose-Built-Databases/flashcards.md",
+      "source_sha256": "b949eade9b8e8b5acba8521ed5dc91eb5bd6ded8fc07e888bdd92032f49a4169",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "13-DynamoDB-ElastiCache-e-Bancos-Purpose-Built/links.md",
+      "target_path": "13-DynamoDB-ElastiCache-and-Purpose-Built-Databases/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "13-DynamoDB-ElastiCache-e-Bancos-Purpose-Built/questoes.md",
+      "target_path": "13-DynamoDB-ElastiCache-and-Purpose-Built-Databases/questions.md",
+      "source_sha256": "6dc6bea5cd774b215f3a2bb28d3049fc3ef13bc9a3ed61cacc106e683e7a3429",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "14-SQS-SNS-EventBridge-e-Step-Functions/README.md",
+      "target_path": "14-SQS-SNS-EventBridge-and-Step-Functions/README.md",
+      "source_sha256": "58bcd7ed4f1a51c11b7e4c4bd40447381f96f56703943d005897cdb873a1a87f",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "14-SQS-SNS-EventBridge-e-Step-Functions/casos-de-uso.md",
+      "target_path": "14-SQS-SNS-EventBridge-and-Step-Functions/use-cases.md",
+      "source_sha256": "05299aec88a741090dc6843b95dc737a92be0ceecb34c5bbaffbdeea3dbfae53",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "14-SQS-SNS-EventBridge-e-Step-Functions/cheatsheet.md",
+      "target_path": "14-SQS-SNS-EventBridge-and-Step-Functions/cheatsheet.md",
+      "source_sha256": "e8219f5ab66215a88b2c87f084413b4da0b59a940ceead4cb6f3294889da8d4b",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "14-SQS-SNS-EventBridge-e-Step-Functions/flashcards.md",
+      "target_path": "14-SQS-SNS-EventBridge-and-Step-Functions/flashcards.md",
+      "source_sha256": "398e388aedd69beb8547b40a6230649362fa8e985c01e244af9a41267f981a5f",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "14-SQS-SNS-EventBridge-e-Step-Functions/lab.md",
+      "target_path": "14-SQS-SNS-EventBridge-and-Step-Functions/lab.md",
+      "source_sha256": "5ac28c4c8949ec81521b53c868a15cd98ff132b15a64d5143729ebccee677f92",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "14-SQS-SNS-EventBridge-e-Step-Functions/links.md",
+      "target_path": "14-SQS-SNS-EventBridge-and-Step-Functions/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "14-SQS-SNS-EventBridge-e-Step-Functions/questoes.md",
+      "target_path": "14-SQS-SNS-EventBridge-and-Step-Functions/questions.md",
+      "source_sha256": "6547031660ae5792009faea8158fb65f8bb753edcff84a86685384db998209c9",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "15-Lambda-API-Gateway-e-Arquiteturas-Serverless/README.md",
+      "target_path": "15-Lambda-API-Gateway-and-Serverless-Architectures/README.md",
+      "source_sha256": "75881e0517fd51c03b25413b0095504961c8c96a7084f7805c7d116a7765a300",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "15-Lambda-API-Gateway-e-Arquiteturas-Serverless/casos-de-uso.md",
+      "target_path": "15-Lambda-API-Gateway-and-Serverless-Architectures/use-cases.md",
+      "source_sha256": "e0605079cc344a1e2531c9a68f89cebf76cdb41ccdc49aca8be3647bd3e7ff75",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "15-Lambda-API-Gateway-e-Arquiteturas-Serverless/cheatsheet.md",
+      "target_path": "15-Lambda-API-Gateway-and-Serverless-Architectures/cheatsheet.md",
+      "source_sha256": "9072938ab76a9896f56e821b73d145987591012619add0eb06e8998c4122d0cb",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "15-Lambda-API-Gateway-e-Arquiteturas-Serverless/flashcards.md",
+      "target_path": "15-Lambda-API-Gateway-and-Serverless-Architectures/flashcards.md",
+      "source_sha256": "595c6f7984e3faad9c72f399da2db03409f1c8ebb7a3750c14d804961949a92e",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "15-Lambda-API-Gateway-e-Arquiteturas-Serverless/lab.md",
+      "target_path": "15-Lambda-API-Gateway-and-Serverless-Architectures/lab.md",
+      "source_sha256": "43f86dc2552797aa570dd7b54872b024387dbe1ee4ea5613a4881a43b5bd7906",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "15-Lambda-API-Gateway-e-Arquiteturas-Serverless/links.md",
+      "target_path": "15-Lambda-API-Gateway-and-Serverless-Architectures/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "15-Lambda-API-Gateway-e-Arquiteturas-Serverless/questoes.md",
+      "target_path": "15-Lambda-API-Gateway-and-Serverless-Architectures/questions.md",
+      "source_sha256": "e489d95d3994a5b26b2653dcd0ddcdc6b7fee52b6b6daaefa708f147f87c7630",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "16-ECS-EKS-Fargate-e-Containers/README.md",
+      "target_path": "16-ECS-EKS-Fargate-and-Containers/README.md",
+      "source_sha256": "614a27249a02329561640d7ea9b09ac5efcb23d1358fe6d144cbfb7f50b62234",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "16-ECS-EKS-Fargate-e-Containers/casos-de-uso.md",
+      "target_path": "16-ECS-EKS-Fargate-and-Containers/use-cases.md",
+      "source_sha256": "1d0dfcbc5d471c5c7569c1c8144112dd45a23a381f837d7299afc5024ffa563c",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "16-ECS-EKS-Fargate-e-Containers/cheatsheet.md",
+      "target_path": "16-ECS-EKS-Fargate-and-Containers/cheatsheet.md",
+      "source_sha256": "fc43c22d3f562cab7df47ed188ea09fb875379b0b35600c19b0ecf6d9d0b4374",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "16-ECS-EKS-Fargate-e-Containers/flashcards.md",
+      "target_path": "16-ECS-EKS-Fargate-and-Containers/flashcards.md",
+      "source_sha256": "541e70962024f68918a92b03482b968ce4ecf3d4182fa3ed9b688f9285af02a0",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "16-ECS-EKS-Fargate-e-Containers/lab.md",
+      "target_path": "16-ECS-EKS-Fargate-and-Containers/lab.md",
+      "source_sha256": "f4a88d4744e6fe556ee982e434e053c44e704471637da9d82060b3514ee7f2f4",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "16-ECS-EKS-Fargate-e-Containers/links.md",
+      "target_path": "16-ECS-EKS-Fargate-and-Containers/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "16-ECS-EKS-Fargate-e-Containers/questoes.md",
+      "target_path": "16-ECS-EKS-Fargate-and-Containers/questions.md",
+      "source_sha256": "2e535098042f4f3f1b4dc1df8af556ecd24e5a260e14dbb2e36840d90190480e",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "17-CloudFormation-CICD-e-Estrategias-de-Deployment/README.md",
+      "target_path": "17-CloudFormation-CICD-and-Deployment-Strategies/README.md",
+      "source_sha256": "cc5e223a2354aaadb2b9657c4900c721087b03b52f68816cfdf39cc090801d20",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "17-CloudFormation-CICD-e-Estrategias-de-Deployment/casos-de-uso.md",
+      "target_path": "17-CloudFormation-CICD-and-Deployment-Strategies/use-cases.md",
+      "source_sha256": "fa029f8fe3bc549406bd6388ae24acb3358f391322b4b4f9adda653cacd0ed12",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "17-CloudFormation-CICD-e-Estrategias-de-Deployment/cheatsheet.md",
+      "target_path": "17-CloudFormation-CICD-and-Deployment-Strategies/cheatsheet.md",
+      "source_sha256": "209538aa8885b5a54162bf4a59901d17840b999470c836a21a7902fe27840a37",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "17-CloudFormation-CICD-e-Estrategias-de-Deployment/flashcards.md",
+      "target_path": "17-CloudFormation-CICD-and-Deployment-Strategies/flashcards.md",
+      "source_sha256": "91bf269b04903abdadffc089fb1775abf59a5614d66913e56ca6e1f49a4070bb",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "17-CloudFormation-CICD-e-Estrategias-de-Deployment/lab.md",
+      "target_path": "17-CloudFormation-CICD-and-Deployment-Strategies/lab.md",
+      "source_sha256": "f6d3230d1daae1eae947e179a7d8a941987b516956344ab69dedd3b2709acb22",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "17-CloudFormation-CICD-e-Estrategias-de-Deployment/links.md",
+      "target_path": "17-CloudFormation-CICD-and-Deployment-Strategies/links.md",
+      "source_sha256": "7f602115214483c0b99c10e8fe792c7665b5a7b1a790a1e4a0110cd04a92ddb7",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "17-CloudFormation-CICD-e-Estrategias-de-Deployment/questoes.md",
+      "target_path": "17-CloudFormation-CICD-and-Deployment-Strategies/questions.md",
+      "source_sha256": "2cd9cf6321c39fc91a4b80ff2406a5f3f4f37fbab06958d09c832411524c8b36",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "18-CloudWatch-CloudTrail-Config-e-Observabilidade/README.md",
+      "target_path": "18-CloudWatch-CloudTrail-Config-and-Observability/README.md",
+      "source_sha256": "9febeca4ffe8d6868a1ca256b461792518c35d9d5581ddbc744ec0fcf9cab402",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "18-CloudWatch-CloudTrail-Config-e-Observabilidade/casos-de-uso.md",
+      "target_path": "18-CloudWatch-CloudTrail-Config-and-Observability/use-cases.md",
+      "source_sha256": "f549fb361228a85c87c209513d2065f70477f1e99e6363fb690fad76ffb35531",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "18-CloudWatch-CloudTrail-Config-e-Observabilidade/cheatsheet.md",
+      "target_path": "18-CloudWatch-CloudTrail-Config-and-Observability/cheatsheet.md",
+      "source_sha256": "474318f2d88d3ad11f3b2d758bf914f2c475ee563ef9c6a67979dd0666547d3b",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "18-CloudWatch-CloudTrail-Config-e-Observabilidade/flashcards.md",
+      "target_path": "18-CloudWatch-CloudTrail-Config-and-Observability/flashcards.md",
+      "source_sha256": "f8788e891fad4a64d517f3f88391ae6e40c6c923cbcf290e60f7d701d3c693de",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "18-CloudWatch-CloudTrail-Config-e-Observabilidade/lab.md",
+      "target_path": "18-CloudWatch-CloudTrail-Config-and-Observability/lab.md",
+      "source_sha256": "3fe0e252ab426e1a623c16b86ee5294f2dff4229175f09cd2420966c052a7161",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "18-CloudWatch-CloudTrail-Config-e-Observabilidade/links.md",
+      "target_path": "18-CloudWatch-CloudTrail-Config-and-Observability/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "18-CloudWatch-CloudTrail-Config-e-Observabilidade/questoes.md",
+      "target_path": "18-CloudWatch-CloudTrail-Config-and-Observability/questions.md",
+      "source_sha256": "df5b9a12c13d6ffef886c71e8e3888ea59205c1a395721ace0299b6796b0f90c",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/README.md",
+      "target_path": "19-Security-KMS-Secrets-Manager-GuardDuty-and-Security-Hub/README.md",
+      "source_sha256": "9986101ac6341831335e2bc75aa17fdcd71fd4d50f507c317a26c6ba1ace4d05",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/casos-de-uso.md",
+      "target_path": "19-Security-KMS-Secrets-Manager-GuardDuty-and-Security-Hub/use-cases.md",
+      "source_sha256": "0f4b0bf3b6268db6f532f783c556dad24a16f90bddd06d8ebb26711d3e70bbcb",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/cheatsheet.md",
+      "target_path": "19-Security-KMS-Secrets-Manager-GuardDuty-and-Security-Hub/cheatsheet.md",
+      "source_sha256": "55d958f85c6a9abebf84d0c731ba91232dc295407407993179e20777b4a780c5",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/flashcards.md",
+      "target_path": "19-Security-KMS-Secrets-Manager-GuardDuty-and-Security-Hub/flashcards.md",
+      "source_sha256": "38090d75e04a4a584346d240ed17b226100d62dbe54789f74cc00c68f6daf56b",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/links.md",
+      "target_path": "19-Security-KMS-Secrets-Manager-GuardDuty-and-Security-Hub/links.md",
+      "source_sha256": "4c11ce6b3bc84e4cf297fab961dd0aed57b14d4a7b42e34f4125bfd84208ce85",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/questoes.md",
+      "target_path": "19-Security-KMS-Secrets-Manager-GuardDuty-and-Security-Hub/questions.md",
+      "source_sha256": "55ad417e7263d266f3b37530b9fbcf8c4dd5bf65e927683197a587d62ab833a0",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "20-Disaster-Recovery-Backup-RTO-e-RPO/README.md",
+      "target_path": "20-Disaster-Recovery-Backup-RTO-and-RPO/README.md",
+      "source_sha256": "3c2b7852f2fa5f2876111b428233c6a192496b90455292b4bd8a7fdc7398d9d4",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "20-Disaster-Recovery-Backup-RTO-e-RPO/casos-de-uso.md",
+      "target_path": "20-Disaster-Recovery-Backup-RTO-and-RPO/use-cases.md",
+      "source_sha256": "0286d3d1a4fbec999bca68f5da2fe2a795d5f89f3bb15d8756de3355d18a7134",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "20-Disaster-Recovery-Backup-RTO-e-RPO/cheatsheet.md",
+      "target_path": "20-Disaster-Recovery-Backup-RTO-and-RPO/cheatsheet.md",
+      "source_sha256": "2bfb05a0fc6e8b7f80c93742c3a022065ff8dda3a196c234e45c821e8c4d7840",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "20-Disaster-Recovery-Backup-RTO-e-RPO/flashcards.md",
+      "target_path": "20-Disaster-Recovery-Backup-RTO-and-RPO/flashcards.md",
+      "source_sha256": "f0fbb3806acd7f7815d94980cfc91514601c0503ae0e12143d1e9e19d1e5a95a",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "20-Disaster-Recovery-Backup-RTO-e-RPO/lab.md",
+      "target_path": "20-Disaster-Recovery-Backup-RTO-and-RPO/lab.md",
+      "source_sha256": "d13323640062e5b952a71bb1ad2a581918a3a8a4c58390cd8ce8df5277a62ffe",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "20-Disaster-Recovery-Backup-RTO-e-RPO/links.md",
+      "target_path": "20-Disaster-Recovery-Backup-RTO-and-RPO/links.md",
+      "source_sha256": "83a19be06bc5e6f851e6f0c7e71ef9fd95772d225351ed827c38b70d43b84805",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "20-Disaster-Recovery-Backup-RTO-e-RPO/questoes.md",
+      "target_path": "20-Disaster-Recovery-Backup-RTO-and-RPO/questions.md",
+      "source_sha256": "f650555a74666f4f94af3ce1f79a7c77c650811b1da95e86c88f5506a72d0378",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "21-Performance-Reliability-e-Service-Quotas/README.md",
+      "target_path": "21-Performance-Reliability-and-Service-Quotas/README.md",
+      "source_sha256": "276fa306f76781871f23eccea8f7098afd6547f7e5e07d83b583d0f5857ac5bd",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "21-Performance-Reliability-e-Service-Quotas/casos-de-uso.md",
+      "target_path": "21-Performance-Reliability-and-Service-Quotas/use-cases.md",
+      "source_sha256": "6d35b033b638c3a2027cbbb4c90107a663f785381255de774d3d740d1bfb2bfa",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "21-Performance-Reliability-e-Service-Quotas/cheatsheet.md",
+      "target_path": "21-Performance-Reliability-and-Service-Quotas/cheatsheet.md",
+      "source_sha256": "a2c1da935b147647e1b9b51877903046f80aac335042c6622babf1816696554c",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "21-Performance-Reliability-e-Service-Quotas/flashcards.md",
+      "target_path": "21-Performance-Reliability-and-Service-Quotas/flashcards.md",
+      "source_sha256": "2eb4b4fb7d63a33ea611c2b5f2df8573c8ec3865eaa95ae69e6bd6f047584388",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "21-Performance-Reliability-e-Service-Quotas/links.md",
+      "target_path": "21-Performance-Reliability-and-Service-Quotas/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "21-Performance-Reliability-e-Service-Quotas/questoes.md",
+      "target_path": "21-Performance-Reliability-and-Service-Quotas/questions.md",
+      "source_sha256": "8c1e8be087e7df61beb7362863e3ae59ed19ab3869fbc3c05412ac79c28ed3b4",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "22-Otimizacao-de-Custos-e-FinOps/README.md",
+      "target_path": "22-Cost-Optimization-and-FinOps/README.md",
+      "source_sha256": "00a263c344b775ad3328ac8043b36cf955c9f0efbc45adfe76b458032953853a",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "22-Otimizacao-de-Custos-e-FinOps/casos-de-uso.md",
+      "target_path": "22-Cost-Optimization-and-FinOps/use-cases.md",
+      "source_sha256": "3e2f14766420e56a6d3f16a6c6f952dbb601d0fed56dbe2eb0f9a7987a1821a0",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "22-Otimizacao-de-Custos-e-FinOps/cheatsheet.md",
+      "target_path": "22-Cost-Optimization-and-FinOps/cheatsheet.md",
+      "source_sha256": "74b21465eef70747aede215fbdf386fa66d224754c4de908f7ba09ff32a002e5",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "22-Otimizacao-de-Custos-e-FinOps/flashcards.md",
+      "target_path": "22-Cost-Optimization-and-FinOps/flashcards.md",
+      "source_sha256": "524c5ebe5b7a86d1f4d6be1fd249ec7fcd9f5c68ff258a6c68f9f9194490629f",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "22-Otimizacao-de-Custos-e-FinOps/lab.md",
+      "target_path": "22-Cost-Optimization-and-FinOps/lab.md",
+      "source_sha256": "1672cb01eefca073b88fc4569903b1cfa60bd5a511d8a3fe1f640dd22ff39594",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "22-Otimizacao-de-Custos-e-FinOps/links.md",
+      "target_path": "22-Cost-Optimization-and-FinOps/links.md",
+      "source_sha256": "d08c579f773474a5367c6fbcd78898d48889dd3db601fabe17e40055b503b633",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "22-Otimizacao-de-Custos-e-FinOps/questoes.md",
+      "target_path": "22-Cost-Optimization-and-FinOps/questions.md",
+      "source_sha256": "f44616af653456fc8b379b5874cbab8afd9c461edd4b1aa2b4056d31f5d2a3ff",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/README.md",
+      "target_path": "23-Migration-Hub-Discovery-and-the-7-Rs/README.md",
+      "source_sha256": "f901cbe0ced605fd660a7cadc42e784b029f3a1ebd812acd7dbfa0f745d9e81c",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/casos-de-uso.md",
+      "target_path": "23-Migration-Hub-Discovery-and-the-7-Rs/use-cases.md",
+      "source_sha256": "0eaa335b62301c1ca7e7b6112317d4434c04a696f6eb0f31a31d708273c10e19",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/cheatsheet.md",
+      "target_path": "23-Migration-Hub-Discovery-and-the-7-Rs/cheatsheet.md",
+      "source_sha256": "af8f60aea78edd43f1fe7262142abbb8a256bd50f03bd61c5173cec9b9692c01",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/flashcards.md",
+      "target_path": "23-Migration-Hub-Discovery-and-the-7-Rs/flashcards.md",
+      "source_sha256": "76b551cf31e35f00af16f7cad3bb77084910eb69d347745b2102b822ee606cc8",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/lab.md",
+      "target_path": "23-Migration-Hub-Discovery-and-the-7-Rs/lab.md",
+      "source_sha256": "b9b8e12f5f12164c1eb34df02cae2933210f488276091fdbce3abe371589800a",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/links.md",
+      "target_path": "23-Migration-Hub-Discovery-and-the-7-Rs/links.md",
+      "source_sha256": "645a2358ebe1b046dd261e4e73eb363c9781783ce29fea05279bcb812e09d801",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/questoes.md",
+      "target_path": "23-Migration-Hub-Discovery-and-the-7-Rs/questions.md",
+      "source_sha256": "5aa73e6c8574efbadd1f55f1b9511723f53db672007eb38fbdfd924ca65ceb18",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "24-MGN-DMS-SCT-e-Migracao-de-Workloads/README.md",
+      "target_path": "24-AWS-MGN-DMS-SCT-and-Workload-Migration/README.md",
+      "source_sha256": "a549d36c1f3d39aceced3f3743db3e69a6d2c328e1276412732315a5da04144c",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "24-MGN-DMS-SCT-e-Migracao-de-Workloads/casos-de-uso.md",
+      "target_path": "24-AWS-MGN-DMS-SCT-and-Workload-Migration/use-cases.md",
+      "source_sha256": "31e1e103ec83c852fa945d4214cab692822cfa0a0f6844dca5115ccd7251b33a",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "24-MGN-DMS-SCT-e-Migracao-de-Workloads/cheatsheet.md",
+      "target_path": "24-AWS-MGN-DMS-SCT-and-Workload-Migration/cheatsheet.md",
+      "source_sha256": "c5bdf3d40ac954cd59fff296688f21175cf0849a2701f6924f4c2fd8815306b2",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "24-MGN-DMS-SCT-e-Migracao-de-Workloads/flashcards.md",
+      "target_path": "24-AWS-MGN-DMS-SCT-and-Workload-Migration/flashcards.md",
+      "source_sha256": "e68e4128921fc9dfe0c8fa662f969e49c6c943197d9b4d91507cc78c9665aa2e",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "24-MGN-DMS-SCT-e-Migracao-de-Workloads/lab.md",
+      "target_path": "24-AWS-MGN-DMS-SCT-and-Workload-Migration/lab.md",
+      "source_sha256": "0d5046428167ae9035e5f0eff7736a955b9baf92a5257993951ae59d2346fceb",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "24-MGN-DMS-SCT-e-Migracao-de-Workloads/links.md",
+      "target_path": "24-AWS-MGN-DMS-SCT-and-Workload-Migration/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "24-MGN-DMS-SCT-e-Migracao-de-Workloads/questoes.md",
+      "target_path": "24-AWS-MGN-DMS-SCT-and-Workload-Migration/questions.md",
+      "source_sha256": "77f101eab172915f0eab07850a84327379e49ec8042c0ca39ab84e14c0a6b9bb",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/README.md",
+      "target_path": "25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer/README.md",
+      "source_sha256": "de390483c7ed1510d6c377b5ca347f28001a24f5b69b19c13b3c1c9ae3220a45",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/casos-de-uso.md",
+      "target_path": "25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer/use-cases.md",
+      "source_sha256": "08460e38b06a9f7c86e254ddd81518c3458b0d163142be4fccfdde0979f10469",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/cheatsheet.md",
+      "target_path": "25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer/cheatsheet.md",
+      "source_sha256": "d2feb503f204efe6bd11ff3e52e0a4642c021343329a4caaa3442ca35b5a40f3",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/flashcards.md",
+      "target_path": "25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer/flashcards.md",
+      "source_sha256": "89aad58b1a41280b2fc34220d8f54f1eed632f444ef6742a05119102bfc5adc7",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/lab.md",
+      "target_path": "25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer/lab.md",
+      "source_sha256": "2418756b450ad71bb9eddd1e0bcdbefd2db6d68fa234666f6a688919e4ab76e1",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/links.md",
+      "target_path": "25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/questoes.md",
+      "target_path": "25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer/questions.md",
+      "source_sha256": "0fdbb1afc4c753e950a093e1ac2dadf9de2a770e454c393031e37aac0520931d",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/README.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/README.md",
+      "source_sha256": "f3b1aa283e11ebe761d9ccc41750cb07080a81caab52a1bc384832afba5e138c",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/casos-de-uso.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/use-cases.md",
+      "source_sha256": "e371f49219c05e3df3475a2aa4b29a7675bbc5f0b0ed3f724a89e6f11acc3baf",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/cheatsheet.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/cheatsheet.md",
+      "source_sha256": "d1d48eeca5239fbed28f730f90cebe0f200f641396a2dc492caae76632fd5662",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/flashcards.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/flashcards.md",
+      "source_sha256": "fa8b5d0777b9e8fb48f5a9df857d6d3ce38e958c17f793b7638650d16962396a",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/lab.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/lab.md",
+      "source_sha256": "47f22ca8c8f8007c6ed90d0b7fb2d3dcbfd9c542ac98680ee6139d3d77d5465e",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/links.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/links.md",
+      "source_sha256": "f2decea1399f0160395d94fc55d6edab97b46969333ffb0b3caeff017524b5ee",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/questoes.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/questions.md",
+      "source_sha256": "96a36151acafeefd2b866e7064278e80c223f2027fed9773e45f5cc2773649d6",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "27-Well-Architected-e-Trade-Offs-Avancados/README.md",
+      "target_path": "27-Well-Architected-and-Advanced-Trade-Offs/README.md",
+      "source_sha256": "649c87a448e511aab0171ac60b334dc0784049af30dfc537ab3e3c7e53cded97",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "27-Well-Architected-e-Trade-Offs-Avancados/casos-de-uso.md",
+      "target_path": "27-Well-Architected-and-Advanced-Trade-Offs/use-cases.md",
+      "source_sha256": "8b978224932509f4d85307656cadef32cc42f29c05d0efca5179dbf898d09344",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "27-Well-Architected-e-Trade-Offs-Avancados/cheatsheet.md",
+      "target_path": "27-Well-Architected-and-Advanced-Trade-Offs/cheatsheet.md",
+      "source_sha256": "ddabf79b2968b941b4f83a0f9d6a1d69676b8a5d67b29bc634c31524a7daf2f8",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "27-Well-Architected-e-Trade-Offs-Avancados/flashcards.md",
+      "target_path": "27-Well-Architected-and-Advanced-Trade-Offs/flashcards.md",
+      "source_sha256": "8f645a36b1133bd93b7ff5da0d16f620313236c905696a9e76ca828f7defdd60",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "27-Well-Architected-e-Trade-Offs-Avancados/links.md",
+      "target_path": "27-Well-Architected-and-Advanced-Trade-Offs/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "27-Well-Architected-e-Trade-Offs-Avancados/questoes.md",
+      "target_path": "27-Well-Architected-and-Advanced-Trade-Offs/questions.md",
+      "source_sha256": "3f2e39597cd28a20bbf4804c8a0c30f77592fbba8e9488c644a0c67b451a8b9f",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "28-Casos-de-Uso-Reais/README.md",
+      "target_path": "28-Real-World-Architecture-Use-Cases/README.md",
+      "source_sha256": "84b39f5142c9d4d922c0a3a64d67681d5367a482277c19902103233218bc7d5f",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "28-Casos-de-Uso-Reais/casos-de-uso.md",
+      "target_path": "28-Real-World-Architecture-Use-Cases/use-cases.md",
+      "source_sha256": "ccc4b2da5efa5b7125bdad779fcc0e96a8cbd04ddb54c3326e61938e2874480b",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "28-Casos-de-Uso-Reais/cheatsheet.md",
+      "target_path": "28-Real-World-Architecture-Use-Cases/cheatsheet.md",
+      "source_sha256": "f352ea94d843ab59aa5c44a64b885f19b8b1c7cfdd95c1c66b5a4ecb6e72eb8d",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "28-Casos-de-Uso-Reais/flashcards.md",
+      "target_path": "28-Real-World-Architecture-Use-Cases/flashcards.md",
+      "source_sha256": "eec30c4f840e259e25aa1f3bba0d98aa1856fc0606dd7186d14c107116f835ee",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "28-Casos-de-Uso-Reais/links.md",
+      "target_path": "28-Real-World-Architecture-Use-Cases/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "28-Casos-de-Uso-Reais/questoes.md",
+      "target_path": "28-Real-World-Architecture-Use-Cases/questions.md",
+      "source_sha256": "3159e54999dc3bd347d3e3cd4cfcaa507e24c95669465db5bb9c50a514735712",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "29-Labs-Praticos/README.md",
+      "target_path": "29-Hands-On-Labs/README.md",
+      "source_sha256": "ae157d0625c07dbe2a2c775e8effca44790a8c6ea4a51fc20f525967101f2194",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "29-Labs-Praticos/casos-de-uso.md",
+      "target_path": "29-Hands-On-Labs/use-cases.md",
+      "source_sha256": "bf3a4abc6892f110c494f4ae89b539b5023dd5ffcd5dfc7e957332a7bb776bac",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "29-Labs-Praticos/cheatsheet.md",
+      "target_path": "29-Hands-On-Labs/cheatsheet.md",
+      "source_sha256": "8080075e59c2c3eb6207567d8ce429440e9f03d7cab7afdcccb43f74c3925362",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "29-Labs-Praticos/flashcards.md",
+      "target_path": "29-Hands-On-Labs/flashcards.md",
+      "source_sha256": "6e231db45dd63c04a47ea8c80f23dd19192b7417d29c4ed8c0fad6d595fc6a6a",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "29-Labs-Praticos/links.md",
+      "target_path": "29-Hands-On-Labs/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "29-Labs-Praticos/questoes.md",
+      "target_path": "29-Hands-On-Labs/questions.md",
+      "source_sha256": "5c2f36957a0ecb3d5869e90d9ee47f5b1d8fe363f0e3fb53680b658cb62e6d8b",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/README.md",
+      "target_path": "30-Practice-Exams-and-Questions/README.md",
+      "source_sha256": "5601902c7f21c8bef9fc2d84d4262aaec11739ed4059afe72c229a54eb155dd1",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/caderno-de-erros.md",
+      "target_path": "30-Practice-Exams-and-Questions/error-log.md",
+      "source_sha256": "165df88d208fa130fb74e8455460795ea7afd92c1d8e8f808002563bfb3459dd",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/casos-de-uso.md",
+      "target_path": "30-Practice-Exams-and-Questions/use-cases.md",
+      "source_sha256": "a726e4b08fdea1840f23617a4f00b38ed9ebd472483eb8fcdcdab8a8c02aab55",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/cheatsheet.md",
+      "target_path": "30-Practice-Exams-and-Questions/cheatsheet.md",
+      "source_sha256": "01a1658d4fa783ed530abbd7559341049edd0f97d2567a2ffd980419f06a2a17",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/flashcards.md",
+      "target_path": "30-Practice-Exams-and-Questions/flashcards.md",
+      "source_sha256": "40af3c6fec11f8f56f84f82307bc36d3be1b4bea4c4f53f85505fc4b742d2876",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/links.md",
+      "target_path": "30-Practice-Exams-and-Questions/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/mini-simulados-por-dominio.md",
+      "target_path": "30-Practice-Exams-and-Questions/domain-practice-exams.md",
+      "source_sha256": "626fe77cbd5db9ed70bd003163d392b5a60a2e2a1be809f3d1539c9c1b9a1941",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/questoes.md",
+      "target_path": "30-Practice-Exams-and-Questions/questions.md",
+      "source_sha256": "66784753e31d0b54b120f12f8002344df02a0153315417a102d7a9373bbfda71",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/reta-final-sap-c02.md",
+      "target_path": "30-Practice-Exams-and-Questions/final-review-sap-c02.md",
+      "source_sha256": "e1d5893bc579700d9134666cb0aab6d84c7609c4f9041e58dd7a20b9cf7c79f9",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "31-Glossario-e-Recursos/README.md",
+      "target_path": "31-Glossary-and-Resources/README.md",
+      "source_sha256": "740f91b561b539126cbd6edd44ad075cb7c4165ce5e03b32c4540d1c1b051035",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "31-Glossario-e-Recursos/casos-de-uso.md",
+      "target_path": "31-Glossary-and-Resources/use-cases.md",
+      "source_sha256": "a3fd91bbb92563483d9f6cd8206eaa230e3aff8e2a6f5f91ec362a72e619270c",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "31-Glossario-e-Recursos/cheatsheet.md",
+      "target_path": "31-Glossary-and-Resources/cheatsheet.md",
+      "source_sha256": "9cfd4883eb05ed7dbde3528e97879f07ff2ca83949b029981a189f488f0677d7",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "31-Glossario-e-Recursos/flashcards.md",
+      "target_path": "31-Glossary-and-Resources/flashcards.md",
+      "source_sha256": "5c53db392ee3fc3896561ac20e019afeb560b52e4de1832c5b23cc56c7347d4e",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "31-Glossario-e-Recursos/links.md",
+      "target_path": "31-Glossary-and-Resources/links.md",
+      "source_sha256": "2794ec34d41533b5c15cc8ea9eae268be8c0c3bb041891d0031f861143b26a78",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "31-Glossario-e-Recursos/questoes.md",
+      "target_path": "31-Glossary-and-Resources/questions.md",
+      "source_sha256": "034976c5a6a570522acf8127b8276add637a62e0c17aa990d6a9adf3512afa95",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "31-Glossario-e-Recursos/recursos-oficiais.md",
+      "target_path": "31-Glossary-and-Resources/official-resources.md",
+      "source_sha256": "18c6b3ba8d32dbbd5ca70d54226878e532d1ca05f1803326a90a379fc2badf91",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "CHANGELOG.md",
+      "target_path": "CHANGELOG.md",
+      "source_sha256": "5213548eb3b74ae0757e3536cfe33129d9294c9513372012a079f2e50a2c92e1",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "CONTRIBUTING.md",
+      "target_path": "CONTRIBUTING.md",
+      "source_sha256": "6316abc5b81f975835549c7e5320e9eaa4b5f6f956392b64037f1aa91b4f6ebe",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "LICENSE",
+      "target_path": "LICENSE",
+      "source_sha256": "1126322e2cc8d165adc4c792eeb195717de2bcc7b39be1ce77959d78e87ef685",
+      "kind": "preserved"
+    },
+    {
+      "original_path": "README.md",
+      "target_path": "README.md",
+      "source_sha256": "1a457c92f0750906a96b4e08c3b2818d004d07c5bd013d97e71b99ccc4eca5c5",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "SECURITY.md",
+      "target_path": "SECURITY.md",
+      "source_sha256": "a3a9fe096b6b989df03c9f8f1191a7bf6d8b4a29bbf64ed80a1eb37bb4edb196",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "TEMPLATE_MODULO.md",
+      "target_path": "MODULE_TEMPLATE.md",
+      "source_sha256": "234f1c16ab6a28c930fb31b8094bd324e4098d30cb5784d6dd9e9f5e332ba574",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "TRILHAS_POR_DOMINIO.md",
+      "target_path": "EXAM_DOMAIN_PATHS.md",
+      "source_sha256": "1f974f8213c4d785cedcd8e1b9bdf84fce8b7ecb1c824ee4d64d08a9b9143009",
+      "kind": "markdown"
+    },
+    {
+      "original_path": "assets/Banner-Solutions-Architect-Professional.png",
+      "target_path": "assets/Banner-Solutions-Architect-Professional.png",
+      "source_sha256": "2e47011f5cbe7692f9bf1cf7b1e94e382571ba697ed5abd7c838a479e3c41a5b",
+      "kind": "preserved"
+    },
+    {
+      "original_path": "assets/Logo-CloudStudy.png",
+      "target_path": "assets/Logo-CloudStudy.png",
+      "source_sha256": "020c13830d14b33100f8238b7a1edd95798b44c23b0e504d9eaf9e0bae4cb3c8",
+      "kind": "preserved"
+    },
+    {
+      "original_path": "index.html",
+      "target_path": "index.html",
+      "source_sha256": "aaf3161fe2fbf26402f86fc70c94ae246374328449674ccb9286643e1e5461ac",
+      "kind": "preserved"
+    }
+  ]
+}
