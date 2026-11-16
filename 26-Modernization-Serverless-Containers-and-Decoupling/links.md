@@ -15,7 +15,7 @@
 
 ## Reference material
 
-- [AWS Prescriptive Guidance migration strategy](https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-strategy/welcome.html) - migration and modernization context.
+- [AWS Prescriptive Guidance migration strategy](https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html) - migration and modernization context.
 - [Serverless Applications Lens](https://docs.aws.amazon.com/wellarchitected/latest/serverless-applications-lens/) - serverless best practices.
 - [Container Build Lens](https://docs.aws.amazon.com/wellarchitected/latest/container-build-lens/) - container best practices.
 

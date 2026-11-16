@@ -1,0 +1,1095 @@
+{
+  "method": "Agent editorial review of every distinct source line and every shared template, translated in context with module title substitution; technical review of substantive hybrid, FinOps and modernization scenarios. This is not an independent human expert review.",
+  "reference_editions": [
+    "https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil/tree/saa-c03-english",
+    "https://github.com/Thiago-code-lab/aws-certified-cloud-practitioner-brasil/tree/clf-c02-english",
+    "https://github.com/Thiago-code-lab/aws-certified-ai-practitioner-brasil/tree/aif-c01-english"
+  ],
+  "documents": [
+    {
+      "original_path": ".github/ISSUE_TEMPLATE/aws_update.md",
+      "target_path": ".github/ISSUE_TEMPLATE/aws_update.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "target_path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": ".github/ISSUE_TEMPLATE/pedagogy_suggestion.md",
+      "target_path": ".github/ISSUE_TEMPLATE/pedagogy_suggestion.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "01-Introducao-SAP-C02/README.md",
+      "target_path": "01-Introduction-SAP-C02/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "01-Introducao-SAP-C02/casos-de-uso.md",
+      "target_path": "01-Introduction-SAP-C02/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "01-Introducao-SAP-C02/cheatsheet.md",
+      "target_path": "01-Introduction-SAP-C02/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "01-Introducao-SAP-C02/flashcards.md",
+      "target_path": "01-Introduction-SAP-C02/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "01-Introducao-SAP-C02/links.md",
+      "target_path": "01-Introduction-SAP-C02/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "01-Introducao-SAP-C02/questoes.md",
+      "target_path": "01-Introduction-SAP-C02/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "02-Organizations-Control-Tower-e-Multi-Account/README.md",
+      "target_path": "02-AWS-Organizations-Control-Tower-and-Multi-Account-Architecture/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "02-Organizations-Control-Tower-e-Multi-Account/casos-de-uso.md",
+      "target_path": "02-AWS-Organizations-Control-Tower-and-Multi-Account-Architecture/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "02-Organizations-Control-Tower-e-Multi-Account/cheatsheet.md",
+      "target_path": "02-AWS-Organizations-Control-Tower-and-Multi-Account-Architecture/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "02-Organizations-Control-Tower-e-Multi-Account/flashcards.md",
+      "target_path": "02-AWS-Organizations-Control-Tower-and-Multi-Account-Architecture/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "02-Organizations-Control-Tower-e-Multi-Account/links.md",
+      "target_path": "02-AWS-Organizations-Control-Tower-and-Multi-Account-Architecture/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "02-Organizations-Control-Tower-e-Multi-Account/questoes.md",
+      "target_path": "02-AWS-Organizations-Control-Tower-and-Multi-Account-Architecture/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "03-IAM-Identity-Center-Federacao-e-Cross-Account/README.md",
+      "target_path": "03-IAM-Identity-Center-Federation-and-Cross-Account-Access/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "03-IAM-Identity-Center-Federacao-e-Cross-Account/casos-de-uso.md",
+      "target_path": "03-IAM-Identity-Center-Federation-and-Cross-Account-Access/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "03-IAM-Identity-Center-Federacao-e-Cross-Account/cheatsheet.md",
+      "target_path": "03-IAM-Identity-Center-Federation-and-Cross-Account-Access/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "03-IAM-Identity-Center-Federacao-e-Cross-Account/flashcards.md",
+      "target_path": "03-IAM-Identity-Center-Federation-and-Cross-Account-Access/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "03-IAM-Identity-Center-Federacao-e-Cross-Account/links.md",
+      "target_path": "03-IAM-Identity-Center-Federation-and-Cross-Account-Access/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "03-IAM-Identity-Center-Federacao-e-Cross-Account/questoes.md",
+      "target_path": "03-IAM-Identity-Center-Federation-and-Cross-Account-Access/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "04-Governanca-SCPs-RAM-e-Service-Catalog/README.md",
+      "target_path": "04-Governance-SCPs-RAM-and-Service-Catalog/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "04-Governanca-SCPs-RAM-e-Service-Catalog/casos-de-uso.md",
+      "target_path": "04-Governance-SCPs-RAM-and-Service-Catalog/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "04-Governanca-SCPs-RAM-e-Service-Catalog/cheatsheet.md",
+      "target_path": "04-Governance-SCPs-RAM-and-Service-Catalog/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "04-Governanca-SCPs-RAM-e-Service-Catalog/flashcards.md",
+      "target_path": "04-Governance-SCPs-RAM-and-Service-Catalog/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "04-Governanca-SCPs-RAM-e-Service-Catalog/links.md",
+      "target_path": "04-Governance-SCPs-RAM-and-Service-Catalog/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "04-Governanca-SCPs-RAM-e-Service-Catalog/questoes.md",
+      "target_path": "04-Governance-SCPs-RAM-and-Service-Catalog/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "05-Redes-Avancadas-VPC-e-Transit-Gateway/README.md",
+      "target_path": "05-Advanced-Networking-VPC-and-Transit-Gateway/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "05-Redes-Avancadas-VPC-e-Transit-Gateway/casos-de-uso.md",
+      "target_path": "05-Advanced-Networking-VPC-and-Transit-Gateway/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "05-Redes-Avancadas-VPC-e-Transit-Gateway/cheatsheet.md",
+      "target_path": "05-Advanced-Networking-VPC-and-Transit-Gateway/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "05-Redes-Avancadas-VPC-e-Transit-Gateway/flashcards.md",
+      "target_path": "05-Advanced-Networking-VPC-and-Transit-Gateway/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "05-Redes-Avancadas-VPC-e-Transit-Gateway/lab.md",
+      "target_path": "05-Advanced-Networking-VPC-and-Transit-Gateway/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "05-Redes-Avancadas-VPC-e-Transit-Gateway/links.md",
+      "target_path": "05-Advanced-Networking-VPC-and-Transit-Gateway/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "05-Redes-Avancadas-VPC-e-Transit-Gateway/questoes.md",
+      "target_path": "05-Advanced-Networking-VPC-and-Transit-Gateway/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/README.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/casos-de-uso.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/cheatsheet.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/flashcards.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/lab.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/links.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/questoes.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "07-PrivateLink-Network-Firewall-WAF-e-Shield/README.md",
+      "target_path": "07-PrivateLink-Network-Firewall-WAF-and-Shield/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "07-PrivateLink-Network-Firewall-WAF-e-Shield/casos-de-uso.md",
+      "target_path": "07-PrivateLink-Network-Firewall-WAF-and-Shield/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "07-PrivateLink-Network-Firewall-WAF-e-Shield/cheatsheet.md",
+      "target_path": "07-PrivateLink-Network-Firewall-WAF-and-Shield/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "07-PrivateLink-Network-Firewall-WAF-e-Shield/flashcards.md",
+      "target_path": "07-PrivateLink-Network-Firewall-WAF-and-Shield/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "07-PrivateLink-Network-Firewall-WAF-e-Shield/lab.md",
+      "target_path": "07-PrivateLink-Network-Firewall-WAF-and-Shield/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "07-PrivateLink-Network-Firewall-WAF-e-Shield/links.md",
+      "target_path": "07-PrivateLink-Network-Firewall-WAF-and-Shield/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "07-PrivateLink-Network-Firewall-WAF-e-Shield/questoes.md",
+      "target_path": "07-PrivateLink-Network-Firewall-WAF-and-Shield/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "08-EC2-Auto-Scaling-e-Estrategias-de-Compute/README.md",
+      "target_path": "08-EC2-Auto-Scaling-and-Compute-Strategies/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "08-EC2-Auto-Scaling-e-Estrategias-de-Compute/casos-de-uso.md",
+      "target_path": "08-EC2-Auto-Scaling-and-Compute-Strategies/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "08-EC2-Auto-Scaling-e-Estrategias-de-Compute/cheatsheet.md",
+      "target_path": "08-EC2-Auto-Scaling-and-Compute-Strategies/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "08-EC2-Auto-Scaling-e-Estrategias-de-Compute/flashcards.md",
+      "target_path": "08-EC2-Auto-Scaling-and-Compute-Strategies/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "08-EC2-Auto-Scaling-e-Estrategias-de-Compute/links.md",
+      "target_path": "08-EC2-Auto-Scaling-and-Compute-Strategies/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "08-EC2-Auto-Scaling-e-Estrategias-de-Compute/questoes.md",
+      "target_path": "08-EC2-Auto-Scaling-and-Compute-Strategies/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/README.md",
+      "target_path": "09-High-Availability-Multi-AZ-and-Multi-Region/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/casos-de-uso.md",
+      "target_path": "09-High-Availability-Multi-AZ-and-Multi-Region/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/cheatsheet.md",
+      "target_path": "09-High-Availability-Multi-AZ-and-Multi-Region/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/flashcards.md",
+      "target_path": "09-High-Availability-Multi-AZ-and-Multi-Region/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/lab.md",
+      "target_path": "09-High-Availability-Multi-AZ-and-Multi-Region/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/links.md",
+      "target_path": "09-High-Availability-Multi-AZ-and-Multi-Region/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/questoes.md",
+      "target_path": "09-High-Availability-Multi-AZ-and-Multi-Region/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "10-Route53-CloudFront-e-Global-Accelerator/README.md",
+      "target_path": "10-Route53-CloudFront-and-Global-Accelerator/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "10-Route53-CloudFront-e-Global-Accelerator/casos-de-uso.md",
+      "target_path": "10-Route53-CloudFront-and-Global-Accelerator/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "10-Route53-CloudFront-e-Global-Accelerator/cheatsheet.md",
+      "target_path": "10-Route53-CloudFront-and-Global-Accelerator/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "10-Route53-CloudFront-e-Global-Accelerator/flashcards.md",
+      "target_path": "10-Route53-CloudFront-and-Global-Accelerator/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "10-Route53-CloudFront-e-Global-Accelerator/lab.md",
+      "target_path": "10-Route53-CloudFront-and-Global-Accelerator/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "10-Route53-CloudFront-e-Global-Accelerator/links.md",
+      "target_path": "10-Route53-CloudFront-and-Global-Accelerator/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "10-Route53-CloudFront-e-Global-Accelerator/questoes.md",
+      "target_path": "10-Route53-CloudFront-and-Global-Accelerator/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/README.md",
+      "target_path": "11-S3-EBS-EFS-FSx-and-Storage-Strategies/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/casos-de-uso.md",
+      "target_path": "11-S3-EBS-EFS-FSx-and-Storage-Strategies/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/cheatsheet.md",
+      "target_path": "11-S3-EBS-EFS-FSx-and-Storage-Strategies/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/flashcards.md",
+      "target_path": "11-S3-EBS-EFS-FSx-and-Storage-Strategies/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/lab.md",
+      "target_path": "11-S3-EBS-EFS-FSx-and-Storage-Strategies/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/links.md",
+      "target_path": "11-S3-EBS-EFS-FSx-and-Storage-Strategies/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/questoes.md",
+      "target_path": "11-S3-EBS-EFS-FSx-and-Storage-Strategies/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/README.md",
+      "target_path": "12-RDS-Aurora-and-Relational-Database-Strategies/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/casos-de-uso.md",
+      "target_path": "12-RDS-Aurora-and-Relational-Database-Strategies/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/cheatsheet.md",
+      "target_path": "12-RDS-Aurora-and-Relational-Database-Strategies/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/flashcards.md",
+      "target_path": "12-RDS-Aurora-and-Relational-Database-Strategies/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/lab.md",
+      "target_path": "12-RDS-Aurora-and-Relational-Database-Strategies/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/links.md",
+      "target_path": "12-RDS-Aurora-and-Relational-Database-Strategies/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/questoes.md",
+      "target_path": "12-RDS-Aurora-and-Relational-Database-Strategies/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "13-DynamoDB-ElastiCache-e-Bancos-Purpose-Built/README.md",
+      "target_path": "13-DynamoDB-ElastiCache-and-Purpose-Built-Databases/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "13-DynamoDB-ElastiCache-e-Bancos-Purpose-Built/casos-de-uso.md",
+      "target_path": "13-DynamoDB-ElastiCache-and-Purpose-Built-Databases/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "13-DynamoDB-ElastiCache-e-Bancos-Purpose-Built/cheatsheet.md",
+      "target_path": "13-DynamoDB-ElastiCache-and-Purpose-Built-Databases/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "13-DynamoDB-ElastiCache-e-Bancos-Purpose-Built/flashcards.md",
+      "target_path": "13-DynamoDB-ElastiCache-and-Purpose-Built-Databases/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "13-DynamoDB-ElastiCache-e-Bancos-Purpose-Built/links.md",
+      "target_path": "13-DynamoDB-ElastiCache-and-Purpose-Built-Databases/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "13-DynamoDB-ElastiCache-e-Bancos-Purpose-Built/questoes.md",
+      "target_path": "13-DynamoDB-ElastiCache-and-Purpose-Built-Databases/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "14-SQS-SNS-EventBridge-e-Step-Functions/README.md",
+      "target_path": "14-SQS-SNS-EventBridge-and-Step-Functions/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "14-SQS-SNS-EventBridge-e-Step-Functions/casos-de-uso.md",
+      "target_path": "14-SQS-SNS-EventBridge-and-Step-Functions/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "14-SQS-SNS-EventBridge-e-Step-Functions/cheatsheet.md",
+      "target_path": "14-SQS-SNS-EventBridge-and-Step-Functions/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "14-SQS-SNS-EventBridge-e-Step-Functions/flashcards.md",
+      "target_path": "14-SQS-SNS-EventBridge-and-Step-Functions/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "14-SQS-SNS-EventBridge-e-Step-Functions/lab.md",
+      "target_path": "14-SQS-SNS-EventBridge-and-Step-Functions/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "14-SQS-SNS-EventBridge-e-Step-Functions/links.md",
+      "target_path": "14-SQS-SNS-EventBridge-and-Step-Functions/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "14-SQS-SNS-EventBridge-e-Step-Functions/questoes.md",
+      "target_path": "14-SQS-SNS-EventBridge-and-Step-Functions/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "15-Lambda-API-Gateway-e-Arquiteturas-Serverless/README.md",
+      "target_path": "15-Lambda-API-Gateway-and-Serverless-Architectures/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "15-Lambda-API-Gateway-e-Arquiteturas-Serverless/casos-de-uso.md",
+      "target_path": "15-Lambda-API-Gateway-and-Serverless-Architectures/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "15-Lambda-API-Gateway-e-Arquiteturas-Serverless/cheatsheet.md",
+      "target_path": "15-Lambda-API-Gateway-and-Serverless-Architectures/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "15-Lambda-API-Gateway-e-Arquiteturas-Serverless/flashcards.md",
+      "target_path": "15-Lambda-API-Gateway-and-Serverless-Architectures/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "15-Lambda-API-Gateway-e-Arquiteturas-Serverless/lab.md",
+      "target_path": "15-Lambda-API-Gateway-and-Serverless-Architectures/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "15-Lambda-API-Gateway-e-Arquiteturas-Serverless/links.md",
+      "target_path": "15-Lambda-API-Gateway-and-Serverless-Architectures/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "15-Lambda-API-Gateway-e-Arquiteturas-Serverless/questoes.md",
+      "target_path": "15-Lambda-API-Gateway-and-Serverless-Architectures/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "16-ECS-EKS-Fargate-e-Containers/README.md",
+      "target_path": "16-ECS-EKS-Fargate-and-Containers/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "16-ECS-EKS-Fargate-e-Containers/casos-de-uso.md",
+      "target_path": "16-ECS-EKS-Fargate-and-Containers/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "16-ECS-EKS-Fargate-e-Containers/cheatsheet.md",
+      "target_path": "16-ECS-EKS-Fargate-and-Containers/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "16-ECS-EKS-Fargate-e-Containers/flashcards.md",
+      "target_path": "16-ECS-EKS-Fargate-and-Containers/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "16-ECS-EKS-Fargate-e-Containers/lab.md",
+      "target_path": "16-ECS-EKS-Fargate-and-Containers/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "16-ECS-EKS-Fargate-e-Containers/links.md",
+      "target_path": "16-ECS-EKS-Fargate-and-Containers/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "16-ECS-EKS-Fargate-e-Containers/questoes.md",
+      "target_path": "16-ECS-EKS-Fargate-and-Containers/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "17-CloudFormation-CICD-e-Estrategias-de-Deployment/README.md",
+      "target_path": "17-CloudFormation-CICD-and-Deployment-Strategies/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "17-CloudFormation-CICD-e-Estrategias-de-Deployment/casos-de-uso.md",
+      "target_path": "17-CloudFormation-CICD-and-Deployment-Strategies/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "17-CloudFormation-CICD-e-Estrategias-de-Deployment/cheatsheet.md",
+      "target_path": "17-CloudFormation-CICD-and-Deployment-Strategies/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "17-CloudFormation-CICD-e-Estrategias-de-Deployment/flashcards.md",
+      "target_path": "17-CloudFormation-CICD-and-Deployment-Strategies/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "17-CloudFormation-CICD-e-Estrategias-de-Deployment/lab.md",
+      "target_path": "17-CloudFormation-CICD-and-Deployment-Strategies/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "17-CloudFormation-CICD-e-Estrategias-de-Deployment/links.md",
+      "target_path": "17-CloudFormation-CICD-and-Deployment-Strategies/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "17-CloudFormation-CICD-e-Estrategias-de-Deployment/questoes.md",
+      "target_path": "17-CloudFormation-CICD-and-Deployment-Strategies/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "18-CloudWatch-CloudTrail-Config-e-Observabilidade/README.md",
+      "target_path": "18-CloudWatch-CloudTrail-Config-and-Observability/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "18-CloudWatch-CloudTrail-Config-e-Observabilidade/casos-de-uso.md",
+      "target_path": "18-CloudWatch-CloudTrail-Config-and-Observability/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "18-CloudWatch-CloudTrail-Config-e-Observabilidade/cheatsheet.md",
+      "target_path": "18-CloudWatch-CloudTrail-Config-and-Observability/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "18-CloudWatch-CloudTrail-Config-e-Observabilidade/flashcards.md",
+      "target_path": "18-CloudWatch-CloudTrail-Config-and-Observability/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "18-CloudWatch-CloudTrail-Config-e-Observabilidade/lab.md",
+      "target_path": "18-CloudWatch-CloudTrail-Config-and-Observability/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "18-CloudWatch-CloudTrail-Config-e-Observabilidade/links.md",
+      "target_path": "18-CloudWatch-CloudTrail-Config-and-Observability/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "18-CloudWatch-CloudTrail-Config-e-Observabilidade/questoes.md",
+      "target_path": "18-CloudWatch-CloudTrail-Config-and-Observability/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/README.md",
+      "target_path": "19-Security-KMS-Secrets-Manager-GuardDuty-and-Security-Hub/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/casos-de-uso.md",
+      "target_path": "19-Security-KMS-Secrets-Manager-GuardDuty-and-Security-Hub/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/cheatsheet.md",
+      "target_path": "19-Security-KMS-Secrets-Manager-GuardDuty-and-Security-Hub/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/flashcards.md",
+      "target_path": "19-Security-KMS-Secrets-Manager-GuardDuty-and-Security-Hub/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/links.md",
+      "target_path": "19-Security-KMS-Secrets-Manager-GuardDuty-and-Security-Hub/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/questoes.md",
+      "target_path": "19-Security-KMS-Secrets-Manager-GuardDuty-and-Security-Hub/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "20-Disaster-Recovery-Backup-RTO-e-RPO/README.md",
+      "target_path": "20-Disaster-Recovery-Backup-RTO-and-RPO/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "20-Disaster-Recovery-Backup-RTO-e-RPO/casos-de-uso.md",
+      "target_path": "20-Disaster-Recovery-Backup-RTO-and-RPO/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "20-Disaster-Recovery-Backup-RTO-e-RPO/cheatsheet.md",
+      "target_path": "20-Disaster-Recovery-Backup-RTO-and-RPO/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "20-Disaster-Recovery-Backup-RTO-e-RPO/flashcards.md",
+      "target_path": "20-Disaster-Recovery-Backup-RTO-and-RPO/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "20-Disaster-Recovery-Backup-RTO-e-RPO/lab.md",
+      "target_path": "20-Disaster-Recovery-Backup-RTO-and-RPO/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "20-Disaster-Recovery-Backup-RTO-e-RPO/links.md",
+      "target_path": "20-Disaster-Recovery-Backup-RTO-and-RPO/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "20-Disaster-Recovery-Backup-RTO-e-RPO/questoes.md",
+      "target_path": "20-Disaster-Recovery-Backup-RTO-and-RPO/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "21-Performance-Reliability-e-Service-Quotas/README.md",
+      "target_path": "21-Performance-Reliability-and-Service-Quotas/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "21-Performance-Reliability-e-Service-Quotas/casos-de-uso.md",
+      "target_path": "21-Performance-Reliability-and-Service-Quotas/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "21-Performance-Reliability-e-Service-Quotas/cheatsheet.md",
+      "target_path": "21-Performance-Reliability-and-Service-Quotas/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "21-Performance-Reliability-e-Service-Quotas/flashcards.md",
+      "target_path": "21-Performance-Reliability-and-Service-Quotas/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "21-Performance-Reliability-e-Service-Quotas/links.md",
+      "target_path": "21-Performance-Reliability-and-Service-Quotas/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "21-Performance-Reliability-e-Service-Quotas/questoes.md",
+      "target_path": "21-Performance-Reliability-and-Service-Quotas/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "22-Otimizacao-de-Custos-e-FinOps/README.md",
+      "target_path": "22-Cost-Optimization-and-FinOps/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "22-Otimizacao-de-Custos-e-FinOps/casos-de-uso.md",
+      "target_path": "22-Cost-Optimization-and-FinOps/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "22-Otimizacao-de-Custos-e-FinOps/cheatsheet.md",
+      "target_path": "22-Cost-Optimization-and-FinOps/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "22-Otimizacao-de-Custos-e-FinOps/flashcards.md",
+      "target_path": "22-Cost-Optimization-and-FinOps/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "22-Otimizacao-de-Custos-e-FinOps/lab.md",
+      "target_path": "22-Cost-Optimization-and-FinOps/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "22-Otimizacao-de-Custos-e-FinOps/links.md",
+      "target_path": "22-Cost-Optimization-and-FinOps/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "22-Otimizacao-de-Custos-e-FinOps/questoes.md",
+      "target_path": "22-Cost-Optimization-and-FinOps/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/README.md",
+      "target_path": "23-Migration-Hub-Discovery-and-the-7-Rs/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/casos-de-uso.md",
+      "target_path": "23-Migration-Hub-Discovery-and-the-7-Rs/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/cheatsheet.md",
+      "target_path": "23-Migration-Hub-Discovery-and-the-7-Rs/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/flashcards.md",
+      "target_path": "23-Migration-Hub-Discovery-and-the-7-Rs/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/lab.md",
+      "target_path": "23-Migration-Hub-Discovery-and-the-7-Rs/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/links.md",
+      "target_path": "23-Migration-Hub-Discovery-and-the-7-Rs/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/questoes.md",
+      "target_path": "23-Migration-Hub-Discovery-and-the-7-Rs/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "24-MGN-DMS-SCT-e-Migracao-de-Workloads/README.md",
+      "target_path": "24-AWS-MGN-DMS-SCT-and-Workload-Migration/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "24-MGN-DMS-SCT-e-Migracao-de-Workloads/casos-de-uso.md",
+      "target_path": "24-AWS-MGN-DMS-SCT-and-Workload-Migration/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "24-MGN-DMS-SCT-e-Migracao-de-Workloads/cheatsheet.md",
+      "target_path": "24-AWS-MGN-DMS-SCT-and-Workload-Migration/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "24-MGN-DMS-SCT-e-Migracao-de-Workloads/flashcards.md",
+      "target_path": "24-AWS-MGN-DMS-SCT-and-Workload-Migration/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "24-MGN-DMS-SCT-e-Migracao-de-Workloads/lab.md",
+      "target_path": "24-AWS-MGN-DMS-SCT-and-Workload-Migration/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "24-MGN-DMS-SCT-e-Migracao-de-Workloads/links.md",
+      "target_path": "24-AWS-MGN-DMS-SCT-and-Workload-Migration/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "24-MGN-DMS-SCT-e-Migracao-de-Workloads/questoes.md",
+      "target_path": "24-AWS-MGN-DMS-SCT-and-Workload-Migration/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/README.md",
+      "target_path": "25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/casos-de-uso.md",
+      "target_path": "25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/cheatsheet.md",
+      "target_path": "25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/flashcards.md",
+      "target_path": "25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/lab.md",
+      "target_path": "25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/links.md",
+      "target_path": "25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/questoes.md",
+      "target_path": "25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/README.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/casos-de-uso.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/cheatsheet.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/flashcards.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/lab.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/lab.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/links.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/questoes.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "27-Well-Architected-e-Trade-Offs-Avancados/README.md",
+      "target_path": "27-Well-Architected-and-Advanced-Trade-Offs/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "27-Well-Architected-e-Trade-Offs-Avancados/casos-de-uso.md",
+      "target_path": "27-Well-Architected-and-Advanced-Trade-Offs/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "27-Well-Architected-e-Trade-Offs-Avancados/cheatsheet.md",
+      "target_path": "27-Well-Architected-and-Advanced-Trade-Offs/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "27-Well-Architected-e-Trade-Offs-Avancados/flashcards.md",
+      "target_path": "27-Well-Architected-and-Advanced-Trade-Offs/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "27-Well-Architected-e-Trade-Offs-Avancados/links.md",
+      "target_path": "27-Well-Architected-and-Advanced-Trade-Offs/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "27-Well-Architected-e-Trade-Offs-Avancados/questoes.md",
+      "target_path": "27-Well-Architected-and-Advanced-Trade-Offs/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "28-Casos-de-Uso-Reais/README.md",
+      "target_path": "28-Real-World-Architecture-Use-Cases/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "28-Casos-de-Uso-Reais/casos-de-uso.md",
+      "target_path": "28-Real-World-Architecture-Use-Cases/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "28-Casos-de-Uso-Reais/cheatsheet.md",
+      "target_path": "28-Real-World-Architecture-Use-Cases/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "28-Casos-de-Uso-Reais/flashcards.md",
+      "target_path": "28-Real-World-Architecture-Use-Cases/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "28-Casos-de-Uso-Reais/links.md",
+      "target_path": "28-Real-World-Architecture-Use-Cases/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "28-Casos-de-Uso-Reais/questoes.md",
+      "target_path": "28-Real-World-Architecture-Use-Cases/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "29-Labs-Praticos/README.md",
+      "target_path": "29-Hands-On-Labs/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "29-Labs-Praticos/casos-de-uso.md",
+      "target_path": "29-Hands-On-Labs/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "29-Labs-Praticos/cheatsheet.md",
+      "target_path": "29-Hands-On-Labs/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "29-Labs-Praticos/flashcards.md",
+      "target_path": "29-Hands-On-Labs/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "29-Labs-Praticos/links.md",
+      "target_path": "29-Hands-On-Labs/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "29-Labs-Praticos/questoes.md",
+      "target_path": "29-Hands-On-Labs/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/README.md",
+      "target_path": "30-Practice-Exams-and-Questions/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/caderno-de-erros.md",
+      "target_path": "30-Practice-Exams-and-Questions/error-log.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/casos-de-uso.md",
+      "target_path": "30-Practice-Exams-and-Questions/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/cheatsheet.md",
+      "target_path": "30-Practice-Exams-and-Questions/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/flashcards.md",
+      "target_path": "30-Practice-Exams-and-Questions/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/links.md",
+      "target_path": "30-Practice-Exams-and-Questions/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/mini-simulados-por-dominio.md",
+      "target_path": "30-Practice-Exams-and-Questions/domain-practice-exams.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/questoes.md",
+      "target_path": "30-Practice-Exams-and-Questions/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "30-Simulados-e-Questoes/reta-final-sap-c02.md",
+      "target_path": "30-Practice-Exams-and-Questions/final-review-sap-c02.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "31-Glossario-e-Recursos/README.md",
+      "target_path": "31-Glossary-and-Resources/README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "31-Glossario-e-Recursos/casos-de-uso.md",
+      "target_path": "31-Glossary-and-Resources/use-cases.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "31-Glossario-e-Recursos/cheatsheet.md",
+      "target_path": "31-Glossary-and-Resources/cheatsheet.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "31-Glossario-e-Recursos/flashcards.md",
+      "target_path": "31-Glossary-and-Resources/flashcards.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "31-Glossario-e-Recursos/links.md",
+      "target_path": "31-Glossary-and-Resources/links.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "31-Glossario-e-Recursos/questoes.md",
+      "target_path": "31-Glossary-and-Resources/questions.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "31-Glossario-e-Recursos/recursos-oficiais.md",
+      "target_path": "31-Glossary-and-Resources/official-resources.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "CHANGELOG.md",
+      "target_path": "CHANGELOG.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "CONTRIBUTING.md",
+      "target_path": "CONTRIBUTING.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "README.md",
+      "target_path": "README.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "SECURITY.md",
+      "target_path": "SECURITY.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "TEMPLATE_MODULO.md",
+      "target_path": "MODULE_TEMPLATE.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    },
+    {
+      "original_path": "TRILHAS_POR_DOMINIO.md",
+      "target_path": "EXAM_DOMAIN_PATHS.md",
+      "review": "Complete source text translated; repeated template translated once and applied consistently. Source structure and exercise count checked separately."
+    }
+  ]
+}

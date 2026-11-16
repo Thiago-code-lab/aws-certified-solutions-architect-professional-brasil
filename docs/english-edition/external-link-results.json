@@ -1,0 +1,541 @@
+{
+  "method": "HTTP GET with redirects, 12-second timeout and eight workers; fragment anchors and page semantics are not checked.",
+  "unique_urls": 106,
+  "summary": {
+    "200": 104,
+    "999": 1,
+    "403": 1
+  },
+  "results": [
+    {
+      "url": "https://aws.amazon.com/architecture/",
+      "status": 200,
+      "final_url": "https://aws.amazon.com/architecture/"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/training-and-certification/september-2026-new-offerings/",
+      "status": 200,
+      "final_url": "https://aws.amazon.com/blogs/training-and-certification/september-2026-new-offerings/"
+    },
+    {
+      "url": "https://aws.amazon.com/certification/certified-solutions-architect-professional/",
+      "status": 200,
+      "final_url": "https://aws.amazon.com/certification/certified-solutions-architect-professional/"
+    },
+    {
+      "url": "https://aws.amazon.com/migration-evaluator/",
+      "status": 200,
+      "final_url": "https://aws.amazon.com/migration-evaluator/"
+    },
+    {
+      "url": "https://chat.whatsapp.com/Lsuexbkt1oELAGX8nCH2La?mode=gi_t",
+      "status": 200,
+      "final_url": "https://chat.whatsapp.com/Lsuexbkt1oELAGX8nCH2La?mode=gi_t"
+    },
+    {
+      "url": "https://cloudstudy.com.br",
+      "status": 200,
+      "final_url": "https://www.cloudstudy.com.br/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-reserved-instances.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-reserved-instances.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/STS/latest/APIReference/welcome.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/STS/latest/APIReference/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/application-discovery/latest/userguide/what-is-appdiscovery.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/application-discovery/latest/userguide/what-is-appdiscovery.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/cross-region-backup.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/cross-region-backup.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/aws-certification/latest/solutions-architect-professional-02/solutions-architect-professional-02.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/aws-certification/latest/solutions-architect-professional-02/solutions-architect-professional-02.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/codepipeline/",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/codepipeline/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/controltower/latest/userguide/account-factory.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/controltower/latest/userguide/account-factory.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/controltower/latest/userguide/how-controls-work.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/controltower/latest/userguide/how-controls-work.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/controltower/latest/userguide/what-is-control-tower.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/controltower/latest/userguide/what-is-control-tower.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/directconnect/",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/directconnect/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/MACsec.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/MACsec.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/direct-connect-gateways.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/direct-connect-gateways.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/direct-connect-transit-gateways.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/direct-connect-transit-gateways.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/resiliency.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/ecs/",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/ecs/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/eks/",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/eks/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/eventbridge/",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/eventbridge/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/kms/latest/developerguide/overview.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/kms/latest/developerguide/overview.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/lambda/",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/lambda/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/mgn/latest/ug/what-is-mgn.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/mgn/latest/ug/what-is-mgn.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/migrationhub-orchestrator/latest/userguide/migrationhub-availability-change.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/migrationhub-orchestrator/latest/userguide/migrationhub-availability-change.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/migrationhub/latest/ug/whatishub.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/migrationhub/latest/ug/whatishub.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/strangler-fig.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/strangler-fig.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-intro-governance/key-concepts.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-intro-governance/key-concepts.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/savingsplans/latest/userguide/what-is-savings-plans.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/savingsplans/latest/userguide/what-is-savings-plans.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-setup-prereqs.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-setup-prereqs.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/snowball/latest/developer-guide/snowball-edge-availability-change.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/snowball/latest/developer-guide/snowball-edge-availability-change.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/sqs/",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/sqs/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/step-functions/",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/step-functions/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/vpc/latest/privatelink/concepts.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/vpc/latest/privatelink/concepts.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/vpc/latest/tgw/",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/vpc/latest/tgw/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-route-tables.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/vpc/latest/tgw/tgw-route-tables.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/vpc/latest/tgw/transit-gateway-quotas.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/vpc/latest/tgw/transit-gateway-quotas.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/vpn/latest/s2svpn/",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/vpn/latest/s2svpn/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/container-build-lens/",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/wellarchitected/latest/container-build-lens/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/cost-optimization-pillar/",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/wellarchitected/latest/cost-optimization-pillar/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_planning_for_recovery_disaster_recovery.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_planning_for_recovery_disaster_recovery.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/serverless-applications-lens/",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/wellarchitected/latest/serverless-applications-lens/"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html"
+    },
+    {
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-workloads-on-aws.html",
+      "status": 200,
+      "final_url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-workloads-on-aws.html"
+    },
+    {
+      "url": "https://github.com/Thiago-code-lab/aws-certified-ai-practitioner-brasil/tree/aif-c01-english",
+      "status": 200,
+      "final_url": "https://github.com/Thiago-code-lab/aws-certified-ai-practitioner-brasil/tree/aif-c01-english"
+    },
+    {
+      "url": "https://github.com/Thiago-code-lab/aws-certified-cloud-practitioner-brasil/tree/clf-c02-english",
+      "status": 200,
+      "final_url": "https://github.com/Thiago-code-lab/aws-certified-cloud-practitioner-brasil/tree/clf-c02-english"
+    },
+    {
+      "url": "https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil/tree/saa-c03-english",
+      "status": 200,
+      "final_url": "https://github.com/Thiago-code-lab/aws-certified-solutions-architect-associate-brasil/tree/saa-c03-english"
+    },
+    {
+      "url": "https://github.com/Thiago-code-lab/aws-certified-solutions-architect-professional-brasil",
+      "status": 200,
+      "final_url": "https://github.com/Thiago-code-lab/aws-certified-solutions-architect-professional-brasil"
+    },
+    {
+      "url": "https://github.com/Thiago-code-lab/aws-certified-solutions-architect-professional-brasil/commits/sap-c02-english/",
+      "status": 200,
+      "final_url": "https://github.com/Thiago-code-lab/aws-certified-solutions-architect-professional-brasil/commits/sap-c02-english/"
+    },
+    {
+      "url": "https://github.com/Thiago-code-lab/aws-certified-solutions-architect-professional-brasil/tree/sap-c02-english",
+      "status": 200,
+      "final_url": "https://github.com/Thiago-code-lab/aws-certified-solutions-architect-professional-brasil/tree/sap-c02-english"
+    },
+    {
+      "url": "https://img.shields.io/badge/CERTIFICATION-SAP--C02-1e40af?style=for-the-badge&labelColor=0f172a",
+      "status": 200,
+      "final_url": "https://img.shields.io/badge/CERTIFICATION-SAP--C02-1e40af?style=for-the-badge&labelColor=0f172a"
+    },
+    {
+      "url": "https://img.shields.io/badge/CloudStudy%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white",
+      "status": 200,
+      "final_url": "https://img.shields.io/badge/CloudStudy%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"
+    },
+    {
+      "url": "https://img.shields.io/badge/CloudStudy-cloudstudy.com.br-2563EB?style=for-the-badge",
+      "status": 200,
+      "final_url": "https://img.shields.io/badge/CloudStudy-cloudstudy.com.br-2563EB?style=for-the-badge"
+    },
+    {
+      "url": "https://img.shields.io/badge/Instagram-@cloudstudy.ai-E4405F?style=for-the-badge&logo=instagram&logoColor=white",
+      "status": 200,
+      "final_url": "https://img.shields.io/badge/Instagram-@cloudstudy.ai-E4405F?style=for-the-badge&logo=instagram&logoColor=white"
+    },
+    {
+      "url": "https://img.shields.io/badge/JOIN_THE_WAITLIST-CloudStudy-2563EB?style=for-the-badge&logo=amazonaws&logoColor=white",
+      "status": 200,
+      "final_url": "https://img.shields.io/badge/JOIN_THE_WAITLIST-CloudStudy-2563EB?style=for-the-badge&logo=amazonaws&logoColor=white"
+    },
+    {
+      "url": "https://img.shields.io/badge/LANGUAGE-ENGLISH-0284c7?style=for-the-badge&labelColor=0f172a",
+      "status": 200,
+      "final_url": "https://img.shields.io/badge/LANGUAGE-ENGLISH-0284c7?style=for-the-badge&labelColor=0f172a"
+    },
+    {
+      "url": "https://img.shields.io/badge/LinkedIn-CloudStudy-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white",
+      "status": 200,
+      "final_url": "https://img.shields.io/badge/LinkedIn-CloudStudy-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"
+    },
+    {
+      "url": "https://img.shields.io/badge/OPEN-SOURCE-2563eb?style=for-the-badge&labelColor=0f172a",
+      "status": 200,
+      "final_url": "https://img.shields.io/badge/OPEN-SOURCE-2563eb?style=for-the-badge&labelColor=0f172a"
+    },
+    {
+      "url": "https://img.shields.io/badge/PROFESSIONAL-ARCHITECTURE-0f766e?style=for-the-badge&labelColor=0f172a",
+      "status": 200,
+      "final_url": "https://img.shields.io/badge/PROFESSIONAL-ARCHITECTURE-0f766e?style=for-the-badge&labelColor=0f172a"
+    },
+    {
+      "url": "https://img.shields.io/badge/USE-EDUCATIONAL-1d4ed8?style=for-the-badge&labelColor=0f172a",
+      "status": 200,
+      "final_url": "https://img.shields.io/badge/USE-EDUCATIONAL-1d4ed8?style=for-the-badge&labelColor=0f172a"
+    },
+    {
+      "url": "https://img.shields.io/badge/Udemy%20Course-A435F0?style=for-the-badge&logo=udemy&logoColor=white",
+      "status": 200,
+      "final_url": "https://img.shields.io/badge/Udemy%20Course-A435F0?style=for-the-badge&logo=udemy&logoColor=white"
+    },
+    {
+      "url": "https://img.shields.io/github/forks/Thiago-code-lab/aws-certified-solutions-architect-professional-brasil?style=for-the-badge&label=Forks&color=2563eb&labelColor=374151",
+      "status": 200,
+      "final_url": "https://img.shields.io/github/forks/Thiago-code-lab/aws-certified-solutions-architect-professional-brasil?style=for-the-badge&label=Forks&color=2563eb&labelColor=374151"
+    },
+    {
+      "url": "https://img.shields.io/github/license/Thiago-code-lab/aws-certified-solutions-architect-professional-brasil?style=for-the-badge&label=License&color=0f766e&labelColor=374151",
+      "status": 200,
+      "final_url": "https://img.shields.io/github/license/Thiago-code-lab/aws-certified-solutions-architect-professional-brasil?style=for-the-badge&label=License&color=0f766e&labelColor=374151"
+    },
+    {
+      "url": "https://img.shields.io/github/stars/Thiago-code-lab/aws-certified-solutions-architect-professional-brasil?style=for-the-badge&label=Stars&color=2563eb&labelColor=374151",
+      "status": 200,
+      "final_url": "https://img.shields.io/github/stars/Thiago-code-lab/aws-certified-solutions-architect-professional-brasil?style=for-the-badge&label=Stars&color=2563eb&labelColor=374151"
+    },
+    {
+      "url": "https://www.instagram.com/cloudstudy.ai/",
+      "status": 200,
+      "final_url": "https://www.instagram.com/cloudstudy.ai/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/cloudstudy-ai/",
+      "status": 200,
+      "final_url": "https://www.linkedin.com/company/cloudstudy-ai/"
+    },
+    {
+      "url": "https://www.linkedin.com/in/analyticsthiagocardoso",
+      "status": 999,
+      "error": "<none>"
+    },
+    {
+      "url": "https://www.udemy.com/course/engenharia-de-dados-na-aws-do-zero-aos-projetos-reais/?referralCode=E28670B9116BA68E08A9",
+      "status": 403,
+      "error": "Forbidden"
+    }
+  ]
+}

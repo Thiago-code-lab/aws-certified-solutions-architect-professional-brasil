@@ -1,0 +1,2976 @@
+{
+  "source_commit": "471ebd78a428180b5d12afa320751fb60fbecffc",
+  "total_questions": 88,
+  "multiple_choice": 66,
+  "open_response": 22,
+  "multi_select": 0,
+  "answer_letter_changes": 0,
+  "answer_corrections": [
+    {
+      "target_path": "30-Practice-Exams-and-Questions/questions.md",
+      "number": 6,
+      "original_answer": "GuardDuty, Security Hub e administracao delegada.",
+      "corrected_answer": "AWS Config and Security Hub CSPM with organizational aggregation and delegated administration where supported. GuardDuty complements these controls with threat detection.",
+      "justification": "The source equated insecure configuration detection with GuardDuty threat detection. Config evaluates configurations; Security Hub CSPM aggregates posture findings. GuardDuty remains complementary threat detection.",
+      "official_reference": "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-setup-prereqs.html"
+    },
+    {
+      "target_path": "30-Practice-Exams-and-Questions/domain-practice-exams.md",
+      "number": 12,
+      "original_answer": "DataSync ou Snow Family conforme volume e conectividade.",
+      "corrected_answer": "assess DataSync against an offline transfer option according to data volume, connectivity and availability. Snow Family is historical context; check current eligibility before proposing it.",
+      "justification": "The source offered Snow Family without an availability qualification. New customers cannot order Snow devices; choose current online or offline options against bandwidth, volume and eligibility.",
+      "official_reference": "https://docs.aws.amazon.com/snowball/latest/developer-guide/snowball-edge-availability-change.html"
+    }
+  ],
+  "questions": [
+    {
+      "id": "SAP-01-Q01",
+      "original_path": "01-Introducao-SAP-C02/questoes.md",
+      "target_path": "01-Introduction-SAP-C02/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-01-Q02",
+      "original_path": "01-Introducao-SAP-C02/questoes.md",
+      "target_path": "01-Introduction-SAP-C02/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-02-Q01",
+      "original_path": "02-Organizations-Control-Tower-e-Multi-Account/questoes.md",
+      "target_path": "02-AWS-Organizations-Control-Tower-and-Multi-Account-Architecture/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-02-Q02",
+      "original_path": "02-Organizations-Control-Tower-e-Multi-Account/questoes.md",
+      "target_path": "02-AWS-Organizations-Control-Tower-and-Multi-Account-Architecture/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-03-Q01",
+      "original_path": "03-IAM-Identity-Center-Federacao-e-Cross-Account/questoes.md",
+      "target_path": "03-IAM-Identity-Center-Federation-and-Cross-Account-Access/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-03-Q02",
+      "original_path": "03-IAM-Identity-Center-Federacao-e-Cross-Account/questoes.md",
+      "target_path": "03-IAM-Identity-Center-Federation-and-Cross-Account-Access/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-04-Q01",
+      "original_path": "04-Governanca-SCPs-RAM-e-Service-Catalog/questoes.md",
+      "target_path": "04-Governance-SCPs-RAM-and-Service-Catalog/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-04-Q02",
+      "original_path": "04-Governanca-SCPs-RAM-e-Service-Catalog/questoes.md",
+      "target_path": "04-Governance-SCPs-RAM-and-Service-Catalog/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-05-Q01",
+      "original_path": "05-Redes-Avancadas-VPC-e-Transit-Gateway/questoes.md",
+      "target_path": "05-Advanced-Networking-VPC-and-Transit-Gateway/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-05-Q02",
+      "original_path": "05-Redes-Avancadas-VPC-e-Transit-Gateway/questoes.md",
+      "target_path": "05-Advanced-Networking-VPC-and-Transit-Gateway/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-06-Q01",
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/questoes.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-06-Q02",
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/questoes.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-06-Q03",
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/questoes.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/questions.md",
+      "number": 3,
+      "original_signature": {
+        "number": 3,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 3,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-06-Q04",
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/questoes.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/questions.md",
+      "number": 4,
+      "original_signature": {
+        "number": 4,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 4,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-06-Q05",
+      "original_path": "06-Conectividade-Hibrida-Direct-Connect-VPN-e-DNS/questoes.md",
+      "target_path": "06-Hybrid-Connectivity-Direct-Connect-VPN-and-DNS/questions.md",
+      "number": 5,
+      "original_signature": {
+        "number": 5,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 5,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-07-Q01",
+      "original_path": "07-PrivateLink-Network-Firewall-WAF-e-Shield/questoes.md",
+      "target_path": "07-PrivateLink-Network-Firewall-WAF-and-Shield/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-07-Q02",
+      "original_path": "07-PrivateLink-Network-Firewall-WAF-e-Shield/questoes.md",
+      "target_path": "07-PrivateLink-Network-Firewall-WAF-and-Shield/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-08-Q01",
+      "original_path": "08-EC2-Auto-Scaling-e-Estrategias-de-Compute/questoes.md",
+      "target_path": "08-EC2-Auto-Scaling-and-Compute-Strategies/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-08-Q02",
+      "original_path": "08-EC2-Auto-Scaling-e-Estrategias-de-Compute/questoes.md",
+      "target_path": "08-EC2-Auto-Scaling-and-Compute-Strategies/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-09-Q01",
+      "original_path": "09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/questoes.md",
+      "target_path": "09-High-Availability-Multi-AZ-and-Multi-Region/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-09-Q02",
+      "original_path": "09-Alta-Disponibilidade-Multi-AZ-e-Multi-Region/questoes.md",
+      "target_path": "09-High-Availability-Multi-AZ-and-Multi-Region/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-10-Q01",
+      "original_path": "10-Route53-CloudFront-e-Global-Accelerator/questoes.md",
+      "target_path": "10-Route53-CloudFront-and-Global-Accelerator/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-10-Q02",
+      "original_path": "10-Route53-CloudFront-e-Global-Accelerator/questoes.md",
+      "target_path": "10-Route53-CloudFront-and-Global-Accelerator/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-11-Q01",
+      "original_path": "11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/questoes.md",
+      "target_path": "11-S3-EBS-EFS-FSx-and-Storage-Strategies/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-11-Q02",
+      "original_path": "11-S3-EBS-EFS-FSx-e-Estrategias-de-Armazenamento/questoes.md",
+      "target_path": "11-S3-EBS-EFS-FSx-and-Storage-Strategies/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-12-Q01",
+      "original_path": "12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/questoes.md",
+      "target_path": "12-RDS-Aurora-and-Relational-Database-Strategies/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-12-Q02",
+      "original_path": "12-RDS-Aurora-e-Estrategias-de-Banco-Relacional/questoes.md",
+      "target_path": "12-RDS-Aurora-and-Relational-Database-Strategies/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-13-Q01",
+      "original_path": "13-DynamoDB-ElastiCache-e-Bancos-Purpose-Built/questoes.md",
+      "target_path": "13-DynamoDB-ElastiCache-and-Purpose-Built-Databases/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-13-Q02",
+      "original_path": "13-DynamoDB-ElastiCache-e-Bancos-Purpose-Built/questoes.md",
+      "target_path": "13-DynamoDB-ElastiCache-and-Purpose-Built-Databases/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-14-Q01",
+      "original_path": "14-SQS-SNS-EventBridge-e-Step-Functions/questoes.md",
+      "target_path": "14-SQS-SNS-EventBridge-and-Step-Functions/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-14-Q02",
+      "original_path": "14-SQS-SNS-EventBridge-e-Step-Functions/questoes.md",
+      "target_path": "14-SQS-SNS-EventBridge-and-Step-Functions/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-15-Q01",
+      "original_path": "15-Lambda-API-Gateway-e-Arquiteturas-Serverless/questoes.md",
+      "target_path": "15-Lambda-API-Gateway-and-Serverless-Architectures/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-15-Q02",
+      "original_path": "15-Lambda-API-Gateway-e-Arquiteturas-Serverless/questoes.md",
+      "target_path": "15-Lambda-API-Gateway-and-Serverless-Architectures/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-16-Q01",
+      "original_path": "16-ECS-EKS-Fargate-e-Containers/questoes.md",
+      "target_path": "16-ECS-EKS-Fargate-and-Containers/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-16-Q02",
+      "original_path": "16-ECS-EKS-Fargate-e-Containers/questoes.md",
+      "target_path": "16-ECS-EKS-Fargate-and-Containers/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-17-Q01",
+      "original_path": "17-CloudFormation-CICD-e-Estrategias-de-Deployment/questoes.md",
+      "target_path": "17-CloudFormation-CICD-and-Deployment-Strategies/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-17-Q02",
+      "original_path": "17-CloudFormation-CICD-e-Estrategias-de-Deployment/questoes.md",
+      "target_path": "17-CloudFormation-CICD-and-Deployment-Strategies/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-18-Q01",
+      "original_path": "18-CloudWatch-CloudTrail-Config-e-Observabilidade/questoes.md",
+      "target_path": "18-CloudWatch-CloudTrail-Config-and-Observability/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-18-Q02",
+      "original_path": "18-CloudWatch-CloudTrail-Config-e-Observabilidade/questoes.md",
+      "target_path": "18-CloudWatch-CloudTrail-Config-and-Observability/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-19-Q01",
+      "original_path": "19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/questoes.md",
+      "target_path": "19-Security-KMS-Secrets-Manager-GuardDuty-and-Security-Hub/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-19-Q02",
+      "original_path": "19-Seguranca-KMS-Secrets-GuardDuty-e-Security-Hub/questoes.md",
+      "target_path": "19-Security-KMS-Secrets-Manager-GuardDuty-and-Security-Hub/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-20-Q01",
+      "original_path": "20-Disaster-Recovery-Backup-RTO-e-RPO/questoes.md",
+      "target_path": "20-Disaster-Recovery-Backup-RTO-and-RPO/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-20-Q02",
+      "original_path": "20-Disaster-Recovery-Backup-RTO-e-RPO/questoes.md",
+      "target_path": "20-Disaster-Recovery-Backup-RTO-and-RPO/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-21-Q01",
+      "original_path": "21-Performance-Reliability-e-Service-Quotas/questoes.md",
+      "target_path": "21-Performance-Reliability-and-Service-Quotas/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-21-Q02",
+      "original_path": "21-Performance-Reliability-e-Service-Quotas/questoes.md",
+      "target_path": "21-Performance-Reliability-and-Service-Quotas/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-22-Q01",
+      "original_path": "22-Otimizacao-de-Custos-e-FinOps/questoes.md",
+      "target_path": "22-Cost-Optimization-and-FinOps/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-22-Q02",
+      "original_path": "22-Otimizacao-de-Custos-e-FinOps/questoes.md",
+      "target_path": "22-Cost-Optimization-and-FinOps/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-23-Q01",
+      "original_path": "23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/questoes.md",
+      "target_path": "23-Migration-Hub-Discovery-and-the-7-Rs/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-23-Q02",
+      "original_path": "23-Migration-Hub-Discovery-e-Estrategia-dos-7Rs/questoes.md",
+      "target_path": "23-Migration-Hub-Discovery-and-the-7-Rs/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-24-Q01",
+      "original_path": "24-MGN-DMS-SCT-e-Migracao-de-Workloads/questoes.md",
+      "target_path": "24-AWS-MGN-DMS-SCT-and-Workload-Migration/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-24-Q02",
+      "original_path": "24-MGN-DMS-SCT-e-Migracao-de-Workloads/questoes.md",
+      "target_path": "24-AWS-MGN-DMS-SCT-and-Workload-Migration/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-25-Q01",
+      "original_path": "25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/questoes.md",
+      "target_path": "25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-25-Q02",
+      "original_path": "25-DataSync-Snow-Transfer-Family-e-Transferencia-de-Dados/questoes.md",
+      "target_path": "25-DataSync-Snow-Family-Transfer-Family-and-Data-Transfer/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-26-Q01",
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/questoes.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-26-Q02",
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/questoes.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-26-Q03",
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/questoes.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/questions.md",
+      "number": 3,
+      "original_signature": {
+        "number": 3,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 3,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-26-Q04",
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/questoes.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/questions.md",
+      "number": 4,
+      "original_signature": {
+        "number": 4,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "A"
+        ],
+        "answer_text": "A",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 4,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "A"
+        ],
+        "answer_text": "A",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-26-Q05",
+      "original_path": "26-Modernizacao-Serverless-Containers-e-Decoupling/questoes.md",
+      "target_path": "26-Modernization-Serverless-Containers-and-Decoupling/questions.md",
+      "number": 5,
+      "original_signature": {
+        "number": 5,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 5,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-27-Q01",
+      "original_path": "27-Well-Architected-e-Trade-Offs-Avancados/questoes.md",
+      "target_path": "27-Well-Architected-and-Advanced-Trade-Offs/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-27-Q02",
+      "original_path": "27-Well-Architected-e-Trade-Offs-Avancados/questoes.md",
+      "target_path": "27-Well-Architected-and-Advanced-Trade-Offs/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-28-Q01",
+      "original_path": "28-Casos-de-Uso-Reais/questoes.md",
+      "target_path": "28-Real-World-Architecture-Use-Cases/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-28-Q02",
+      "original_path": "28-Casos-de-Uso-Reais/questoes.md",
+      "target_path": "28-Real-World-Architecture-Use-Cases/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-29-Q01",
+      "original_path": "29-Labs-Praticos/questoes.md",
+      "target_path": "29-Hands-On-Labs/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-29-Q02",
+      "original_path": "29-Labs-Praticos/questoes.md",
+      "target_path": "29-Hands-On-Labs/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-D01",
+      "original_path": "30-Simulados-e-Questoes/mini-simulados-por-dominio.md",
+      "target_path": "30-Practice-Exams-and-Questions/domain-practice-exams.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "multi-account com OUs, SCPs e logging centralizado.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "multiple accounts with OUs, SCPs and centralized logging.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-D02",
+      "original_path": "30-Simulados-e-Questoes/mini-simulados-por-dominio.md",
+      "target_path": "30-Practice-Exams-and-Questions/domain-practice-exams.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "IAM Identity Center com permission sets.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "IAM Identity Center with permission sets.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-D03",
+      "original_path": "30-Simulados-e-Questoes/mini-simulados-por-dominio.md",
+      "target_path": "30-Practice-Exams-and-Questions/domain-practice-exams.md",
+      "number": 3,
+      "original_signature": {
+        "number": 3,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "AWS RAM quando aplicavel.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 3,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "AWS RAM where supported.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-D04",
+      "original_path": "30-Simulados-e-Questoes/mini-simulados-por-dominio.md",
+      "target_path": "30-Practice-Exams-and-Questions/domain-practice-exams.md",
+      "number": 4,
+      "original_signature": {
+        "number": 4,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "CloudFront e desenho de origem.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 4,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "CloudFront and an appropriate origin design.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-D05",
+      "original_path": "30-Simulados-e-Questoes/mini-simulados-por-dominio.md",
+      "target_path": "30-Practice-Exams-and-Questions/domain-practice-exams.md",
+      "number": 5,
+      "original_signature": {
+        "number": 5,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "Amazon SQS.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 5,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "Amazon SQS.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-D06",
+      "original_path": "30-Simulados-e-Questoes/mini-simulados-por-dominio.md",
+      "target_path": "30-Practice-Exams-and-Questions/domain-practice-exams.md",
+      "number": 6,
+      "original_signature": {
+        "number": 6,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "AWS Fargate quando requisitos permitirem.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 6,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "AWS Fargate where requirements allow it.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-D07",
+      "original_path": "30-Simulados-e-Questoes/mini-simulados-por-dominio.md",
+      "target_path": "30-Practice-Exams-and-Questions/domain-practice-exams.md",
+      "number": 7,
+      "original_signature": {
+        "number": 7,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "tags, Cost Explorer e Budgets.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 7,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "tags, Cost Explorer and Budgets.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-D08",
+      "original_path": "30-Simulados-e-Questoes/mini-simulados-por-dominio.md",
+      "target_path": "30-Practice-Exams-and-Questions/domain-practice-exams.md",
+      "number": 8,
+      "original_signature": {
+        "number": 8,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "GuardDuty e Security Hub com administracao delegada.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 8,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "GuardDuty and Security Hub with delegated administration.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-D09",
+      "original_path": "30-Simulados-e-Questoes/mini-simulados-por-dominio.md",
+      "target_path": "30-Practice-Exams-and-Questions/domain-practice-exams.md",
+      "number": 9,
+      "original_signature": {
+        "number": 9,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "revisar Service Quotas, testar carga e solicitar aumento.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 9,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "review Service Quotas, load test and request an increase where supported.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-D10",
+      "original_path": "30-Simulados-e-Questoes/mini-simulados-por-dominio.md",
+      "target_path": "30-Practice-Exams-and-Questions/domain-practice-exams.md",
+      "number": 10,
+      "original_signature": {
+        "number": 10,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "discovery e assessment.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 10,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "discovery and assessment.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-D11",
+      "original_path": "30-Simulados-e-Questoes/mini-simulados-por-dominio.md",
+      "target_path": "30-Practice-Exams-and-Questions/domain-practice-exams.md",
+      "number": 11,
+      "original_signature": {
+        "number": 11,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "AWS DMS.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 11,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "AWS DMS, subject to supported engines and change data capture prerequisites.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-D12",
+      "original_path": "30-Simulados-e-Questoes/mini-simulados-por-dominio.md",
+      "target_path": "30-Practice-Exams-and-Questions/domain-practice-exams.md",
+      "number": 12,
+      "original_signature": {
+        "number": 12,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "DataSync ou Snow Family conforme volume e conectividade.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 12,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "assess DataSync against an offline transfer option according to data volume, connectivity and availability. Snow Family is historical context; check current eligibility before proposing it.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-Q01",
+      "original_path": "30-Simulados-e-Questoes/questoes.md",
+      "target_path": "30-Practice-Exams-and-Questions/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "aplicar SCP na OU.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "apply an SCP to the relevant workload OUs. SCPs constrain permissions in member accounts; they do not grant permissions or restrict the management account or service-linked roles.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-Q02",
+      "original_path": "30-Simulados-e-Questoes/questoes.md",
+      "target_path": "30-Practice-Exams-and-Questions/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "Direct Connect com Site-to-Site VPN como backup.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "Direct Connect with Site-to-Site VPN as backup.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-Q03",
+      "original_path": "30-Simulados-e-Questoes/questoes.md",
+      "target_path": "30-Practice-Exams-and-Questions/questions.md",
+      "number": 3,
+      "original_signature": {
+        "number": 3,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "avaliar Route 53, CloudFront, Global Accelerator e estrategia de origem.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 3,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "evaluate Route 53, CloudFront, Global Accelerator and the origin strategy against the API's routing and caching requirements.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-Q04",
+      "original_path": "30-Simulados-e-Questoes/questoes.md",
+      "target_path": "30-Practice-Exams-and-Questions/questions.md",
+      "number": 4,
+      "original_signature": {
+        "number": 4,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "Multi-AZ ou Aurora com failover gerenciado.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 4,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "Multi-AZ or Aurora with managed failover, using a supported deployment configuration.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-Q05",
+      "original_path": "30-Simulados-e-Questoes/questoes.md",
+      "target_path": "30-Practice-Exams-and-Questions/questions.md",
+      "number": 5,
+      "original_signature": {
+        "number": 5,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "SQS, SNS, EventBridge ou Step Functions conforme padrao.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 5,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "SQS, SNS, EventBridge or Step Functions according to the required messaging or orchestration pattern.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-Q06",
+      "original_path": "30-Simulados-e-Questoes/questoes.md",
+      "target_path": "30-Practice-Exams-and-Questions/questions.md",
+      "number": 6,
+      "original_signature": {
+        "number": 6,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "GuardDuty, Security Hub e administracao delegada.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 6,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "AWS Config and Security Hub CSPM with organizational aggregation and delegated administration where supported. GuardDuty complements these controls with threat detection.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-Q07",
+      "original_path": "30-Simulados-e-Questoes/questoes.md",
+      "target_path": "30-Practice-Exams-and-Questions/questions.md",
+      "number": 7,
+      "original_signature": {
+        "number": 7,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "tags, Cost Explorer, Budgets e rightsizing antes de commitments.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 7,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "tags, Cost Explorer, Budgets and rightsizing before commitments.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-Q08",
+      "original_path": "30-Simulados-e-Questoes/questoes.md",
+      "target_path": "30-Practice-Exams-and-Questions/questions.md",
+      "number": 8,
+      "original_signature": {
+        "number": 8,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "discovery, dependencias e escolha dos 7Rs.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 8,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "discovery, dependency mapping and selection among the 7 Rs.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-Q09",
+      "original_path": "30-Simulados-e-Questoes/questoes.md",
+      "target_path": "30-Practice-Exams-and-Questions/questions.md",
+      "number": 9,
+      "original_signature": {
+        "number": 9,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "extrair capacidades por APIs, eventos e componentes gerenciados.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 9,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "extract capabilities through APIs, events and managed components.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-30-Q10",
+      "original_path": "30-Simulados-e-Questoes/questoes.md",
+      "target_path": "30-Practice-Exams-and-Questions/questions.md",
+      "number": 10,
+      "original_signature": {
+        "number": 10,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "desempatar por requisitos explicitos, risco operacional, custo e governanca.",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 10,
+        "kind": "open-response",
+        "option_labels": [],
+        "answer_set": [],
+        "answer_text": "choose according to explicit requirements, operational risk, cost and governance.",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-31-Q01",
+      "original_path": "31-Glossario-e-Recursos/questoes.md",
+      "target_path": "31-Glossary-and-Resources/questions.md",
+      "number": 1,
+      "original_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 1,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    },
+    {
+      "id": "SAP-31-Q02",
+      "original_path": "31-Glossario-e-Recursos/questoes.md",
+      "target_path": "31-Glossary-and-Resources/questions.md",
+      "number": 2,
+      "original_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "reviewed_signature": {
+        "number": 2,
+        "kind": "multiple-choice",
+        "option_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer_set": [
+          "B"
+        ],
+        "answer_text": "B",
+        "multi_select": false
+      },
+      "review": "Read prompt, alternatives and rationale; retained answer letters and question type. Open responses are scenario review prompts, not a full exam simulation."
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 ## Essential reading
 
-- [AWS Cost Management](https://docs.aws.amazon.com/cost-management/) - entry point for cost tools; high priority.
+- [AWS Cost Management](https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html) - entry point for cost tools; high priority.
 - [AWS Cost Explorer](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html) - trend analysis; high priority.
 - [AWS Budgets](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html) - budget thresholds, notifications and optional configured actions; high priority. A budget does not automatically impose a hard spending cap.
 

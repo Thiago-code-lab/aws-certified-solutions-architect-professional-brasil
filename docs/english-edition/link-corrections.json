@@ -1,0 +1,22 @@
+[
+  {
+    "path": "22-Cost-Optimization-and-FinOps/links.md",
+    "original_url": "https://docs.aws.amazon.com/cost-management/",
+    "corrected_url": "https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html"
+  },
+  {
+    "path": "23-Migration-Hub-Discovery-and-the-7-Rs/links.md",
+    "original_url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-strategy/welcome.html",
+    "corrected_url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html"
+  },
+  {
+    "path": "23-Migration-Hub-Discovery-and-the-7-Rs/links.md",
+    "original_url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-terms-and-concepts/welcome.html",
+    "corrected_url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-intro-governance/key-concepts.html"
+  },
+  {
+    "path": "26-Modernization-Serverless-Containers-and-Decoupling/links.md",
+    "original_url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-strategy/welcome.html",
+    "corrected_url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html"
+  }
+]

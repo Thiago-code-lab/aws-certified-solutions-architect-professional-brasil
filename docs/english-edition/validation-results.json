@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "source_commit": "471ebd78a428180b5d12afa320751fb60fbecffc",
+  "source_files": 223,
+  "translated_markdown": 217,
+  "modules": 31,
+  "questions": 88,
+  "markdown_files_checked": 218,
+  "failures": [],
+  "scope": "Offline checks; no external URL reachability test or AWS lab execution."
+}

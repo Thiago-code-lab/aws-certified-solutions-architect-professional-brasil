@@ -4,8 +4,8 @@
 
 - [https://docs.aws.amazon.com/migrationhub/latest/ug/whatishub.html](https://docs.aws.amazon.com/migrationhub/latest/ug/whatishub.html)
 - [https://docs.aws.amazon.com/application-discovery/latest/userguide/what-is-appdiscovery.html](https://docs.aws.amazon.com/application-discovery/latest/userguide/what-is-appdiscovery.html)
-- [https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-strategy/welcome.html](https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-strategy/welcome.html)
-- [https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-terms-and-concepts/welcome.html](https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-terms-and-concepts/welcome.html)
+- [https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html](https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html)
+- [https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-intro-governance/key-concepts.html](https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-intro-governance/key-concepts.html)
 - [https://aws.amazon.com/migration-evaluator/](https://aws.amazon.com/migration-evaluator/)
 
 ## Why these links matter
