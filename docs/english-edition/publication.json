@@ -1,0 +1,15 @@
+{
+  "verified_content_commit": "55fab99367f21e04a21f7eec14586d1701db76cc",
+  "local_head": "55fab99367f21e04a21f7eec14586d1701db76cc",
+  "remote_tracking_head": "55fab99367f21e04a21f7eec14586d1701db76cc",
+  "advertised_remote_head": "55fab99367f21e04a21f7eec14586d1701db76cc",
+  "heads_match": true,
+  "publication_branch": "sap-c02-english",
+  "local_main": "471ebd78a428180b5d12afa320751fb60fbecffc",
+  "remote_main": "471ebd78a428180b5d12afa320751fb60fbecffc",
+  "remote_gh_pages": "eb62bf8ccd4482cc7177cec6af6da06d7225662a",
+  "validation_passed": true,
+  "regression_tests_passed": 18,
+  "final_audit_commit_resolution": "git log -1 --format=%H -- docs/english-edition/README.md",
+  "scope": "All intended educational content, validation tools and evidence are published at this checkpoint. The following audit commit records this evidence; its own final SHA is resolved from Git and verified again in the completion report."
+}
